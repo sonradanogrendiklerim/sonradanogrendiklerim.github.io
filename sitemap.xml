@@ -36,22 +36,22 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://sonradanogrendiklerim.com/bilgisayar-muhendisligine-giris/ubuntu-kurulumu/</loc>
-         <lastmod>2024-02-18</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://sonradanogrendiklerim.com/kendimce/urun-yonetimi/</loc>
-         <lastmod>2024-02-18</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://sonradanogrendiklerim.com/nasil-soru-sorulur/</loc>
          <lastmod>2024-02-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://sonradanogrendiklerim.com/ubuntu/ilk-kurulum/</loc>
+         <loc>https://sonradanogrendiklerim.com/ubuntu/ilk-ayarlar/</loc>
+         <lastmod>2024-02-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://sonradanogrendiklerim.com/ubuntu/kurulum/</loc>
+         <lastmod>2024-02-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://sonradanogrendiklerim.com/ubuntu/terminal/</loc>
          <lastmod>2024-02-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
