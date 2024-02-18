@@ -520,9 +520,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#terminal-emulatoru" class="md-nav__link">
+  <a href="#linux-terminal-emulatoru" class="md-nav__link">
     <span class="md-ellipsis">
-      Terminal Emülatörü
+      Linux Terminal Emülatörü
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ilgilisine-dizi-onerisi" class="md-nav__link">
+    <span class="md-ellipsis">
+      İlgilisine Dizi Önerisi
     </span>
   </a>
   
@@ -595,9 +604,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#terminal-emulatoru" class="md-nav__link">
+  <a href="#linux-terminal-emulatoru" class="md-nav__link">
     <span class="md-ellipsis">
-      Terminal Emülatörü
+      Linux Terminal Emülatörü
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ilgilisine-dizi-onerisi" class="md-nav__link">
+    <span class="md-ellipsis">
+      İlgilisine Dizi Önerisi
     </span>
   </a>
   
@@ -621,7 +639,7 @@
   <h1>Terminal</h1>
 
 <h2 id="emulator">Emülatör<a class="headerlink" href="#emulator" title="Permanent link">&para;</a></h2>
-<p>Terminali anlamak için aslında <a href="https://simple.wikipedia.org/wiki/Emulator" target="_blank">emulator</a> kelimesine biraz aşina olmamız
+<p>Terminali anlamak için aslında <a href="https://simple.wikipedia.org/wiki/Emulator" target="_blank">emülator</a> kelimesine biraz aşina olmamız
 gerekiyor. Sektör genelinde kısaltılmış olarak <code>terminal</code> dense de aslında burada kastettiğimiz
 <code>terminal emülatörü</code>.</p>
 <p>Emülatöre kelime anlamıyla <code>bir [şey] gibi davranmak</code> diyebiliriz. Bunu en iyi şekilde anlamak için
@@ -641,7 +659,43 @@ bilerek ona göre davranan bir uygulamadan, <strong>yazılımsal bir bilgisayard
 Günümüzde <a href="https://en.wikipedia.org/wiki/DOSBox" target="_blank">DOSBox</a> ve <a href="https://simple.wikipedia.org/wiki/Wine_(software)" target="_blank">Wine</a> bunlara örnek olarak
 verilebilir.</p>
 <h2 id="terminal">Terminal<a class="headerlink" href="#terminal" title="Permanent link">&para;</a></h2>
-<h2 id="terminal-emulatoru">Terminal Emülatörü<a class="headerlink" href="#terminal-emulatoru" title="Permanent link">&para;</a></h2>
+<p><em>Not: Burada yazdıklarım tarihsel olarak gerçeği tam olarak yansıtmayabilir. Genel bağlamda durumun</em>
+<em>nasıl olduğunu anlatmaya çalıştım. Bilgisayar tarihçileri yanlış yaptığım bir nokta olursa lütfen</em>
+<em>düzeltsinler.</em></p>
+<p>Bilgisayarların tarihçesine baktığımız zaman tonlarca ağırlıkta, günümüzle kıyasladığımızda çok
+düşük işlem performansı görüyoruz. Bu bilgisayarların şu anda olduğu gibi birden fazla kullanıcı ile
+kullanılabildiğini düşünmeyin. Tek bir iş yapıyorlar ve tek bir kullanıcıları var. Bu
+bilgisayarlarla komut gönderip sonuç almanın yolu ise <code>terminaller</code>.</p>
+<!-- markdownlint-disable MD033 -->
+<figure>
+  <img alt="VT100 Terminal" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/DEC_VT100_terminal.jpg/811px-DEC_VT100_terminal.jpg" />
+  <figcaption>VT100 Terminal</figcaption>
+</figure>
+<p>Düşünün ki aşağıdaki komutu bilgisayara gönderiyorsunuz:</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span>
+</span></code></pre></div>
+<p>ve size cevap olarak tek satırda <code>4</code> cevabını dönüyor. İşin kötü yanı ise bu cevapların satır satır
+size dönüyor olması. Bu bilgisayarı programlayacak olsanız ekrana basacağınız yazıları dikkatli
+seçiyor olurdunuz çünkü bir kere ekrana basıldıktan sonra programatik olarak geri dönüp bunu
+silmenin <strong>standard</strong> bir yolu yok. En azından <a href="https://en.wikipedia.org/wiki/ANSI_escape_code" target="_blank">ANSI</a> özel (kaçış)
+karakterlerini ilk destekleyen terminallerden biri olan <a href="https://en.wikipedia.org/wiki/VT100" target="_blank">VT100</a> gelene
+kadar durum bu şekildeydi. VT100 birçok özellik ile geldi. Standard haline gelen ANSI kodlarını
+desteklemesi birçok bilgisayar ile uyumlu çalışmasını sağladı ve milyonlarca sattı.</p>
+<p>Yani aslında terminal dediğimiz şey fiziksel bir cihaz ve bilgisayar ile bildiğimiz anlamda
+etkileşmekte.</p>
+<h2 id="linux-terminal-emulatoru">Linux Terminal Emülatörü<a class="headerlink" href="#linux-terminal-emulatoru" title="Permanent link">&para;</a></h2>
+<p>Linux üzerinde çalıştırabileceğiniz yüzlerce terminal uygulaması var. Bu terminal uygulamaları
+yukarıda açıklandığı gibi çeşitli karakterler kullanıyorlar. <a href="https://en.wikipedia.org/wiki/ANSI_escape_code">ANSI</a> kaçış karakterleri ile
+ekrandaki yazı renklerini, büyüklüklerini, boyutlarını değiştirebiliyorlar; yeni satıra
+geçebiliyorlar, bir önceki satıra dönüp üzerine yazabiliyorlar ve yazının arkaplanını farklı, ön
+planını farklı yapabiliyorlar.</p>
+<p>Dolayısıyla bu uygulamaların çıktılarını ekranda gösterecek olan <code>terminal</code> uygulamasının da belli
+bir formatı desteklemesi, <code>emüle</code> etmesi gerekmekte. Elimizde VT100 olmadığı için, zamanında
+oluşturulmuş standardları emüle etmemiz gerekmekte ki terminal ekranımızda düzgün çıktı görebilelim.
+<code>Emülatör</code>, <code>Terminal</code> ve <code>Terminal Emülatörü</code> arasındaki ilişkiyi burada sonlandırabiliriz.</p>
+<h2 id="ilgilisine-dizi-onerisi">İlgilisine Dizi Önerisi<a class="headerlink" href="#ilgilisine-dizi-onerisi" title="Permanent link">&para;</a></h2>
+<p>Bir oda dolusu bilgisayarın mesai saatleri sonrası kapatılıp sonrasında tekrar açılması ile başlayan
+ve paylaşımlı bilgisayarlardan nasıl para kazanılabileceği ile devam eden <a href="https://www.imdb.com/title/tt2543312/" target="_blank">Halt and Catch Fire</a> dizisini de ilgililere öneririm.</p>
 
 
 
