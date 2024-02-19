@@ -529,6 +529,24 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#emulatorumuzu-deneyelim" class="md-nav__link">
+    <span class="md-ellipsis">
+      Emülatörümüzü Deneyelim
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#terminal-ile-iliskiniz" class="md-nav__link">
+    <span class="md-ellipsis">
+      Terminal ile İlişkiniz
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#ilgilisine-dizi-onerisi" class="md-nav__link">
     <span class="md-ellipsis">
       İlgilisine Dizi Önerisi
@@ -613,6 +631,24 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#emulatorumuzu-deneyelim" class="md-nav__link">
+    <span class="md-ellipsis">
+      Emülatörümüzü Deneyelim
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#terminal-ile-iliskiniz" class="md-nav__link">
+    <span class="md-ellipsis">
+      Terminal ile İlişkiniz
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#ilgilisine-dizi-onerisi" class="md-nav__link">
     <span class="md-ellipsis">
       İlgilisine Dizi Önerisi
@@ -677,12 +713,12 @@ bilgisayarlarla komut gönderip sonuç almanın yolu ise <code>terminaller</code
 <p>ve size cevap olarak tek satırda <code>4</code> cevabını dönüyor. İşin kötü yanı ise bu cevapların satır satır
 size dönüyor olması. Bu bilgisayarı programlayacak olsanız ekrana basacağınız yazıları dikkatli
 seçiyor olurdunuz çünkü bir kere ekrana basıldıktan sonra programatik olarak geri dönüp bunu
-silmenin <strong>standard</strong> bir yolu yok. En azından <a href="https://en.wikipedia.org/wiki/ANSI_escape_code" target="_blank">ANSI</a> özel (kaçış)
+silmenin <strong>standard</strong> bir yolu yoktu. En azından <a href="https://en.wikipedia.org/wiki/ANSI_escape_code" target="_blank">ANSI</a> özel (kaçış)
 karakterlerini ilk destekleyen terminallerden biri olan <a href="https://en.wikipedia.org/wiki/VT100" target="_blank">VT100</a> gelene
 kadar durum bu şekildeydi. VT100 birçok özellik ile geldi. Standard haline gelen ANSI kodlarını
 desteklemesi birçok bilgisayar ile uyumlu çalışmasını sağladı ve milyonlarca sattı.</p>
-<p>Yani aslında terminal dediğimiz şey fiziksel bir cihaz ve bilgisayar ile bildiğimiz anlamda
-etkileşmekte.</p>
+<p>Yani aslında terminal dediğimiz şey fiziksel bir cihaz ve bilgisayar ile kablo ile bağlı şekilde
+işini yapmakta.</p>
 <h2 id="linux-terminal-emulatoru">Linux Terminal Emülatörü<a class="headerlink" href="#linux-terminal-emulatoru" title="Permanent link">&para;</a></h2>
 <p>Linux üzerinde çalıştırabileceğiniz yüzlerce terminal uygulaması var. Bu terminal uygulamaları
 yukarıda açıklandığı gibi çeşitli karakterler kullanıyorlar. <a href="https://en.wikipedia.org/wiki/ANSI_escape_code">ANSI</a> kaçış karakterleri ile
@@ -690,11 +726,40 @@ ekrandaki yazı renklerini, büyüklüklerini, boyutlarını değiştirebiliyorl
 geçebiliyorlar, bir önceki satıra dönüp üzerine yazabiliyorlar ve yazının arkaplanını farklı, ön
 planını farklı yapabiliyorlar.</p>
 <p>Dolayısıyla bu uygulamaların çıktılarını ekranda gösterecek olan <code>terminal</code> uygulamasının da belli
-bir formatı desteklemesi, <code>emüle</code> etmesi gerekmekte. Elimizde VT100 olmadığı için, zamanında
-oluşturulmuş standardları emüle etmemiz gerekmekte ki terminal ekranımızda düzgün çıktı görebilelim.
-<code>Emülatör</code>, <code>Terminal</code> ve <code>Terminal Emülatörü</code> arasındaki ilişkiyi burada sonlandırabiliriz.</p>
+bir formatı desteklemesi, <code>emüle</code> etmesi gerekmekte. Artık VT100 fiziksel olarak kullanılmadığı
+için, zamanında oluşturulmuş standardları emüle etmemiz gerekmekte ki terminal ekranımızda düzgün
+çıktı görebilelim. VT100 o kadar yaygınlaştı ki hala bunu ve diğer terminalleri emüle ederek
+kullanmaktayız. <code>Emülatör</code>, <code>Terminal</code> ve <code>Terminal Emülatörü</code> arasındaki ilişki bundan ibaret.</p>
+<h2 id="emulatorumuzu-deneyelim">Emülatörümüzü Deneyelim<a class="headerlink" href="#emulatorumuzu-deneyelim" title="Permanent link">&para;</a></h2>
+<p>Terminal uygulamasını açın ve ilk komutunuzu girin:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">echo</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot; DUZ YAZI&quot;</span>
+</span></code></pre></div>
+<p>Bu komut parametre olarak ne alıyorsa aynısını size verecektir. Her ne kadar kısa sürse de bunu uzun
+süren bir komut olarak düşünüp, dakikalarca bekleyip, bittiğinde terminalinizde bir şeyler görüyor
+olarak hayal edebilirsiniz. Şimdiye kadar öğrendiklerimizi deneyecek olursak ekrana kırmızı, kalın,
+yeşil vb. yazı yazmak ve emülatörümüzü test etmek için <code>echo</code> komutu uygun bir komutmuş gibi
+duruyor.</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">echo</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;\e[1;31m KIRMIZI YAZI \e[0m&quot;</span>
+</span></code></pre></div>
+<p>Bu komut ekrana kırmızı bir yazı basacaktır. Unutmayın. Terminal emülatörü kullanıyoruz.
+Bilgisayarımıza bir komut gönderdik, bu komutun cevabı hiç değişmeden bize geldi, gelen bu cevap da
+terminal emülatörü tarafından yorumlandı ve ekranda göründü.</p>
+<p>Burada yapılan şey basit. ANSI kaçış kodları içerisinde <code>ben şimdi başlıyorum, buradan sonrasıyle
+özel olarak ilgilen</code> karakterleri mevcut ve işini bitirdiği zaman <code>ben tamamım, artık normale
+döndük</code> diyor. Burada renkler için bu kaçış kodunun başlangıcı <code>\033[95m</code> ve bitişi <code>\033[0m</code>
+karakterleri ile ifade ediliyor. Terminal emülatörümüz bu kodları alıyor, yorumluyor ve ekranda
+düzgün biçimde gösteriyor. Daha fazlası için <a href="https://stackoverflow.com/questions/4842424/list-of-ansi-color-escape-sequences" target="_blank">StackOverflow'da yazılmış detaylı cevaba</a> ulaşabilirsiniz.</p>
+<h2 id="terminal-ile-iliskiniz">Terminal ile İlişkiniz<a class="headerlink" href="#terminal-ile-iliskiniz" title="Permanent link">&para;</a></h2>
+<p>Hayır, o ilişki değil. Ubuntu arayüzünde gördüğünüz ve yapabildiğiniz her şeyi <em>(dosya silme,</em>
+<em>oluşturma, değiştirme, vb.)</em> terminal ile yapabilirsiniz. Hatırlayacağınız üzere bilgisayar ile
+ilişkinin temeli terminale dayanıyor ve biz de modern dünya olarak bunu emüle edip kullanıyoruz.</p>
+<p>Bunun gibi komutları yine temel linux komutları anahtar kelimeleri ile öğrenebilirsiniz. Bu
+komutları öğrenmenizi, test etmenizi, sonucunda ne olduğunu öğrenmenizi ve grafik arayüzünden
+bağımsız olarak kendinizi sadece terminal kullanmaya yönlendirmenizi tavsiye ederim.</p>
+<p>Kod geliştirme aşamasında neredeyse tamamiyle terminal kullanacağınız için bu yetkinliğe sahip olmak
+size artı bir değer olarak geri dönecektir.</p>
 <h2 id="ilgilisine-dizi-onerisi">İlgilisine Dizi Önerisi<a class="headerlink" href="#ilgilisine-dizi-onerisi" title="Permanent link">&para;</a></h2>
-<p>Bir oda dolusu bilgisayarın mesai saatleri sonrası kapatılıp sonrasında tekrar açılması ile başlayan
+<p>Bilgisayarların mesai saatleri sonrası kapatılıp sonrasında tekrar açılması ile başlayan
 ve paylaşımlı bilgisayarlardan nasıl para kazanılabileceği ile devam eden <a href="https://www.imdb.com/title/tt2543312/" target="_blank">Halt and Catch Fire</a> dizisini de ilgililere öneririm.</p>
 
 
