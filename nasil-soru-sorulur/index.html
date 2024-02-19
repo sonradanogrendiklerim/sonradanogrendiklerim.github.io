@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.9">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.10">
     
     
       
@@ -30,7 +30,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.f2e4d321.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.7e359304.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
@@ -112,6 +112,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#hepimiz-gonulluyuz" class="md-skip">
+          Ana içeriğe geç
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -254,7 +259,7 @@
         <a href="./" class="md-tabs__link">
           
   
-  Nasıl Soru Sorulur
+  Nasıl Soru Sorulur?
 
         </a>
       </li>
@@ -560,7 +565,7 @@
             
   
   <span class="md-ellipsis">
-    Nasıl Soru Sorulur
+    Nasıl Soru Sorulur?
   </span>
   
 
@@ -570,7 +575,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            Nasıl Soru Sorulur
+            Nasıl Soru Sorulur?
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -588,6 +593,17 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Giriş
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -597,6 +613,32 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="İçindekiler">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      İçindekiler
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#hepimiz-gonulluyuz" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hepimiz Gönüllüyüz
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -760,6 +802,23 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      İçindekiler
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#hepimiz-gonulluyuz" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hepimiz Gönüllüyüz
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -775,7 +834,35 @@
 
   <h1>Giriş</h1>
 
-
+<p>Bilgisayar mühendisliği bölümüne giriş serisinden devam ediyoruz. Nasıl soru sorulur serisini
+bitirdiğimizde doğru soruları nasıl ve ne şekilde soracağımız konusunda fikrimiz olacak.</p>
+<p>Bu belge <a href="https://en.wikipedia.org/wiki/Eric_S._Raymond" target="_blank">Eric Steven Raymond</a>'ın <a href="http://www.catb.org/~esr/faqs/smart-questions.html" target="_blank">How To Ask Questions The Smart Way</a> belgesinden esinlenmiştir. Orijinal belge uzun olduğundan tamamiyle çevrilmemiş, ilgili kısımlar alınarak Türkçeleştirilmiştir. Belgenin tamamını
+yazılım ile uğraşan ve uğraşacak olan herkese tavsiye ederim. Her ne kadar IRC ve e-posta listeleri
+yerine artık Discord, Slack ve başka mecralar daha çok kullanılıyor olsa da belgenin temellerinin aynı kaldığını söyleyebiliriz.</p>
+<div class="admonition tip">
+<p class="admonition-title">Nerede değil, nasıl?</p>
+<p>Soruyu nerede sorduğunuz değil, nasıl sorduğunuz önemlidir.</p>
+</div>
+<p>Soracağınız herhangi bir soruya alacağınız cevap, nasıl sorduğunuz ile doğru orantılıdır. Eğer
+ödevinizi yapmaz ve <code>bu çalışmıyor</code> gibi bir hata raporu ile gelirseniz, muhtemelen birilerini
+sinirlendirecek ve sizin de sinirleneceğiniz bir cevap alacaksınız. Bu açıdan hem kendi ana
+dilinizde, hem de İngilizce olarak nasıl doğru soru soracağınızı öğrenmek bölüme başlarken
+edineceğiniz önemli yetilerden biri olacaktır.</p>
+<p>Burada sizlerden mükemmel bir şekilde yazı yazılması istenilmiyor. Sadece eğer ders olarak
+veriliyorsa yazma ve okuma derslerine özen göstermeniz sizin yararınıza olacaktır. Sektörümüz %90
+oranında yazıyor. Kod yazıyor, belge yazıyor, hata raporu yazıyor, test yazıyor, blog yazıyor, bu
+satırları yazıyor. Yazmanın ne kadar önemli olduğunu başka bir şekilde ifade edemezdim sanırım.</p>
+<div class="admonition info">
+<p class="admonition-title">Çok iyi bir programcı olabilirsiniz</p>
+<p>Ancak kendinizi yazılı olarak ifade edemediğinizde bunun bir önemi kalmıyor.</p>
+</div>
+<p>Bu yüzden programcılık yeteneklerinizi geliştirmeden önce yazılı iletişim konusunda kendinizi
+geliştirmeniz daha faydalı bile olabilir. Her ikisi birbirinden bağımsız şeyler değil. En azından
+bunun farkında olarak sadece tek bir tarafa yönelmemek yararınıza olabilir.</p>
+<h2 id="hepimiz-gonulluyuz">Hepimiz Gönüllüyüz<a class="headerlink" href="#hepimiz-gonulluyuz" title="Permanent link">&para;</a></h2>
+<p>Soru sorduğunuz insanların bu işi para için yapmadıklarını aklınızdan çıkarmayın. Çoğu boş
+vakitlerinde sizlerin sorularına cevap veriyor, hata gideriyor ve geliştirme yapıyor. Soru sorarken
+kendiniz harcamadığınız zamanı karşı taraftan beklemeyin. En iyi ihtimalle cevap alamazsınız.</p>
 
 
 
