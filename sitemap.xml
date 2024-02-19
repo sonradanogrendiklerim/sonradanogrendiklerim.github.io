@@ -21,6 +21,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://sonradanogrendiklerim.com/blog/2024/02/19/statik-sayfa-projeleri-ve-mkdocs/</loc>
+         <lastmod>2024-02-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://sonradanogrendiklerim.com/makaleler/</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
@@ -47,6 +52,16 @@
     </url>
     <url>
          <loc>https://sonradanogrendiklerim.com/ubuntu/kurulum/</loc>
+         <lastmod>2024-02-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://sonradanogrendiklerim.com/blog/archive/2024/</loc>
+         <lastmod>2024-02-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://sonradanogrendiklerim.com/blog/category/yaz%C4%B1l%C4%B1m-geli%C5%9Ftirme/</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
