@@ -6,19 +6,19 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Bilgisayar mühendisliği öğrencileri için işletim sistemleri ve Ubuntu kurulumu.">
+        <meta name="description" content="Tailscale ile kendi VPN sunucunuzu kurun.">
       
       
         <meta name="author" content="Eren Türkay">
       
       
-        <link rel="canonical" href="https://sonradanogrendiklerim.com/ubuntu/kurulum/">
+        <link rel="canonical" href="https://sonradanogrendiklerim.com/makaleler/tailscale-vpn-kurulumu/">
       
       
-        <link rel="prev" href="../../bilgisayar-muhendisligine-giris/baslarken/">
+        <link rel="prev" href="../">
       
       
-        <link rel="next" href="../../temeller/terminal/">
+        <link rel="next" href="../../blog/">
       
       
       <link rel="icon" href="../../assets/favicon.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Ubuntu Kurulumu - Sonradan Öğrendiklerim</title>
+        <title>Tailscale VPN Kurulumu - Sonradan Öğrendiklerim</title>
       
     
     
@@ -73,11 +73,11 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="Ubuntu Kurulumu - Sonradan Öğrendiklerim" >
+        <meta  property="og:title"  content="Tailscale VPN Kurulumu - Sonradan Öğrendiklerim" >
       
-        <meta  property="og:description"  content="Bilgisayar mühendisliği öğrencileri için işletim sistemleri ve Ubuntu kurulumu." >
+        <meta  property="og:description"  content="Tailscale ile kendi VPN sunucunuzu kurun." >
       
-        <meta  property="og:image"  content="https://sonradanogrendiklerim.com/assets/images/social/ubuntu/kurulum.png" >
+        <meta  property="og:image"  content="https://sonradanogrendiklerim.com/assets/images/social/makaleler/tailscale-vpn-kurulumu.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -85,15 +85,15 @@
       
         <meta  property="og:image:height"  content="630" >
       
-        <meta  property="og:url"  content="https://sonradanogrendiklerim.com/ubuntu/kurulum/" >
+        <meta  property="og:url"  content="https://sonradanogrendiklerim.com/makaleler/tailscale-vpn-kurulumu/" >
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="Ubuntu Kurulumu - Sonradan Öğrendiklerim" >
+        <meta  name="twitter:title"  content="Tailscale VPN Kurulumu - Sonradan Öğrendiklerim" >
       
-        <meta  name="twitter:description"  content="Bilgisayar mühendisliği öğrencileri için işletim sistemleri ve Ubuntu kurulumu." >
+        <meta  name="twitter:description"  content="Tailscale ile kendi VPN sunucunuzu kurun." >
       
-        <meta  name="twitter:image"  content="https://sonradanogrendiklerim.com/assets/images/social/ubuntu/kurulum.png" >
+        <meta  name="twitter:image"  content="https://sonradanogrendiklerim.com/assets/images/social/makaleler/tailscale-vpn-kurulumu.png" >
       
     
     
@@ -112,11 +112,6 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
-      
-        
-        <a href="#isletim-sistemi-nedir" class="md-skip">
-          Ana içeriğe geç
-        </a>
       
     </div>
     <div data-md-component="announce">
@@ -148,7 +143,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Ubuntu Kurulumu
+              Tailscale VPN Kurulumu
             
           </span>
         </div>
@@ -232,12 +227,10 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
+      <li class="md-tabs__item">
         <a href="../../bilgisayar-muhendisligine-giris/onsoz/" class="md-tabs__link">
           
   
@@ -270,11 +263,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../makaleler/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
   Makaleler
@@ -360,30 +355,25 @@
       
   
   
-    
   
   
-  
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -394,7 +384,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Bilgisayar Mühendisliğine Giriş
@@ -447,30 +437,25 @@
                 
   
   
-    
   
   
-  
     
     
     
       
       
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
         
           
-          
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -481,7 +466,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_3">
             <span class="md-nav__icon md-icon"></span>
             Ubuntu
@@ -492,28 +477,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Ubuntu Kurulumu
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../ubuntu/kurulum/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -522,60 +489,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="İçindekiler">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      İçindekiler
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#isletim-sistemi-nedir" class="md-nav__link">
-    <span class="md-ellipsis">
-      İşletim Sistemi Nedir
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#kurulum" class="md-nav__link">
-    <span class="md-ellipsis">
-      Kurulum
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ilk-ayarlar" class="md-nav__link">
-    <span class="md-ellipsis">
-      İlk Ayarlar
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#hemen-kod-yazalm" class="md-nav__link">
-    <span class="md-ellipsis">
-      Hemen Kod Yazalım
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -710,25 +623,30 @@
       
   
   
+    
   
   
+  
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -739,7 +657,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Makaleler
@@ -753,7 +671,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../makaleler/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -771,10 +689,17 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../makaleler/tailscale-vpn-kurulumu/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -783,6 +708,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -881,50 +807,6 @@
   
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      İçindekiler
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#isletim-sistemi-nedir" class="md-nav__link">
-    <span class="md-ellipsis">
-      İşletim Sistemi Nedir
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#kurulum" class="md-nav__link">
-    <span class="md-ellipsis">
-      Kurulum
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ilk-ayarlar" class="md-nav__link">
-    <span class="md-ellipsis">
-      İlk Ayarlar
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#hemen-kod-yazalm" class="md-nav__link">
-    <span class="md-ellipsis">
-      Hemen Kod Yazalım
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -938,61 +820,9 @@
                   
 
 
-  <h1>Ubuntu Kurulumu</h1>
+  <h1>Tailscale VPN Kurulumu</h1>
 
-<h2 id="isletim-sistemi-nedir">İşletim Sistemi Nedir<a class="headerlink" href="#isletim-sistemi-nedir" title="Permanent link">&para;</a></h2>
-<p>Bilgisayarınızda birçok aygıt bulunur. Bu aygıtlara örnek olarak işlemci, ekran kartı, sabit disk,
-ve USB portları verebiliriz. <a href="https://simple.wikipedia.org/wiki/Operating_system" target="_blank">İşletim sistemi</a> bu aygıtları bir
-şekilde kullanmanızı sağlar ve işletim sistemi sizin de yazacağınız herhangi bir <code>programdan</code>
-farkızdır. İşletim sistemi sadece çok daha farklı bir katmanda, çok daha farklı işler yapar. Hatta
-işletim sistemlerine <code>programların programı</code> diyebiliriz çünkü diğer programların yönetimini de bu
-üstlenir. Sonuç olarak bir programı çalıştırmak, bu çalışan programın yazacağı/okuyacağı dosyaları
-sunmak, hata anında çalışan programa neler yapılacağına karar vermek işletim sisteminin bazı
-görevlerindendir. Detayları daha sonra göreceğiz ancak şimdilik işletim sisteminin <code>programların
-programı</code> olduğunu bilmemiz yeterli olacaktır.</p>
-<h2 id="kurulum">Kurulum<a class="headerlink" href="#kurulum" title="Permanent link">&para;</a></h2>
-<p>Burada adımlarla kurulumun nasıl gerçekleştirildiğine değinmeyeceğim. YouTube'da birçok video
-mevcut. Dikkat etmeniz gereken USB bellek aracılığı ile bilgisayarınıza gerçek bir kurulum yapmanız
-ve VirtualBox gibi sanallaştırma araçlarını kullanmıyor olmanız. Bu belgenin sonunda
-bilgisayarınızda bir Ubuntu kurulumu olacak ve açma/kapama tuşuna bastığınızda hangi işletim
-sistemini kullanmak istediğinizi seçeceksiniz. Veya seçmeyeceksiniz çünkü artık birer mühendis
-adayısınız ve Windows kurulumuna çok az ihtiyacınız olacağı için diskin tamamına Ubuntu kurmak
-isteyebilirsiniz :)</p>
-<p>Aşağıdaki video Windows ve Ubuntu'yu aynı anda kullanmak için neler yapmanız gerektiğini net bir
-şekilde anlatıyor. Üreticiden üreticiye hangi tuş kombinasyonlarını kullanmanız gerektiği
-değişebilir ancak mantık aşağı yukarı aynı.</p>
-<ul>
-<li>Bilgisayar açılırken bir kombinasyon ile bilgisayarı ne ile açmak istediğinizi seçiyorsunuz.</li>
-<li>Kurulum yapılmadıysa bu seçim ekranından USB belleği seçiyorsunuz ve kurulumu yapıyorsunuz.</li>
-<li>Devamında ne kullanmak istiyorsanız açılırken bu seçimi gerçekleştiriyorsunuz</li>
-</ul>
-<!-- markdownlint-disable MD033 -->
-<div class="video-wrapper">
-  <iframe width="1280" height="720" src="https://www.youtube.com/embed/W-RFY4LQ6oE" frameborder="0" allowfullscreen></iframe>
-</div>
 
-<p><br>
-Unutmayın. Bu işlem sabit diskinizi biçimlendirecek. İçerisinde var olan dosyaları kaybetme ihtimaliniz yüksek. Bu açıdan <a href="../../bilgisayar-muhendisligine-giris/baslarken/">Bölüme Başlarken</a> kısmını dikkatle ve tekrar okumanızı öneririm.</p>
-<h2 id="ilk-ayarlar">İlk Ayarlar<a class="headerlink" href="#ilk-ayarlar" title="Permanent link">&para;</a></h2>
-<p>İlk ayarlar ve basit kullanım için de YouTube videolarını takip edebilirsiniz. <a href="https://www.youtube.com/watch?v=i2jMQRgfHek&amp;list=PLrW4kXWyzgoJgN3Ebo3LGoyJvNZiDMWi9&amp;index=2">Linux TV</a>
-bu noktada sizlere yardımcı olacaktır. Nasıl uygulama yüklenir, temel ayarlar nasıl yapılır gibi
-konuları bu kanaldan öğrenebilirsiniz.</p>
-<p>Daha da önemlisi bunları kendiniz keşfedebilirsiniz. Artık önceki dosyalarınız yerli yerinde olan
-veya olmayan bir Ubuntu bilgisayara sahipsiniz ve istediğiniz zaman tekrar kurabilirsiniz.
-Dolayısıyla bunu bozun, tekrar yapın, keşfedin, bozarken neden bozduğunuzu sorun ve öğrenmeye
-çalışın. Mühendis olmanın gerekliliklerini bu şekilde yerine getirebilirsiniz.</p>
-<p>İçerik bulma konusunda tavsiyem İngilizce içerikli kanalları tüketmek olacaktır. Arama yaparken
-İngilizce anahtar kelimeleri kullanmanız daha yararlı olur. Maalesef Türkçe içerik konusunda sıkıntı
-çekmekteyiz.</p>
-<h2 id="hemen-kod-yazalm">Hemen Kod Yazalım<a class="headerlink" href="#hemen-kod-yazalm" title="Permanent link">&para;</a></h2>
-<p>Herkesin aklındaki soruya şimdiden cevap verme gereği hissediyorum. Cin olmadan adam çarpmaya
-çalışmıyoruz. Öncesinde Windows ortamında deneyiminiz olmuş, ekrana <code>C#</code> kullanarak <code>hello world</code>
-yazmış ve kendinizi büyük bir programcı gibi hissetmiş olabilirsiniz. Buna en hafif tabiri ile bir
-sanrı diyebiliriz.</p>
-<p>Bu blog ile yapmaya çalıştığım oldukça yavaş bir şekilde, sonradan öğrendiklerimi, yine yavaş ve
-özümseyerek aktarmak. Bu zaman alan bir süreç ve hız bu noktada en az isteyeceğim özellik. Eğer
-buradan kod yazmaya ve konseptleri hızlı bir şekilde anlamaya çalışmak gibi bir beklentiniz varsa
-okumayı burada sonlandırabilirsiniz.</p>
 
 
 
@@ -1009,58 +839,6 @@ okumayı burada sonlandırabilirsiniz.</p>
 
 
 
-
-<h2 id="__comments">Yorumlar</h2>
-
-<script
-  src="https://giscus.app/client.js"
-  data-repo="sonradanogrendiklerim/forum"
-  data-repo-id="R_kgDOLTPrfQ"
-  data-category="Genel"
-  data-category-id="DIC_kwDOLTPrfc4CdRGJ"
-  data-mapping="og:title"
-  data-strict="1"
-  data-reactions-enabled="0"
-  data-emit-metadata="0"
-  data-input-position="top"
-  data-theme="light"
-  data-lang="tr"
-  data-loading="lazy"
-  crossorigin="anonymous"
-  async
-></script>
-<!-- Synchronize Giscus theme with palette -->
-<script>
-  var giscus = document.querySelector("script[src*=giscus]");
-
-  // Set palette on initial load
-  var palette = __md_get("__palette");
-  if (palette && typeof palette.color === "object") {
-    var theme = palette.color.scheme === "slate" ? "transparent_dark" : "light";
-
-    // Instruct Giscus to set theme
-    giscus.setAttribute("data-theme", theme);
-  }
-
-  // Register event handlers after documented loaded
-  document.addEventListener("DOMContentLoaded", function () {
-    var ref = document.querySelector("[data-md-component=palette]");
-    ref.addEventListener("change", function () {
-      var palette = __md_get("__palette");
-      if (palette && typeof palette.color === "object") {
-        var theme =
-          palette.color.scheme === "slate" ? "transparent_dark" : "light";
-
-        // Instruct Giscus to change theme
-        var frame = document.querySelector(".giscus-frame");
-        frame.contentWindow.postMessage(
-          { giscus: { setConfig: { theme } } },
-          "https://giscus.app"
-        );
-      }
-    });
-  });
-</script>
 
                 
               </article>
@@ -1079,7 +857,7 @@ okumayı burada sonlandırabilirsiniz.</p>
       <nav class="md-footer__inner md-grid" aria-label="Altbilgi" >
         
           
-          <a href="../../bilgisayar-muhendisligine-giris/baslarken/" class="md-footer__link md-footer__link--prev" aria-label="Önceki: Başlarken">
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Önceki: Makale Listesi">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -1089,20 +867,20 @@ okumayı burada sonlandırabilirsiniz.</p>
                 Önceki
               </span>
               <div class="md-ellipsis">
-                Başlarken
+                Makale Listesi
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../temeller/terminal/" class="md-footer__link md-footer__link--next" aria-label="Sonraki: Terminal">
+          <a href="../../blog/" class="md-footer__link md-footer__link--next" aria-label="Sonraki: Günlük">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Sonraki
               </span>
               <div class="md-ellipsis">
-                Terminal
+                Günlük
               </div>
             </div>
             <div class="md-footer__button md-icon">
