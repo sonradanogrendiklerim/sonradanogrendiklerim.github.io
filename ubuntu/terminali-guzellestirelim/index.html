@@ -1147,15 +1147,11 @@ aşağıdaki şekilde görünecek:</p>
 <p>Buradaki <code>sudo</code> komutu sonrasında gelen her şeyi yetkili kullanıcı ile çalıştırmayı sağlar.
 Bir uygulama yüklerken şu an olduğu gibi yetkisiz bir kullanıcı ile yüklemeye çalıştığımızda
 belirli dizinlere erişim sağlanamayacağından uygulama da yüklenemeyecektir.</p>
+<p>Bu örnekte alacağımız hata aşağıdakine benzer olacaktır:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>E: Could not open lock file /var/lib/dpkg/lock-frontend - open (13: Permission denied)
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), are you root?
+</span></code></pre></div>
 </div>
-<!-- markdownlint-disable-next-line -->
-<div class="language-text highlight"><pre><span></span><code>Bu örnekte alacağımız hata aşağıdakine benzer olacaktır:
-
-```
-E: Could not open lock file /var/lib/dpkg/lock-frontend - open (13: Permission denied)
-E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), are you root?
-```
-</code></pre></div>
 
 
 
