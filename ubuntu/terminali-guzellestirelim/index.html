@@ -629,11 +629,26 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#zsh" class="md-nav__link">
+  <a href="#fish" class="md-nav__link">
     <span class="md-ellipsis">
-      Zsh
+      Fish
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Fish">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fish-yukleyelim" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fish Yükleyelim
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1030,11 +1045,26 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#zsh" class="md-nav__link">
+  <a href="#fish" class="md-nav__link">
     <span class="md-ellipsis">
-      Zsh
+      Fish
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Fish">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fish-yukleyelim" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fish Yükleyelim
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1065,8 +1095,8 @@
 </figure>
 <p>Zamanımızın neredeyse tamamı bu uygulama içerisinde geçeceğinden olabildiğince rahat edebileceğim
 şekilde ayarlamayı tercih ediyorum. Bu bölümde <a href="https://simple.wikipedia.org/wiki/Unix_shell" target="_blank">shell</a> nedir,
-<a href="https://en.wikipedia.org/wiki/Bash_(Unix_shell)" target="_blank">bash</a> yerine <a href="https://en.wikipedia.org/wiki/Z_shell" target="_blank">zsh</a> nasıl kullanılır ve
-zsh ayarları nasıl yapılır göreceğiz.</p>
+<a href="https://en.wikipedia.org/wiki/Bash_(Unix_shell)" target="_blank">bash</a> yerine <a href="https://en.wikipedia.org/wiki/Fish_(Unix_shell)" target="_blank">fish</a> nasıl kullanılır ve fish
+ayarları nasıl yapılır göreceğiz.</p>
 <h2 id="shell">Shell<a class="headerlink" href="#shell" title="Permanent link">&para;</a></h2>
 <p>Buna bir çeşit farklı bir kullanıcı arayüzü diyebiliriz. Şu anda ekranda gördüğünüz bir grafik
 arayüzü. Bilgisayarınızla grafik arayüzü ile işlem yapıyorsunuz ve grafik arayüzünün size tanıdığı
@@ -1096,12 +1126,36 @@ aradaki farkı görün:</p>
 atmanızda fayda var.</p>
 <h3 id="bash-konfigurasyonu">Bash Konfigürasyonu<a class="headerlink" href="#bash-konfigurasyonu" title="Permanent link">&para;</a></h3>
 <p>Bahsettiğimiz konfigürasyon dosyasının ismi <code>.bashrc</code>. Bunu herhangi bir editör ile açarak
-inceleyebilirsiniz. Bash yerine zsh kullanacağımız için içerisinde yazanları anlamlandırmamıza gerek
-yok. Göz atmanız yeterli. Bu dosyanın içeriğini aşağıdaki komut ile görebilirsiniz:</p>
+inceleyebilirsiniz. Bash yerine fish kullanacağımız için içerisinde yazanları anlamlandırmamıza
+gerek yok. Göz atmanız yeterli. Bu dosyanın içeriğini aşağıdaki komut ile görebilirsiniz:</p>
 <div class="language-sh highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>cat<span class="w"> </span>.bashrc
 </span></code></pre></div>
 <p><code>cat</code> komutu sonrasında gelen herhangi bir dosyanın içeriğini ekrana basacaktır.</p>
-<h2 id="zsh">Zsh<a class="headerlink" href="#zsh" title="Permanent link">&para;</a></h2>
+<h2 id="fish">Fish<a class="headerlink" href="#fish" title="Permanent link">&para;</a></h2>
+<p>Artık metin tabanlı arayüz kullanacağımız için ekran görüntülerine <code>gnome-terminal</code> gibi arayüzleri
+eklemeyeceğiz. Şu anda terminalimiz şu şekilde görünmekte:</p>
+<p><img alt="Bash terminal" src="/assets/ubuntu/terminal/merhaba-dunya-giris.png" width="500" /></p>
+<p>Bu belgenin sonunda terminalimiz bir <a href="https://en.wikipedia.org/wiki/Git" target="_blank">git</a> reposu dizinine girdiğinizde
+aşağıdaki şekilde görünecek:</p>
+<p><img alt="Fish terminal" src="/assets/ubuntu/terminal/fish-final.png" width="500" /></p>
+<h3 id="fish-yukleyelim">Fish Yükleyelim<a class="headerlink" href="#fish-yukleyelim" title="Permanent link">&para;</a></h3>
+<p>Terminalde aşağıdaki komutu çalıştırın:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>fish
+</span></code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Sudo komutu</p>
+<p>Buradaki <code>sudo</code> komutu sonrasında gelen her şeyi yetkili kullanıcı ile çalıştırmayı sağlar.
+Bir uygulama yüklerken şu an olduğu gibi yetkisiz bir kullanıcı ile yüklemeye çalıştığımızda
+belirli dizinlere erişim sağlanamayacağından uygulama da yüklenemeyecektir.</p>
+</div>
+<!-- markdownlint-disable-next-line -->
+<div class="language-text highlight"><pre><span></span><code>Bu örnekte alacağımız hata aşağıdakine benzer olacaktır:
+
+```
+E: Could not open lock file /var/lib/dpkg/lock-frontend - open (13: Permission denied)
+E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), are you root?
+```
+</code></pre></div>
 
 
 
