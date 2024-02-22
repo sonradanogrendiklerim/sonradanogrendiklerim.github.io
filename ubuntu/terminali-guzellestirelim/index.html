@@ -1283,7 +1283,20 @@ elimizde boş bir <code>config.fish</code> dosyası olsun. Sonrasında hoş geld
 <a href="https://fishshell.com/docs/current/tutorial.html">belgelerine</a> bakmamız gerekecek ve bu da Bilgisayar Mühendisliğinde zamanımızın büyük
 bir çoğunluğunu oluşturuyor :)</p>
 <p>Bu ayarı bulması biraz zor. Bu yüzden Google'a <code>fish disable greeting</code> yazarak nasıl yapıldığını
-aramaya başlıyoruz ve görüyoruz ki bu bir <a href="https://en.wikipedia.org/wiki/Environment_variable">ortam değişkeni</a>.</p>
+aramaya başlıyoruz ve görüyoruz ki bu bir <a href="https://en.wikipedia.org/wiki/Environment_variable">ortam değişkeni</a>. Dolayısıyla fish içerisinde
+kapatıp açacağımız bir ayardan ziyade içerisine bir şeyler yazacağımız bir değişken diyebiliriz.
+Şimdilik bu kadarını bilmemiz yeterli.</p>
+<p>Sonuç olarak bu değişkenin içeriğini boş yaptığımızda istediğimize ulaşmış oluyoruz. Bunu da
+<code>config.fish</code> dosyasına aşağıdaki satırı ekleyerek yapıyoruz:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nb">set</span><span class="w"> </span>fish_greeting<span class="w"> </span><span class="s2">&quot;&quot;</span>
+</span></code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Çift tırnak</p>
+<p>Buraya çift tırnak koymak zorunda değiliz, direkt olarak <code>set fish_greeting</code> şeklinde
+kullanabiliyoruz ancak içerisini boş olarak doldurduğumuzu belirtmek için konuldu.</p>
+</div>
+<p>Dosyayı kaydedip, <code>exit</code> komutunu çalıştırıp, tekrar <code>fish</code> çalıştırdığımızda artık ilgili mesajı
+görmeyeceğiz.</p>
 
 
 
