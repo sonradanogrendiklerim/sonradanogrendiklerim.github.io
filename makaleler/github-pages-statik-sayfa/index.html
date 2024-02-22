@@ -6,15 +6,19 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Tailscale ile kendi VPN sunucunuzu kurun.">
+        <meta name="description" content="Sonradan öğrendiklerim sayfası statik olarak nasıl sunuluyor.">
       
       
         <meta name="author" content="Eren Türkay">
       
       
-        <link rel="canonical" href="https://sonradanogrendiklerim.com/makaleler/tailscale-vpn-kurulumu/">
+        <link rel="canonical" href="https://sonradanogrendiklerim.com/makaleler/github-pages-statik-sayfa/">
       
       
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../../blog/">
       
       
       <link rel="icon" href="../../assets/favicon.png">
@@ -22,7 +26,7 @@
     
     
       
-        <title>Tailscale VPN Kurulumu - Sonradan Öğrendiklerim</title>
+        <title>Github Pages ile Statik Sayfa Sunmak - Sonradan Öğrendiklerim</title>
       
     
     
@@ -69,11 +73,11 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="Tailscale VPN Kurulumu - Sonradan Öğrendiklerim" >
+        <meta  property="og:title"  content="Github Pages ile Statik Sayfa Sunmak - Sonradan Öğrendiklerim" >
       
-        <meta  property="og:description"  content="Tailscale ile kendi VPN sunucunuzu kurun." >
+        <meta  property="og:description"  content="Sonradan öğrendiklerim sayfası statik olarak nasıl sunuluyor." >
       
-        <meta  property="og:image"  content="https://sonradanogrendiklerim.com/assets/images/social/makaleler/tailscale-vpn-kurulumu.png" >
+        <meta  property="og:image"  content="https://sonradanogrendiklerim.com/assets/images/social/makaleler/github-pages-statik-sayfa.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -81,15 +85,15 @@
       
         <meta  property="og:image:height"  content="630" >
       
-        <meta  property="og:url"  content="https://sonradanogrendiklerim.com/makaleler/tailscale-vpn-kurulumu/" >
+        <meta  property="og:url"  content="https://sonradanogrendiklerim.com/makaleler/github-pages-statik-sayfa/" >
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="Tailscale VPN Kurulumu - Sonradan Öğrendiklerim" >
+        <meta  name="twitter:title"  content="Github Pages ile Statik Sayfa Sunmak - Sonradan Öğrendiklerim" >
       
-        <meta  name="twitter:description"  content="Tailscale ile kendi VPN sunucunuzu kurun." >
+        <meta  name="twitter:description"  content="Sonradan öğrendiklerim sayfası statik olarak nasıl sunuluyor." >
       
-        <meta  name="twitter:image"  content="https://sonradanogrendiklerim.com/assets/images/social/makaleler/tailscale-vpn-kurulumu.png" >
+        <meta  name="twitter:image"  content="https://sonradanogrendiklerim.com/assets/images/social/makaleler/github-pages-statik-sayfa.png" >
       
     
     
@@ -108,6 +112,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#domain" class="md-skip">
+          Ana içeriğe geç
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -139,7 +148,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Tailscale VPN Kurulumu
+              Github Pages ile Statik Sayfa Sunmak
             
           </span>
         </div>
@@ -259,10 +268,12 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../" class="md-tabs__link">
           
   
@@ -748,25 +759,30 @@
       
   
   
+    
   
   
+  
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -777,7 +793,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Makaleler
@@ -800,6 +816,117 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Github Pages ile Statik Sayfa Sunmak
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Github Pages ile Statik Sayfa Sunmak
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="İçindekiler">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      İçindekiler
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#domain" class="md-nav__link">
+    <span class="md-ellipsis">
+      Domain
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Github Pages
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#statik-sayfa-testi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Statik Sayfa Testi
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dns-yonlendirmesi" class="md-nav__link">
+    <span class="md-ellipsis">
+      DNS Yönlendirmesi
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cloudflare-ns-sunucular-opsiyonel" class="md-nav__link">
+    <span class="md-ellipsis">
+      CloudFlare NS Sunucuları (Opsiyonel)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mkdocs-material" class="md-nav__link">
+    <span class="md-ellipsis">
+      MkDocs Material
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -852,6 +979,68 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      İçindekiler
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#domain" class="md-nav__link">
+    <span class="md-ellipsis">
+      Domain
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Github Pages
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#statik-sayfa-testi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Statik Sayfa Testi
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dns-yonlendirmesi" class="md-nav__link">
+    <span class="md-ellipsis">
+      DNS Yönlendirmesi
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cloudflare-ns-sunucular-opsiyonel" class="md-nav__link">
+    <span class="md-ellipsis">
+      CloudFlare NS Sunucuları (Opsiyonel)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mkdocs-material" class="md-nav__link">
+    <span class="md-ellipsis">
+      MkDocs Material
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -865,9 +1054,77 @@
                   
 
 
-  <h1>Tailscale VPN Kurulumu</h1>
+  <h1>Github Pages ile Statik Sayfa Sunmak</h1>
 
+<!-- markdownlint-disable MD034 -->
 
+<p>Bir web sayfası yapmak için ihtiyacınız olan çok az şey var. Bunlardan bir tanesi domain, ve bu
+domaine gittiğimiz zaman içerik sunacak bir web sunucu. Bunun haricinde herhangi bir şeye
+ihtiyacınız yok. Bu sayfa için konuşuacak olursak domainimiz <code>sonradanogrendiklerim.com</code> ve web
+sunucumuz <a href="https://pages.github.com">Github Pages</a>. Bu belgede sayfayı statik olarak nasıl sunduğumuzu
+inceleyeceğiz.</p>
+<h2 id="domain">Domain<a class="headerlink" href="#domain" title="Permanent link">&para;</a></h2>
+<p>Kişisel bir tercih olarak domainleri <a href="https://www.namecheap.com" target="_blank">namecheap.com</a> üzerinden almayı tercih ediyorum. Yıllardır kullanmakla birlikte arayüzleri ve sundukları müşteri desteğinden memnunum. Bu açıdan öncelikle tercih ettiğiniz yerden bir domain edinin.</p>
+<h2 id="github-pages">Github Pages<a class="headerlink" href="#github-pages" title="Permanent link">&para;</a></h2>
+<p>Burada dikkat etmemiz gereken nokta tek bir hesabın ya da organizasyonun bir tane ana domaini
+olabiliyor. Dolayısıyla kişisel hesapta bir sayfa varsa, buna ek olarak sayfa açamıyoruz. Benim
+durumumda <code>eren.github.com</code> reposunda <code>erenturkay.com</code> tanımlı. Bu da tek bir statik sayfa anlamına
+geliyor. Bu yüzden kişisel hesabıma bağlı <a href="https://sonradanogrendiklerim.com">sonradanogrendiklerim</a> adlı ayrı bir
+organizasyon açmak durumunda kaldım.</p>
+<div class="admonition note">
+<p class="admonition-title">eren.github.com</p>
+<p>Github Pages ilk açıldığında repo isimleri <code>.github.com</code> bitmesi gerekiyordu. Bu sonrasında değişti ve artık <code>.github.io</code> ile bitmesi gerekiyor.</p>
+</div>
+<p>Domaini aldıktan sonra organizasyon ya da ana hesabınızla aynı olan bir repo açın ve sonu
+<code>.github.io</code> ile bitsin. Örnek olarak ana kullanıcı adım olan <code>eren</code> için
+<a href="https://github.com/eren/eren.github.com/" target="_blank">eren.github.com</a>, organizasyon olan <code>sonradanogrendiklerim</code> için
+<a href="http://github.com/sonradanogrendiklerim/sonradanogrendiklerim.github.io" target="_blank">sonradanogrendiklerim.github.io</a> gösterebiliriz.</p>
+<p>Devamında <code>CNAME</code> adlı bir dosya oluşturun ve içerisine domaininizi yazın. Sonradan öğrendiklerim
+için bu dosyanın içeriği <code>sonradanogrendiklerim.com</code>. Bunun Github içerisindeki ismi <code>Custom
+Domain</code>. <a href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site">Kendi belgeleri</a> daha uzun şekilde anlatmakta. Buraya da bakmayı tercih
+edebilirsiniz.</p>
+<h2 id="statik-sayfa-testi">Statik Sayfa Testi<a class="headerlink" href="#statik-sayfa-testi" title="Permanent link">&para;</a></h2>
+<p>Biraz sonra denemek için repo içerisine <code>index.html</code> koymak iyi bir fikir olabilir. Bu dosyayı
+oluşturun ve içerisini dilediğiniz şekilde doldurun. Ben burayı aşağıdaki kod parçacığı ile
+doldurmayı tercih ettim zira tarayıcı ile açtığımızda test sayfayı görebileyim.</p>
+<div class="language-html highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Github Pages Test Sayfası<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>TEST<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></code></pre></div>
+<h2 id="dns-yonlendirmesi">DNS Yönlendirmesi<a class="headerlink" href="#dns-yonlendirmesi" title="Permanent link">&para;</a></h2>
+<p>Domainimizi aldık, web sunucusu zaten hazırdı (github pages), gerekli ayarları yaptık ve artık
+yönlendirmeye hazırız. Burada domaini aldığınız yerden <code>A</code> kaydı olarak aşağıdakileri girdiğinizde
+statik sayfaları sunmaya başlayabileceksiniz. Bu kayıtlar Github Pages sunucuları ve yukarıda
+hesabımızla bağlantılı sayfaları sunuyorlar.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>185.199.108.153
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>185.199.109.153
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>185.199.110.153
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>185.199.111.153
+</span></code></pre></div>
+<p>Bu noktada dikkat edilmesi gereken şey bu kayıtların <code>APEX</code> olarak girilmesi, yani bu kayıtlar domainin köküne (root) kısmına girilmesi gerekmekte.</p>
+<div class="admonition danger">
+<p class="admonition-title">Yanlış kayıt</p>
+<p>www.sonradanogrendiklerim.com</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Doğru kayıt (APEX)</p>
+<p>sonradanogrendiklerim.com</p>
+</div>
+<p>TTL değerleri kendini bulduğunda statik sayfanız böylelikle hazır olmuş olacak. Tebrikler.</p>
+<h2 id="cloudflare-ns-sunucular-opsiyonel">CloudFlare NS Sunucuları (Opsiyonel)<a class="headerlink" href="#cloudflare-ns-sunucular-opsiyonel" title="Permanent link">&para;</a></h2>
+<p>Domain satın aldığınız servis DNS sunucu hizmeti de yüksek ihtimalle veriyor. Bu hizmeti
+kullanabilirsiniz ancak kişisel olarak <code>namecheap</code> sunucuları yerine <code>CloudFlare</code> kullanmayı tercih
+ediyorum. Belgenin bu bölümü sonralarda olsa da aslında domain alındıktan sonra yapılması
+gerekmekte.</p>
+<p>Satın alma işleminden sonra <code>CloudFlare</code> üzerinde bir proje oluşturun ve NS sunucu isimlerini alın. <code>sonradanogrendiklerim.com</code> projesi için CloudFlare aşağıdaki sunucuları kullanmamı istedi.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>alex.ns.cloudflare.com
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>iris.ns.cloudflare.com
+</span></code></pre></div>
+<p>Devamında domain aldığınız yerde APEX kaydı olarak size verilen sunucuları girin. Bunları yaptıktan
+sonra domain kayıtlarınızı artık satın aldığınız yerden değil, CloudFlare üzerinden yapacaksınız.</p>
+<h2 id="mkdocs-material">MkDocs Material<a class="headerlink" href="#mkdocs-material" title="Permanent link">&para;</a></h2>
+<p>Statik sayfamızı artık oluşturduk. Domaini yazdıktan sonra <code>index.html</code> içerisindeki yazıları gördükten sonra işimiz aslında bitiyor ama siteyi güncellememiz ve yeni yazılar eklememiz de gerekmekte. İşte bu noktada <a href="https://www.mkdocs.org">MkDocs</a> devreye giriyor.</p>
 
 
 
@@ -903,6 +1160,44 @@
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Altbilgi" >
+        
+          
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Önceki: Makale Listesi">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Önceki
+              </span>
+              <div class="md-ellipsis">
+                Makale Listesi
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../blog/" class="md-footer__link md-footer__link--next" aria-label="Sonraki: Düşünceler">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Sonraki
+              </span>
+              <div class="md-ellipsis">
+                Düşünceler
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">

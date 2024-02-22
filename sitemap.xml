@@ -21,17 +21,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://sonradanogrendiklerim.com/blog/2024/02/19/statik-sayfa-projeleri-ve-mkdocs/</loc>
-         <lastmod>2024-02-22</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://sonradanogrendiklerim.com/makaleler/</loc>
          <lastmod>2024-02-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://sonradanogrendiklerim.com/makaleler/tailscale-vpn-kurulumu/</loc>
+         <loc>https://sonradanogrendiklerim.com/makaleler/github-pages-statik-sayfa/</loc>
          <lastmod>2024-02-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -72,16 +67,6 @@
     </url>
     <url>
          <loc>https://sonradanogrendiklerim.com/ubuntu/terminali-guzellestirelim/</loc>
-         <lastmod>2024-02-22</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://sonradanogrendiklerim.com/blog/archive/2024/</loc>
-         <lastmod>2024-02-22</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://sonradanogrendiklerim.com/blog/category/yaz%C4%B1l%C4%B1m-geli%C5%9Ftirme/</loc>
          <lastmod>2024-02-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
