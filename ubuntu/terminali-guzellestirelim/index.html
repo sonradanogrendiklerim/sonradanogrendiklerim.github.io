@@ -615,9 +615,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#bash-konfigurasyonu" class="md-nav__link">
+  <a href="#bash-ayarlar" class="md-nav__link">
     <span class="md-ellipsis">
-      Bash Konfigürasyonu
+      Bash Ayarları
     </span>
   </a>
   
@@ -642,6 +642,15 @@
   <a href="#fish-yukleyelim" class="md-nav__link">
     <span class="md-ellipsis">
       Fish Yükleyelim
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fish-ayarlar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fish Ayarları
     </span>
   </a>
   
@@ -1031,9 +1040,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#bash-konfigurasyonu" class="md-nav__link">
+  <a href="#bash-ayarlar" class="md-nav__link">
     <span class="md-ellipsis">
-      Bash Konfigürasyonu
+      Bash Ayarları
     </span>
   </a>
   
@@ -1063,6 +1072,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#fish-ayarlar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fish Ayarları
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1086,8 +1104,8 @@
   <h1>Terminali Güzelleştirelim</h1>
 
 <h2 id="on-tanml-ayarlar">Ön Tanımlı Ayarlar<a class="headerlink" href="#on-tanml-ayarlar" title="Permanent link">&para;</a></h2>
-<p>Önceki bölümde gördüğümüz terminal sadece kendisine kadar konfigürasyon içeriyor. Dilerseniz bu
-şekilde de kullanabilirsiniz ancak ben bu şekilde kullanmayı tercih etmiyorum.</p>
+<p>Önceki bölümde gördüğümüz terminal sadece kendisine kadar ayar (konfigürasyon) içeriyor. Dilerseniz
+bu şekilde de kullanabilirsiniz ancak ben bu şekilde kullanmayı tercih etmiyorum.</p>
 <!-- markdownlint-disable MD033 -->
 <figure>
   <img alt="Gnome Terminal" src="https://linuxhint.com/wp-content/uploads/2019/11/1-45.png" />
@@ -1111,8 +1129,8 @@ bölümde görmüştük ve modern dünyada <a href="../terminal/#linux-terminal-
 açtığınızda bu <strong>program</strong>, bir başka deyişle bu <strong>uygulama</strong> çalışır. Programı özellikle
 belirtiyorum çünkü bu Firefox veya LibreOffice gibi bir program. Sadece metin tabanlı olarak
 çalışmakta.</p>
-<p>Her uygulama gibi bunun da bir konfigürasyon dosyası mevcut. Uygulama başlangıçta bu dosyayı okuyup
-çalışmasına devam ediyor. Bu konfiglürasyon dosyasını şimdilik göremiyorsunuz çünkü gizli :)</p>
+<p>Her uygulama gibi bunun da bir ayar dosyası mevcut. Uygulama başlangıçta bu dosyayı okuyup
+çalışmasına devam ediyor. Bu ayar dosyasını şimdilik göremiyorsunuz çünkü gizli :)</p>
 <h3 id="linux-ve-benzeri-sistemlerde-gizli-dosyalar">Linux ve Benzeri Sistemlerde Gizli Dosyalar<a class="headerlink" href="#linux-ve-benzeri-sistemlerde-gizli-dosyalar" title="Permanent link">&para;</a></h3>
 <p>Aslında değil tabii ki. Linux ve benzeri sistemlerde gizli dosyalar nokta karakteri ile başlar ve ön
 tanımlı olarak dosya yöneticilerinde gösterilmezler. Terminalinize aşağıdaki komutları yazın ve
@@ -1124,8 +1142,8 @@ aradaki farkı görün:</p>
 <p><code>ls</code> komutuna verdiğiniz <code>-a</code> parametresi bütün dosyaları görmek istediğinizi söyler.</p>
 <p>Bu komutunun hangi parametrelerini alacağını da <code>ls --help</code> komutu ile öğrenebilirsiniz. Bir göz
 atmanızda fayda var.</p>
-<h3 id="bash-konfigurasyonu">Bash Konfigürasyonu<a class="headerlink" href="#bash-konfigurasyonu" title="Permanent link">&para;</a></h3>
-<p>Bahsettiğimiz konfigürasyon dosyasının ismi <code>.bashrc</code>. Bunu herhangi bir editör ile açarak
+<h3 id="bash-ayarlar">Bash Ayarları<a class="headerlink" href="#bash-ayarlar" title="Permanent link">&para;</a></h3>
+<p>Bahsettiğimiz ayar dosyasının ismi <code>.bashrc</code>. Bunu herhangi bir editör ile açarak
 inceleyebilirsiniz. Bash yerine fish kullanacağımız için içerisinde yazanları anlamlandırmamıza
 gerek yok. Göz atmanız yeterli. Bu dosyanın içeriğini aşağıdaki komut ile görebilirsiniz:</p>
 <div class="language-sh highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>cat<span class="w"> </span>.bashrc
@@ -1140,7 +1158,7 @@ aşağıdaki şekilde görünecek:</p>
 <p><img alt="Fish terminal" src="../../assets/ubuntu/terminal/fish-final.png" width="500" /></p>
 <p>Artık tekrar etmeye gerek yok ancak yine de tekrar edelim. <a href="https://en.wikipedia.org/wiki/Fish_(Unix_shell)">Fish</a> de bash gibi bir arayüz ve
 bir uygulama. Sadece bazı noktalarda avantajları ve dezavantajları var. Ben bash yerine fish
-kullanmayı tercih ediyorum çünkü ön tanımlı ayarları ve konfigürasyonu bana daha uygun geliyor.</p>
+kullanmayı tercih ediyorum çünkü ön tanımlı ayarları bana daha uygun geliyor.</p>
 <p>Avantajlarından bahsederken dezavantajlarından bahsetmemek olmaz. Fish kullandığınızda bash için
 yazılmış komutlarda hatalarla karşılaşabilirsiniz. Tek bir komut ile yüklenen uygulamalar genellikle
 bash ile yazıldığı için bu noktada sorunla karşılaşacaksınız ancak bunu da fish değil bash ile
@@ -1164,6 +1182,9 @@ belirli dizinlere erişim sağlanamayacağından uygulama da yüklenemeyecektir.
 </div>
 <p>Yükledikten sonra direkt olarak terminalimize <code>fish</code> yazarak çalıştırmaya başlayabiliriz. Hiçbir
 ayar yapmadığımızda aşağıdaki gibi bir arayüz bizi karşılayacak:</p>
+<p><img alt="Fish ilk kurulum" src="../../assets/ubuntu/terminal/fish-ilk-kurulum.png" width="500" /></p>
+<h3 id="fish-ayarlar">Fish Ayarları<a class="headerlink" href="#fish-ayarlar" title="Permanent link">&para;</a></h3>
+<p>Bu uygulamada da ayar dosyaları mevcut.</p>
 
 
 
