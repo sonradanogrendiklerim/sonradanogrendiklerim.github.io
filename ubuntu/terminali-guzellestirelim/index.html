@@ -1170,8 +1170,9 @@ olanaklar ne ise onunla sınırlısınız. Dosya kopyalama, düzenleme, silme gi
 istenilen şekilde yapmak durumundasınız. Windows, OS X gibi kullanıcı arayüzlerini burada örnek
 gösterebiliriz.</p>
 <p>Arayüzler sadece grafik ile sınırlı değil. Metin tabanlı arayüzler de bunlardan bir tanesi ve biz
-metin tabanlı arayüzler ile ilgileniyoruz. Hatırlarsanız metin tabanlı <a href="../terminal/#terminal">arayüzleri</a> önceki
-bölümde görmüştük ve modern dünyada <a href="../terminal/#linux-terminal-emulatoru">emüle</a> ederek kullanıyorduk.</p>
+metin tabanlı arayüzler ile ilgileniyoruz. Hatırlarsanız metin tabanlı
+<a href="../terminal/#terminal" target="_blank">arayüzleri</a> önceki bölümde görmüştük ve modern dünyada
+<a href="../terminal/#linux-terminal-emulatoru" target="_blank">emüle</a> ederek kullanıyorduk.</p>
 <h2 id="bash">Bash<a class="headerlink" href="#bash" title="Permanent link">&para;</a></h2>
 <p>Ubuntu ile ön tanımlı olarak gelen metin tabanlı arayüz. Grafik arayüzünüz ile <code>gnome-terminal</code>
 açtığınızda bu <strong>program</strong>, bir başka deyişle bu <strong>uygulama</strong> çalışır. Programı özellikle
@@ -1204,16 +1205,17 @@ eklemeyeceğiz. Şu anda terminalimiz şu şekilde görünmekte:</p>
 <p>Bu belgenin sonunda terminalimiz bir <a href="https://en.wikipedia.org/wiki/Git" target="_blank">git</a> reposu dizinine girdiğinizde
 aşağıdaki şekilde görünecek:</p>
 <p><img alt="Fish terminal" src="../../assets/ubuntu/terminal/fish-final.png" width="500" /></p>
-<p>Artık tekrar etmeye gerek yok ancak yine de tekrar edelim. <a href="https://en.wikipedia.org/wiki/Fish_(Unix_shell)">Fish</a> de bash gibi bir arayüz ve
-bir uygulama. Sadece bazı noktalarda avantajları ve dezavantajları var. Ben bash yerine fish
-kullanmayı tercih ediyorum çünkü ön tanımlı ayarları bana daha uygun geliyor.</p>
+<p>Artık tekrar etmeye gerek yok ancak yine de tekrar edelim. <a href="https://en.wikipedia.org/wiki/Fish_(Unix_shell)" target="_blank">Fish</a> de bash
+gibi bir arayüz ve bir uygulama. Sadece bazı noktalarda avantajları ve dezavantajları var. Ben bash
+yerine fish kullanmayı tercih ediyorum çünkü ön tanımlı ayarları bana daha uygun geliyor.</p>
 <p>Avantajlarından bahsederken dezavantajlarından bahsetmemek olmaz. Fish kullandığınızda bash için
 yazılmış komutlarda hatalarla karşılaşabilirsiniz. Tek bir komut ile yüklenen uygulamalar genellikle
 bash ile yazıldığı için bu noktada sorunla karşılaşacaksınız ancak bunu da fish değil bash ile
 çalıştırılarak çözülebiliyor. Bu ileri bir konu, fish ve bash scriptlerinin farklarını bilmemize
 şimdilik ihtiyacımız yok.</p>
-<p>Bash ve Fish ile birlikte <a href="https://en.wikipedia.org/wiki/Z_shell">Zsh</a> de en çok tercih edilen uygulamalar arasında. Tercihinizi bu
-yönde de yapabilirsiniz ancak kişisel olarak Fish kullandığım için belgede bundan bahsediyoruz.</p>
+<p>Bash ve Fish ile birlikte <a href="https://en.wikipedia.org/wiki/Z_shell" target="_blank">Zsh</a> de en çok tercih edilen uygulamalar arasında.
+Tercihinizi bu yönde de yapabilirsiniz ancak kişisel olarak Fish kullandığım için belgede bundan
+bahsediyoruz.</p>
 <h3 id="fish-yukleyelim">Fish Yükleyelim<a class="headerlink" href="#fish-yukleyelim" title="Permanent link">&para;</a></h3>
 <p>Terminalde aşağıdaki komutu çalıştırın:</p>
 <div class="language-sh highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>fish
@@ -1265,10 +1267,10 @@ listelediğimizde, yani <code>ls</code> komutunu kullandığımızda, aşağıda
 hoşlanmadığım bir durum. Zaten kullanıyoruz ve tekrar bu mesajı görmemizin pek bir anlamı yok. Neyse
 ki bunu bir ayar ile kapatabiliyoruz. Yapmamız gereken <code>config.fish</code> dosyasına istenilen şekilde bir
 satır eklemek.</p>
-<p>Bu aşamada genellikle <a href="https://en.wikipedia.org/wiki/GNU_nano">nano</a> veya <a href="https://en.wikipedia.org/wiki/Vim_(text_editor)">vim</a> gibi terminal tabanlı metin editörlerine
-değinilse de ben bunun ileri aşama olduğunu düşünüyorum. Terminale henüz elimiz alışıyor ve
-gerektiği yerde grafik arayüzünün kullanılması öğrenimimizi kolaylaştırıyor. Bu açıdan aşağıdaki
-komutu girerek terminalde içinde bulunduğumuz dizine grafik arayüzünden erişelim:</p>
+<p>Bu aşamada genellikle <a href="https://en.wikipedia.org/wiki/GNU_nano" target="_blank">nano</a> veya <a href="https://en.wikipedia.org/wiki/Vim_(text_editor)" target="_blank">vim</a> gibi terminal
+tabanlı metin editörlerine değinilse de ben bunun ileri aşama olduğunu düşünüyorum. Terminale henüz
+elimiz alışıyor ve gerektiği yerde grafik arayüzünün kullanılması öğrenimimizi kolaylaştırıyor. Bu
+açıdan aşağıdaki komutu girerek terminalde içinde bulunduğumuz dizine grafik arayüzünden erişelim:</p>
 <div class="language-sh highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>xdg-open<span class="w"> </span>.
 </span></code></pre></div>
 <p>Bu komut dosya yöneticisini <code>.config/fish</code> dizininde açacaktır ve <code>ls</code> ile gördüğümüz dosyaları aynı
@@ -1280,12 +1282,12 @@ aşağıdaki satırları göreceksiniz:</p>
 </span></code></pre></div>
 <p>Buradaki <code>is-interactive</code> kontrolüne henüz ihtiyacımız yok. Bu açıdan bu satırları silip kaydedin ve
 elimizde boş bir <code>config.fish</code> dosyası olsun. Sonrasında hoş geldin mesajını kapatmak için fish
-<a href="https://fishshell.com/docs/current/tutorial.html">belgelerine</a> bakmamız gerekecek ve bu da Bilgisayar Mühendisliğinde zamanımızın büyük
-bir çoğunluğunu oluşturuyor :)</p>
+<a href="https://fishshell.com/docs/current/tutorial.html" target="_blank">belgelerine</a> bakmamız gerekecek ve bu da Bilgisayar Mühendisliğinde
+zamanımızın büyük bir çoğunluğunu oluşturuyor :)</p>
 <p>Bu ayarı bulması biraz zor. Bu yüzden Google'a <code>fish disable greeting</code> yazarak nasıl yapıldığını
-aramaya başlıyoruz ve görüyoruz ki bu bir <a href="https://en.wikipedia.org/wiki/Environment_variable">ortam değişkeni</a>. Dolayısıyla fish içerisinde
-kapatıp açacağımız bir ayardan ziyade içerisine bir şeyler yazacağımız bir değişken diyebiliriz.
-Şimdilik bu kadarını bilmemiz yeterli.</p>
+aramaya başlıyoruz ve görüyoruz ki bu bir <a href="https://en.wikipedia.org/wiki/Environment_variable" target="_blank">ortam değişkeni</a>. Dolayısıyla
+fish içerisinde kapatıp açacağımız bir ayardan ziyade içerisine bir şeyler yazacağımız bir değişken
+diyebiliriz. Şimdilik bu kadarını bilmemiz yeterli.</p>
 <p>Sonuç olarak bu değişkenin içeriğini boş yaptığımızda istediğimize ulaşmış oluyoruz. Bunu da
 <code>config.fish</code> dosyasına aşağıdaki satırı ekleyerek yapıyoruz:</p>
 <div class="language-sh highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nb">set</span><span class="w"> </span>fish_greeting<span class="w"> </span><span class="s2">&quot;&quot;</span>
