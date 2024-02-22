@@ -1250,8 +1250,8 @@ yöneltebiliriz. Fish ayarları yaparken kullanacağımız dizin her daim <code>
 <p>Bu karakter linux ve benzeri sistemlerde <a href="https://en.wikipedia.org/wiki/Home_directory" target="_blank">ev dizinini</a> ifade eder.
 Bash ve Fish'i tanımlarken metin tabanlı arayüz ile shell demiştik. Bunların görevlerinden bir
 tanesi de bu gibi özel karakterleri doğru şekilde yorumlamak. Kullanıcı adınıza bağlı olarak ~
-karakteri farklı dizinleri gösterecektir. Benim sistemimde bu <code>/home/eren</code> olarak görünmekte.</p>
-<p>Dolayısıyla yukarıdaki komutu ~ ile başlattığımızda öncelikle ev dizinimizi, sonrasında fish
+karakteri farklı dizinleri gösterecektir. Benim sistemimde bu <code>/home/eren</code> olarak görünmekte.
+Dolayısıyla yukarıdaki komutu ~ ile başlattığımızda öncelikle ev dizinimizi, sonrasında fish
 ayar dizinini ifade etmekteyiz. Bunu <code>echo</code> komutu ile rahatlıkla test edebiliriz:</p>
 <div class="language-sh highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nb">echo</span><span class="w"> </span>~/.config/fish
 </span></code></pre></div>
@@ -1262,8 +1262,28 @@ listelediğimizde, yani <code>ls</code> komutunu kullandığımızda, aşağıda
 <p>Bu dosyaları ve dizinleri biz oluşturmadık. Fish yüklendiği ve ilk açıldığı sırada oluşturuldular. Yapmamız gereken Fish'in istediği şekilde yeni bir ayar eklemek.</p>
 <h4 id="yeni-ayar-hos-geldiniz-mesaj">Yeni Ayar: Hoş Geldiniz Mesajı<a class="headerlink" href="#yeni-ayar-hos-geldiniz-mesaj" title="Permanent link">&para;</a></h4>
 <p>Fish ilk açıldığında her daim hoş geldiniz mesajını terminalimize göndermekte. Bu benim pek
-hoşlanmadığım bir durum. Zaten kullanıyoruz ve tekrar tekrar bu mesajı görmemizin pek bir anlamı
-yok. Neyse ki bunu bir ayar ile kapatabiliyoruz.</p>
+hoşlanmadığım bir durum. Zaten kullanıyoruz ve tekrar bu mesajı görmemizin pek bir anlamı yok. Neyse
+ki bunu bir ayar ile kapatabiliyoruz. Yapmamız gereken <code>config.fish</code> dosyasına istenilen şekilde bir
+satır eklemek.</p>
+<p>Bu aşamada genellikle <a href="https://en.wikipedia.org/wiki/GNU_nano">nano</a> veya <a href="https://en.wikipedia.org/wiki/Vim_(text_editor)">vim</a> gibi terminal tabanlı metin editörlerine
+değinilse de ben bunun ileri aşama olduğunu düşünüyorum. Terminale henüz elimiz alışıyor ve
+gerektiği yerde grafik arayüzünün kullanılması öğrenimimizi kolaylaştırıyor. Bu açıdan aşağıdaki
+komutu girerek terminalde içinde bulunduğumuz dizine grafik arayüzünden erişelim:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>xdg-open<span class="w"> </span>.
+</span></code></pre></div>
+<p>Bu komut dosya yöneticisini <code>.config/fish</code> dizininde açacaktır ve <code>ls</code> ile gördüğümüz dosyaları aynı
+şekilde gösterecektir. Dosyaya çift tıklayarak düzenlemeye başlayabilirsiniz. Ön tanımlı olarak
+aşağıdaki satırları göreceksiniz:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">if</span><span class="w"> </span>status<span class="w"> </span>is-interactive
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">    </span><span class="c1"># Commands to run in interactive sessions can go here</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>end
+</span></code></pre></div>
+<p>Buradaki <code>is-interactive</code> kontrolüne henüz ihtiyacımız yok. Bu açıdan bu satırları silip kaydedin ve
+elimizde boş bir <code>config.fish</code> dosyası olsun. Sonrasında hoş geldin mesajını kapatmak için fish
+<a href="https://fishshell.com/docs/current/tutorial.html">belgelerine</a> bakmamız gerekecek ve bu da Bilgisayar Mühendisliğinde zamanımızın büyük
+bir çoğunluğunu oluşturuyor :)</p>
+<p>Bu ayarı bulması biraz zor. Bu yüzden Google'a <code>fish disable greeting</code> yazarak nasıl yapıldığını
+aramaya başlıyoruz ve görüyoruz ki bu bir <a href="https://en.wikipedia.org/wiki/Environment_variable">ortam değişkeni</a>.</p>
 
 
 
