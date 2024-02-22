@@ -654,6 +654,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Fish Ayarları">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#yeni-ayar-ekleme" class="md-nav__link">
+    <span class="md-ellipsis">
+      Yeni Ayar Ekleme
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -1079,6 +1094,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Fish Ayarları">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#yeni-ayar-ekleme" class="md-nav__link">
+    <span class="md-ellipsis">
+      Yeni Ayar Ekleme
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -1184,7 +1214,30 @@ belirli dizinlere erişim sağlanamayacağından uygulama da yüklenemeyecektir.
 ayar yapmadığımızda aşağıdaki gibi bir arayüz bizi karşılayacak:</p>
 <p><img alt="Fish ilk kurulum" src="../../assets/ubuntu/terminal/fish-ilk-kurulum.png" width="500" /></p>
 <h3 id="fish-ayarlar">Fish Ayarları<a class="headerlink" href="#fish-ayarlar" title="Permanent link">&para;</a></h3>
-<p>Bu uygulamada da ayar dosyaları mevcut.</p>
+<p>Bu uygulamada da ayar dosyaları mevcut. İlgili dizinler ve dosyalar nokta karakteri ile başlıyor,
+yani gizli görünmesi isteniyor.
+Fish için ayarlar <a href="https://fishshell.com/docs/current/tutorial.html#startup-where-s-bashrc" target="_blank">.config/fish/fish.config</a> dosyasında yer alıyor.</p>
+<p>Dikkat ederseniz fish ayrı bir dizin içerisine ayar dosyalarını koymuş durumda. Bu her shell için
+değişecektir. Bash için tek bir ayar dosyası <em>(.bashrc)</em> varken, fish için durumun farklı olduğunu
+görüyoruz. Yukarıda bahsettiğim tercih sebeplerinden bir tanesinin bu olduğunu da hatırlatmak
+isterim.</p>
+<p>Artık ayar dosyasının hangi dizinde olduğunu öğrendiğimize göre, dikkatimizi sadece o dizine
+yöneltebiliriz. Fish ayarları yaparken kullanacağımız dizin her daim <code>.config/fish</code> olacak.</p>
+<h4 id="yeni-ayar-ekleme">Yeni Ayar Ekleme<a class="headerlink" href="#yeni-ayar-ekleme" title="Permanent link">&para;</a></h4>
+<p>Fish ayar dizini içerisine girerek dikkatimizi yönlendirmeye başlayalım. Terminalde aşağıdaki komutu yazarak bu dizin içerisine girebilirsiniz:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nb">cd</span><span class="w"> </span>~/.config/fish
+</span></code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">~ karakteri</p>
+<p>Bu karakter linux ve benzeri sistemlerde <a href="https://en.wikipedia.org/wiki/Home_directory" target="_blank">ev dizinini</a> ifade eder.
+Bash ve Fish'i tanımlarken metin tabanlı arayüz ile shell demiştik. Bunların görevlerinden bir
+tanesi de bu gibi özel karakterleri doğru şekilde yorumlamak. Kullanıcı adınıza bağlı olarak ~
+karakteri farklı dizinleri gösterecektir. Benim sistemimde bu <code>/home/eren</code> olarak görünmekte.</p>
+<p>Dolayısıyla yukarıdaki komutu ~ ile başlattığımızda öncelikle ev dizinimizi, sonrasında fish
+ayar dizinini ifade etmekteyiz. Bunu <code>echo</code> komutu ile rahatlıkla test edebiliriz:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nb">echo</span><span class="w"> </span>~/.config/fish
+</span></code></pre></div>
+</div>
 
 
 
