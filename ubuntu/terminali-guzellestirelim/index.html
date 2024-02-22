@@ -658,9 +658,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#yeni-ayar-eklemeye-giris" class="md-nav__link">
+  <a href="#ayar-eklemeye-giris" class="md-nav__link">
     <span class="md-ellipsis">
-      Yeni Ayar Eklemeye Giriş
+      Ayar Eklemeye Giriş
     </span>
   </a>
   
@@ -680,8 +680,50 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#starship" class="md-nav__link">
+    <span class="md-ellipsis">
+      Starship
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Starship">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#starship-yukleyelim" class="md-nav__link">
+    <span class="md-ellipsis">
+      Starship Yükleyelim
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#her-daim-calstralm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Her Daim Çalıştıralım
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tebrikler" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tebrikler
+    </span>
+  </a>
   
 </li>
       
@@ -1107,9 +1149,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#yeni-ayar-eklemeye-giris" class="md-nav__link">
+  <a href="#ayar-eklemeye-giris" class="md-nav__link">
     <span class="md-ellipsis">
-      Yeni Ayar Eklemeye Giriş
+      Ayar Eklemeye Giriş
     </span>
   </a>
   
@@ -1129,8 +1171,50 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#starship" class="md-nav__link">
+    <span class="md-ellipsis">
+      Starship
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Starship">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#starship-yukleyelim" class="md-nav__link">
+    <span class="md-ellipsis">
+      Starship Yükleyelim
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#her-daim-calstralm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Her Daim Çalıştıralım
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tebrikler" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tebrikler
+    </span>
+  </a>
   
 </li>
       
@@ -1243,7 +1327,7 @@ görüyoruz. Yukarıda bahsettiğim tercih sebeplerinden bir tanesinin bu olduğ
 isterim.</p>
 <p>Artık ayar dosyasının hangi dizinde olduğunu öğrendiğimize göre, dikkatimizi sadece o dizine
 yöneltebiliriz. Fish ayarları yaparken kullanacağımız dizin her daim <code>.config/fish</code> olacak.</p>
-<h4 id="yeni-ayar-eklemeye-giris">Yeni Ayar Eklemeye Giriş<a class="headerlink" href="#yeni-ayar-eklemeye-giris" title="Permanent link">&para;</a></h4>
+<h4 id="ayar-eklemeye-giris">Ayar Eklemeye Giriş<a class="headerlink" href="#ayar-eklemeye-giris" title="Permanent link">&para;</a></h4>
 <p>Fish ayar dizini içerisine girerek dikkatimizi yönlendirmeye başlayalım. Terminalde aşağıdaki komutu yazarak bu dizin içerisine girebilirsiniz:</p>
 <div class="language-sh highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nb">cd</span><span class="w"> </span>~/.config/fish
 </span></code></pre></div>
@@ -1299,6 +1383,46 @@ kullanabiliyoruz ancak içerisini boş olarak doldurduğumuzu belirtmek için ko
 </div>
 <p>Dosyayı kaydedip, <code>exit</code> komutunu çalıştırıp, tekrar <code>fish</code> çalıştırdığımızda artık ilgili mesajı
 görmeyeceğiz.</p>
+<h3 id="starship">Starship<a class="headerlink" href="#starship" title="Permanent link">&para;</a></h3>
+<p>Fish bu haliyle bile güzel görünürken yazının başında gördüğümüz gibi <code>git</code> dizininde daha güzel
+görünebilir. Bunu <a href="https://starship.rs" target="_blank">starship</a> adlı bir proje bize sunuyor. Bu tarz
+projelere genel olarak <code>prompt</code> denmekte.</p>
+<h4 id="starship-yukleyelim">Starship Yükleyelim<a class="headerlink" href="#starship-yukleyelim" title="Permanent link">&para;</a></h4>
+<p>Aşağıdaki komut ile projeyi yükleyin:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>curl<span class="w"> </span>-sS<span class="w"> </span>https://starship.rs/install.sh<span class="w"> </span><span class="p">|</span><span class="w"> </span>sh
+</span></code></pre></div>
+<p>Proje yüklendikten fish de dahil olmak üzere çeşitli shell uygulamaları için nasıl ayarlanacağına
+dair mesaj gösterecektir. Bu mesajda fish için aşağıdaki bulunur. Bu komutu girdiğinizde <code>starship</code>
+projesini çalıştırmış olacaksınız.</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>starship<span class="w"> </span>init<span class="w"> </span>fish<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nb">source</span>
+</span></code></pre></div>
+<p>Bu komut projeyi sadece 1 defa çalıştıracaktır. Tekrar fish çalıştırdığımızda bu komutu girmemiz
+gerekecek.</p>
+<h4 id="her-daim-calstralm">Her Daim Çalıştıralım<a class="headerlink" href="#her-daim-calstralm" title="Permanent link">&para;</a></h4>
+<p>Bunu yapabilmek için <code>config.fish</code> dosyasına yukarıdaki komutu eklememiz yeterli ancak biz <code>.bashrc</code>
+gibi tek bir dosya yerine fish'in sunduğu birden fazla dosya ile nasıl ayarlayacağımızı
+inceleyeceğiz.</p>
+<p>Fish ayar dizininde <code>conf.d</code> isimli dizin bize bunu sağlıyor. Buraya koyduğumuz her <strong>ayrı</strong> dosya birer ayar olarak okunuyor ve böylelikle bütün ayarları tek bir dosyaya koymaktan kurtuluyoruz.</p>
+<p>Yapmamız gereken tek şey <code>conf.d</code> dizini içerisinde <code>starship.fish</code> adlı bir dosya oluşturmak ve içerisine starship ayarını yazmak:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>starship<span class="w"> </span>init<span class="w"> </span>fish<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nb">source</span>
+</span></code></pre></div>
+<p>Böylelikle tekrar <code>fish</code> çalıştırdığınızda bu dosya okunacak ve <code>starship</code> çalıştırmış olacaksınız.</p>
+<div class="admonition note">
+<p class="admonition-title">conf.d/ üzerine</p>
+<p>Linux ve benzeri sistemlerde <code>conf.d</code> dizini aynı fish ile yaptığımız gibi başka uygulamalarda
+da kullanılabiliyor. Genellikle sunucularda bu dizini görür ve kullanmaya gayret ederiz zira
+hangi ayarı nerede ve nasıl yaptığımız önemli olduğu için, ayarları bu şekilde ayırıyor olmak
+bize yönetimsel anlamda avantaj sağlamakta. Fish de bir shell olarak bundan farksız değil.</p>
+</div>
+<h2 id="tebrikler">Tebrikler<a class="headerlink" href="#tebrikler" title="Permanent link">&para;</a></h2>
+<p>Buraya kadar okuyup uygulamanız sizi birkaç adım öne taşıdı. Artık daha güzel bir terminal görüp,
+kullanırken daha rahat edeceksiniz. Tekrar belirtmekte fayda var, zamanımızın çoğunu terminalde
+geçiriyoruz ve terminalimize özen göstermemiz her daim bize yarar sağlıyor.</p>
+<p>Sonuç olarak artık terminalimiz <code>sonradan öğrendiklerim</code> projesine girildiğinde bu şekilde
+görünüyor:</p>
+<p><img alt="Fish terminal" src="../../assets/ubuntu/terminal/fish-final.png" width="500" /></p>
+<p>Aradaki farkı rahatlıkla görebiliyoruz:</p>
+<p><img alt="Bash terminal" src="../../assets/ubuntu/terminal/merhaba-dunya-giris.png" width="500" /></p>
 
 
 
