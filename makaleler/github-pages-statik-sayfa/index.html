@@ -1038,10 +1038,17 @@ organizasyon açmak durumunda kaldım.</p>
 <code>.github.io</code> ile bitsin. Örnek olarak ana kullanıcı adım olan <code>eren</code> için
 <a href="https://github.com/eren/eren.github.io/" target="_blank">eren.github.io</a>, organizasyon olan <code>sonradanogrendiklerim</code> için
 <a href="http://github.com/sonradanogrendiklerim/sonradanogrendiklerim.github.io" target="_blank">sonradanogrendiklerim.github.io</a> gösterebiliriz.</p>
-<p>Devamında <code>CNAME</code> adlı bir dosya oluşturun ve içerisine domaininizi yazın. Sonradan öğrendiklerim
-için bu dosyanın içeriği <code>sonradanogrendiklerim.com</code>. Bunun Github içerisindeki ismi <code>Custom
-Domain</code>. <a href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site">Kendi belgeleri</a> daha uzun şekilde anlatmakta. Buraya da bakmayı tercih
-edebilirsiniz.</p>
+<p>Devamında <code>docs/</code> dizini altında <code>CNAME</code> adlı bir dosya oluşturun ve içerisine domaininizi yazın.
+Sonradan öğrendiklerim için bu dosyanın içeriği <code>sonradanogrendiklerim.com</code>. Bunun Github
+içerisindeki ismi <code>Custom Domain</code>. <a href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site">Kendi belgeleri</a> daha uzun şekilde anlatmakta.
+Buraya da bakmayı tercih edebilirsiniz.</p>
+<div class="admonition note">
+<p class="admonition-title">CNAME dosyası</p>
+<p>Bu dosyanın normalde reponun root dizininde olması gerekmekte. Burada <code>docs/</code> dizini altına
+koymamızın nedeni siteyi <code>mkdocs</code> ile üretiyor olmamız. Eğer <code>mkdocs</code> dosyalarının bulunduğu
+<code>src</code> branchi altında <code>CNAME</code> dosyasını koyarsak bu dosya site üretildiğinde ana branch'e
+gönderilemeyecek, dolayısıyla sayfamız çalışmayacaktır.</p>
+</div>
 <h2 id="statik-sayfa-testi">Statik Sayfa Testi<a class="headerlink" href="#statik-sayfa-testi" title="Permanent link">&para;</a></h2>
 <p>Biraz sonra denemek için repo içerisine <code>index.html</code> koymak iyi bir fikir olabilir. Bu dosyayı
 oluşturun ve içerisini dilediğiniz şekilde doldurun. Ben burayı aşağıdaki kod parçacığı ile
