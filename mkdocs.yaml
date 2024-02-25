@@ -1,0 +1,95 @@
+site_name: Sonradan Öğrendiklerim
+site_author: Eren Türkay
+site_url: https://sonradanogrendiklerim.com
+
+#repo_name: sonradanogrendiklerim
+#repo_url: https://github.com/sonradanogrendiklerim/sonradanogrendiklerim.github.io/tree/src
+
+copyright: Copyright &copy; 2024 Eren Türkay
+
+nav:
+  - Anasayfa: index.md
+  - Bilgisayar Mühendisliğine Giriş:
+      - Ön Söz: bilgisayar-muhendisligine-giris/onsoz.md
+      - Başlarken: bilgisayar-muhendisligine-giris/baslarken.md
+
+      - Nasıl Soru Sorulur?:
+          - Giriş: nasil-soru-sorulur/index.md
+          - Sormadan Önce: nasil-soru-sorulur/sormadan-once.md
+          - Soru Sorduğunuzda: nasil-soru-sorulur/soru-sordugunuzda.md
+
+      - Ubuntu:
+          - Ubuntu Kurulumu: ubuntu/kurulum.md
+          - Terminal: ubuntu/terminal.md
+          - Terminali Güzelleştirelim: ubuntu/terminali-guzellestirelim.md
+
+  - Makaleler:
+      - Makale Listesi: makaleler/index.md
+      - Github Pages ile Statik Sayfa Sunmak: makaleler/github-pages-statik-sayfa.md
+
+  - Blog: blog/index.md
+  - Resume: https://erenturkay.com/assets/resume/Eren_Turkay_Resume.pdf
+
+theme:
+  name: material
+  language: tr
+
+  favicon: assets/favicon.png
+  font:
+    text: Roboto
+    code: Roboto Mono
+  palette:
+    primary: white
+    accent: orange
+
+  features:
+    - navigation.top
+    - navigation.sections
+    - navigation.path
+    - navigation.tabs
+    - navigation.footer
+    - toc.follow
+    - content.code.copy
+
+  # Yorum eklentisini eklemek için gerekli
+  custom_dir: overrides
+
+markdown_extensions:
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - admonition
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+
+plugins:
+  - social
+  - search
+  - blog
+  - rss:
+      match_path: blog/posts/.*
+      date_from_meta:
+        as_creation: date
+      categories:
+        - categories
+        - tags
+
+extra:
+  analytics:
+    provider: google
+    property: G-E9CRJC3RBF
+
+extra_css:
+  - css/extra.css
