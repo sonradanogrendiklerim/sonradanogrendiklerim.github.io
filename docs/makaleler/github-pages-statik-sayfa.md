@@ -41,6 +41,12 @@ Buraya da bakmayı tercih edebilirsiniz.
     `src` branchi altında `CNAME` dosyasını koyarsak bu dosya site üretildiğinde ana branch'e
     gönderilemeyecek, dolayısıyla sayfamız çalışmayacaktır.
 
+!!! tip "Git ve Github üzerine"
+    Daha önceden deneyimi olmayanlar git ve github kullanımı için başka makalelere göz atmaları
+    gerekebilir. Terminolojik olarak konuşursak bu dosyaların sonuç itibariyle repo içerisinde push
+    edilmiş halde bulunması gerekiyor.
+    Mosh Hamedani'nin [git başlangıç videosu][mosh-video] ve [Oh My Git!][oh-my-git] interaktif oyununu bu noktada iyi bir başlangıç olabilir.
+
 ## Statik Sayfa Testi
 
 Biraz sonra denemek için repo içerisine `index.html` koymak iyi bir fikir olabilir. Bu dosyayı
@@ -166,6 +172,8 @@ git push origin gh-pages:main -f
 [sonradan-io]:  http://github.com/sonradanogrendiklerim/sonradanogrendiklerim.github.io
 [eren-github]:  https://github.com/eren/eren.github.io/
 [mkdocs]:       https://www.mkdocs.org
+[mosh-video]:   https://www.youtube.com/watch?v=8JJ101D3knE
+[oh-my-git]:    https://ohmygit.org
 [material]:     https://squidfunk.github.io/mkdocs-material/
 [sonradan-config]: https://github.com/sonradanogrendiklerim/sonradanogrendiklerim.github.io/blob/src/mkdocs.yaml
 [material-start]: https://squidfunk.github.io/mkdocs-material/getting-started/
