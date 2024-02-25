@@ -41,12 +41,6 @@ Buraya da bakmayı tercih edebilirsiniz.
     `src` branchi altında `CNAME` dosyasını koyarsak bu dosya site üretildiğinde ana branch'e
     gönderilemeyecek, dolayısıyla sayfamız çalışmayacaktır.
 
-!!! tip "Git ve Github üzerine"
-    Daha önceden deneyimi olmayanlar git ve github kullanımı için başka makalelere göz atmaları
-    gerekebilir. Terminolojik olarak konuşursak bu dosyaların sonuç itibariyle repo içerisinde push
-    edilmiş halde bulunması gerekiyor.
-    Mosh Hamedani'nin [git başlangıç videosu][mosh-video] ve [Oh My Git!][oh-my-git] interaktif oyununu bu noktada iyi bir başlangıç olabilir.
-
 ## Statik Sayfa Testi
 
 Biraz sonra denemek için repo içerisine `index.html` koymak iyi bir fikir olabilir. Bu dosyayı
@@ -59,6 +53,12 @@ doldurmayı tercih ettim zira tarayıcı ile açtığımızda test sayfayı gör
     <body><h1>TEST</h1></body>
 </html>
 ```
+
+!!! tip "Git ve Github üzerine"
+    Daha önceden deneyimi olmayanlar git ve github kullanımı için başka makalelere göz atmaları
+    gerekebilir. Terminolojik olarak konuşursak bu dosyaların sonuç itibariyle repo içerisinde push
+    edilmiş halde bulunması gerekiyor.
+    Mosh Hamedani'nin [git başlangıç videosu][mosh-video] ve [Oh My Git!][oh-my-git] interaktif oyununu bu noktada iyi bir başlangıç olabilir.
 
 ## DNS Yönlendirmesi
 
