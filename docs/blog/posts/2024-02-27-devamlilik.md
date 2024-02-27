@@ -15,4 +15,4 @@ pencereyi kapatmak istemediğimi sadece kendime hatırlatmak istedim.
 Web sayfaları yenilendiğinde ve temizlik yapıldığında ilk 1 hafta blog girilip sonrasında
 bırakılabiliyor. En azından ben bu şekilde bir örüntü gördüm diyebiliriz. Sonrasında sayfa
 güncellenmesi unutuluyor, yaşayan bir şey olduğu hatırlanmıyor ve o şekilde kalıyor. Ben kendi
-bloğumda bu şekilde olmasını istemiyorum ve bunun olmamasını diliyorum.
+blogumda bu şekilde olmasını istemiyorum ve bunun olmamasını diliyorum.
