@@ -1,7 +1,6 @@
 ---
 title: Tailscale ile VPN Sunucusu Kurulumu
 description: Tailscale ile kendi VPN sunucunuzu nasıl kurarsınız.
-draft: true
 ---
 
 [VPN][vpn]'in ne demek olduğunu artık hepimiz çok iyi biliyoruz, bu yüzden açıklamayı es geçip
