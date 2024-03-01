@@ -25,6 +25,7 @@ nav:
 
   - Makaleler:
       - Makale Listesi: makaleler/index.md
+      - Tailscale ile VPN Sunucusu Kurulumu: makaleler/tailscale-vpn-kurulumu.md
       - Github Pages ile Statik Sayfa Sunmak: makaleler/github-pages-statik-sayfa.md
 
   - Blog: blog/index.md
