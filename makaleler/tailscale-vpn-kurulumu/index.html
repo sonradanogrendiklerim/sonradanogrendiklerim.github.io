@@ -6,19 +6,19 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="İnternet üzerinde soru sorarken uygulamanızın iyi olacağı noktalar.">
+        <meta name="description" content="Tailscale ile kendi VPN sunucunuzu nasıl kurarsınız.">
       
       
         <meta name="author" content="Eren Türkay">
       
       
-        <link rel="canonical" href="https://sonradanogrendiklerim.com/nasil-soru-sorulur/soru-sordugunuzda/">
+        <link rel="canonical" href="https://sonradanogrendiklerim.com/makaleler/tailscale-vpn-kurulumu/">
       
       
-        <link rel="prev" href="../sormadan-once/">
+        <link rel="prev" href="../">
       
       
-        <link rel="next" href="../../ubuntu/kurulum/">
+        <link rel="next" href="../github-pages-statik-sayfa/">
       
       
         <link rel="alternate" type="application/rss+xml" title="RSS beslemesi" href="../../feed_rss_created.xml">
@@ -29,7 +29,7 @@
     
     
       
-        <title>İnternet Üzerinde Soru Sorarken - Sonradan Öğrendiklerim</title>
+        <title>Tailscale ile VPN Sunucusu Kurulumu - Sonradan Öğrendiklerim</title>
       
     
     
@@ -76,11 +76,11 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="İnternet Üzerinde Soru Sorarken - Sonradan Öğrendiklerim" >
+        <meta  property="og:title"  content="Tailscale ile VPN Sunucusu Kurulumu - Sonradan Öğrendiklerim" >
       
-        <meta  property="og:description"  content="İnternet üzerinde soru sorarken uygulamanızın iyi olacağı noktalar." >
+        <meta  property="og:description"  content="Tailscale ile kendi VPN sunucunuzu nasıl kurarsınız." >
       
-        <meta  property="og:image"  content="https://sonradanogrendiklerim.com/assets/images/social/nasil-soru-sorulur/soru-sordugunuzda.png" >
+        <meta  property="og:image"  content="https://sonradanogrendiklerim.com/assets/images/social/makaleler/tailscale-vpn-kurulumu.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -88,15 +88,15 @@
       
         <meta  property="og:image:height"  content="630" >
       
-        <meta  property="og:url"  content="https://sonradanogrendiklerim.com/nasil-soru-sorulur/soru-sordugunuzda/" >
+        <meta  property="og:url"  content="https://sonradanogrendiklerim.com/makaleler/tailscale-vpn-kurulumu/" >
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="İnternet Üzerinde Soru Sorarken - Sonradan Öğrendiklerim" >
+        <meta  name="twitter:title"  content="Tailscale ile VPN Sunucusu Kurulumu - Sonradan Öğrendiklerim" >
       
-        <meta  name="twitter:description"  content="İnternet üzerinde soru sorarken uygulamanızın iyi olacağı noktalar." >
+        <meta  name="twitter:description"  content="Tailscale ile kendi VPN sunucunuzu nasıl kurarsınız." >
       
-        <meta  name="twitter:image"  content="https://sonradanogrendiklerim.com/assets/images/social/nasil-soru-sorulur/soru-sordugunuzda.png" >
+        <meta  name="twitter:image"  content="https://sonradanogrendiklerim.com/assets/images/social/makaleler/tailscale-vpn-kurulumu.png" >
       
     
     
@@ -115,6 +115,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#ubuntu-kurulumu" class="md-skip">
+          Ana içeriğe geç
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -146,7 +151,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              İnternet Üzerinde Soru Sorarken
+              Tailscale ile VPN Sunucusu Kurulumu
             
           </span>
         </div>
@@ -230,12 +235,10 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
+      <li class="md-tabs__item">
         <a href="../../bilgisayar-muhendisligine-giris/onsoz/" class="md-tabs__link">
           
   
@@ -250,11 +253,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../makaleler/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
   Makaleler
@@ -356,30 +361,25 @@
       
   
   
-    
   
   
-  
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -390,7 +390,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Bilgisayar Mühendisliğine Giriş
@@ -443,30 +443,25 @@
                 
   
   
-    
   
   
-  
     
     
     
       
       
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
         
           
-          
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -477,7 +472,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_3">
             <span class="md-nav__icon md-icon"></span>
             Nasıl Soru Sorulur?
@@ -491,7 +486,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../../nasil-soru-sorulur/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -512,7 +507,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sormadan-once/" class="md-nav__link">
+      <a href="../../nasil-soru-sorulur/sormadan-once/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -530,17 +525,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../nasil-soru-sorulur/soru-sordugunuzda/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -549,7 +537,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -575,20 +562,17 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
         
           
-          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -688,25 +672,30 @@
       
   
   
+    
   
   
+  
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -717,7 +706,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Makaleler
@@ -731,7 +720,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../makaleler/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -749,10 +738,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../makaleler/tailscale-vpn-kurulumu/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Tailscale ile VPN Sunucusu Kurulumu
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -761,6 +768,111 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="İçindekiler">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      İçindekiler
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ubuntu-kurulumu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ubuntu Kurulumu
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ubuntu-guncellemesi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ubuntu Güncellemesi
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tailscale-kurulumu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tailscale Kurulumu
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tailscale Kurulumu">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kullanc-hesab" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kullanıcı Hesabı
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tailscale-indirme" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tailscale İndirme
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tailscale-kullanm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tailscale Kullanımı
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ip-adresleri-ve-sertifikalar" class="md-nav__link">
+    <span class="md-ellipsis">
+      IP Adresleri ve Sertifikalar
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ip-adresim-ne" class="md-nav__link">
+    <span class="md-ellipsis">
+      IP Adresim Ne
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sonuc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sonuç
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -773,7 +885,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../makaleler/github-pages-statik-sayfa/" class="md-nav__link">
+      <a href="../github-pages-statik-sayfa/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -854,6 +966,101 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      İçindekiler
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ubuntu-kurulumu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ubuntu Kurulumu
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ubuntu-guncellemesi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ubuntu Güncellemesi
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tailscale-kurulumu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tailscale Kurulumu
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tailscale Kurulumu">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kullanc-hesab" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kullanıcı Hesabı
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tailscale-indirme" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tailscale İndirme
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tailscale-kullanm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tailscale Kullanımı
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ip-adresleri-ve-sertifikalar" class="md-nav__link">
+    <span class="md-ellipsis">
+      IP Adresleri ve Sertifikalar
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ip-adresim-ne" class="md-nav__link">
+    <span class="md-ellipsis">
+      IP Adresim Ne
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sonuc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sonuç
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -867,34 +1074,98 @@
                   
 
 
-  <h1>Soru Sorduğunuzda</h1>
+  <h1>Tailscale ile VPN Sunucusu Kurulumu</h1>
 
-<ol>
-<li>Sormak istediğiniz soruya yeterince vakit harcadım mı sorusunu kendinize sorun.</li>
-<li>İyi bir gramer ve temiz bir dil kullanın.</li>
-<li>Okuması anlaşılır şekilde olduğuna dikkat edin. Sonuçta kötü yazılmış bir formattaki soruyu kimse
-  okumak istemez.</li>
-<li>Probleminizin başkaları tarafından da anlaşılabilmesi için gerekli açıklamaları detaylı olarak
-   ekleyin.</li>
-<li>Programda bir hata buldum yanılgısına hemen kapılmayın. Belki de bu sadece sizinle ilgilidir ve
-  programda bir hata yoktur.</li>
-</ol>
-<p>Mühendisliğe yeni başlayanların yaptığı hatalardan biri de yanlış soruları doğru şekilde sormaya
-çalışmak. Üzerinde uğraştığınız problemin belirli noktalarında <code>problem bundan kaynaklanıyor, bunu
-sormam gerekli</code> algısına kapılıp yanlış bir soruyu doğru şekilde sorma yoluna gidilebiliyor. Bunun
-yerine buradaki amacımız doğru soruları, doğru şekilde sormak.</p>
-<p>Eğer bir problemi çözmek istiyorsanız, çözmek istediğiniz problemi yazmalısınız, <em>şu anda</em> üzerinde
-çalıştığınız problemi değil. Şu an çözmeye çalıştığınız problem orijinal problem ile tamamiyle
-ilgisiz olabilir.</p>
-<div class="admonition danger">
-<p class="admonition-title">Akıllıca olmayan bir soru örneği</p>
-<p>Elimde dictionary formatında bir veri var ve bu verileri başka bir veri ile birleştirerek daha kolay kullanmak istiyorum.</p>
+<p><a href="https://en.wikipedia.org/wiki/Virtual_private_network">VPN</a>'in ne demek olduğunu artık hepimiz çok iyi biliyoruz, bu yüzden açıklamayı es geçip
+direkt olarak nasıl kendimize özel VPN sunucusu kurabiliriz konusuna eğileceğim.</p>
+<p><a href="https://tailscale.com">Tailscale</a> VPN kurulumunu kolaylaştırıcı, tercih ettiğim bir VPN yazılımı. Kişisel
+kullanım için ücretsiz ve birkaç komut ile kurulumu gerçekleştirebiliyoruz. Kurulum kısmında zaman
+alan kısım sunucu kiralamak ve basit adımlarını takip etmek. Biz bu basit adımları <code>Ubuntu 22.04</code>
+üzerinde gerçekleştireceğiz ve makalenin sonunda bütün trafiğimizi Tailscale aracılığı ile bu makine
+üzerinden geçireceğiz.</p>
+<p>Bu makale giriş seviyesinde bir makale değil ve öncesinde bir sanal sunucu kiralamış, SSH bağlantısı
+yapmış kişilere hitab ediyor. Eğer daha önce bunları yapmadıysanız, öncelikli olarak bir sanal
+sunucu kiralamanız ve SSH ile erişebilmeniz gerekmekte. Çok zor bir şey değil, internet üzerinde
+nasıl sanal sunucu açılır belgeleri mevcut. Bunları takip ederek siz de sanal sunucu açabilirsiniz.</p>
+<h2 id="ubuntu-kurulumu">Ubuntu Kurulumu<a class="headerlink" href="#ubuntu-kurulumu" title="Permanent link">&para;</a></h2>
+<p>Elinizde bir makine yoksa öncelikle bunu edinmeniz gerekmekte. Ben Amazon'un 1 senelik ücretsiz
+verdiği krediyi kullanarak EC2 üzerinde <code>t4g.small</code> tipinde minik bir makine oluşturdum. Bu makine
+<code>2 CPU, 2 GB RAM, 25 GB disk</code> ve <code>5Gbit</code>'e kadar network'e sahip. VPN için oldukça yeterli. Sizin de
+dilediğiniz bir platformda küçük bir sanal makine edinmeniz gerekmekte. <a href="https://www.hetzner.com/cloud/">Hetzner</a> ve
+<a href="http://digitalocean.com">DigitalOcean</a>'ı kullanım kolaylığı ve ucuzluk olarak tercih edebilirsiniz.</p>
+<p>Makalenin devamına geçmeden önce makinenin açılmış ve SSH bağlantısının yapılmış olduğundan emin
+olun.</p>
+<h2 id="ubuntu-guncellemesi">Ubuntu Güncellemesi<a class="headerlink" href="#ubuntu-guncellemesi" title="Permanent link">&para;</a></h2>
+<p>Yeni bir kurulum yaptıktan sonra ilk işimizin güncelleme olması iyi bir pratik. SSH bağlantısı
+yaptıktan sonra güncelleme komutlarını çalıştırmayı hatırlayalım:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>update
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>upgrade<span class="w"> </span>-y
+</span></code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Terminal Ayarları</p>
+<p>Bu makalede terminal üzerinde herhangi bir ayar yapmayacağız ve ön tanımlı terminali
+kullanacağız. Ancak kişisel tercih olarak sunucu yönetirken de <code>fish</code> kullanmayı tercih
+ediyorum. Bu açıdan terminal çıktıları farklılık gösterebilir. İlginizi çekerse
+<a href="../../ubuntu/terminali-guzellestirelim/" target="_blank">Terminali güzelleştirelim</a>
+makalesine göz atabilirsiniz.</p>
 </div>
-<div class="admonition success">
-<p class="admonition-title">Daha akıllıca bir soru örneği</p>
-<p>Sunucudan aşağıdaki JSON formatında bir veri geliyor. Bunun içerisindeki dictionary verilerini toplayıp daha kolay halde kullanmak istiyorum çünkü bu veriye ileride şu yüzden ihtiyacım var / şu şekilde kullanıyorum.</p>
-</div>
-<p>İkinci soru daha geniş kapsamlı olduğu için buna uygun çözüm belki daha iyi sunulacaktır çünkü buradaki sunucu eğer sizin kontrolünüzde ise ilgilendiğiniz veriyi direkt olarak sunucu verebilir ve siz hiçbir şey yapmadan problemi çözmüş olabilirsiniz.</p>
+<h2 id="tailscale-kurulumu">Tailscale Kurulumu<a class="headerlink" href="#tailscale-kurulumu" title="Permanent link">&para;</a></h2>
+<h3 id="kullanc-hesab">Kullanıcı Hesabı<a class="headerlink" href="#kullanc-hesab" title="Permanent link">&para;</a></h3>
+<p>Tailscale <a href="https://tailscale.com/kb/1017/install" target="_blank">hızlı kurulum belgesinde</a> belirtildiği gibi öncelikli olarak
+bir <a href="https://login.tailscale.com/start" target="_blank">kullanıcı hesabı</a> oluşturmanız gerekmekte. Bu kullanıcı hesabı
+Tailscale ile ilgili yapacağınız tüm işlemlerde kullanılacak. Bu açıdan güçlü bir parola seçmenizi
+ve 2 aşamalı doğrulamayı kullanmanızı öneririm.</p>
+<h3 id="tailscale-indirme">Tailscale İndirme<a class="headerlink" href="#tailscale-indirme" title="Permanent link">&para;</a></h3>
+<p>Linux için terminalinize aşağıdaki komutu yazmanız yeterli:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://tailscale.com/install.sh<span class="w"> </span><span class="p">|</span><span class="w"> </span>sh
+</span></code></pre></div>
+<p>Bu komut sizin bir şey yapmanıza gerek kalmadan Tailscale Ubuntu reposunu anahtarları ile birlikte
+ekleyecek ve <code>apt-get</code> ile tailscale yükleyecek. Manuel olarak bunları yapmamak için halihazırda
+Tailscale'in sunduğu bu scripti kullanıyoruz.
+Scriptin kaynak kodlarına <a href="https://github.com/tailscale/tailscale/blob/main/scripts/installer.sh" target="_blank">bu adresten</a> ve
+Tailscale'in indirme sayfasına <a href="https://tailscale.com/download/linux/ubuntu-2204" target="_blank">bu adresten</a> erişebilirsiniz.</p>
+<p>Kurulumu yaptıktan sonra aşağıdaki mesajla karşılaşacaksınız:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Installation complete! Log in to start using Tailscale by running:
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>tailscale up
+</span></code></pre></div>
+<h3 id="tailscale-kullanm">Tailscale Kullanımı<a class="headerlink" href="#tailscale-kullanm" title="Permanent link">&para;</a></h3>
+<p>Kurulum sonrası verilen komut ile Tailscale başlayacaktır ancak burada bu sanal makineyi çıkış
+makinesi olarak kullanmak için ekstra bir parametre gerekiyor. Bu yüzden Tailscale'i
+<code>--advertise-exit-node</code> parametresi ile başlatmamız gerekli. Aşağıdaki komutu girerek VPN sunucumuzu
+başlatabiliriz:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>tailscale<span class="w"> </span>up<span class="w"> </span>--advertise-exit-node
+</span></code></pre></div>
+<p>Daha önce giriş yapmadığımız için bize giriş yapmamız için bir link verecektir.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>ubuntu@vpn:~$ sudo tailscale up --advertise-exit-node
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>To authenticate, visit:
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a> https://login.tailscale.com/a/02a13d13690d
+</span></code></pre></div>
+<p>Giriş yaptıktan sonra <code>Success.</code> mesajını görmemiz gerekmekte. Bu mesajı gördükten sonra bu cihaz
+Tailscale hesabımıza bağlanmış olacak ve <code>--advertise-exit-node</code> parametresi verdiğimiz için
+bağlayacağımız diğer cihazlar için çıkış görevi görebilecek.</p>
+<p>Bundan sonra yapmanız gereken tek şey bilgisayarınıza ve telefonunuza Tailscale kurmak. Burada
+yaptığımız gibi Tailscale hesabı ile giriş yapıp, kullanıma başlayabilirsiniz.</p>
+<p>Bu noktada şunu da hatırlatmam gerekir ki telefonda veya bilgisayarda Tailscale kullandığınız zaman
+çıkış cihazı olarak <em>(exit node)</em> VPN sunucumuzu seçmemiz gerekmekte. Sonrasında bu ayar
+hatırlanacak ve bir sonraki bağlanmanızda otomatik olarak bu kullanılacak.</p>
+<h3 id="ip-adresleri-ve-sertifikalar">IP Adresleri ve Sertifikalar<a class="headerlink" href="#ip-adresleri-ve-sertifikalar" title="Permanent link">&para;</a></h3>
+<p>Tailscale kullanımının bana sorarsanız en güzel yanı bu. VPN sunucumuzun IP adresleri ve
+sertifiklaları ile uğraşmıyoruz. Sadece Tailscale hesabı ile bunları yönetiyoruz ve bizim
+hesaplarımıza cihazlar dahil oluyor. Esasında Tailscale VPN'in ötesinde yazılım tabanlı bir ağ
+sunuyor. Burada hangi cihazın birbiri ile nasıl haberleşebileceğini de belirleyebiliyoruz ancak bu yazının konusu değil. Şimdilik sadece bir cihazı çıkış cihazı olarak kullanıyoruz.</p>
+<h3 id="ip-adresim-ne">IP Adresim Ne<a class="headerlink" href="#ip-adresim-ne" title="Permanent link">&para;</a></h3>
+<p><a href="https://ifconfig.me" target="_blank">http://ifconfig.me</a> adresini ziyaret ederek IP adresinizi
+öğrenebilirsiniz. Her şey doğru çalışıyorsa IP adresiniz VPN sunucusunun adresi olarak görünmesi
+gerekiyor.</p>
+<h2 id="sonuc">Sonuç<a class="headerlink" href="#sonuc" title="Permanent link">&para;</a></h2>
+<p>Tailscale yeni nesil bir yazılım tabanlı ağ hizmeti. Birçok özelliği ile birlikte biz sadece çıkış
+cihazı özelliğini kullanarak VPN sunucusu elde ettik. Sadece Tailscale hesabı ile herhangi bir
+cihazı buna dahil ederek kullanabilmek büyük bir kolaylık sağlıyor.</p>
+<p>Tailscale'in ACL, DNS, SSH, Funnel gibi diğer özellikleri için <a href="https://tailscale.com/kb/1017/install">kendi belgelerine</a> göz
+atabilirsiniz.</p>
 
 
 
@@ -935,7 +1206,7 @@ ilgisiz olabilir.</p>
       <nav class="md-footer__inner md-grid" aria-label="Altbilgi" >
         
           
-          <a href="../sormadan-once/" class="md-footer__link md-footer__link--prev" aria-label="Önceki: Sormadan Önce">
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Önceki: Makale Listesi">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -945,20 +1216,20 @@ ilgisiz olabilir.</p>
                 Önceki
               </span>
               <div class="md-ellipsis">
-                Sormadan Önce
+                Makale Listesi
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../ubuntu/kurulum/" class="md-footer__link md-footer__link--next" aria-label="Sonraki: Ubuntu Kurulumu">
+          <a href="../github-pages-statik-sayfa/" class="md-footer__link md-footer__link--next" aria-label="Sonraki: Github Pages ile Statik Sayfa Sunmak">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Sonraki
               </span>
               <div class="md-ellipsis">
-                Ubuntu Kurulumu
+                Github Pages ile Statik Sayfa Sunmak
               </div>
             </div>
             <div class="md-footer__button md-icon">
