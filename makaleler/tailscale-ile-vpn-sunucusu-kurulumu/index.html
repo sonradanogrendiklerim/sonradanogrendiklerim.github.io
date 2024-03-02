@@ -829,6 +829,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#paket-yonlendirme-ayarlar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paket Yönlendirme Ayarları
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#tailscale-kullanm" class="md-nav__link">
     <span class="md-ellipsis">
       Tailscale Kullanımı
@@ -1019,6 +1028,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#paket-yonlendirme-ayarlar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paket Yönlendirme Ayarları
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#tailscale-kullanm" class="md-nav__link">
     <span class="md-ellipsis">
       Tailscale Kullanımı
@@ -1129,19 +1147,26 @@ Tailscale'in indirme sayfasına <a href="https://tailscale.com/download/linux/ub
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>tailscale up
 </span></code></pre></div>
+<h3 id="paket-yonlendirme-ayarlar">Paket Yönlendirme Ayarları<a class="headerlink" href="#paket-yonlendirme-ayarlar" title="Permanent link">&para;</a></h3>
+<p>Bu cihaz aldığı paketi yönlendireceği için bu ayarı Linux kernelinde açmamız gerekmekte. Bunun için
+aşağıdaki komutları girin:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;net.ipv4.ip_forward = 1&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>-a<span class="w"> </span>/etc/sysctl.d/99-tailscale.conf
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;net.ipv6.conf.all.forwarding = 1&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>-a<span class="w"> </span>/etc/sysctl.d/99-tailscale.conf
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>sudo<span class="w"> </span>sysctl<span class="w"> </span>-p<span class="w"> </span>/etc/sysctl.d/99-tailscale.conf
+</span></code></pre></div>
 <h3 id="tailscale-kullanm">Tailscale Kullanımı<a class="headerlink" href="#tailscale-kullanm" title="Permanent link">&para;</a></h3>
 <p>Kurulum sonrası verilen komut ile Tailscale başlayacaktır ancak burada bu sanal makineyi çıkış
 makinesi olarak kullanmak için ekstra bir parametre gerekiyor. Bu yüzden Tailscale'i
 <code>--advertise-exit-node</code> parametresi ile başlatmamız gerekli. Aşağıdaki komutu girerek VPN sunucumuzu
 başlatabiliriz:</p>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>tailscale<span class="w"> </span>up<span class="w"> </span>--advertise-exit-node
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>tailscale<span class="w"> </span>up<span class="w"> </span>--advertise-exit-node
 </span></code></pre></div>
 <p>Daha önce giriş yapmadığımız için bize giriş yapmamız için bir link verecektir.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>ubuntu@vpn:~$ sudo tailscale up --advertise-exit-node
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>To authenticate, visit:
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a> https://login.tailscale.com/a/02a13d13690d
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>ubuntu@vpn:~$ sudo tailscale up --advertise-exit-node
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>To authenticate, visit:
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a> https://login.tailscale.com/a/02a13d13690d
 </span></code></pre></div>
 <p>Giriş yaptıktan sonra <code>Success.</code> mesajını görmemiz gerekmekte. Bu mesajı gördükten sonra bu cihaz
 Tailscale hesabımıza bağlanmış olacak ve <code>--advertise-exit-node</code> parametresi verdiğimiz için
@@ -1151,6 +1176,13 @@ yaptığımız gibi Tailscale hesabı ile giriş yapıp, kullanıma başlayabili
 <p>Bu noktada şunu da hatırlatmam gerekir ki telefonda veya bilgisayarda Tailscale kullandığınız zaman
 çıkış cihazı olarak <em>(exit node)</em> VPN sunucumuzu seçmemiz gerekmekte. Sonrasında bu ayar
 hatırlanacak ve bir sonraki bağlanmanızda otomatik olarak bu kullanılacak.</p>
+<div class="admonition note">
+<p class="admonition-title">Çıkış cihazı görünmemesi</p>
+<p>Eğer bilgisayarınızda veya telefonunuzda çıkış cihazı olarak bu makineyi göremiyorsanız
+Tailscale <a href="https://login.tailscale.com/admin/machines" target="_blank">hesabınıza</a> girerek, makinenin yan tarafında bulunan üç
+noktalı üç noktalı menüye tıklayın ve <code>Edit route settings</code> ayarlarına girin. Orada <code>Use as exit
+node</code> kutucuğunu işaretleyin.</p>
+</div>
 <h3 id="ip-adresleri-ve-sertifikalar">IP Adresleri ve Sertifikalar<a class="headerlink" href="#ip-adresleri-ve-sertifikalar" title="Permanent link">&para;</a></h3>
 <p>Tailscale kullanımının bana sorarsanız en güzel yanı bu. VPN sunucumuzun IP adresleri ve
 sertifiklaları ile uğraşmıyoruz. Sadece Tailscale hesabı ile bunları yönetiyoruz ve bizim
