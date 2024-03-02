@@ -95,7 +95,7 @@ makinesi olarak kullanmak için ekstra bir parametre gerekiyor. Bu yüzden Tails
 başlatabiliriz:
 
 ```sh
-tailscale up --advertise-exit-node
+sudo tailscale up --advertise-exit-node
 ```
 
 Daha önce giriş yapmadığımız için bize giriş yapmamız için bir link verecektir.
@@ -112,18 +112,20 @@ Giriş yaptıktan sonra `Success.` mesajını görmemiz gerekmekte. Bu mesajı g
 Tailscale hesabımıza bağlanmış olacak ve `--advertise-exit-node` parametresi verdiğimiz için
 bağlayacağımız diğer cihazlar için çıkış görevi görebilecek.
 
+Bu aşamada [Tailscale hesabınıza][admin]{:target="_blank"} girerek makinenin yan tarafında bulunan
+üç noktalı menüye tıklayın, `Edit route settings` ayarlarına girin ve aşağıda bulunan
+`Use as exit node` kutucuğunu işaretleyin. `--advertise-exit-node` parametresi vermemiz bu makinenin
+hemen çıkış makinesi olarak kullanılacağı anlamına gelmiyor. Tailscale arayüzünden seçilmesi
+gerekmekte.
+
 Bundan sonra yapmanız gereken tek şey bilgisayarınıza ve telefonunuza Tailscale kurmak. Burada
 yaptığımız gibi Tailscale hesabı ile giriş yapıp, kullanıma başlayabilirsiniz.
 
-Bu noktada şunu da hatırlatmam gerekir ki telefonda veya bilgisayarda Tailscale kullandığınız zaman
-çıkış cihazı olarak _(exit node)_ VPN sunucumuzu seçmemiz gerekmekte. Sonrasında bu ayar
-hatırlanacak ve bir sonraki bağlanmanızda otomatik olarak bu kullanılacak.
-
-!!! note "Çıkış cihazı görünmemesi"
-    Eğer bilgisayarınızda veya telefonunuzda çıkış cihazı olarak bu makineyi göremiyorsanız
-    Tailscale [hesabınıza][admin]{:target="_blank"} girerek, makinenin yan tarafında bulunan üç
-    noktalı üç noktalı menüye tıklayın ve `Edit route settings` ayarlarına girin. Orada `Use as exit
-    node` kutucuğunu işaretleyin.
+!!! note "Çıkış Cihazı Ayarı"
+    Bu noktada şunu da hatırlatmam gerekir ki telefonda veya bilgisayarda Tailscale kullandığınız
+    zaman çıkış cihazı olarak _(exit node)_ VPN sunucusunu elle seçmemiz gerekmekte. Sonrasında bu
+    ayar hatırlanacak ve bir sonraki bağlanmanızda otomatik olarak bu kullanılacak. Tailscale
+    bağlantısı yaptıktan sonra IP adresi değişmiyorsa uygulamanın çıkış cihazı kısmını kontrol edin.
 
 ### IP Adresleri ve Sertifikalar
 
