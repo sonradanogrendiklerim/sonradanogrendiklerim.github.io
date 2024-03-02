@@ -50,15 +50,15 @@ söylemiştim. Eğer zamanınız ve bilginiz varsa bu tarz sensör verilerini al
 [ESP8266][esp8266]{:target="_blank"} çok güzel bir platform. Birçok sensör bağlanabiliyor ve
 [ESPHome][esphome]{:target="_blank"} ile [OTA][ota]{:target="_blank"} özelliği sayesinde cihazı
 bilgisayara bağlamadan ağ üzerinden programlayabiliyorsunuz. Geliştirme aşamasında bu çok büyük bir
-kolaylık sağlıyor. Devamında InfluxDB, Telegraf, Mosquitto ve Grafana ile güzel bir şekilde de
+kolaylık sağlıyor. Sonrasında InfluxDB, Telegraf, Mosquitto ve Grafana ile güzel bir şekilde de
 görselleştirebiliyoruz.
 
 Burada tek eksik kullanıcı dostu olmaması. Tak çalıştır şeklinde bir altyapı tabii ki kurulabilir ama bunu para için yapmadığımız için kendi yağımızda kavruluyoruz. Grafana'nın mobil arayüzü gayet yeterli olduğu için pek de ihtiyacımız yok aslında.
 
 Umarım buradaki anahtar kelimeler sizlere yardımcı olur ve kendi sıcaklık / nem sensörünüzü,
 devamında arka tarafındaki altyapınızı kurmanız için bir yol açar. Maalesef bütün bu sunucuları ve
-altyapıyı baştan kurup yazıya dökmek için enerjim şimdilik yok. Umarım benim için de bu enerji gelir
-ve baştan sona sıcaklık / nem sensörü ile beraber görselleştirme yazısı yazabilirim.
+altyapıyı baştan kurup yazıya dökmek için vaktim şimdilik yok. Umarım ben de baştan sona sıcaklık /
+nem sensörü ile beraber görselleştirme yazısı yazmak için zaman bulabilirim.
 
 [influxdb]:   https://www.influxdata.com
 [mosquitto]:  http://mosquitto.org
