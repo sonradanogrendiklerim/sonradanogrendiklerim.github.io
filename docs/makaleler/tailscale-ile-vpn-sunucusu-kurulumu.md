@@ -76,6 +76,17 @@ Installation complete! Log in to start using Tailscale by running:
 tailscale up
 ```
 
+### Paket Yönlendirme Ayarları
+
+Bu cihaz aldığı paketi yönlendireceği için bu ayarı Linux kernelinde açmamız gerekmekte. Bunun için
+aşağıdaki komutları girin:
+
+```sh
+echo 'net.ipv4.ip_forward = 1' | sudo tee -a /etc/sysctl.d/99-tailscale.conf
+echo 'net.ipv6.conf.all.forwarding = 1' | sudo tee -a /etc/sysctl.d/99-tailscale.conf
+sudo sysctl -p /etc/sysctl.d/99-tailscale.conf
+```
+
 ### Tailscale Kullanımı
 
 Kurulum sonrası verilen komut ile Tailscale başlayacaktır ancak burada bu sanal makineyi çıkış
@@ -108,6 +119,12 @@ Bu noktada şunu da hatırlatmam gerekir ki telefonda veya bilgisayarda Tailscal
 çıkış cihazı olarak _(exit node)_ VPN sunucumuzu seçmemiz gerekmekte. Sonrasında bu ayar
 hatırlanacak ve bir sonraki bağlanmanızda otomatik olarak bu kullanılacak.
 
+!!! note "Çıkış cihazı görünmemesi"
+    Eğer bilgisayarınızda veya telefonunuzda çıkış cihazı olarak bu makineyi göremiyorsanız
+    Tailscale [hesabınıza][admin]{:target="_blank"} girerek, makinenin yan tarafında bulunan üç
+    noktalı üç noktalı menüye tıklayın ve `Edit route settings` ayarlarına girin. Orada `Use as exit
+    node` kutucuğunu işaretleyin.
+
 ### IP Adresleri ve Sertifikalar
 
 Tailscale kullanımının bana sorarsanız en güzel yanı bu. VPN sunucumuzun IP adresleri ve
@@ -139,3 +156,4 @@ atabilirsiniz.
 [source]:       https://github.com/tailscale/tailscale/blob/main/scripts/installer.sh
 [download]:     https://tailscale.com/download/linux/ubuntu-2204
 [ifconfig]:     https://ifconfig.me
+[admin]:        https://login.tailscale.com/admin/machines
