@@ -1,5 +1,5 @@
 ---
-title: InfluxDB, Mosquitto ve Grafana ile IoT Görselleştirme
+title: InfluxDB, Telegraf, Mosquitto ve Grafana ile IoT Görselleştirme
 description: İnternete bağlı ufak cihazlardan veri alıp görselleştirme yöntemlerinden biri.
 draft: true
 ---

@@ -25,7 +25,7 @@ nav:
 
   - Makaleler:
       - Makale Listesi: makaleler/index.md
-      # - InfluxDB, Mosquitto ve Grafana ile IoT Görselleştirme: makaleler/influxdb-mosquitto-ve-grafana-ile-iot-gorsellestirme.md
+      # - InfluxDB, Telegraf, Mosquitto ve Grafana ile IoT Görselleştirme: makaleler/influxdb-telegraf-mosquitto-ve-grafana-ile-iot-gorsellestirme.md
       - Tailscale ile VPN Sunucusu Kurulumu: makaleler/tailscale-ile-vpn-sunucusu-kurulumu.md
       - Github Pages ile Statik Sayfa Sunmak: makaleler/github-pages-statik-sayfa.md
 
