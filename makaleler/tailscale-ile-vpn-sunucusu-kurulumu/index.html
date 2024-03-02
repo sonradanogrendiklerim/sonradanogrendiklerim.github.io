@@ -1159,7 +1159,7 @@ aşağıdaki komutları girin:</p>
 makinesi olarak kullanmak için ekstra bir parametre gerekiyor. Bu yüzden Tailscale'i
 <code>--advertise-exit-node</code> parametresi ile başlatmamız gerekli. Aşağıdaki komutu girerek VPN sunucumuzu
 başlatabiliriz:</p>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>tailscale<span class="w"> </span>up<span class="w"> </span>--advertise-exit-node
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>sudo<span class="w"> </span>tailscale<span class="w"> </span>up<span class="w"> </span>--advertise-exit-node
 </span></code></pre></div>
 <p>Daha önce giriş yapmadığımız için bize giriş yapmamız için bir link verecektir.</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>ubuntu@vpn:~$ sudo tailscale up --advertise-exit-node
@@ -1171,17 +1171,19 @@ başlatabiliriz:</p>
 <p>Giriş yaptıktan sonra <code>Success.</code> mesajını görmemiz gerekmekte. Bu mesajı gördükten sonra bu cihaz
 Tailscale hesabımıza bağlanmış olacak ve <code>--advertise-exit-node</code> parametresi verdiğimiz için
 bağlayacağımız diğer cihazlar için çıkış görevi görebilecek.</p>
+<p>Bu aşamada <a href="https://login.tailscale.com/admin/machines" target="_blank">Tailscale hesabınıza</a> girerek makinenin yan tarafında bulunan
+üç noktalı menüye tıklayın, <code>Edit route settings</code> ayarlarına girin ve aşağıda bulunan
+<code>Use as exit node</code> kutucuğunu işaretleyin. <code>--advertise-exit-node</code> parametresi vermemiz bu makinenin
+hemen çıkış makinesi olarak kullanılacağı anlamına gelmiyor. Tailscale arayüzünden seçilmesi
+gerekmekte.</p>
 <p>Bundan sonra yapmanız gereken tek şey bilgisayarınıza ve telefonunuza Tailscale kurmak. Burada
 yaptığımız gibi Tailscale hesabı ile giriş yapıp, kullanıma başlayabilirsiniz.</p>
-<p>Bu noktada şunu da hatırlatmam gerekir ki telefonda veya bilgisayarda Tailscale kullandığınız zaman
-çıkış cihazı olarak <em>(exit node)</em> VPN sunucumuzu seçmemiz gerekmekte. Sonrasında bu ayar
-hatırlanacak ve bir sonraki bağlanmanızda otomatik olarak bu kullanılacak.</p>
 <div class="admonition note">
-<p class="admonition-title">Çıkış cihazı görünmemesi</p>
-<p>Eğer bilgisayarınızda veya telefonunuzda çıkış cihazı olarak bu makineyi göremiyorsanız
-Tailscale <a href="https://login.tailscale.com/admin/machines" target="_blank">hesabınıza</a> girerek, makinenin yan tarafında bulunan üç
-noktalı üç noktalı menüye tıklayın ve <code>Edit route settings</code> ayarlarına girin. Orada <code>Use as exit
-node</code> kutucuğunu işaretleyin.</p>
+<p class="admonition-title">Çıkış Cihazı Ayarı</p>
+<p>Bu noktada şunu da hatırlatmam gerekir ki telefonda veya bilgisayarda Tailscale kullandığınız
+zaman çıkış cihazı olarak <em>(exit node)</em> VPN sunucusunu elle seçmemiz gerekmekte. Sonrasında bu
+ayar hatırlanacak ve bir sonraki bağlanmanızda otomatik olarak bu kullanılacak. Tailscale
+bağlantısı yaptıktan sonra IP adresi değişmiyorsa uygulamanın çıkış cihazı kısmını kontrol edin.</p>
 </div>
 <h3 id="ip-adresleri-ve-sertifikalar">IP Adresleri ve Sertifikalar<a class="headerlink" href="#ip-adresleri-ve-sertifikalar" title="Permanent link">&para;</a></h3>
 <p>Tailscale kullanımının bana sorarsanız en güzel yanı bu. VPN sunucumuzun IP adresleri ve
