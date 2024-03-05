@@ -10,9 +10,9 @@ olursak bu bir `dil`. Türkçenin nasıl gramer kuralları varsa, programlama di
 kuralları var ve gramerini, kelimelerini doğru kullandığımız ölçüde kendimizi ifade edebiliyoruz,
 yani program yazıyoruz.
 
-Programlama dilleri dedik çünkü kullanabileceğimiz tek bir programlama dili yok, etrafta binlerce
+Programlama dilleri dedik çünkü kullanabileceğimiz tek bir programlama dili yok, etrafta yüzlerce
 programlama dili mevcut. Biz burada sadece [Python][python]{:target="_blank"} ile ilgileneceğiz
-ancak yaklaşımımız ezberlenmiş şekilde değişken tanımları, fonksiyonlar yerine tarihsel olacak. Bir konuyu öğrenirken arka planında neler olmuş, neden bu şekilde yapıyoruz soruları bana göre öğrenmeyi kolaylaştırıcı sorular.
+ancak yaklaşımımız ezberlenmiş şekilde değişken tanımları, fonksiyonlar yerine temelden olacak. Bir konuyu öğrenirken arka planında neler olmuş, neden bu şekilde yapıyoruz soruları bana göre öğrenmeyi kolaylaştırıcı sorular.
 
 Yazının sonunda bilgisayar nasıl çalışır, nasıl programlayabiliriz, programlama dilleri neden ve
 nasıl ortaya çıktı konuları hakkında fikrimiz olacak.
@@ -24,11 +24,12 @@ nasıl ortaya çıktı konuları hakkında fikrimiz olacak.
 ### İşlemci
 
 İşlemci dediğimiz nispeten küçük bir elektronik devre parçası ve sadece 1 ve 0, yani ikilik sistemi
-anlıyor. Burada dünyada 1 işlemci ya da işlemci mimarisi olduğu anlaşılmasın, yine programlama
-dillerinde olduğu gibi yüzlerce, belki binlerce işlemci ve işlemci mimarisi var. Lakin en çok x86 ve
-ARM kullanmaktayız. Telefonlarımızda düşük güçte yüksek performans verebildiği için ARM, sunucularda
-veya kişisel bilgisayarlarımızda ise x86 yaygın olarak kullanılmakta. Son zamanlarda ARM mimarisi
-sunucu performasına gelmiş olsa da ARM ve x86 karşılaştırması şimdilik konumuz değil.
+anlıyor. Burada dünyada 1 işlemci ya da işlemci mimarisi olduğu anlaşılmasın; yine programlama
+dillerinde olduğu gibi yüzlerce, belki binlerce işlemci ve işlemci mimarisi var. Lakin en çok
+[x86][x86] ve [ARM][arm] kullanmaktayız. Telefonlarımızda düşük güçte yüksek performans verebildiği
+için ARM, sunucularda veya kişisel bilgisayarlarımızda ise x86 yaygın olarak kullanılmakta. Son
+zamanlarda ARM mimarisi sunucu performasına gelmiş olsa da ARM ve x86 karşılaştırması şimdilik
+konumuz değil.
 
 1 ve 0'lardan oluşan sisteme matematikte ikilik sistem, yani `binary` denmekte. Bu ikilik sistem ile
 oluşturduğumuz verilere ise ikiliik veri, ingilizcesi ile `binary data` deniyor. Peki elimizde
@@ -118,6 +119,8 @@ mimarinizi ve programlama dilinizi oluşturdunuz. Sadece 1 adet komut
 
 [opcode]: https://en.wikipedia.org/wiki/Opcode
 [siunit]: https://en.wikipedia.org/wiki/Byte#Multiple-byte_units
+[x86]: https://en.wikipedia.org/wiki/X86
+[arm]: https://en.wikipedia.org/wiki/ARM_architecture_family
 
 ### Böyle Programlama Olmaz Olsun
 
@@ -165,7 +168,11 @@ Yukarıda yazdığımız `topla 7` komutu bir assembly dili ve her işlemci içi
 Biz burada hayali kara kutumuza, yani işlemcimize bir assembly dili tanımladık. Bununla beraber x86
 ve ARM için assembly dillerinin farklı olduğunu hatırlatmam gerekir.
 
-Ancak yine de assembly dili kullanması zor bir dil. Bunun üzerine başka, daha kolay kullanılabilir programlama dilleri de tanımlanabilir. Bahsettiğim gibi programlama dilleri başlı başına bir ders konusu, dolayısıyla assembly ile programlamanın __da__ zor olduğunu düşünürsek elimizde daha kolay bir programlama dili olması tercih edilecektir. Örnek olarak ekrana `Hello, World` yazan assembly programını ekliyorum. Ne kadar zor ve hataya açık olabileceğini tahmin edebiliriz:
+Ancak yine de assembly dili kullanması zor bir dil. Bunun üzerine başka, daha kolay kullanılabilir
+programlama dilleri de tanımlanabilir. Bahsettiğim gibi programlama dilleri başlı başına bir ders
+konusu, dolayısıyla assembly ile programlamanın __da__ zor olduğunu düşünürsek elimizde daha kolay
+bir programlama dili olması tercih edilecektir. [Örnek olarak][x86example] ekrana `Hello, World`
+yazan assembly programını ekliyorum. Ne kadar zor ve hataya açık olabileceğini tahmin edebiliriz:
 
 ```asm
           global    _start
@@ -183,6 +190,8 @@ _start:   mov       rax, 1                  ; system call for write
           section   .data
 message:  db        "Hello, World", 10      ; note the newline at the end
 ```
+
+[x86example]: https://cs.lmu.edu/~ray/notes/x86assembly/
 
 ## Sonuç
 
