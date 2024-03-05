@@ -165,9 +165,30 @@ Yukarıda yazdığımız `topla 7` komutu bir assembly dili ve her işlemci içi
 Biz burada hayali kara kutumuza, yani işlemcimize bir assembly dili tanımladık. Bununla beraber x86
 ve ARM için assembly dillerinin farklı olduğunu hatırlatmam gerekir.
 
-- Dil nedir
-- Bilgisayar tarihçesi, nelerden oluşur
-- İkilik sistem ve assembly
-- Nasıl programlıyoruz. CPU RAM Disk ilişkisi
-- Python programı, REPL, bash/fish farksız
-- Program çalıştıran program
+Ancak yine de assembly dili kullanması zor bir dil. Bunun üzerine başka, daha kolay kullanılabilir programlama dilleri de tanımlanabilir. Bahsettiğim gibi programlama dilleri başlı başına bir ders konusu, dolayısıyla assembly ile programlamanın __da__ zor olduğunu düşünürsek elimizde daha kolay bir programlama dili olması tercih edilecektir. Örnek olarak ekrana `Hello, World` yazan assembly programını ekliyorum. Ne kadar zor ve hataya açık olabileceğini tahmin edebiliriz:
+
+```asm
+          global    _start
+
+          section   .text
+_start:   mov       rax, 1                  ; system call for write
+          mov       rdi, 1                  ; file handle 1 is stdout
+          mov       rsi, message            ; address of string to output
+          mov       rdx, 13                 ; number of bytes
+          syscall                           ; invoke operating system
+          mov       rax, 60                 ; system call for exit
+          xor       rdi, rdi                ; exit code 0
+          syscall                           ; invoke operating system to exit
+
+          section   .data
+message:  db        "Hello, World", 10      ; note the newline at the end
+```
+
+## Sonuç
+
+Kara kutu örneğinden giderek işlemciye nasıl komutlar gönderilebileceğini, ikilik sistemi, kendimize ait nasıl işlemci mimarisi yapabileceğimizi ve programlama dilinin ne olduğunu gördük. Esasında programlama dili dediğimiz şey 1 ve 0 ile işlemci komutlarının üzerindeki assembly dilinin üzerine yerleştirilmiş katmanlardan oluşuyor. Geldiğimiz yer yine işlemcinin anlayacağı 1 ve 0'lardan ibaret.
+
+Programlama dilinin ne olduğuna değindiğimize göre bir sonraki bölümde Python'a geçeceğiz. Python'u yine assembly üzerinde bir katman olarak düşünebiliriz. Her ne kadar çok basit bir anlatım ve Python'un da kendi içerisinde incelikleri olsa da bu örneğin giriş seviyesinde doğru olduğunu düşünüyorum.
+
+Hatırlamakta fayda var, programlama dili, her daim bir programı çalıştıran başka bir program
+tarafından yorumlanıyor / derleniyor. Programlama dilleri de 1 ve 0 veya assembly ile zor olanı yapmak yerine, daha kolay programlama yapmamız için bir araç sağlıyor.
