@@ -14,6 +14,9 @@ Programlama dilleri dedik çünkü kullanabileceğimiz tek bir programlama dili 
 programlama dili mevcut. Biz burada sadece [Python][python]{:target="_blank"} ile ilgileneceğiz
 ancak yaklaşımımız ezberlenmiş şekilde değişken tanımları, fonksiyonlar yerine tarihsel olacak. Bir konuyu öğrenirken arka planında neler olmuş, neden bu şekilde yapıyoruz soruları bana göre öğrenmeyi kolaylaştırıcı sorular.
 
+Yazının sonunda bilgisayar nasıl çalışır, nasıl programlayabiliriz, programlama dilleri neden ve
+nasıl ortaya çıktı konuları hakkında fikrimiz olacak.
+
 [python]: https://www.python.org
 
 ## Bilgisayar Nasıl Çalışır
