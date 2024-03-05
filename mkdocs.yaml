@@ -23,12 +23,7 @@ nav:
           - Terminal: ubuntu/terminal.md
           - Terminali Güzelleştirelim: ubuntu/terminali-guzellestirelim.md
 
-  - Makaleler:
-      - Makale Listesi: makaleler/index.md
-      # - InfluxDB, Telegraf, Mosquitto ve Grafana ile IoT Görselleştirme: makaleler/influxdb-telegraf-mosquitto-ve-grafana-ile-iot-gorsellestirme.md
-      - Tailscale ile VPN Sunucusu Kurulumu: makaleler/tailscale-ile-vpn-sunucusu-kurulumu.md
-      - Github Pages ile Statik Sayfa Sunmak: makaleler/github-pages-statik-sayfa.md
-
+  - Makaleler: makaleler/index.md
   - Blog: blog/index.md
   - Resume: https://erenturkay.com/assets/resume/Eren_Turkay_Resume.pdf
 
