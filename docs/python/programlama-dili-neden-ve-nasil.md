@@ -12,7 +12,9 @@ yani program yazıyoruz.
 
 Programlama dilleri dedik çünkü kullanabileceğimiz tek bir programlama dili yok, etrafta yüzlerce
 programlama dili mevcut. Biz burada sadece [Python][python]{:target="_blank"} ile ilgileneceğiz
-ancak yaklaşımımız ezberlenmiş şekilde değişken tanımları, fonksiyonlar yerine temelden olacak. Bir konuyu öğrenirken arka planında neler olmuş, neden bu şekilde yapıyoruz soruları bana göre öğrenmeyi kolaylaştırıcı sorular.
+ancak yaklaşımımız ezberlenmiş şekilde değişken tanımları, fonksiyonlar yerine temelden olacak. Bir
+konuyu öğrenirken arka planında neler olmuş, neden bu şekilde yapıyoruz soruları bana göre öğrenmeyi
+kolaylaştırıcı sorular.
 
 Yazının sonunda bilgisayar nasıl çalışır, nasıl programlayabiliriz, programlama dilleri neden ve
 nasıl ortaya çıktı konuları hakkında fikrimiz olacak.
@@ -46,7 +48,9 @@ Gelin beraber fikir yürüterek, elimizde sadece 1 ve 0 varken bir `şey`'e nas�
 pratiği yapalım. Henüz nasıl çalıştığını bilmiyoruz, ileride bunun üzerine de düşüneceğiz ancak
 şimdilik bir toplama işlemini nasıl ifade edebiliriz üzerine düşünelim.
 
-Öncelikle bu kara kutu için toplamda kaç adet 1 ve 0 kullanacağımızı belirlememiz gerekiyor. Bunun için 8 adet 1 ve 0 yeterli gibi görünüyor. Dolayısıyla ifade edeceğimiz her şeyi 8 adet ikilik sayı ile ifade edeceğiz.
+Öncelikle bu kara kutu için toplamda kaç adet 1 ve 0 kullanacağımızı belirlememiz gerekiyor. Bunun
+için 8 adet 1 ve 0 yeterli gibi görünüyor. Dolayısıyla ifade edeceğimiz her şeyi 8 adet ikilik sayı
+ile ifade edeceğiz.
 
 Verinin aksine ifade edeceğimiz durum sayısı bu kadar değil. Sadece 2 adet ifade edeceğimiz
 durum mevcut.
@@ -63,9 +67,11 @@ işlem, sonraki 6 bit veri olacak bu kara kutuda.
     Bu yazıda çok kullanmayacağız ancak burada görülmesinde fayda olduğunu düşünüyorum. 8 adet bit
     yan yana geldiğinde buna `byte` denmekte. Kara kutumuz ile ilgili konuşurken her daim bit hesabı
     yapacağız ancak daha büyük verileri nitelendirmek istediğimizde `byte` kullanılmakta. Kilobyte,
-    Megabyte gibi standard ünite değerlerine burada dokunabilirdik ancak ana konumuz bu olmadığı için merak edenlere [wikipedia makalesini][siunit]{:target="_blank"} tavsiye ederim.
+    Megabyte gibi standard ünite değerlerine burada dokunabilirdik ancak ana konumuz bu olmadığı
+    için merak edenlere [wikipedia makalesini][siunit]{:target="_blank"} tavsiye ederim.
 
-İkilik sistemi düşünürsek hangi işlemi yapacağımızı ifade ettiğimiz 2 bit ile toplamda 4 adet işlem ifade edebiliyoruz:
+İkilik sistemi düşünürsek hangi işlemi yapacağımızı ifade ettiğimiz 2 bit ile toplamda 4 adet işlem
+ifade edebiliyoruz:
 
 ```plain
 00
@@ -96,11 +102,14 @@ Bunların hepsini bir araya getirdiğimizde şu şekilde bir tablo ortaya çık�
 ```
 
 Burada işlemimizi ilk 2 bit ile ifade ettik ve bu işlemin alacağı herhangi bir değere 6 bit atadık.
-Dikkat ederseniz bunların tamamı hayal ürünü ve bizim ona anlam ifade ettiğimiz kadar anlamlı. Şu an herhangi bir şey ifade etmiyor, anlam yüklemeye başlayabiliriz.
+Dikkat ederseniz bunların tamamı hayal ürünü ve bizim ona anlam ifade ettiğimiz kadar anlamlı. Şu an
+herhangi bir şey ifade etmiyor, anlam yüklemeye başlayabiliriz.
 
 ---
 
-Toplama işlemi ile başlayalım demiştik. Kara kutumuza komut gönderirken `00` ile ifade ettiğimiz değer toplama işlemi olsun ve sonrasında 6 bit ile ifade ettiklerimiz üzerine ekleyeceğimiz sayıyı ifade etsin. Yani aşağıdaki komut 7 sayısını toplamayı ifade edecek:
+Toplama işlemi ile başlayalım demiştik. Kara kutumuza komut gönderirken `00` ile ifade ettiğimiz
+değer toplama işlemi olsun ve sonrasında 6 bit ile ifade ettiklerimiz üzerine ekleyeceğimiz sayıyı
+ifade etsin. Yani aşağıdaki komut 7 sayısını toplamayı ifade edecek:
 
 ```plain
 00 000111
@@ -115,7 +124,8 @@ bize hayali olarak ne sunduğu.
 
 Kara kutumuza bu komutu gönderdiğimizde bizim için toplama işlemi yapacak. Tebrikler, ilk işlemci
 mimarinizi ve programlama dilinizi oluşturdunuz. Sadece 1 adet komut
-([opcode][opcode]{:target="_blank"}) kabul ediyor ve gramer olarak ilk 2 bit işlem, sonrasında gelen 6 bit işlem için gereken veri kısmını anlıyor.
+([opcode][opcode]{:target="_blank"}) kabul ediyor ve gramer olarak ilk 2 bit işlem, sonrasında gelen
+6 bit işlem için gereken veri kısmını anlıyor.
 
 [opcode]: https://en.wikipedia.org/wiki/Opcode
 [siunit]: https://en.wikipedia.org/wiki/Byte#Multiple-byte_units
@@ -124,7 +134,7 @@ mimarinizi ve programlama dilinizi oluşturdunuz. Sadece 1 adet komut
 
 ### Böyle Programlama Olmaz Olsun
 
-Evet, böyle programlama çok zor ve hataya açık ama ilk bilgisayarlar ortaya çıkmışken programcılar
+Evet, böyle programlama çok zor ve hataya açık ancak ilk bilgisayarlar ortaya çıkmışken programcılar
 bu şekilde ikilik halde bilgisayarı programlıyorlardı. Onlar da bunun farkındaydı ve daha kolay
 nasıl programlanabilir sorusunun cevabını arıyorlardı. Bu cevap [Grace
 Hopper][hopper]{:target="_blank"}'ın ilk [derleyiciyi (compiler)][compiler]
@@ -149,7 +159,8 @@ programlama dilimizi tanımlamaktayız şu anda:
 topla 7
 ```
 
-yazdığımızda ve bunu başka bir programa verdiğimizde, çıktı olarak bize kara kutumuzun yukarıdaki çıktısını verdiğinde programlama dilimizi tamamlamış oluyoruz:
+yazdığımızda ve bunu başka bir programa verdiğimizde, çıktı olarak kara kutumuzun yukarıdaki
+çıktısını verdiğinde programlama dilimizi tamamlamış oluyoruz:
 
 ```plain
 00 000111
@@ -171,8 +182,9 @@ ve ARM için assembly dillerinin farklı olduğunu hatırlatmam gerekir.
 Ancak yine de assembly dili kullanması zor bir dil. Bunun üzerine başka, daha kolay kullanılabilir
 programlama dilleri de tanımlanabilir. Bahsettiğim gibi programlama dilleri başlı başına bir ders
 konusu, dolayısıyla assembly ile programlamanın __da__ zor olduğunu düşünürsek elimizde daha kolay
-bir programlama dili olması tercih edilecektir. [Örnek olarak][x86example] ekrana `Hello, World`
-yazan assembly programını ekliyorum. Ne kadar zor ve hataya açık olabileceğini tahmin edebiliriz:
+bir programlama dili olması tercih edilecektir. [Örnek olarak][x86example]{:target="_blank"} ekrana
+`Hello, World` yazan assembly programını ekliyorum. Ne kadar zor ve hataya açık olabileceğini tahmin
+edebiliriz:
 
 ```asm
           global    _start
@@ -195,9 +207,16 @@ message:  db        "Hello, World", 10      ; note the newline at the end
 
 ## Sonuç
 
-Kara kutu örneğinden giderek işlemciye nasıl komutlar gönderilebileceğini, ikilik sistemi, kendimize ait nasıl işlemci mimarisi yapabileceğimizi ve programlama dilinin ne olduğunu gördük. Esasında programlama dili dediğimiz 1 ve 0 ile işlemci komutlarının üzerindeki assembly dilinin üzerine yerleştirilmiş katmanlardan oluşuyor. Geldiğimiz yer yine işlemcinin anlayacağı 1 ve 0'lardan ibaret.
+Kara kutu örneğinden giderek işlemciye nasıl komutlar gönderilebileceğini, ikilik sistemi, kendimize
+ait nasıl işlemci mimarisi yapabileceğimizi ve programlama dilinin ne olduğunu gördük. Esasında
+programlama dili dediğimiz 1 ve 0 ile işlemci komutlarının üzerindeki assembly dilinin üzerine
+yerleştirilmiş katmanlardan oluşuyor. Geldiğimiz yer yine işlemcinin anlayacağı 1 ve 0'lardan
+ibaret.
 
-Programlama dilinin ne olduğuna değindiğimize göre bir sonraki bölümde Python'a geçeceğiz. Python'u yine assembly üzerinde bir katman olarak düşünebiliriz. Her ne kadar çok basit bir anlatım ve Python'un da kendi içerisinde incelikleri olsa da bu örneğin giriş seviyesinde doğru olduğunu düşünüyorum.
+Programlama dilinin ne olduğuna değindiğimize göre bir sonraki bölümde Python'a geçeceğiz. Python'u
+yine assembly üzerinde bir katman olarak düşünebiliriz. Her ne kadar çok basit bir benzetme ve
+Python'un da kendi içerisinde incelikleri olsa da bu örneğin giriş seviyesinde doğru olduğunu
+düşünüyorum.
 
 Hatırlamakta fayda var; programlama dili, bir programı çalıştıran başka bir program tarafından
 yorumlanıyor / derleniyor. Yani programlama dilinin olabilmesi için onu yorumlayan başka bir
