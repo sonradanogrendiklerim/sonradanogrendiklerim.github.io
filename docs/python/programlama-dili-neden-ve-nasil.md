@@ -161,9 +161,9 @@ olması açısından ilk derleyicinin nasıl yazıldığı üzerine düşünmeni
 
 ### Assembly Dili
 
-Yukarıda yazdığımız `topla 7` komutu bir assembly dili ve her işlemci için farklılık göstermekte.
+Yukarıda yazdığımız `topla 7` komutu bir assembly dili ve her işlemci için farklılık gösterecek.
 Biz burada hayali kara kutumuza, yani işlemcimize bir assembly dili tanımladık. Bununla beraber x86
-ve ARM için assembly dilleri çok farklı
+ve ARM için assembly dillerinin farklı olduğunu hatırlatmam gerekir.
 
 - Dil nedir
 - Bilgisayar tarihçesi, nelerden oluşur
