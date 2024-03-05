@@ -1,6 +1,6 @@
 ---
-title: Programlama Dili Nedir
-description: Programlama dili nedir, neden ve nasıl ortaya çıktı.
+title: "Programlama Dili: Neden ve Nasıl"
+description: Bilgisayar nasıl çalışır, programlama dili nedir, neden ve nasıl ortaya çıktı.
 ---
 
 ## Giriş
@@ -19,7 +19,7 @@ nasıl ortaya çıktı konuları hakkında fikrimiz olacak.
 
 [python]: https://www.python.org
 
-## Bilgisayar ve Programlama Dilleri Nasıl Çalışır
+## Programlama Dilleri Nasıl Çalışır
 
 ### İşlemci
 
@@ -47,8 +47,8 @@ pratiği yapalım. Henüz nasıl çalıştığını bilmiyoruz, ileride bunun ü
 
 Öncelikle bu kara kutu için toplamda kaç adet 1 ve 0 kullanacağımızı belirlememiz gerekiyor. Bunun için 8 adet 1 ve 0 yeterli gibi görünüyor. Dolayısıyla ifade edeceğimiz her şeyi 8 adet ikilik sayı ile ifade edeceğiz.
 
-Verinin aksine ifade edeceğimiz işlem sayısı bu kadar değil. Sadece 2 adet ifade edeceğimiz durum
-mevcut.
+Verinin aksine ifade edeceğimiz durum sayısı bu kadar değil. Sadece 2 adet ifade edeceğimiz
+durum mevcut.
 
 1. Hangi işlemi yapacağız
 2. Bu işlem için hangi veriyi kullanacağız
@@ -114,7 +114,7 @@ bize hayali olarak ne sunduğu.
 
 Kara kutumuza bu komutu gönderdiğimizde bizim için toplama işlemi yapacak. Tebrikler, ilk işlemci
 mimarinizi ve programlama dilinizi oluşturdunuz. Sadece 1 adet komut
-([opcode][opcode]{:target="_blank"}) komut kabul ediyor ve gramer olarak ilk 2 bit işlem, sonrasında gelen 6 bit işlem için gereken veri kısmını anlıyor.
+([opcode][opcode]{:target="_blank"}) kabul ediyor ve gramer olarak ilk 2 bit işlem, sonrasında gelen 6 bit işlem için gereken veri kısmını anlıyor.
 
 [opcode]: https://en.wikipedia.org/wiki/Opcode
 [siunit]: https://en.wikipedia.org/wiki/Byte#Multiple-byte_units
@@ -123,9 +123,9 @@ mimarinizi ve programlama dilinizi oluşturdunuz. Sadece 1 adet komut
 
 Evet, böyle programlama çok zor ve hataya açık ama ilk bilgisayarlar ortaya çıkmışken programcılar
 bu şekilde ikilik halde bilgisayarı programlıyorlardı. Onlar da bunun farkındaydı ve daha kolay
-nasıl programlanabilir sorusunun cevabını arıyorlardı. Bu cevap
-[Grace Hopper][hopper]{:target="_blank"}'ın ilk [derleyiciyi (compiler)][compiler] yazması ile
-geldi.
+nasıl programlanabilir sorusunun cevabını arıyorlardı. Bu cevap [Grace
+Hopper][hopper]{:target="_blank"}'ın ilk [derleyiciyi (compiler)][compiler]
+[1951 yılında][firstcompiler] yazması ile geldi ve bu acı son buldu. Gerçi hala JavaScript acısı çekiyoruz ama bu Hopper'ın emeklerini boşa çıkarmıyor :)
 
 ### Derleyici
 
@@ -133,13 +133,14 @@ Bir programı alıp başka programa dönüştüren program olarak kısaltabiliri
 bahsettiğimiz zorluk ve hataya açık olma sebebiyle ortaya çıkmış bir kolaylık. Hopper bu durumun
 farkında olarak bunun üzerine düşünmüş ve ilk derleyiciyi yazmış. Kendimiz derleyici yapıyor olsak
 ve kendi problemimizi çözüyor olsaydık, artık hayal ürünü kara kutumuz ile direkt olarak iletişimden
-ziyade, araya bir katman koyardık. Bu katman daha üst düzeyde yazdığımız komutları, daha alt
+ziyade, araya bir katman koyardık. Bu katman daha üst düzeyde yazdığımız komutları daha alt
 düzeydeki komutlara birebir çevirir ve istediğimiz işi yapardı.
 
 Araya katman koyduğumuz için de çok çeşitli optimizasyonlar, daha kara kutuya gitmeden yaptığımız
-yanlışları görme fırsatı bulabilirdik. Şimdi bunun üzerine düşünelim. Aslında çok da düşünmeye gerek
-yok, yapacağımız şey basit. Kara kutumuz için nasıl tanımlar yaptıysak, bunun için de birtakım
-tanımlar yapıp onlar üzerinden ilerleyeceğiz. İşte bu tanımlara dilin grameri diyoruz. Aslında kendi programlama dilimizi tanımlamaktayız şu anda:
+yanlışları görme fırsatı bulabilirdik. Bunun üzerine düşündüğümüzde aslında yapmamız gereken şeyin
+çok basit olduğunu görebiliriz. Kara kutumuz için nasıl tanımlar yaptıysak, bunun için de birtakım
+tanımlar yapıp onlar üzerinden ilerleyeceğiz. İşte bu tanımlara dilin grameri diyoruz. Aslında kendi
+programlama dilimizi tanımlamaktayız şu anda:
 
 ```plain
 topla 7
@@ -156,12 +157,13 @@ olması açısından ilk derleyicinin nasıl yazıldığı üzerine düşünmeni
 
 [hopper]: https://en.wikipedia.org/wiki/Grace_Hopper
 [compiler]: https://en.wikipedia.org/wiki/Compiler
+[firstcompiler]: https://cs.brown.edu/~adf/programming_languages.html#:~:text=In%201951%2C%20Grace%20Hopper%20wrote,do%20the%20work%20by%20hand.
 
-### RAM
+### Assembly Dili
 
-### Disk
-
-## Notlar
+Yukarıda yazdığımız `topla 7` komutu bir assembly dili ve her işlemci için farklılık göstermekte.
+Biz burada hayali kara kutumuza, yani işlemcimize bir assembly dili tanımladık. Bununla beraber x86
+ve ARM için assembly dilleri çok farklı
 
 - Dil nedir
 - Bilgisayar tarihçesi, nelerden oluşur
