@@ -1060,20 +1060,22 @@ ki yıllar sonra bunu anladığımda gerçekten çok şaşırmıştım.</p>
 <hr />
 <p>Gelin beraber fikir yürüterek, elimizde sadece 1 ve 0 varken bir <code>şey</code>'e nasıl komut verebiliriz
 pratiği yapalım. Henüz nasıl çalıştığını bilmiyoruz, ileride bunun üzerine de düşüneceğiz ancak
-şimdilik bir toplama işlemini nasıl ifade edebiliriz üzerine düşünelim.</p>
+şimdilik 4 işlemi <em>(toplama, çıkarma, çarpma, bölme)</em> nasıl ifade edebiliriz üzerine düşünelim.</p>
 <p>Öncelikle bu kara kutu için toplamda kaç adet 1 ve 0 kullanacağımızı belirlememiz gerekiyor. Bunun
-için 8 adet 1 ve 0 yeterli gibi görünüyor. Dolayısıyla ifade edeceğimiz her şeyi 8 adet ikilik sayı
-ile ifade edeceğiz.</p>
-<p>Verinin aksine ifade edeceğimiz durum sayısı bu kadar değil. Sadece 2 adet ifade edeceğimiz
-durum mevcut.</p>
+için kara kutumuzun bize ne sunduğu önemli. Farz edelim ki <strong>sadece</strong> 4 işlem için komut
+gönderebiliyoruz ve onluk tabanda 64'e kadar işlem yapmak istiyoruz. Bunun için toplamda 8 adet 1 ve
+0 yeterli gibi görünüyor. Neden yeterli olduğuna birazdan değineceğiz.</p>
+<p>Son tahlilde elimizde 8 adet 1 ve 0 ile çalışan, 4 işlem için komut gönderebildiğimiz ve 64'e kadar
+veri alabilen bir kara kutu var. Verinin aksine ifade edebileceğimiz durumlar bu kadar fazla değil.
+Sadece aşağıdakiler işimizi görmekte:</p>
 <ol>
 <li>Hangi işlemi yapacağız</li>
 <li>Bu işlem için hangi veriyi kullanacağız</li>
 </ol>
 <p>Burada hangi işlem ve kullanacağımız veri miktarı için ne kadar 1 ve 0 ayıracağımız tamamen bize
-kalmış durumda. Yine kolaylık olması açısından ilk 2 haneyi işlem, sonraki 6 haneyi veri olmak üzere
-8 adet 1 ve 0 kullanacağız. Burada kullandığımız 1 ve 0'lara kısaca <code>bit</code> diyoruz. Yani ilk 2 bit
-işlem, sonraki 6 bit veri olacak bu kara kutuda.</p>
+kalmış durumda. Kara kutunun çalışma biçimi açısından ilk 2 haneyi işlem, sonraki 6 haneyi veri
+olmak üzere 8 adet 1 ve 0 kullanacağız. Burada kullandığımız 1 ve 0'lara kısaca <code>bit</code> diyoruz. Yani
+ilk 2 bit işlem, sonraki 6 bit veri olacak bu kara kutuda.</p>
 <div class="admonition tip">
 <p class="admonition-title">Bit ve Byte</p>
 <p>Bu yazıda çok kullanmayacağız ancak burada görülmesinde fayda olduğunu düşünüyorum. 8 adet bit
@@ -1084,10 +1086,10 @@ için merak edenlere <a href="https://en.wikipedia.org/wiki/Byte#Multiple-byte_u
 </div>
 <p>İkilik sistemi düşünürsek hangi işlemi yapacağımızı ifade ettiğimiz 2 bit ile toplamda 4 adet işlem
 ifade edebiliyoruz:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>00
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>01
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>10
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>11
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>00  toplama
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>01  çıkarma
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>10  çarpma
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>11  bölme
 </span></code></pre></div>
 <p>Veri için elimizde 6 tane bit olduğu için, 2 üzeri 6 <em>(2^6=64)</em> adet durum ifade edebiliyoruz. Bu da
 demek oluyor ki onluk tabanda en fazla 64 sayısına kadar toplayabiliriz çünkü fazlasını ifade
@@ -1115,6 +1117,11 @@ ifade etsin. Yani aşağıdaki komut 7 sayısını toplamayı ifade edecek:</p>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>|  |-----&gt; onluk tabanda 7 sayısı
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>|--------&gt; toplama işlemi
 </span></code></pre></div>
+<p>Aynı şekilde aşağıdaki kod ise 7 ile çarpma işlemini ifade edecek:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>10 000111
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>|  |-----&gt; onluk tabanda 7 sayısı
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>|--------&gt; çarpma işlemi
+</span></code></pre></div>
 <p>Burada dikkat etmemiz gereken nokta hala hayal ürünü bir kara kutu ile çalışıyoruz. Nasıl
 toplayacağız, neyi toplayacağız, ne nerede duruyor, sonucu nasıl alacağız gibi sorularla
 şimdilik ilgilenmiyoruz. Sadece tek ilgilendiğimiz nokta bu kara kutuyu nasıl yöneteceğimiz ve
@@ -1141,11 +1148,11 @@ yanlışları görme fırsatı bulabilirdik. Bunun üzerine düşündüğümüzd
 çok basit olduğunu görebiliriz. Kara kutumuz için nasıl tanımlar yaptıysak, bunun için de birtakım
 tanımlar yapıp onlar üzerinden ilerleyeceğiz. İşte bu tanımlara dilin grameri diyoruz. Aslında kendi
 programlama dilimizi tanımlamaktayız şu anda:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>topla 7
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>topla 7
 </span></code></pre></div>
 <p>yazdığımızda ve bunu başka bir programa verdiğimizde, çıktı olarak kara kutumuzun yukarıdaki
 çıktısını verdiğinde programlama dilimizi tamamlamış oluyoruz:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>00 000111
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>00 000111
 </span></code></pre></div>
 <p>Bunu nasıl yaptığı 1 yıllık bir ders konusu, burada işlemeye vaktimiz olmayacak ama beyin jimnastiği
 olması açısından ilk derleyicinin nasıl yazıldığı üzerine düşünmenizi isterim.</p>
@@ -1159,20 +1166,20 @@ konusu, dolayısıyla assembly ile programlamanın <strong>da</strong> zor oldu�
 bir programlama dili olması tercih edilecektir. <a href="https://cs.lmu.edu/~ray/notes/x86assembly/" target="_blank">Örnek olarak</a> ekrana
 <code>Hello, World</code> yazan assembly programını ekliyorum. Ne kadar zor ve hataya açık olabileceğini tahmin
 edebiliriz:</p>
-<div class="language-asm highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="w">          </span><span class="nf">global</span><span class="w">    </span><span class="no">_start</span>
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">          </span><span class="nf">section</span><span class="w">   </span><span class="no">.text</span>
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="nl">_start:</span><span class="w">   </span><span class="nf">mov</span><span class="w">       </span><span class="no">rax</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="w">                  </span><span class="c1">; system call for write</span>
-</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">          </span><span class="nf">mov</span><span class="w">       </span><span class="no">rdi</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="w">                  </span><span class="c1">; file handle 1 is stdout</span>
-</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">          </span><span class="nf">mov</span><span class="w">       </span><span class="no">rsi</span><span class="p">,</span><span class="w"> </span><span class="no">message</span><span class="w">            </span><span class="c1">; address of string to output</span>
-</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">          </span><span class="nf">mov</span><span class="w">       </span><span class="no">rdx</span><span class="p">,</span><span class="w"> </span><span class="mi">13</span><span class="w">                 </span><span class="c1">; number of bytes</span>
-</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">          </span><span class="nf">syscall</span><span class="w">                           </span><span class="c1">; invoke operating system</span>
-</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">          </span><span class="nf">mov</span><span class="w">       </span><span class="no">rax</span><span class="p">,</span><span class="w"> </span><span class="mi">60</span><span class="w">                 </span><span class="c1">; system call for exit</span>
-</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">          </span><span class="nf">xor</span><span class="w">       </span><span class="no">rdi</span><span class="p">,</span><span class="w"> </span><span class="no">rdi</span><span class="w">                </span><span class="c1">; exit code 0</span>
-</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="w">          </span><span class="nf">syscall</span><span class="w">                           </span><span class="c1">; invoke operating system to exit</span>
-</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>
-</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="w">          </span><span class="nf">section</span><span class="w">   </span><span class="no">.data</span>
-</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="nl">message:</span><span class="w">  </span><span class="nf">db</span><span class="w">        </span><span class="err">&quot;</span><span class="no">Hello</span><span class="p">,</span><span class="w"> </span><span class="no">World</span><span class="err">&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="w">      </span><span class="c1">; note the newline at the end</span>
+<div class="language-asm highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="w">          </span><span class="nf">global</span><span class="w">    </span><span class="no">_start</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">          </span><span class="nf">section</span><span class="w">   </span><span class="no">.text</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="nl">_start:</span><span class="w">   </span><span class="nf">mov</span><span class="w">       </span><span class="no">rax</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="w">                  </span><span class="c1">; system call for write</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">          </span><span class="nf">mov</span><span class="w">       </span><span class="no">rdi</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="w">                  </span><span class="c1">; file handle 1 is stdout</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">          </span><span class="nf">mov</span><span class="w">       </span><span class="no">rsi</span><span class="p">,</span><span class="w"> </span><span class="no">message</span><span class="w">            </span><span class="c1">; address of string to output</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">          </span><span class="nf">mov</span><span class="w">       </span><span class="no">rdx</span><span class="p">,</span><span class="w"> </span><span class="mi">13</span><span class="w">                 </span><span class="c1">; number of bytes</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">          </span><span class="nf">syscall</span><span class="w">                           </span><span class="c1">; invoke operating system</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">          </span><span class="nf">mov</span><span class="w">       </span><span class="no">rax</span><span class="p">,</span><span class="w"> </span><span class="mi">60</span><span class="w">                 </span><span class="c1">; system call for exit</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="w">          </span><span class="nf">xor</span><span class="w">       </span><span class="no">rdi</span><span class="p">,</span><span class="w"> </span><span class="no">rdi</span><span class="w">                </span><span class="c1">; exit code 0</span>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="w">          </span><span class="nf">syscall</span><span class="w">                           </span><span class="c1">; invoke operating system to exit</span>
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="w">          </span><span class="nf">section</span><span class="w">   </span><span class="no">.data</span>
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="nl">message:</span><span class="w">  </span><span class="nf">db</span><span class="w">        </span><span class="err">&quot;</span><span class="no">Hello</span><span class="p">,</span><span class="w"> </span><span class="no">World</span><span class="err">&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="w">      </span><span class="c1">; note the newline at the end</span>
 </span></code></pre></div>
 <h2 id="sonuc">Sonuç<a class="headerlink" href="#sonuc" title="Permanent link">&para;</a></h2>
 <p>Kara kutu örneğinden giderek işlemciye nasıl komutlar gönderilebileceğini, ikilik sistemi, kendimize
