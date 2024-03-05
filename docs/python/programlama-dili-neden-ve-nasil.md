@@ -46,22 +46,24 @@ ki yıllar sonra bunu anladığımda gerçekten çok şaşırmıştım.
 
 Gelin beraber fikir yürüterek, elimizde sadece 1 ve 0 varken bir `şey`'e nasıl komut verebiliriz
 pratiği yapalım. Henüz nasıl çalıştığını bilmiyoruz, ileride bunun üzerine de düşüneceğiz ancak
-şimdilik bir toplama işlemini nasıl ifade edebiliriz üzerine düşünelim.
+şimdilik 4 işlemi _(toplama, çıkarma, çarpma, bölme)_ nasıl ifade edebiliriz üzerine düşünelim.
 
 Öncelikle bu kara kutu için toplamda kaç adet 1 ve 0 kullanacağımızı belirlememiz gerekiyor. Bunun
-için 8 adet 1 ve 0 yeterli gibi görünüyor. Dolayısıyla ifade edeceğimiz her şeyi 8 adet ikilik sayı
-ile ifade edeceğiz.
+için kara kutumuzun bize ne sunduğu önemli. Farz edelim ki __sadece__ 4 işlem için komut
+gönderebiliyoruz ve onluk tabanda 64'e kadar işlem yapmak istiyoruz. Bunun için toplamda 8 adet 1 ve
+0 yeterli gibi görünüyor. Neden yeterli olduğuna birazdan değineceğiz.
 
-Verinin aksine ifade edeceğimiz durum sayısı bu kadar değil. Sadece 2 adet ifade edeceğimiz
-durum mevcut.
+Son tahlilde elimizde 8 adet 1 ve 0 ile çalışan, 4 işlem için komut gönderebildiğimiz ve 64'e kadar
+veri alabilen bir kara kutu var. Verinin aksine ifade edebileceğimiz durumlar bu kadar fazla değil.
+Sadece aşağıdakiler işimizi görmekte:
 
 1. Hangi işlemi yapacağız
 2. Bu işlem için hangi veriyi kullanacağız
 
 Burada hangi işlem ve kullanacağımız veri miktarı için ne kadar 1 ve 0 ayıracağımız tamamen bize
-kalmış durumda. Yine kolaylık olması açısından ilk 2 haneyi işlem, sonraki 6 haneyi veri olmak üzere
-8 adet 1 ve 0 kullanacağız. Burada kullandığımız 1 ve 0'lara kısaca `bit` diyoruz. Yani ilk 2 bit
-işlem, sonraki 6 bit veri olacak bu kara kutuda.
+kalmış durumda. Kara kutunun çalışma biçimi açısından ilk 2 haneyi işlem, sonraki 6 haneyi veri
+olmak üzere 8 adet 1 ve 0 kullanacağız. Burada kullandığımız 1 ve 0'lara kısaca `bit` diyoruz. Yani
+ilk 2 bit işlem, sonraki 6 bit veri olacak bu kara kutuda.
 
 !!! tip "Bit ve Byte"
     Bu yazıda çok kullanmayacağız ancak burada görülmesinde fayda olduğunu düşünüyorum. 8 adet bit
@@ -74,10 +76,10 @@ işlem, sonraki 6 bit veri olacak bu kara kutuda.
 ifade edebiliyoruz:
 
 ```plain
-00
-01
-10
-11
+00  toplama
+01  çıkarma
+10  çarpma
+11  bölme
 ```
 
 Veri için elimizde 6 tane bit olduğu için, 2 üzeri 6 _(2^6=64)_ adet durum ifade edebiliyoruz. Bu da
@@ -115,6 +117,14 @@ ifade etsin. Yani aşağıdaki komut 7 sayısını toplamayı ifade edecek:
 00 000111
 |  |-----> onluk tabanda 7 sayısı
 |--------> toplama işlemi
+```
+
+Aynı şekilde aşağıdaki kod ise 7 ile çarpma işlemini ifade edecek:
+
+```plain
+10 000111
+|  |-----> onluk tabanda 7 sayısı
+|--------> çarpma işlemi
 ```
 
 Burada dikkat etmemiz gereken nokta hala hayal ürünü bir kara kutu ile çalışıyoruz. Nasıl
