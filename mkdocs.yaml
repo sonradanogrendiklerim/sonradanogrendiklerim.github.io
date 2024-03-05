@@ -22,6 +22,8 @@ nav:
           - Ubuntu Kurulumu: ubuntu/kurulum.md
           - Terminal: ubuntu/terminal.md
           - Terminali Güzelleştirelim: ubuntu/terminali-guzellestirelim.md
+      - Python:
+          - "Programlama Dili: Neden ve Nasıl": python/programlama-dili-neden-ve-nasil.md
 
   - Makaleler: makaleler/index.md
   - Blog: blog/index.md
