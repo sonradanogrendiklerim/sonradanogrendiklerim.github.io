@@ -19,11 +19,11 @@ nasıl ortaya çıktı konuları hakkında fikrimiz olacak.
 
 [python]: https://www.python.org
 
-## Bilgisayar Nasıl Çalışır
+## Bilgisayar ve Programlama Dilleri Nasıl Çalışır
 
 ### İşlemci
 
-İşlemci dediğimiz çok küçük ve güçlü elektronik devre parçası ve sadece 1 ve 0, yani ikilik sistemi
+İşlemci dediğimiz nispeten küçük bir elektronik devre parçası ve sadece 1 ve 0, yani ikilik sistemi
 anlıyor. Burada dünyada 1 işlemci ya da işlemci mimarisi olduğu anlaşılmasın, yine programlama
 dillerinde olduğu gibi yüzlerce, belki binlerce işlemci ve işlemci mimarisi var. Lakin en çok x86 ve
 ARM kullanmaktayız. Telefonlarımızda düşük güçte yüksek performans verebildiği için ARM, sunucularda
@@ -47,16 +47,16 @@ pratiği yapalım. Henüz nasıl çalıştığını bilmiyoruz, ileride bunun ü
 
 Öncelikle bu kara kutu için toplamda kaç adet 1 ve 0 kullanacağımızı belirlememiz gerekiyor. Bunun için 8 adet 1 ve 0 yeterli gibi görünüyor. Dolayısıyla ifade edeceğimiz her şeyi 8 adet ikilik sayı ile ifade edeceğiz.
 
-Verinin aksine ifade edeceklerimizin sayısı bu kadar değil. Sadece 2 adet ifade edeceğimiz durum
+Verinin aksine ifade edeceğimiz işlem sayısı bu kadar değil. Sadece 2 adet ifade edeceğimiz durum
 mevcut.
 
-1. Hangi işlemi yapacağımız
-2. Bu işlem için kullanacağımız veri
+1. Hangi işlemi yapacağız
+2. Bu işlem için hangi veriyi kullanacağız
 
 Burada hangi işlem ve kullanacağımız veri miktarı için ne kadar 1 ve 0 ayıracağımız tamamen bize
 kalmış durumda. Yine kolaylık olması açısından ilk 2 haneyi işlem, sonraki 6 haneyi veri olmak üzere
-8 adet 1 ve 0 kullanacağız. Buna kısaca `bit` diyoruz. Yani ilk 2 bit işlem, sonraki 6 bit veri
-olacak bu kara kutuda.
+8 adet 1 ve 0 kullanacağız. Burada kullandığımız 1 ve 0'lara kısaca `bit` diyoruz. Yani ilk 2 bit
+işlem, sonraki 6 bit veri olacak bu kara kutuda.
 
 !!! tip "Bit ve Byte"
     Bu yazıda çok kullanmayacağız ancak burada görülmesinde fayda olduğunu düşünüyorum. 8 adet bit
@@ -78,12 +78,12 @@ demek oluyor ki onluk tabanda en fazla 64 sayısına kadar toplayabiliriz çünk
 edemiyoruz.
 
 ```plain
-000000
+000000 -> onluk sistemde 0
 000001
-000010
+000010 -> onluk sistemde 3
 000011
 ...
-111111
+111111 -> onluk sistemde 64
 ```
 
 Bunların hepsini bir araya getirdiğimizde şu şekilde bir tablo ortaya çıkıyor:
@@ -99,12 +99,63 @@ Dikkat ederseniz bunların tamamı hayal ürünü ve bizim ona anlam ifade etti�
 
 ---
 
-- Toplama işlemi için 2 register
-- Register'a veri koymak için, yukle
-- Toplama işlemi için 1 komut, topla
-- Sonucu ilk registera yazılıyor.
+Toplama işlemi ile başlayalım demiştik. Kara kutumuza komut gönderirken `00` ile ifade ettiğimiz değer toplama işlemi olsun ve sonrasında 6 bit ile ifade ettiklerimiz üzerine ekleyeceğimiz sayıyı ifade etsin. Yani aşağıdaki komut 7 sayısını toplamayı ifade edecek:
 
+```plain
+00 000111
+|  |-----> onluk tabanda 7 sayısı
+|--------> toplama işlemi
+```
+
+Burada dikkat etmemiz gereken nokta hala hayal ürünü bir kara kutu ile çalışıyoruz. Nasıl
+toplayacağız, neyi toplayacağız, ne nerede duruyor, sonucu nasıl alacağız gibi sorularla
+şimdilik ilgilenmiyoruz. Sadece tek ilgilendiğimiz nokta bu kara kutuyu nasıl yöneteceğimiz ve
+bize hayali olarak ne sunduğu.
+
+Kara kutumuza bu komutu gönderdiğimizde bizim için toplama işlemi yapacak. Tebrikler, ilk işlemci
+mimarinizi ve programlama dilinizi oluşturdunuz. Sadece 1 adet komut
+([opcode][opcode]{:target="_blank"}) komut kabul ediyor ve gramer olarak ilk 2 bit işlem, sonrasında gelen 6 bit işlem için gereken veri kısmını anlıyor.
+
+[opcode]: https://en.wikipedia.org/wiki/Opcode
 [siunit]: https://en.wikipedia.org/wiki/Byte#Multiple-byte_units
+
+### Böyle Programlama Olmaz Olsun
+
+Evet, böyle programlama çok zor ve hataya açık ama ilk bilgisayarlar ortaya çıkmışken programcılar
+bu şekilde ikilik halde bilgisayarı programlıyorlardı. Onlar da bunun farkındaydı ve daha kolay
+nasıl programlanabilir sorusunun cevabını arıyorlardı. Bu cevap
+[Grace Hopper][hopper]{:target="_blank"}'ın ilk [derleyiciyi (compiler)][compiler] yazması ile
+geldi.
+
+### Derleyici
+
+Bir programı alıp başka programa dönüştüren program olarak kısaltabiliriz. Bu tamamen yukarıda
+bahsettiğimiz zorluk ve hataya açık olma sebebiyle ortaya çıkmış bir kolaylık. Hopper bu durumun
+farkında olarak bunun üzerine düşünmüş ve ilk derleyiciyi yazmış. Kendimiz derleyici yapıyor olsak
+ve kendi problemimizi çözüyor olsaydık, artık hayal ürünü kara kutumuz ile direkt olarak iletişimden
+ziyade, araya bir katman koyardık. Bu katman daha üst düzeyde yazdığımız komutları, daha alt
+düzeydeki komutlara birebir çevirir ve istediğimiz işi yapardı.
+
+Araya katman koyduğumuz için de çok çeşitli optimizasyonlar, daha kara kutuya gitmeden yaptığımız
+yanlışları görme fırsatı bulabilirdik. Şimdi bunun üzerine düşünelim. Aslında çok da düşünmeye gerek
+yok, yapacağımız şey basit. Kara kutumuz için nasıl tanımlar yaptıysak, bunun için de birtakım
+tanımlar yapıp onlar üzerinden ilerleyeceğiz. İşte bu tanımlara dilin grameri diyoruz. Aslında kendi programlama dilimizi tanımlamaktayız şu anda:
+
+```plain
+topla 7
+```
+
+yazdığımızda ve bunu başka bir programa verdiğimizde, çıktı olarak bize kara kutumuzun yukarıdaki çıktısını verdiğinde programlama dilimizi tamamlamış oluyoruz:
+
+```plain
+00 000111
+```
+
+Bunu nasıl yaptığı 1 yıllık bir ders konusu, burada işlemeye vaktimiz olmayacak ama beyin jimnastiği
+olması açısından ilk derleyicinin nasıl yazıldığı üzerine düşünmenizi isterim.
+
+[hopper]: https://en.wikipedia.org/wiki/Grace_Hopper
+[compiler]: https://en.wikipedia.org/wiki/Compiler
 
 ### RAM
 
