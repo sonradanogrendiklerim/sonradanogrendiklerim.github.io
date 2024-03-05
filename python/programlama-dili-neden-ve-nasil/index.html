@@ -1,0 +1,1299 @@
+
+<!doctype html>
+<html lang="tr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Bilgisayar nasıl çalışır, programlama dili nedir, neden ve nasıl ortaya çıktı.">
+      
+      
+        <meta name="author" content="Eren Türkay">
+      
+      
+        <link rel="canonical" href="https://sonradanogrendiklerim.com/python/programlama-dili-neden-ve-nasil/">
+      
+      
+        <link rel="prev" href="../../ubuntu/terminali-guzellestirelim/">
+      
+      
+        <link rel="next" href="../../makaleler/">
+      
+      
+        <link rel="alternate" type="application/rss+xml" title="RSS beslemesi" href="../../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="Güncellenmiş içeriğin RSS beslemesi" href="../../feed_rss_updated.xml">
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.10">
+    
+    
+      
+        <title>Programlama Dili: Neden ve Nasıl - Sonradan Öğrendiklerim</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e359304.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-E9CRJC3RBF"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-E9CRJC3RBF",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-E9CRJC3RBF",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Programlama Dili: Neden ve Nasıl - Sonradan Öğrendiklerim" >
+      
+        <meta  property="og:description"  content="Bilgisayar nasıl çalışır, programlama dili nedir, neden ve nasıl ortaya çıktı." >
+      
+        <meta  property="og:image"  content="https://sonradanogrendiklerim.com/assets/images/social/python/programlama-dili-neden-ve-nasil.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://sonradanogrendiklerim.com/python/programlama-dili-neden-ve-nasil/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Programlama Dili: Neden ve Nasıl - Sonradan Öğrendiklerim" >
+      
+        <meta  name="twitter:description"  content="Bilgisayar nasıl çalışır, programlama dili nedir, neden ve nasıl ortaya çıktı." >
+      
+        <meta  name="twitter:image"  content="https://sonradanogrendiklerim.com/assets/images/social/python/programlama-dili-neden-ve-nasil.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#giris" class="md-skip">
+          Ana içeriğe geç
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Başlık">
+    <a href="../.." title="Sonradan Öğrendiklerim" class="md-header__button md-logo" aria-label="Sonradan Öğrendiklerim" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Sonradan Öğrendiklerim
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Programlama Dili: Neden ve Nasıl
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Ara" placeholder="Ara" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Ara">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Temizle" aria-label="Temizle" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Arama başlatılıyor
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Sekmeler" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Anasayfa
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../bilgisayar-muhendisligine-giris/onsoz/" class="md-tabs__link">
+          
+  
+  Bilgisayar Mühendisliğine Giriş
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../makaleler/" class="md-tabs__link">
+        
+  
+    
+  
+  Makaleler
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../blog/" class="md-tabs__link">
+        
+  
+    
+  
+  Blog
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://erenturkay.com/assets/resume/Eren_Turkay_Resume.pdf" class="md-tabs__link">
+        
+  
+    
+  
+  Resume
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigasyon" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Sonradan Öğrendiklerim" class="md-nav__button md-logo" aria-label="Sonradan Öğrendiklerim" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Sonradan Öğrendiklerim
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Anasayfa
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Bilgisayar Mühendisliğine Giriş
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Bilgisayar Mühendisliğine Giriş
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bilgisayar-muhendisligine-giris/onsoz/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ön Söz
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bilgisayar-muhendisligine-giris/baslarken/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Başlarken
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Nasıl Soru Sorulur?
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Nasıl Soru Sorulur?
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nasil-soru-sorulur/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Giriş
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nasil-soru-sorulur/sormadan-once/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sormadan Önce
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nasil-soru-sorulur/soru-sordugunuzda/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Soru Sorduğunuzda
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Ubuntu
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Ubuntu
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ubuntu/kurulum/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ubuntu Kurulumu
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ubuntu/terminal/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Terminal
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ubuntu/terminali-guzellestirelim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Terminali Güzelleştirelim
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Python
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            Python
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Programlama Dili: Neden ve Nasıl
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Programlama Dili: Neden ve Nasıl
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="İçindekiler">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      İçindekiler
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#giris" class="md-nav__link">
+    <span class="md-ellipsis">
+      Giriş
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#programlama-dilleri-nasl-calsr" class="md-nav__link">
+    <span class="md-ellipsis">
+      Programlama Dilleri Nasıl Çalışır
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Programlama Dilleri Nasıl Çalışır">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#islemci" class="md-nav__link">
+    <span class="md-ellipsis">
+      İşlemci
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#boyle-programlama-olmaz-olsun" class="md-nav__link">
+    <span class="md-ellipsis">
+      Böyle Programlama Olmaz Olsun
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#derleyici" class="md-nav__link">
+    <span class="md-ellipsis">
+      Derleyici
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assembly-dili" class="md-nav__link">
+    <span class="md-ellipsis">
+      Assembly Dili
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sonuc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sonuç
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../makaleler/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Makaleler
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Blog
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://erenturkay.com/assets/resume/Eren_Turkay_Resume.pdf" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Resume
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="İçindekiler">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      İçindekiler
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#giris" class="md-nav__link">
+    <span class="md-ellipsis">
+      Giriş
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#programlama-dilleri-nasl-calsr" class="md-nav__link">
+    <span class="md-ellipsis">
+      Programlama Dilleri Nasıl Çalışır
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Programlama Dilleri Nasıl Çalışır">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#islemci" class="md-nav__link">
+    <span class="md-ellipsis">
+      İşlemci
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#boyle-programlama-olmaz-olsun" class="md-nav__link">
+    <span class="md-ellipsis">
+      Böyle Programlama Olmaz Olsun
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#derleyici" class="md-nav__link">
+    <span class="md-ellipsis">
+      Derleyici
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assembly-dili" class="md-nav__link">
+    <span class="md-ellipsis">
+      Assembly Dili
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sonuc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sonuç
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Programlama Dili: Neden ve Nasıl</h1>
+
+<h2 id="giris">Giriş<a class="headerlink" href="#giris" title="Permanent link">&para;</a></h2>
+<p>Adı aslında üzerinde; herhangi bir programlama dilini kelimelerin ifade ettiği şekilde anlayacak
+olursak bu bir <code>dil</code>. Türkçenin nasıl gramer kuralları varsa, programlama dillerinin de gramer
+kuralları var ve gramerini, kelimelerini doğru kullandığımız ölçüde kendimizi ifade edebiliyoruz,
+yani program yazıyoruz.</p>
+<p>Programlama dilleri dedik çünkü kullanabileceğimiz tek bir programlama dili yok, etrafta yüzlerce
+programlama dili mevcut. Biz burada sadece <a href="https://www.python.org" target="_blank">Python</a> ile ilgileneceğiz
+ancak yaklaşımımız ezberlenmiş şekilde değişken tanımları, fonksiyonlar yerine temelden olacak. Bir
+konuyu öğrenirken arka planında neler olmuş, neden bu şekilde yapıyoruz soruları bana göre öğrenmeyi
+kolaylaştırıcı sorular.</p>
+<p>Yazının sonunda bilgisayar nasıl çalışır, nasıl programlayabiliriz, programlama dilleri neden ve
+nasıl ortaya çıktı konuları hakkında fikrimiz olacak.</p>
+<h2 id="programlama-dilleri-nasl-calsr">Programlama Dilleri Nasıl Çalışır<a class="headerlink" href="#programlama-dilleri-nasl-calsr" title="Permanent link">&para;</a></h2>
+<h3 id="islemci">İşlemci<a class="headerlink" href="#islemci" title="Permanent link">&para;</a></h3>
+<p>İşlemci dediğimiz nispeten küçük bir elektronik devre parçası ve sadece 1 ve 0, yani ikilik sistemi
+anlıyor. Burada dünyada 1 işlemci ya da işlemci mimarisi olduğu anlaşılmasın; yine programlama
+dillerinde olduğu gibi yüzlerce, belki binlerce işlemci ve işlemci mimarisi var. Lakin en çok
+<a href="https://en.wikipedia.org/wiki/X86">x86</a> ve <a href="https://en.wikipedia.org/wiki/ARM_architecture_family">ARM</a> kullanmaktayız. Telefonlarımızda düşük güçte yüksek performans verebildiği
+için ARM, sunucularda veya kişisel bilgisayarlarımızda ise x86 yaygın olarak kullanılmakta. Son
+zamanlarda ARM mimarisi sunucu performasına gelmiş olsa da ARM ve x86 karşılaştırması şimdilik
+konumuz değil.</p>
+<p>1 ve 0'lardan oluşan sisteme matematikte ikilik sistem, yani <code>binary</code> denmekte. Bu ikilik sistem ile
+oluşturduğumuz verilere ise ikiliik veri, ingilizcesi ile <code>binary data</code> deniyor. Peki elimizde
+sadece 1 ve 0 varsa işlemciye nasıl komutlar göndereceğiz, nasıl toplama, çıkarma gibi matematik
+hesabı yaptıracağız? Yaptırmayı bırakalım, işlemci sadece 1 ve 0 algılıyorsa, kendi içerisinde bu
+işlemleri nasıl yapabiliyor?</p>
+<p>Korkmayın, bütün bu soruların cevabı aslında çok basit. İşlemci o kadar basit bir şekilde çalışıyor
+ki yıllar sonra bunu anladığımda gerçekten çok şaşırmıştım.</p>
+<hr />
+<p>Gelin beraber fikir yürüterek, elimizde sadece 1 ve 0 varken bir <code>şey</code>'e nasıl komut verebiliriz
+pratiği yapalım. Henüz nasıl çalıştığını bilmiyoruz, ileride bunun üzerine de düşüneceğiz ancak
+şimdilik bir toplama işlemini nasıl ifade edebiliriz üzerine düşünelim.</p>
+<p>Öncelikle bu kara kutu için toplamda kaç adet 1 ve 0 kullanacağımızı belirlememiz gerekiyor. Bunun
+için 8 adet 1 ve 0 yeterli gibi görünüyor. Dolayısıyla ifade edeceğimiz her şeyi 8 adet ikilik sayı
+ile ifade edeceğiz.</p>
+<p>Verinin aksine ifade edeceğimiz durum sayısı bu kadar değil. Sadece 2 adet ifade edeceğimiz
+durum mevcut.</p>
+<ol>
+<li>Hangi işlemi yapacağız</li>
+<li>Bu işlem için hangi veriyi kullanacağız</li>
+</ol>
+<p>Burada hangi işlem ve kullanacağımız veri miktarı için ne kadar 1 ve 0 ayıracağımız tamamen bize
+kalmış durumda. Yine kolaylık olması açısından ilk 2 haneyi işlem, sonraki 6 haneyi veri olmak üzere
+8 adet 1 ve 0 kullanacağız. Burada kullandığımız 1 ve 0'lara kısaca <code>bit</code> diyoruz. Yani ilk 2 bit
+işlem, sonraki 6 bit veri olacak bu kara kutuda.</p>
+<div class="admonition tip">
+<p class="admonition-title">Bit ve Byte</p>
+<p>Bu yazıda çok kullanmayacağız ancak burada görülmesinde fayda olduğunu düşünüyorum. 8 adet bit
+yan yana geldiğinde buna <code>byte</code> denmekte. Kara kutumuz ile ilgili konuşurken her daim bit hesabı
+yapacağız ancak daha büyük verileri nitelendirmek istediğimizde <code>byte</code> kullanılmakta. Kilobyte,
+Megabyte gibi standard ünite değerlerine burada dokunabilirdik ancak ana konumuz bu olmadığı
+için merak edenlere <a href="https://en.wikipedia.org/wiki/Byte#Multiple-byte_units" target="_blank">wikipedia makalesini</a> tavsiye ederim.</p>
+</div>
+<p>İkilik sistemi düşünürsek hangi işlemi yapacağımızı ifade ettiğimiz 2 bit ile toplamda 4 adet işlem
+ifade edebiliyoruz:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>00
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>01
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>10
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>11
+</span></code></pre></div>
+<p>Veri için elimizde 6 tane bit olduğu için, 2 üzeri 6 <em>(2^6=64)</em> adet durum ifade edebiliyoruz. Bu da
+demek oluyor ki onluk tabanda en fazla 64 sayısına kadar toplayabiliriz çünkü fazlasını ifade
+edemiyoruz.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>000000 -&gt; onluk sistemde 0
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>000001
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>000010 -&gt; onluk sistemde 3
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>000011
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>...
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>111111 -&gt; onluk sistemde 64
+</span></code></pre></div>
+<p>Bunların hepsini bir araya getirdiğimizde şu şekilde bir tablo ortaya çıkıyor:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>00 000000
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>|  ------&gt; İşleme ait veri
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>|--------&gt; İşlem (opcode)
+</span></code></pre></div>
+<p>Burada işlemimizi ilk 2 bit ile ifade ettik ve bu işlemin alacağı herhangi bir değere 6 bit atadık.
+Dikkat ederseniz bunların tamamı hayal ürünü ve bizim ona anlam ifade ettiğimiz kadar anlamlı. Şu an
+herhangi bir şey ifade etmiyor, anlam yüklemeye başlayabiliriz.</p>
+<hr />
+<p>Toplama işlemi ile başlayalım demiştik. Kara kutumuza komut gönderirken <code>00</code> ile ifade ettiğimiz
+değer toplama işlemi olsun ve sonrasında 6 bit ile ifade ettiklerimiz üzerine ekleyeceğimiz sayıyı
+ifade etsin. Yani aşağıdaki komut 7 sayısını toplamayı ifade edecek:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>00 000111
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>|  |-----&gt; onluk tabanda 7 sayısı
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>|--------&gt; toplama işlemi
+</span></code></pre></div>
+<p>Burada dikkat etmemiz gereken nokta hala hayal ürünü bir kara kutu ile çalışıyoruz. Nasıl
+toplayacağız, neyi toplayacağız, ne nerede duruyor, sonucu nasıl alacağız gibi sorularla
+şimdilik ilgilenmiyoruz. Sadece tek ilgilendiğimiz nokta bu kara kutuyu nasıl yöneteceğimiz ve
+bize hayali olarak ne sunduğu.</p>
+<p>Kara kutumuza bu komutu gönderdiğimizde bizim için toplama işlemi yapacak. Tebrikler, ilk işlemci
+mimarinizi ve programlama dilinizi oluşturdunuz. Sadece 1 adet komut
+(<a href="https://en.wikipedia.org/wiki/Opcode" target="_blank">opcode</a>) kabul ediyor ve gramer olarak ilk 2 bit işlem, sonrasında gelen
+6 bit işlem için gereken veri kısmını anlıyor.</p>
+<h3 id="boyle-programlama-olmaz-olsun">Böyle Programlama Olmaz Olsun<a class="headerlink" href="#boyle-programlama-olmaz-olsun" title="Permanent link">&para;</a></h3>
+<p>Evet, böyle programlama çok zor ve hataya açık ancak ilk bilgisayarlar ortaya çıkmışken programcılar
+bu şekilde ikilik halde bilgisayarı programlıyorlardı. Onlar da bunun farkındaydı ve daha kolay
+nasıl programlanabilir sorusunun cevabını arıyorlardı. Bu cevap <a href="https://en.wikipedia.org/wiki/Grace_Hopper" target="_blank">Grace
+Hopper</a>'ın ilk <a href="https://en.wikipedia.org/wiki/Compiler">derleyiciyi</a> (compiler)
+<a href="https://cs.brown.edu/~adf/programming_languages.html#:~:text=In%201951%2C%20Grace%20Hopper%20wrote,do%20the%20work%20by%20hand.">1951 yılında</a> yazması ile geldi ve bu acı son buldu. Gerçi hala JavaScript acısı çekiyoruz ama bu Hopper'ın emeklerini boşa çıkarmıyor :)</p>
+<h3 id="derleyici">Derleyici<a class="headerlink" href="#derleyici" title="Permanent link">&para;</a></h3>
+<p>Bir programı alıp başka programa dönüştüren program olarak kısaltabiliriz. Bu tamamen yukarıda
+bahsettiğimiz zorluk ve hataya açık olma sebebiyle ortaya çıkmış bir kolaylık. Hopper bu durumun
+farkında olarak bunun üzerine düşünmüş ve ilk derleyiciyi yazmış. Kendimiz derleyici yapıyor olsak
+ve kendi problemimizi çözüyor olsaydık, artık hayal ürünü kara kutumuz ile direkt olarak iletişimden
+ziyade, araya bir katman koyardık. Bu katman daha üst düzeyde yazdığımız komutları daha alt
+düzeydeki komutlara birebir çevirir ve istediğimiz işi yapardı.</p>
+<p>Araya katman koyduğumuz için de çok çeşitli optimizasyonlar, daha kara kutuya gitmeden yaptığımız
+yanlışları görme fırsatı bulabilirdik. Bunun üzerine düşündüğümüzde aslında yapmamız gereken şeyin
+çok basit olduğunu görebiliriz. Kara kutumuz için nasıl tanımlar yaptıysak, bunun için de birtakım
+tanımlar yapıp onlar üzerinden ilerleyeceğiz. İşte bu tanımlara dilin grameri diyoruz. Aslında kendi
+programlama dilimizi tanımlamaktayız şu anda:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>topla 7
+</span></code></pre></div>
+<p>yazdığımızda ve bunu başka bir programa verdiğimizde, çıktı olarak kara kutumuzun yukarıdaki
+çıktısını verdiğinde programlama dilimizi tamamlamış oluyoruz:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>00 000111
+</span></code></pre></div>
+<p>Bunu nasıl yaptığı 1 yıllık bir ders konusu, burada işlemeye vaktimiz olmayacak ama beyin jimnastiği
+olması açısından ilk derleyicinin nasıl yazıldığı üzerine düşünmenizi isterim.</p>
+<h3 id="assembly-dili">Assembly Dili<a class="headerlink" href="#assembly-dili" title="Permanent link">&para;</a></h3>
+<p>Yukarıda yazdığımız <code>topla 7</code> komutu bir assembly dili ve her işlemci için farklılık gösterecek.
+Biz burada hayali kara kutumuza, yani işlemcimize bir assembly dili tanımladık. Bununla beraber x86
+ve ARM için assembly dillerinin farklı olduğunu hatırlatmam gerekir.</p>
+<p>Ancak yine de assembly dili kullanması zor bir dil. Bunun üzerine başka, daha kolay kullanılabilir
+programlama dilleri de tanımlanabilir. Bahsettiğim gibi programlama dilleri başlı başına bir ders
+konusu, dolayısıyla assembly ile programlamanın <strong>da</strong> zor olduğunu düşünürsek elimizde daha kolay
+bir programlama dili olması tercih edilecektir. <a href="https://cs.lmu.edu/~ray/notes/x86assembly/" target="_blank">Örnek olarak</a> ekrana
+<code>Hello, World</code> yazan assembly programını ekliyorum. Ne kadar zor ve hataya açık olabileceğini tahmin
+edebiliriz:</p>
+<div class="language-asm highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="w">          </span><span class="nf">global</span><span class="w">    </span><span class="no">_start</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">          </span><span class="nf">section</span><span class="w">   </span><span class="no">.text</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="nl">_start:</span><span class="w">   </span><span class="nf">mov</span><span class="w">       </span><span class="no">rax</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="w">                  </span><span class="c1">; system call for write</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">          </span><span class="nf">mov</span><span class="w">       </span><span class="no">rdi</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="w">                  </span><span class="c1">; file handle 1 is stdout</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">          </span><span class="nf">mov</span><span class="w">       </span><span class="no">rsi</span><span class="p">,</span><span class="w"> </span><span class="no">message</span><span class="w">            </span><span class="c1">; address of string to output</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">          </span><span class="nf">mov</span><span class="w">       </span><span class="no">rdx</span><span class="p">,</span><span class="w"> </span><span class="mi">13</span><span class="w">                 </span><span class="c1">; number of bytes</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">          </span><span class="nf">syscall</span><span class="w">                           </span><span class="c1">; invoke operating system</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">          </span><span class="nf">mov</span><span class="w">       </span><span class="no">rax</span><span class="p">,</span><span class="w"> </span><span class="mi">60</span><span class="w">                 </span><span class="c1">; system call for exit</span>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">          </span><span class="nf">xor</span><span class="w">       </span><span class="no">rdi</span><span class="p">,</span><span class="w"> </span><span class="no">rdi</span><span class="w">                </span><span class="c1">; exit code 0</span>
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="w">          </span><span class="nf">syscall</span><span class="w">                           </span><span class="c1">; invoke operating system to exit</span>
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>
+</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="w">          </span><span class="nf">section</span><span class="w">   </span><span class="no">.data</span>
+</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="nl">message:</span><span class="w">  </span><span class="nf">db</span><span class="w">        </span><span class="err">&quot;</span><span class="no">Hello</span><span class="p">,</span><span class="w"> </span><span class="no">World</span><span class="err">&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="w">      </span><span class="c1">; note the newline at the end</span>
+</span></code></pre></div>
+<h2 id="sonuc">Sonuç<a class="headerlink" href="#sonuc" title="Permanent link">&para;</a></h2>
+<p>Kara kutu örneğinden giderek işlemciye nasıl komutlar gönderilebileceğini, ikilik sistemi, kendimize
+ait nasıl işlemci mimarisi yapabileceğimizi ve programlama dilinin ne olduğunu gördük. Esasında
+programlama dili dediğimiz 1 ve 0 ile işlemci komutlarının üzerindeki assembly dilinin üzerine
+yerleştirilmiş katmanlardan oluşuyor. Geldiğimiz yer yine işlemcinin anlayacağı 1 ve 0'lardan
+ibaret.</p>
+<p>Programlama dilinin ne olduğuna değindiğimize göre bir sonraki bölümde Python'a geçeceğiz. Python'u
+yine assembly üzerinde bir katman olarak düşünebiliriz. Her ne kadar çok basit bir benzetme ve
+Python'un da kendi içerisinde incelikleri olsa da bu örneğin giriş seviyesinde doğru olduğunu
+düşünüyorum.</p>
+<p>Hatırlamakta fayda var; programlama dili, bir programı çalıştıran başka bir program tarafından
+yorumlanıyor / derleniyor. Yani programlama dilinin olabilmesi için onu yorumlayan başka bir
+programın var olması gerekmekte. Programlama dilleri de binary veya assembly ile zor olanı yapmak
+yerine, daha kolay programlama yapmamız için bir araç konumuna geliyor.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Başa dön
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Altbilgi" >
+        
+          
+          <a href="../../ubuntu/terminali-guzellestirelim/" class="md-footer__link md-footer__link--prev" aria-label="Önceki: Terminali Güzelleştirelim">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Önceki
+              </span>
+              <div class="md-ellipsis">
+                Terminali Güzelleştirelim
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../makaleler/" class="md-footer__link md-footer__link--next" aria-label="Sonraki: Makaleler">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Sonraki
+              </span>
+              <div class="md-ellipsis">
+                Makaleler
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024 Eren Türkay
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.sections", "navigation.path", "navigation.tabs", "navigation.footer", "toc.follow", "content.code.copy"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Kopyaland\u0131", "clipboard.copy": "Kopyala", "search.result.more.one": "Bu sayfada 1 tane daha", "search.result.more.other": "Bu sayfada # tane daha", "search.result.none": "E\u015fle\u015fen dok\u00fcman bulunamad\u0131", "search.result.one": "1 dok\u00fcman bulundu", "search.result.other": "# dok\u00fcman bulundu", "search.result.placeholder": "Aramaya ba\u015flamak i\u00e7in yaz\u0131n", "search.result.term.missing": "Eksik", "select.version": "Versiyon se\u00e7"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      
+    
+  </body>
+</html>
