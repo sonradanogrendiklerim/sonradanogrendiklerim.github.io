@@ -221,4 +221,4 @@ düşünüyorum.
 Hatırlamakta fayda var; programlama dili, bir programı çalıştıran başka bir program tarafından
 yorumlanıyor / derleniyor. Yani programlama dilinin olabilmesi için onu yorumlayan başka bir
 programın var olması gerekmekte. Programlama dilleri de binary veya assembly ile zor olanı yapmak
-yerine, daha kolay programlama yapmamız için bir araç sağlıyor.
+yerine, daha kolay programlama yapmamız için bir araç konumuna geliyor.
