@@ -37,6 +37,12 @@ işlemleri nasıl yapabiliyor?
 Korkmayın, bütün bu soruların cevabı aslında çok basit. İşlemci o kadar basit bir şekilde çalışıyor
 ki yıllar sonra bunu anladığımda gerçekten çok şaşırmıştım.
 
+---
+
+Gelin beraber fikir yürüterek, elimizde sadece 1 ve 0 varken bir `şey`'e nasıl komut verebiliriz
+pratiği yapalım. Henüz nasıl çalıştığını bilmiyoruz, ileride bunun üzerine de düşüneceğiz ancak
+şimdilik bir toplama işlemini nasıl ifade edebiliriz üzerine düşünelim.
+
 ### RAM
 
 ### Disk
