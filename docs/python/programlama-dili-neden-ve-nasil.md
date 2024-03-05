@@ -137,7 +137,7 @@ mimarinizi ve programlama dilinizi oluşturdunuz. Sadece 1 adet komut
 Evet, böyle programlama çok zor ve hataya açık ancak ilk bilgisayarlar ortaya çıkmışken programcılar
 bu şekilde ikilik halde bilgisayarı programlıyorlardı. Onlar da bunun farkındaydı ve daha kolay
 nasıl programlanabilir sorusunun cevabını arıyorlardı. Bu cevap [Grace
-Hopper][hopper]{:target="_blank"}'ın ilk [derleyiciyi (compiler)][compiler]
+Hopper][hopper]{:target="_blank"}'ın ilk [derleyiciyi][compiler] (compiler)
 [1951 yılında][firstcompiler] yazması ile geldi ve bu acı son buldu. Gerçi hala JavaScript acısı çekiyoruz ama bu Hopper'ın emeklerini boşa çıkarmıyor :)
 
 ### Derleyici
