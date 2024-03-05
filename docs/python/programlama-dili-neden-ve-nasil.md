@@ -186,9 +186,11 @@ message:  db        "Hello, World", 10      ; note the newline at the end
 
 ## Sonuç
 
-Kara kutu örneğinden giderek işlemciye nasıl komutlar gönderilebileceğini, ikilik sistemi, kendimize ait nasıl işlemci mimarisi yapabileceğimizi ve programlama dilinin ne olduğunu gördük. Esasında programlama dili dediğimiz şey 1 ve 0 ile işlemci komutlarının üzerindeki assembly dilinin üzerine yerleştirilmiş katmanlardan oluşuyor. Geldiğimiz yer yine işlemcinin anlayacağı 1 ve 0'lardan ibaret.
+Kara kutu örneğinden giderek işlemciye nasıl komutlar gönderilebileceğini, ikilik sistemi, kendimize ait nasıl işlemci mimarisi yapabileceğimizi ve programlama dilinin ne olduğunu gördük. Esasında programlama dili dediğimiz 1 ve 0 ile işlemci komutlarının üzerindeki assembly dilinin üzerine yerleştirilmiş katmanlardan oluşuyor. Geldiğimiz yer yine işlemcinin anlayacağı 1 ve 0'lardan ibaret.
 
 Programlama dilinin ne olduğuna değindiğimize göre bir sonraki bölümde Python'a geçeceğiz. Python'u yine assembly üzerinde bir katman olarak düşünebiliriz. Her ne kadar çok basit bir anlatım ve Python'un da kendi içerisinde incelikleri olsa da bu örneğin giriş seviyesinde doğru olduğunu düşünüyorum.
 
-Hatırlamakta fayda var, programlama dili, her daim bir programı çalıştıran başka bir program
-tarafından yorumlanıyor / derleniyor. Programlama dilleri de 1 ve 0 veya assembly ile zor olanı yapmak yerine, daha kolay programlama yapmamız için bir araç sağlıyor.
+Hatırlamakta fayda var; programlama dili, bir programı çalıştıran başka bir program tarafından
+yorumlanıyor / derleniyor. Yani programlama dilinin olabilmesi için onu yorumlayan başka bir
+programın var olması gerekmekte. Programlama dilleri de binary veya assembly ile zor olanı yapmak
+yerine, daha kolay programlama yapmamız için bir araç sağlıyor.
