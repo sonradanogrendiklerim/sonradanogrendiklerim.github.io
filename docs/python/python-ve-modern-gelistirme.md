@@ -24,7 +24,7 @@ komutlar her zaman `Ubuntu 22.04` üzerinde olacak. Daha önce güzelleştirilmi
 girin:
 
 ```sh
-sudo apt-get install python3.10 python3.10-venv
+sudo apt-get install python3.10
 ```
 
 Python yüklendiğinde aşağıdaki çıktıyı görmeniz gerekmekte:
@@ -48,7 +48,10 @@ Python konsolu içerisine aşağıdaki komutu yazdığınızda programlamaya ba�
 print("merhaba dünya")
 ```
 
-Görebileceğiniz gibi ekrana çok kolay bir biçimde bir şeyler bastırabildik. Bunu bir önceki bölümde Assembly ile yapmak çok zordu ve hataya açıktı. Buradan anlıyoruz ki diller aslında bizim işimizi kolaylaştırıcı bir araç. Dilerseniz burada bir toplama işlemi tanımlayalım ve ne kadar kolay çağrılabilir olduğunu görelim:
+Görebileceğiniz gibi ekrana çok kolay bir biçimde bir şeyler bastırabildik. Bunu bir önceki bölümde
+Assembly ile yapmak çok zordu ve hataya açıktı. Buradan anlıyoruz ki diller aslında bizim işimizi
+kolaylaştırıcı bir araç. Dilerseniz burada bir toplama işlemi tanımlayalım ve ne kadar kolay
+çağrılabilir olduğunu görelim:
 
 ```python
 def topla(a, b):
@@ -58,7 +61,8 @@ topla(3, 7)
 ```
 
 Bunları şimdilik konsolda, interaktif şekilde yaptık ancak muhtemelen kodlarımızın kalıcı olmasını
-isteyeceğizdir. Bunun için `.py` uzantılı bir dosya oluşturup içerisine yazabiliriz. Yeni shell komutlari ile bu dosya ve dizinleri oluşturalım.
+isteyeceğizdir. Bunun için `.py` uzantılı bir dosya oluşturup içerisine yazabiliriz. Yeni shell
+komutlari ile bu dosya ve dizinleri oluşturalım.
 
 ```sh
 cd ~
@@ -70,7 +74,8 @@ touch src/ilkadim.py
 - __mkdir__: `Make directory` anlamına geliyor. Yeni bir dizin oluşturuyor.
 - __touch__: Şef dokunuşu. Boş bir dosya oluşturuyor.
 
-Şimdi grafik arayüzünüzden ev dizininde bulunan `src` klasörüne giderek `ilkadim.py` dosyasını metin editörü ile açın ve içerisine aşağıdakileri yazın:
+Şimdi grafik arayüzünüzden ev dizininde bulunan `src` klasörüne giderek `ilkadim.py` dosyasını metin
+editörü ile açın ve içerisine aşağıdakileri yazın:
 
 ```py
 print("merhaba dünya")
@@ -87,7 +92,10 @@ Sonrasında konsolunuza dönün ve aşağıdaki komutu girin:
 python3 ilkadim.py
 ```
 
-Ekrana sadece `merhaba dünya` bastığını göreceksiniz. Python konsolu ve normal şekilde çalıştırma arasındaki fark var. Python konsolu bir REPL olduğu için en son yazdığınız komutun çıktısını her daim ekrana basacaktır ancak normal şekilde çalıştırdığımızda ekranda bir şey görmüyor, sadece topluyoruz. Ekranda bunu görmek için toplama sonucunu bir değişkene atayıp bastırabiliriz:
+Ekrana sadece `merhaba dünya` bastığını göreceksiniz. Python konsolu ve normal şekilde çalıştırma
+arasındaki fark var. Python konsolu bir REPL olduğu için en son yazdığınız komutun çıktısını her
+daim ekrana basacaktır ancak normal şekilde çalıştırdığımızda ekranda bir şey görmüyor, sadece
+topluyoruz. Ekranda bunu görmek için toplama sonucunu bir değişkene atayıp bastırabiliriz:
 
 ```py
 toplam = topla(3, 7)
@@ -100,6 +108,8 @@ Sonucunda tüm programımız şu hali aldı:
 print("merhaba dünya")
 
 def topla(a, b):
+    # burada boşluklar
+    # önemli
     return a + b
 
 toplam = topla(3, 7)
@@ -113,5 +123,100 @@ Tekrar konsola dönüp `python3 ilkadim.py` çalıştırdığınızda aşağıda
 merhaba dünya
 10
 ```
+
+!!! note "Python ve Boşluklar"
+    Dilin yapısı gereği Python'da boşluklar önem arz ediyor. Yukarıdaki kod parçacığını kopyalarken
+    boşluklara dikkat etmelisiniz. `def` satırından sonra bir alt satıra geçtiğimizde, bunun `def`
+    ile ilgili olduğunu belirtmek için 4 boşluk kullandık. Tek satır olduğundan anlaşılması zor
+    olabilir ancak birden fazla satır olduğunda anlaşılması daha kolay olacaktır.
+
+### Biraz Matematiksel İşlem
+
+Toplama işlemi yaptık. Bunu rahatlıkla `+` operatörü ile yapabiliyoruz ancak faktoriyel hesabı
+yapmak istediğimizi varsayalım. Bunun için Python bize kendi içerisinde, dışarıdan yüklemeye ihtiyaç
+kalmadan birtakım modüller sunabiliyor. `math` modülü bunlardan bir tanesi. Birçok matematiksel
+hesap fonksiyonlarını (metodlarını) sunabiliyor ve `factorial` bunlardan bir tanesi. Bu modülü
+programımızın başına `import` anahtar kelimesini kullanarak dahil edebiliyoruz.
+
+Yine önce REPL üzerinden ilerleyip, sonrasında bunu kalıcı olması açısından bir dosyaya yazacağız.
+`python3` komutu ile REPL'u kullanarak aşağıdaki komutları girin:
+
+```py
+import math
+
+math.factorial(4)
+```
+
+Sonuç olarak 24 çıkacaktır. Devamında kodu `faktoriyel.py` dosyası içerisine yazın ve kaydedin,
+`python3 faktoriyel.py` şeklinde çalıştırın. Oops, ekrana yine bir şeyler yazmayacak. Bunun için
+toplama işleminde gördüğümüz gibi `print` yapmanız gerekecek. İlla ki değişkene atamanız
+gerekmeyecek. Çok kısa bir ifade olduğu için aşağıdaki şekilde de kullanabilirsiniz:
+
+```py
+import math
+
+print(math.factorial(4))
+```
+
+!!! tip "REPL ve Kod Tamamlama"
+    Python konsolu içerisinde herhangi bir modülün hangi metodlar barındırdığına nokta karakterinden
+    sonra TAB tuşuna basarak anlayabilirsiniz. `math` modülü için `math.` yazdıktan sonra TAB tuşuna
+    basarsanız neler barındırdığını görebilirsiniz. Aynı zamanda bu metodların nasıl kullanıldığını
+    `help` fonksiyonu ile öğrenebilirsiniz. Örneğin factorial için `help(math.factorial)` yazmanız
+    yeterli olacaktır.
+
+Sonuç olarak burada kendi kodumuza ait olmayan bir modülü kullandık. Bu modül Python'un kendi
+içerisinde gelen bir modüldü ve dışarıdan modül yüklemedik. Python dili sadece kendi içerisinde
+modülleri değil, dışarıdan yükleyeceğimiz modülleri de desteklemekte ve etrafta `math` modülü gibi
+çok çeşitli işler için çok çeşitli modüller var.
+
+Lakin bu modüllerin kullanılmadan önce sistemimize yüklenmesi gerekiyor. Bu modüllerin yüklenmesinin
+de çeşitli yöntemleri var. Şimdi bunlara bakalım.
+
+### Web Sayfası Ziyareti
+
+Sadece matematik işlemi değil, Python ile web sayfasına bağlanabilir, oradan veri alablilir, görsel
+ile ilgili işler yapabilir, yapay zeka ve diğer konularda da kullanılabilir. Yani anlayacağınız
+Python güçlü bir ekosistemi olan güçlü bir dil.
+
+Bu kısımda sadece bir web sayfasına bağlanıp oradan veri alacağız. Bu veri web sayfasına tarayıcınız
+ile bağlanıp `kaynak kodunu göster` dediğinizde karşınıza gelen veri olacak. Bunun için `requests`
+adlı çok kullanışlı, Python'un kendi içinde olmayan ama dışarıda geliştirilen bir modül
+kullanacağız. Öncesinde belirttiğim gibi önce bunu yüklememiz gerekmekte. Terminalimizi açıp
+aşağıdaki komutu girerek bu modülü _Ubuntu üzerine_ yükleyebiliriz:
+
+```sh
+sudo apt-get install python3-requests
+```
+
+Modül yüklendiğine göre bunu REPL içerisinde `import` edebilmemiz gerekmekte:
+
+```python
+import requests
+```
+
+Herhangi bir hata almıyorsanız modül başarılı bir şekilde yüklenmiş demektir. Web sayfasının kaynak
+kodlarını almak için requests bize `get` metodunu sunuyor. Bunu kullanarak kaynak kodlarını alalım:
+
+```py
+import requests
+
+requests.get('https://erenturkay.com')
+```
+
+Bu kod parçacığı bize  `<Response [200]>` objesi dönecek. Buradaki `Response` objenin ismi ve `200`
+HTTP statü kodu anlamına geliyor ama bize sadece dönüş yaptı ve ekrana bastı. Bunu bir değişkene
+atayıp içerisindekileri okumamız daha anlamlı olacaktır.
+
+```py
+import requests
+
+response = requests.get('https://erenturkay.com')
+print(response.text)
+```
+
+Gördüğümüz gibi `response` objesi içerisinden `text` metodunu çağırdık. Response içerisinde çokça
+metod var. Bunları yine TAB tamamlama özelliği ile görebilirsiniz. Elimizdeki çıktı tarayıcıdan
+gördüğümüz kaynak kodları ile aynı olacak.
 
 [repl]: https://en.wikipedia.org/wiki/Read–eval–print_loop
