@@ -270,6 +270,36 @@ python3 -m venv venv
     geliyor. `mkdir` komutu oluşmuş bir dizin içerisinde yeni bir dizin oluşturduğundan, önceki
     aşamada `src` dizini yoksa, hata vermemesi açısından kullanılıyor.
 
+Burada Python'un `venv` modülünü kullanarak (-m venv) ve `venv` isimli bir dizin vererek bize sanal bir ortam sağlamasını istedik. Ancak bunu istemek, şu an kullandığımız anlamına gelmiyor. Yalnızca bu proje için oluşturulmuş sanal ortamı aktive etmemiz gerekmekte. Bunun için konsola aşağıdaki komutu yazın:
+
+```sh
+source venv/bin/activate.fish
+```
+
+Bir önceki bölümlerde terminalimiz fish idi ve fish ile devam ediyoruz. Bu yüzden aktivasyon için
+`activate.fish` kullandık. Eğer bash veya zsh kullanıyorsanız bunu `venv/bin/activate` şeklinde
+değiştirmelisiniz. Sonuç olarak konsolumuz şu hali almış olacak:
+
+```sh
+eren in 🌐 sonradanogrendiklerim in ~/src/sonradanogrendiklerim via 🐍 v3.10.12 (venv) 
+❯ ls
+venv
+```
+
+Terminalimiz güzelleştiği için venv kullanıp kullanmadığımızı ve hangi Python versiyonu ile
+kullandığımızı görebiliyoruz. Artık projeye özel sanal ortamdayız ve sadece projeye özel paketler
+yükleyebiliriz.
+
+Önceki örneğimizde `requests` yüklemiştik. Bunun için `pip` ile aşağıdaki komutu girerek yükleyebiliriz:
+
+```sh
+pip install requests
+```
+
+Bu komut sanal ortamımız aktive olduğundan sadece sanal ortama bunu yükleyecektir. Dikkat ederseniz
+paket ismi `python3-requests` değil, sadece `requests` çünkü pip ile yüklediğimizde bunun ismi
+sadece `requests`.
+
 [repl]:     https://en.wikipedia.org/wiki/Read–eval–print_loop
 [ipython]:  https://ipython.org
 [pip]:      https://pip.pypa.io/en/stable/
