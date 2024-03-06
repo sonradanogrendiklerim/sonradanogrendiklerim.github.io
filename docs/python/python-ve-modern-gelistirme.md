@@ -5,15 +5,15 @@ title: Python Programlama Dili ve Modern Geliştirme
 ## Giriş
 
 Önceki bölümde programlama dillerinin hangi ihtiyaçtan, nasıl ortaya çıktığına değindik.
-[Python][python] da bunlardan bir tanesi. Bu yazıda Python kurulumu, dile basit bir giriş, modern
-Python geliştirirken kullanılan araçlar, paket yöneticisi, sanal ortam (virtual environment) gibi
-konulara değineceğiz.
+[Python][python]{:target="_blank"} da bunlardan bir tanesi. Bu yazıda Python kurulumu, dile basit
+bir giriş, modern Python geliştirirken kullanılan araçlar, paket yöneticisi, sanal ortam (virtual
+environment) gibi konulara değineceğiz.
 
 Buradaki amaç dili öğretmek değil, geliştirme yaparken sektörde sık kullanılan araçları sizlere
 tanıtmak ve geliştirmenizi kolaylaştırmak. Dili daha fazla öğrenmek isterseniz Python'un
-[wikisi][wiki] ile birlikte birçok YouTube videosu ve makaleler mevcut.
+[wikisi][wiki]{:target="_blank"} ile birlikte birçok YouTube videosu ve makaleler mevcut.
 
-Burada unutmamamız gereken nokta Python'un da bir program çalıştıran program olduğunu hatırlamak.
+Burada dikkat etmemiz gereken nokta Python'un da bir program çalıştıran program olduğunu hatırlamak.
 Programlama dilleri bölümünde dillerin nasıl ortaya çıktığını anladık, Python da bundan farksız
 değil. Yazdığımız programlar bir başka program (Python) tarafından alınıyor, işleniyor ve sonucunda
 işlemcinin anlayacağı şekilde 1 ve 0'lara dönüştürülüyor. Bunu yaparken Python bize birçok kolaylık
@@ -57,7 +57,7 @@ print("merhaba dünya")
 Görebileceğiniz gibi ekrana çok kolay bir biçimde bir şeyler bastırabildik. Bunu bir önceki bölümde
 Assembly ile yapmak çok zordu ve hataya açıktı. Buradan anlıyoruz ki diller aslında bizim işimizi
 kolaylaştırıcı bir araç. Dilerseniz burada bir toplama işlemi tanımlayalım ve ne kadar kolay
-çağrılabilir olduğunu görelim:
+çağırılabilir olduğunu görelim:
 
 ```python
 def topla(a, b):
@@ -68,7 +68,7 @@ topla(3, 7)
 
 Bunları şimdilik konsolda, interaktif şekilde yaptık ancak muhtemelen kodlarımızın kalıcı olmasını
 isteyeceğizdir. Bunun için `.py` uzantılı bir dosya oluşturup içerisine yazabiliriz. Yeni shell
-komutlari ile bu dosya ve dizinleri oluşturalım.
+komutları ile bu dosya ve dizinleri oluşturalım.
 
 ```sh
 cd ~
@@ -76,7 +76,8 @@ mkdir src
 touch src/ilkadim.py
 ```
 
-- __cd__: Bunu daha önce [terminal makalesinde](../ubuntu/terminali-guzellestirelim.md#ayar-eklemeye-giris) görmüştük. Bu komut şu anda bulunduğumuz dizini değiştiriyor.
+- __cd__: Bunu daha önce [terminal makalesinde](../ubuntu/terminali-guzellestirelim.md#ayar-eklemeye-giris){:target="_blank"} görmüştük. Bu komut şu anda bulunduğumuz dizini
+  değiştiriyor.
 - __mkdir__: `Make directory` anlamına geliyor. Yeni bir dizin oluşturuyor.
 - __touch__: Şef dokunuşu. Boş bir dosya oluşturuyor.
 
@@ -140,8 +141,8 @@ merhaba dünya
 
 Toplama işlemi yaptık. Bunu rahatlıkla `+` operatörü ile yapabiliyoruz ancak faktoriyel hesabı
 yapmak istediğimizi varsayalım. Bunun için Python bize kendi içerisinde, dışarıdan yüklemeye ihtiyaç
-kalmadan birtakım modüller sunabiliyor. `math` modülü bunlardan bir tanesi. Birçok matematiksel
-hesap fonksiyonlarını (metodlarını) sunabiliyor ve `factorial` bunlardan bir tanesi. Bu modülü
+kalmadan birtakım modüller sunuyor. `math` modülü bunlardan bir tanesi. Birçok matematiksel
+hesap fonksiyonlarını (metodlarını) barındırıyor ve `factorial` bunlardan bir tanesi. Bu modülü
 programımızın başına `import` anahtar kelimesini kullanarak dahil edebiliyoruz.
 
 Yine önce REPL üzerinden ilerleyip, sonrasında bunu kalıcı olması açısından bir dosyaya yazacağız.
@@ -182,14 +183,14 @@ de çeşitli yöntemleri var. Şimdi bunlara bakalım.
 ### Web Sayfası Ziyareti
 
 Sadece matematik işlemi değil, Python ile web sayfasına bağlanabilir, oradan veri alablilir, görsel
-ile ilgili işler yapabilir, yapay zeka ve diğer konularda da kullanılabilir. Yani anlayacağınız
+ile ilgili işler yapabilir, yapay zeka ve diğer konularda da kullanabilirsiniz. Yani anlayacağınız
 Python güçlü bir ekosistemi olan güçlü bir dil.
 
 Bu kısımda sadece bir web sayfasına bağlanıp oradan veri alacağız. Bu veri web sayfasına tarayıcınız
 ile bağlanıp `kaynak kodunu göster` dediğinizde karşınıza gelen veri olacak. Bunun için `requests`
 adlı çok kullanışlı, Python'un kendi içinde olmayan ama dışarıda geliştirilen bir modül
 kullanacağız. Öncesinde belirttiğim gibi önce bunu yüklememiz gerekmekte. Terminalimizi açıp
-aşağıdaki komutu girerek bu modülü _Ubuntu üzerine_ yükleyebiliriz:
+aşağıdaki komutu girerek bu modülü ^^Ubuntu içerisine^^ yükleyebiliriz:
 
 ```sh
 sudo apt-get install python3-requests
@@ -210,9 +211,10 @@ import requests
 requests.get('https://erenturkay.com')
 ```
 
-Bu kod parçacığı bize  `<Response [200]>` objesi dönecek. Buradaki `Response` objenin ismi ve `200`
-HTTP statü kodu anlamına geliyor ama bize sadece dönüş yaptı ve ekrana bastı. Bunu bir değişkene
-atayıp içerisindekileri okumamız daha anlamlı olacaktır.
+Bu kod parçacığı bize  `<Response [200]>` objesi dönecek.
+Buradaki `Response` [objenin ismi][response]{:target="_blank"} ve
+`200` [HTTP durum kodu][httpstatus]{:target="_blank"} anlamına geliyor ama bize sadece dönüş yaptı
+ve ekrana bastı. Bunu bir değişkene atayıp içerisindekileri okumamız daha anlamlı olacaktır.
 
 ```py
 import requests
@@ -222,9 +224,9 @@ response = requests.get('https://erenturkay.com')
 print(response.text)
 ```
 
-Gördüğümüz gibi `response` objesi içerisinden `text` metodunu çağırdık. Response içerisinde çokça
-metod var. Bunları yine TAB tamamlama özelliği ile görebilirsiniz. Elimizdeki çıktı tarayıcıdan
-gördüğümüz kaynak kodları ile aynı olacak.
+Gördüğümüz gibi `response` objesi içerisinden `text` [metodunu][method]{:target="_blank"} çağırdık.
+Response içerisinde çokça metod var. Bunları yine TAB tamamlama özelliği ile görebilirsiniz.
+Elimizdeki çıktı tarayıcıdan gördüğümüz kaynak kodları ile aynı olacak.
 
 ## Python Konsolunu Güzelleştirelim
 
@@ -248,8 +250,8 @@ ile görebiliyoruz. IPython'un en sevdiğim yanı renklendirmesi diyebilirim.
 mantıklı olabilir ancak birden fazla proje üzerinde çalıştığımızda bütün projelerin ihtiyaç duyduğu
 paketleri (bağımlılıkları) sistemimize yüklemek pek mantıklı değil. Mantıklı değil çünkü bir projede
 ihtiyaç duyulan paketin versiyonu ile diğer projenin ihtiyaç duyduğu versiyon farklılık
-gösterebilir. En kötüsü, her ikisi de çalışırken sistemdeki paket güncellemesi yapıldığında projenin
-bozulabilecek olması.
+gösterebilir. En kötüsü, her ikisi de çalışırken sistemdeki paket güncellemesi yapıldığında
+projelerin bozulabilecek olması.
 
 Bunun yerine her projeyi kendi içerisinde izole etmek daha tercih edilen bir yöntem. Bunun için
 Python'un paket yöneticisi olan [pip][pip]{:target="_blank"} ve projeleri izole etmek için
@@ -259,8 +261,8 @@ Python'un paket yöneticisi olan [pip][pip]{:target="_blank"} ve projeleri izole
 
 Her proje başladığında yaptığımız öncelikle bir virtualenv oluşturmak olacak. Bunun için proje
 dizini içerisinde `venv` adlı bir dizin kullanılıyor. Bu dizinin ismi `ali`, `sanal` gibi herhangi
-bir şey olabilir ancak pratik açısından sektörde bunu `venv` ya da gizli olsun istersek `.venv`
-yapıyoruz.
+bir şey olabilir ancak pratik olması açısından sektörde bunu `venv` ya da gizli olsun istersek
+`.venv` yapıyoruz.
 
 Proje dizini içerisinde bir venv oluşturmakla başlayalım ve yaptığımız örnekleri tekrarlayalım. Artık konsola hakim olduğumuz için dizin oluşturma işlemlerini konsoldan yapacağız:
 
@@ -274,9 +276,12 @@ python3 -m venv venv
 !!! note "-p parametresi"
     Buradaki -p parametresi eğer `src` dizini öncesinde oluşturulmadıysa bunu da oluştur anlamına
     geliyor. `mkdir` komutu oluşmuş bir dizin içerisinde yeni bir dizin oluşturduğundan, önceki
-    aşamada `src` dizini yoksa, hata vermemesi açısından kullanılıyor.
+    aşamada `src` dizini yoksa hata vermemesi açısından kullanılıyor.
 
-Burada Python'un `venv` modülünü kullanarak (-m venv) ve `venv` isimli bir dizin vererek bize sanal bir ortam sağlamasını istedik. Ancak bunu istemek, şu an kullandığımız anlamına gelmiyor. Yalnızca bu proje için oluşturulmuş sanal ortamı aktive etmemiz gerekmekte. Bunun için konsola aşağıdaki komutu yazın:
+Burada Python'un `venv` modülünü kullanarak `(-m venv)` ve `venv` isimli bir dizin ismini son
+parametre olarak vererek bize sanal bir ortam oluşturmasını istedik. Ancak bunu istemek, şu an
+kullandığımız anlamına gelmiyor. Yalnızca bu proje için oluşturulmuş sanal ortamı aktive etmemiz
+gerekmekte. Bunun için konsola aşağıdaki komutu yazın:
 
 ```sh
 source venv/bin/activate.fish
@@ -337,4 +342,7 @@ kullanmanızı, her projede bu pratiği yapmanızı tavsiye ederim.
 [repl]:     https://en.wikipedia.org/wiki/Read–eval–print_loop
 [ipython]:  https://ipython.org
 [pip]:      https://pip.pypa.io/en/stable/
+[response]: https://requests.readthedocs.io/en/latest/api/#requests.Response
+[method]:   https://requests.readthedocs.io/en/latest/api/#requests.Response.text
 [virtualenv]: https://docs.python.org/3.10/library/venv.html
+[httpstatus]: https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
