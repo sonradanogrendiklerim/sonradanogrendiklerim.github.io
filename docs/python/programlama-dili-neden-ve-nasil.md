@@ -1,6 +1,7 @@
 ---
 title: "Programlama Dili: Neden ve Nasıl"
 description: Bilgisayar nasıl çalışır, programlama dili nedir, neden ve nasıl ortaya çıktı.
+date: 2024-03-05
 ---
 
 ## Giriş

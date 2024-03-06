@@ -1,6 +1,7 @@
 ---
 title: Python ve Modern Geliştirme
 description: Python, paket yöneticileri, sanal ortam ve modern geliştirmeye giriş.
+date: 2024-03-06
 ---
 
 ## Giriş
