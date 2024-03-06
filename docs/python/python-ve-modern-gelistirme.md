@@ -13,6 +13,12 @@ Buradaki amaç dili öğretmek değil, geliştirme yaparken sektörde sık kulla
 tanıtmak ve geliştirmenizi kolaylaştırmak. Dili daha fazla öğrenmek isterseniz Python'un
 [wikisi][wiki] ile birlikte birçok YouTube videosu ve makaleler mevcut.
 
+Burada unutmamamız gereken nokta Python'un da bir program çalıştıran program olduğunu hatırlamak.
+Programlama dilleri bölümünde dillerin nasıl ortaya çıktığını anladık, Python da bundan farksız
+değil. Yazdığımız programlar bir başka program (Python) tarafından alınıyor, işleniyor ve sonucunda
+işlemcinin anlayacağı şekilde 1 ve 0'lara dönüştürülüyor. Bunu yaparken Python bize birçok kolaylık
+sağlıyor.
+
 [python]: https://www.python.org
 [wiki]: https://wiki.python.org/moin/BeginnersGuide/Programmers
 
@@ -299,6 +305,34 @@ pip install requests
 Bu komut sanal ortamımız aktive olduğundan sadece sanal ortama bunu yükleyecektir. Dikkat ederseniz
 paket ismi `python3-requests` değil, sadece `requests` çünkü pip ile yüklediğimizde bunun ismi
 sadece `requests`.
+
+Her ortamda farklı paketler olacağı için bu ortam içerisinde şimdilik `ipython` bulunmuyor. Hatırlarsanız bunu sisteme yüklemiştik ve ismi `ipython3` idi. Şimdi bunu yükleyelim. PyPI paket reposu içerisinde bunun ismi sadece `ipython`. Aşağıdaki komut ile kolayca yükleyebilirsiniz:
+
+```sh
+pip install ipython
+```
+
+### Sanal Ortamdan Çıkma
+
+İşimiz bittiğinde veya başka bir projeye geçeceğimizde içinde bulunduğumuz sanal ortamdan çıkmamız gerekiyor. Bunun için sadece `deactivate` komutunu yazmanız yeterli. Bunu yazdıktan sonra konsolunuz aşağıdaki şekilde size geri bildirimde bulunacaktır:
+
+```sh
+eren in 🌐 sonradanogrendiklerim in ~/src/sonradanogrendiklerim via 🐍 v3.10.12 (venv)
+❯ deactivate
+
+eren in 🌐 sonradanogrendiklerim in ~/src/sonradanogrendiklerim 
+❯
+```
+
+## Sonuç
+
+Programlama dillerinin ne olduğunu, nasıl ortaya çıktığını az çok anladık. Python'un program
+çalıştıran program olduğunu, sonuç olarak 1 ve 0'lar ile işlem yaptığımızı gördük. Biraz Python
+programlamaya, modüllere giriş yaptık ve en önemlisi sektörde çok sık kullanılan virtual environment
+konusuna değindik.
+
+Umarım bu kulak aşinalığı ilerleyen projelerinizde işinize yarayacaktır. Özellikle virtualenv ve pip
+kullanmanızı, her projede bu pratiği yapmanızı tavsiye ederim.
 
 [repl]:     https://en.wikipedia.org/wiki/Read–eval–print_loop
 [ipython]:  https://ipython.org
