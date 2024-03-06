@@ -212,6 +212,7 @@ atayıp içerisindekileri okumamız daha anlamlı olacaktır.
 import requests
 
 response = requests.get('https://erenturkay.com')
+
 print(response.text)
 ```
 
@@ -219,4 +220,28 @@ Gördüğümüz gibi `response` objesi içerisinden `text` metodunu çağırdık
 metod var. Bunları yine TAB tamamlama özelliği ile görebilirsiniz. Elimizdeki çıktı tarayıcıdan
 gördüğümüz kaynak kodları ile aynı olacak.
 
-[repl]: https://en.wikipedia.org/wiki/Read–eval–print_loop
+## Python Konsolunu Güzelleştirelim
+
+`python3` konsolu yeterli olsa da Fish ve Starship shell'de olduğu gibi daha güzel bir REPL mevcut.
+Bunun ismi [IPython][ipython]. Bize renklendirme, daha iyi kod tamamlama, satır sayıları gibi birçok
+özellik sunuyor. Ben python3 konsolu kullanmak yerine bunu kullanmayı tercih ediyorum ve sistemime
+ilk kurduğum yazılımlar arasında.
+
+```sh
+sudo apt-get install ipython3
+```
+
+Devamında `ipython3` komutu ile bu yeni konsolu çalıştırabilirsiniz. Aradaki farkı tek bir görsel
+ile görebiliyoruz. IPython'un en sevdiğim yanı renklendirmesi diyebilirim.
+
+![Python3 vs IPython](../assets/python/python-ipython-ornek.png){width=480}
+
+## Paket Yöneticileri
+
+Şimdiye kadar bütün paketleri Ubuntu üzerine yükledik. Bu tek bir proje üzerinde çalışıyorsak mantıklı olabilir ancak birden fazla proje üzerinde çalıştığımızda bütün projelerin ihtiyaç duyduğu paketleri (bağımlılıkları) sistemimize yüklemek pek mantıklı değil. Mantıklı değil çünkü bir projede ihtiyaç duyulan paketin versiyonu ile diğer projenin ihtiyaç duyduğu versiyon farklılık gösterebilir. En kötüsü, her ikisi de çalışırken sistemdeki paket güncellemesi yapıldığında projenin bozulabilecek olması.
+
+Bunun yerine her projeyi kendi içerisinde izole etmek daha tercih edilen bir yöntem. Bunun için
+Python'un paket yöneticisi olan `pip` ve projeleri izole etmek için `virtualenv` kullanıyoruz.
+
+[repl]:     https://en.wikipedia.org/wiki/Read–eval–print_loop
+[ipython]:  https://ipython.org
