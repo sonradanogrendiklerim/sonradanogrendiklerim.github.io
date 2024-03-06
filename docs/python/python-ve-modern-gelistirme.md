@@ -238,10 +238,39 @@ ile görebiliyoruz. IPython'un en sevdiğim yanı renklendirmesi diyebilirim.
 
 ## Paket Yöneticileri
 
-Şimdiye kadar bütün paketleri Ubuntu üzerine yükledik. Bu tek bir proje üzerinde çalışıyorsak mantıklı olabilir ancak birden fazla proje üzerinde çalıştığımızda bütün projelerin ihtiyaç duyduğu paketleri (bağımlılıkları) sistemimize yüklemek pek mantıklı değil. Mantıklı değil çünkü bir projede ihtiyaç duyulan paketin versiyonu ile diğer projenin ihtiyaç duyduğu versiyon farklılık gösterebilir. En kötüsü, her ikisi de çalışırken sistemdeki paket güncellemesi yapıldığında projenin bozulabilecek olması.
+Şimdiye kadar bütün paketleri Ubuntu üzerine yükledik. Bu tek bir proje üzerinde çalışıyorsak
+mantıklı olabilir ancak birden fazla proje üzerinde çalıştığımızda bütün projelerin ihtiyaç duyduğu
+paketleri (bağımlılıkları) sistemimize yüklemek pek mantıklı değil. Mantıklı değil çünkü bir projede
+ihtiyaç duyulan paketin versiyonu ile diğer projenin ihtiyaç duyduğu versiyon farklılık
+gösterebilir. En kötüsü, her ikisi de çalışırken sistemdeki paket güncellemesi yapıldığında projenin
+bozulabilecek olması.
 
 Bunun yerine her projeyi kendi içerisinde izole etmek daha tercih edilen bir yöntem. Bunun için
-Python'un paket yöneticisi olan `pip` ve projeleri izole etmek için `virtualenv` kullanıyoruz.
+Python'un paket yöneticisi olan [pip][pip]{:target="_blank"} ve projeleri izole etmek için
+[virtualenv][virtualenv]{:target="_blank"} kullanıyoruz.
+
+### Pip ve Virtualenv
+
+Her proje başladığında yaptığımız öncelikle bir virtualenv oluşturmak olacak. Bunun için proje
+dizini içerisinde `venv` adlı bir dizin kullanılıyor. Bu dizinin ismi `ali`, `sanal` gibi herhangi
+bir şey olabilir ancak pratik açısından sektörde bunu `venv` ya da gizli olsun istersek `.venv`
+yapıyoruz.
+
+Proje dizini içerisinde bir venv oluşturmakla başlayalım ve yaptığımız örnekleri tekrarlayalım. Artık konsola hakim olduğumuz için dizin oluşturma işlemlerini konsoldan yapacağız:
+
+```sh
+mkdir -p ~/src/sonradanogrendiklerim
+cd ~/src/sonradanogrendiklerim
+
+python3 -m venv venv
+```
+
+!!! note "-p parametresi"
+    Buradaki -p parametresi eğer `src` dizini öncesinde oluşturulmadıysa bunu da oluştur anlamına
+    geliyor. `mkdir` komutu oluşmuş bir dizin içerisinde yeni bir dizin oluşturduğundan, önceki
+    aşamada `src` dizini yoksa, hata vermemesi açısından kullanılıyor.
 
 [repl]:     https://en.wikipedia.org/wiki/Read–eval–print_loop
 [ipython]:  https://ipython.org
+[pip]:      https://pip.pypa.io/en/stable/
+[virtualenv]: https://docs.python.org/3.10/library/venv.html
