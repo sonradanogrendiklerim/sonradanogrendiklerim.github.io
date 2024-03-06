@@ -1,5 +1,5 @@
 ---
-title: Python Programlama Dili ve Modern Geliştirme
+title: Python ve Modern Geliştirme
 description: Python, paket yöneticileri, sanal ortam ve modern geliştirmeye giriş.
 ---
 
