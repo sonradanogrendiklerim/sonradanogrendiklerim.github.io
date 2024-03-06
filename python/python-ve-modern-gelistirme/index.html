@@ -1,0 +1,1465 @@
+
+<!doctype html>
+<html lang="tr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Eren Türkay">
+      
+      
+        <link rel="canonical" href="https://sonradanogrendiklerim.com/python/python-ve-modern-gelistirme/">
+      
+      
+        <link rel="prev" href="../programlama-dili-neden-ve-nasil/">
+      
+      
+        <link rel="next" href="../../makaleler/">
+      
+      
+        <link rel="alternate" type="application/rss+xml" title="RSS beslemesi" href="../../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="Güncellenmiş içeriğin RSS beslemesi" href="../../feed_rss_updated.xml">
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.10">
+    
+    
+      
+        <title>Python Programlama Dili ve Modern Geliştirme - Sonradan Öğrendiklerim</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e359304.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-E9CRJC3RBF"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-E9CRJC3RBF",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-E9CRJC3RBF",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Python Programlama Dili ve Modern Geliştirme - Sonradan Öğrendiklerim" >
+      
+        <meta  property="og:description"  content="None" >
+      
+        <meta  property="og:image"  content="https://sonradanogrendiklerim.com/assets/images/social/python/python-ve-modern-gelistirme.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://sonradanogrendiklerim.com/python/python-ve-modern-gelistirme/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Python Programlama Dili ve Modern Geliştirme - Sonradan Öğrendiklerim" >
+      
+        <meta  name="twitter:description"  content="None" >
+      
+        <meta  name="twitter:image"  content="https://sonradanogrendiklerim.com/assets/images/social/python/python-ve-modern-gelistirme.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#giris" class="md-skip">
+          Ana içeriğe geç
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Başlık">
+    <a href="../.." title="Sonradan Öğrendiklerim" class="md-header__button md-logo" aria-label="Sonradan Öğrendiklerim" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Sonradan Öğrendiklerim
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Python Programlama Dili ve Modern Geliştirme
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Ara" placeholder="Ara" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Ara">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Temizle" aria-label="Temizle" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Arama başlatılıyor
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Sekmeler" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Anasayfa
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../bilgisayar-muhendisligine-giris/onsoz/" class="md-tabs__link">
+          
+  
+  Bilgisayar Mühendisliğine Giriş
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../makaleler/" class="md-tabs__link">
+        
+  
+    
+  
+  Makaleler
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../blog/" class="md-tabs__link">
+        
+  
+    
+  
+  Blog
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://erenturkay.com/assets/resume/Eren_Turkay_Resume.pdf" class="md-tabs__link">
+        
+  
+    
+  
+  Resume
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigasyon" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Sonradan Öğrendiklerim" class="md-nav__button md-logo" aria-label="Sonradan Öğrendiklerim" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Sonradan Öğrendiklerim
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Anasayfa
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Bilgisayar Mühendisliğine Giriş
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Bilgisayar Mühendisliğine Giriş
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bilgisayar-muhendisligine-giris/onsoz/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ön Söz
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bilgisayar-muhendisligine-giris/baslarken/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Başlarken
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Nasıl Soru Sorulur?
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Nasıl Soru Sorulur?
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nasil-soru-sorulur/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Giriş
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nasil-soru-sorulur/sormadan-once/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sormadan Önce
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nasil-soru-sorulur/soru-sordugunuzda/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Soru Sorduğunuzda
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Ubuntu
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Ubuntu
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ubuntu/kurulum/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ubuntu Kurulumu
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ubuntu/terminal/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Terminal
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ubuntu/terminali-guzellestirelim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Terminali Güzelleştirelim
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Python
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            Python
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../programlama-dili-neden-ve-nasil/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Programlama Dili: Neden ve Nasıl
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Python ve Modern Geliştirme
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Python ve Modern Geliştirme
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="İçindekiler">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      İçindekiler
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#giris" class="md-nav__link">
+    <span class="md-ellipsis">
+      Giriş
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-kurulumu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python Kurulumu
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-kullanm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python Kullanımı
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Python Kullanımı">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#biraz-matematiksel-islem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Biraz Matematiksel İşlem
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#web-sayfas-ziyareti" class="md-nav__link">
+    <span class="md-ellipsis">
+      Web Sayfası Ziyareti
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-konsolunu-guzellestirelim" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python Konsolunu Güzelleştirelim
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paket-yoneticileri" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paket Yöneticileri
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Paket Yöneticileri">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pip-ve-virtualenv" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pip ve Virtualenv
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sanal-ortamdan-ckma" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sanal Ortamdan Çıkma
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sonuc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sonuç
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../makaleler/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Makaleler
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Blog
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://erenturkay.com/assets/resume/Eren_Turkay_Resume.pdf" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Resume
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="İçindekiler">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      İçindekiler
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#giris" class="md-nav__link">
+    <span class="md-ellipsis">
+      Giriş
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-kurulumu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python Kurulumu
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-kullanm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python Kullanımı
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Python Kullanımı">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#biraz-matematiksel-islem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Biraz Matematiksel İşlem
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#web-sayfas-ziyareti" class="md-nav__link">
+    <span class="md-ellipsis">
+      Web Sayfası Ziyareti
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-konsolunu-guzellestirelim" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python Konsolunu Güzelleştirelim
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paket-yoneticileri" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paket Yöneticileri
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Paket Yöneticileri">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pip-ve-virtualenv" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pip ve Virtualenv
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sanal-ortamdan-ckma" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sanal Ortamdan Çıkma
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sonuc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sonuç
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Python ve Modern Geliştirme</h1>
+
+<h2 id="giris">Giriş<a class="headerlink" href="#giris" title="Permanent link">&para;</a></h2>
+<p>Önceki bölümde programlama dillerinin hangi ihtiyaçtan, nasıl ortaya çıktığına değindik.
+<a href="https://www.python.org" target="_blank">Python</a> da bunlardan bir tanesi. Bu yazıda Python kurulumu, dile basit
+bir giriş, modern Python geliştirirken kullanılan araçlar, paket yöneticisi, sanal ortam (virtual
+environment) gibi konulara değineceğiz.</p>
+<p>Buradaki amaç dili öğretmek değil, geliştirme yaparken sektörde sık kullanılan araçları sizlere
+tanıtmak ve geliştirmenizi kolaylaştırmak. Dili daha fazla öğrenmek isterseniz Python'un
+<a href="https://wiki.python.org/moin/BeginnersGuide/Programmers" target="_blank">wikisi</a> ile birlikte birçok YouTube videosu ve makaleler mevcut.</p>
+<p>Burada dikkat etmemiz gereken nokta Python'un da bir program çalıştıran program olduğunu hatırlamak.
+Programlama dilleri bölümünde dillerin nasıl ortaya çıktığını anladık, Python da bundan farksız
+değil. Yazdığımız programlar bir başka program (Python) tarafından alınıyor, işleniyor ve sonucunda
+işlemcinin anlayacağı şekilde 1 ve 0'lara dönüştürülüyor. Bunu yaparken Python bize birçok kolaylık
+sağlıyor.</p>
+<h2 id="python-kurulumu">Python Kurulumu<a class="headerlink" href="#python-kurulumu" title="Permanent link">&para;</a></h2>
+<p>Önceki yazılarda Ubuntu kullanmamızın yararlı olacağını belirtmiştim. Bundan sonrasında yazacağımız
+komutlar her zaman <code>Ubuntu 22.04</code> üzerinde olacak. Daha önce güzelleştirilmiş
+<a href="../../ubuntu/terminali-guzellestirelim/" target="_blank">terminalinizi</a> açarak aşağıdaki komutu
+girin:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>python3.10
+</span></code></pre></div>
+<p>Python yüklendiğinde aşağıdaki çıktıyı görmeniz gerekmekte:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>❯<span class="w"> </span>python3<span class="w"> </span>--version
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>Python<span class="w"> </span><span class="m">3</span>.10.12
+</span></code></pre></div>
+<p>Artık terminalimize <code>python3</code> komutunu yazarak kullanmaya başlayabiliriz.</p>
+<h2 id="python-kullanm">Python Kullanımı<a class="headerlink" href="#python-kullanm" title="Permanent link">&para;</a></h2>
+<p>Terminalimize <code>python3</code> yazdığımızda fish veya bash ile benzer şekilde metin tabanlı bir arayüz bizi
+karşılayacak. Bu arayüze <a href="https://en.wikipedia.org/wiki/Read–eval–print_loop">REPL</a> <code>(Read-Eval-Print-Loop)</code> denmekte. Aslında terminal de aynı
+şekilde bir REPL, sadece bu ismi şu anda hazır olduğumuz için belgenin bu kısmında duyuyoruz.</p>
+<p>Python konsolu içerisine aşağıdaki komutu yazdığınızda programlamaya başlamış oluyoruz:</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;merhaba dünya&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Görebileceğiniz gibi ekrana çok kolay bir biçimde bir şeyler bastırabildik. Bunu bir önceki bölümde
+Assembly ile yapmak çok zordu ve hataya açıktı. Buradan anlıyoruz ki diller aslında bizim işimizi
+kolaylaştırıcı bir araç. Dilerseniz burada bir toplama işlemi tanımlayalım ve ne kadar kolay
+çağırılabilir olduğunu görelim:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">def</span> <span class="nf">topla</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="n">topla</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Bunları şimdilik konsolda, interaktif şekilde yaptık ancak muhtemelen kodlarımızın kalıcı olmasını
+isteyeceğizdir. Bunun için <code>.py</code> uzantılı bir dosya oluşturup içerisine yazabiliriz. Yeni shell
+komutları ile bu dosya ve dizinleri oluşturalım.</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">cd</span><span class="w"> </span>~
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>mkdir<span class="w"> </span>src
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>touch<span class="w"> </span>src/ilkadim.py
+</span></code></pre></div>
+<ul>
+<li><strong>cd</strong>: Bunu daha önce <a href="../../ubuntu/terminali-guzellestirelim/#ayar-eklemeye-giris" target="_blank">terminal makalesinde</a> görmüştük. Bu komut şu anda bulunduğumuz dizini
+  değiştiriyor.</li>
+<li><strong>mkdir</strong>: <code>Make directory</code> anlamına geliyor. Yeni bir dizin oluşturuyor.</li>
+<li><strong>touch</strong>: Şef dokunuşu. Boş bir dosya oluşturuyor.</li>
+</ul>
+<p>Şimdi grafik arayüzünüzden ev dizininde bulunan <code>src</code> klasörüne giderek <code>ilkadim.py</code> dosyasını metin
+editörü ile açın ve içerisine aşağıdakileri yazın:</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;merhaba dünya&quot;</span><span class="p">)</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="k">def</span> <span class="nf">topla</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="n">topla</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Sonrasında konsolunuza dönün ve aşağıdaki komutu girin:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>python3<span class="w"> </span>ilkadim.py
+</span></code></pre></div>
+<p>Ekrana sadece <code>merhaba dünya</code> bastığını göreceksiniz. Python konsolu ve normal şekilde çalıştırma
+arasındaki fark var. Python konsolu bir REPL olduğu için en son yazdığınız komutun çıktısını her
+daim ekrana basacaktır ancak normal şekilde çalıştırdığımızda ekranda bir şey görmüyor, sadece
+topluyoruz. Ekranda bunu görmek için toplama sonucunu bir değişkene atayıp bastırabiliriz:</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">toplam</span> <span class="o">=</span> <span class="n">topla</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">toplam</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Sonucunda tüm programımız şu hali aldı:</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;merhaba dünya&quot;</span><span class="p">)</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="k">def</span> <span class="nf">topla</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>    <span class="c1"># burada boşluklar</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>    <span class="c1"># önemli</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="n">toplam</span> <span class="o">=</span> <span class="n">topla</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="nb">print</span><span class="p">(</span><span class="n">toplam</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Tekrar konsola dönüp <code>python3 ilkadim.py</code> çalıştırdığınızda aşağıdaki çıktıyı görmeniz gerekmekte:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>❯ python ilkadim.py
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>merhaba dünya
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>10
+</span></code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Python ve Boşluklar</p>
+<p>Dilin yapısı gereği Python'da boşluklar önem arz ediyor. Yukarıdaki kod parçacığını kopyalarken
+boşluklara dikkat etmelisiniz. <code>def</code> satırından sonra bir alt satıra geçtiğimizde, bunun <code>def</code>
+ile ilgili olduğunu belirtmek için 4 boşluk kullandık. Tek satır olduğundan anlaşılması zor
+olabilir ancak birden fazla satır olduğunda anlaşılması daha kolay olacaktır.</p>
+</div>
+<h3 id="biraz-matematiksel-islem">Biraz Matematiksel İşlem<a class="headerlink" href="#biraz-matematiksel-islem" title="Permanent link">&para;</a></h3>
+<p>Toplama işlemi yaptık. Bunu rahatlıkla <code>+</code> operatörü ile yapabiliyoruz ancak faktoriyel hesabı
+yapmak istediğimizi varsayalım. Bunun için Python bize kendi içerisinde, dışarıdan yüklemeye ihtiyaç
+kalmadan birtakım modüller sunuyor. <code>math</code> modülü bunlardan bir tanesi. Birçok matematiksel
+hesap fonksiyonlarını (metodlarını) barındırıyor ve <code>factorial</code> bunlardan bir tanesi. Bu modülü
+programımızın başına <code>import</code> anahtar kelimesini kullanarak dahil edebiliyoruz.</p>
+<p>Yine önce REPL üzerinden ilerleyip, sonrasında bunu kalıcı olması açısından bir dosyaya yazacağız.
+<code>python3</code> komutu ile REPL'u kullanarak aşağıdaki komutları girin:</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kn">import</span> <span class="nn">math</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="n">math</span><span class="o">.</span><span class="n">factorial</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Sonuç olarak 24 çıkacaktır. Devamında kodu <code>faktoriyel.py</code> dosyası içerisine yazın ve kaydedin,
+<code>python3 faktoriyel.py</code> şeklinde çalıştırın. Oops, ekrana yine bir şeyler yazmayacak. Bunun için
+toplama işleminde gördüğümüz gibi <code>print</code> yapmanız gerekecek. İlla ki değişkene atamanız
+gerekmeyecek. Çok kısa bir ifade olduğu için aşağıdaki şekilde de kullanabilirsiniz:</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kn">import</span> <span class="nn">math</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">factorial</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>
+</span></code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">REPL ve Kod Tamamlama</p>
+<p>Python konsolu içerisinde herhangi bir modülün hangi metodlar barındırdığına nokta karakterinden
+sonra TAB tuşuna basarak anlayabilirsiniz. <code>math</code> modülü için <code>math.</code> yazdıktan sonra TAB tuşuna
+basarsanız neler barındırdığını görebilirsiniz. Aynı zamanda bu metodların nasıl kullanıldığını
+<code>help</code> fonksiyonu ile öğrenebilirsiniz. Örneğin factorial için <code>help(math.factorial)</code> yazmanız
+yeterli olacaktır.</p>
+</div>
+<p>Sonuç olarak burada kendi kodumuza ait olmayan bir modülü kullandık. Bu modül Python'un kendi
+içerisinde gelen bir modüldü ve dışarıdan modül yüklemedik. Python dili sadece kendi içerisinde
+modülleri değil, dışarıdan yükleyeceğimiz modülleri de desteklemekte ve etrafta <code>math</code> modülü gibi
+çok çeşitli işler için çok çeşitli modüller var.</p>
+<p>Lakin bu modüllerin kullanılmadan önce sistemimize yüklenmesi gerekiyor. Bu modüllerin yüklenmesinin
+de çeşitli yöntemleri var. Şimdi bunlara bakalım.</p>
+<h3 id="web-sayfas-ziyareti">Web Sayfası Ziyareti<a class="headerlink" href="#web-sayfas-ziyareti" title="Permanent link">&para;</a></h3>
+<p>Sadece matematik işlemi değil, Python ile web sayfasına bağlanabilir, oradan veri alablilir, görsel
+ile ilgili işler yapabilir, yapay zeka ve diğer konularda da kullanabilirsiniz. Yani anlayacağınız
+Python güçlü bir ekosistemi olan güçlü bir dil.</p>
+<p>Bu kısımda sadece bir web sayfasına bağlanıp oradan veri alacağız. Bu veri web sayfasına tarayıcınız
+ile bağlanıp <code>kaynak kodunu göster</code> dediğinizde karşınıza gelen veri olacak. Bunun için <code>requests</code>
+adlı çok kullanışlı, Python'un kendi içinde olmayan ama dışarıda geliştirilen bir modül
+kullanacağız. Öncesinde belirttiğim gibi önce bunu yüklememiz gerekmekte. Terminalimizi açıp
+aşağıdaki komutu girerek bu modülü <ins>Ubuntu içerisine</ins> yükleyebiliriz:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>python3-requests
+</span></code></pre></div>
+<p>Modül yüklendiğine göre bunu REPL içerisinde <code>import</code> edebilmemiz gerekmekte:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="kn">import</span> <span class="nn">requests</span>
+</span></code></pre></div>
+<p>Herhangi bir hata almıyorsanız modül başarılı bir şekilde yüklenmiş demektir. Web sayfasının kaynak
+kodlarını almak için requests bize <code>get</code> metodunu sunuyor. Bunu kullanarak kaynak kodlarını alalım:</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="kn">import</span> <span class="nn">requests</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://erenturkay.com&#39;</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Bu kod parçacığı bize  <code>&lt;Response [200]&gt;</code> objesi dönecek.
+Buradaki <code>Response</code> <a href="https://requests.readthedocs.io/en/latest/api/#requests.Response" target="_blank">objenin ismi</a> ve
+<code>200</code> <a href="https://en.wikipedia.org/wiki/List_of_HTTP_status_codes" target="_blank">HTTP durum kodu</a> anlamına geliyor ama bize sadece dönüş yaptı
+ve ekrana bastı. Bunu bir değişkene atayıp içerisindekileri okumamız daha anlamlı olacaktır.</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="kn">import</span> <span class="nn">requests</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://erenturkay.com&#39;</span><span class="p">)</span>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Gördüğümüz gibi <code>response</code> objesi içerisinden <code>text</code> <a href="https://requests.readthedocs.io/en/latest/api/#requests.Response.text" target="_blank">metodunu</a> çağırdık.
+Response içerisinde çokça metod var. Bunları yine TAB tamamlama özelliği ile görebilirsiniz.
+Elimizdeki çıktı tarayıcıdan gördüğümüz kaynak kodları ile aynı olacak.</p>
+<h2 id="python-konsolunu-guzellestirelim">Python Konsolunu Güzelleştirelim<a class="headerlink" href="#python-konsolunu-guzellestirelim" title="Permanent link">&para;</a></h2>
+<p><code>python3</code> konsolu yeterli olsa da Fish ve Starship shell'de olduğu gibi daha güzel bir REPL mevcut.
+Bunun ismi <a href="https://ipython.org">IPython</a>. Bize renklendirme, daha iyi kod tamamlama, satır sayıları gibi birçok
+özellik sunuyor. Ben python3 konsolu kullanmak yerine bunu kullanmayı tercih ediyorum ve sistemime
+ilk kurduğum yazılımlar arasında.</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>ipython3
+</span></code></pre></div>
+<p>Devamında <code>ipython3</code> komutu ile bu yeni konsolu çalıştırabilirsiniz. Aradaki farkı tek bir görsel
+ile görebiliyoruz. IPython'un en sevdiğim yanı renklendirmesi diyebilirim.</p>
+<p><img alt="Python3 vs IPython" src="../../assets/python/python-ipython-ornek.png" width="480" /></p>
+<h2 id="paket-yoneticileri">Paket Yöneticileri<a class="headerlink" href="#paket-yoneticileri" title="Permanent link">&para;</a></h2>
+<p>Şimdiye kadar bütün paketleri Ubuntu üzerine yükledik. Bu tek bir proje üzerinde çalışıyorsak
+mantıklı olabilir ancak birden fazla proje üzerinde çalıştığımızda bütün projelerin ihtiyaç duyduğu
+paketleri (bağımlılıkları) sistemimize yüklemek pek mantıklı değil. Mantıklı değil çünkü bir projede
+ihtiyaç duyulan paketin versiyonu ile diğer projenin ihtiyaç duyduğu versiyon farklılık
+gösterebilir. En kötüsü, her ikisi de çalışırken sistemdeki paket güncellemesi yapıldığında
+projelerin bozulabilecek olması.</p>
+<p>Bunun yerine her projeyi kendi içerisinde izole etmek daha tercih edilen bir yöntem. Bunun için
+Python'un paket yöneticisi olan <a href="https://pip.pypa.io/en/stable/" target="_blank">pip</a> ve projeleri izole etmek için
+<a href="https://docs.python.org/3.10/library/venv.html" target="_blank">virtualenv</a> kullanıyoruz.</p>
+<h3 id="pip-ve-virtualenv">Pip ve Virtualenv<a class="headerlink" href="#pip-ve-virtualenv" title="Permanent link">&para;</a></h3>
+<p>Her proje başladığında yaptığımız öncelikle bir virtualenv oluşturmak olacak. Bunun için proje
+dizini içerisinde <code>venv</code> adlı bir dizin kullanılıyor. Bu dizinin ismi <code>ali</code>, <code>sanal</code> gibi herhangi
+bir şey olabilir ancak pratik olması açısından sektörde bunu <code>venv</code> ya da gizli olsun istersek
+<code>.venv</code> yapıyoruz.</p>
+<p>Proje dizini içerisinde bir venv oluşturmakla başlayalım ve yaptığımız örnekleri tekrarlayalım. Artık konsola hakim olduğumuz için dizin oluşturma işlemlerini konsoldan yapacağız:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>~/src/sonradanogrendiklerim
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="nb">cd</span><span class="w"> </span>~/src/sonradanogrendiklerim
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>venv
+</span></code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">-p parametresi</p>
+<p>Buradaki -p parametresi eğer <code>src</code> dizini öncesinde oluşturulmadıysa bunu da oluştur anlamına
+geliyor. <code>mkdir</code> komutu oluşmuş bir dizin içerisinde yeni bir dizin oluşturduğundan, önceki
+aşamada <code>src</code> dizini yoksa hata vermemesi açısından kullanılıyor.</p>
+</div>
+<p>Burada Python'un <code>venv</code> modülünü kullanarak <code>(-m venv)</code> ve <code>venv</code> isimli bir dizin ismini son
+parametre olarak vererek bize sanal bir ortam oluşturmasını istedik. Ancak bunu istemek, şu an
+kullandığımız anlamına gelmiyor. Yalnızca bu proje için oluşturulmuş sanal ortamı aktive etmemiz
+gerekmekte. Bunun için konsola aşağıdaki komutu yazın:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="nb">source</span><span class="w"> </span>venv/bin/activate.fish
+</span></code></pre></div>
+<p>Bir önceki bölümlerde terminalimiz fish idi ve fish ile devam ediyoruz. Bu yüzden aktivasyon için
+<code>activate.fish</code> kullandık. Eğer bash veya zsh kullanıyorsanız bunu <code>venv/bin/activate</code> şeklinde
+değiştirmelisiniz. Sonuç olarak konsolumuz şu hali almış olacak:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>eren<span class="w"> </span><span class="k">in</span><span class="w"> </span>🌐<span class="w"> </span>sonradanogrendiklerim<span class="w"> </span><span class="k">in</span><span class="w"> </span>~/src/sonradanogrendiklerim<span class="w"> </span>via<span class="w"> </span>🐍<span class="w"> </span>v3.10.12<span class="w"> </span><span class="o">(</span>venv<span class="o">)</span><span class="w"> </span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>❯<span class="w"> </span>ls
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>venv
+</span></code></pre></div>
+<p>Terminalimiz güzelleştiği için venv kullanıp kullanmadığımızı ve hangi Python versiyonu ile
+kullandığımızı görebiliyoruz. Artık projeye özel sanal ortamdayız ve sadece projeye özel paketler
+yükleyebiliriz.</p>
+<p>Önceki örneğimizde <code>requests</code> yüklemiştik. Bunun için <code>pip</code> ile aşağıdaki komutu girerek yükleyebiliriz:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>pip<span class="w"> </span>install<span class="w"> </span>requests
+</span></code></pre></div>
+<p>Bu komut sanal ortamımız aktive olduğundan sadece sanal ortama bunu yükleyecektir. Dikkat ederseniz
+paket ismi <code>python3-requests</code> değil, sadece <code>requests</code> çünkü pip ile yüklediğimizde bunun ismi
+sadece <code>requests</code>.</p>
+<p>Her ortamda farklı paketler olacağı için bu ortam içerisinde şimdilik <code>ipython</code> bulunmuyor. Hatırlarsanız bunu sisteme yüklemiştik ve ismi <code>ipython3</code> idi. Şimdi bunu yükleyelim. PyPI paket reposu içerisinde bunun ismi sadece <code>ipython</code>. Aşağıdaki komut ile kolayca yükleyebilirsiniz:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>pip<span class="w"> </span>install<span class="w"> </span>ipython
+</span></code></pre></div>
+<h3 id="sanal-ortamdan-ckma">Sanal Ortamdan Çıkma<a class="headerlink" href="#sanal-ortamdan-ckma" title="Permanent link">&para;</a></h3>
+<p>İşimiz bittiğinde veya başka bir projeye geçeceğimizde içinde bulunduğumuz sanal ortamdan çıkmamız gerekiyor. Bunun için sadece <code>deactivate</code> komutunu yazmanız yeterli. Bunu yazdıktan sonra konsolunuz aşağıdaki şekilde size geri bildirimde bulunacaktır:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>eren<span class="w"> </span><span class="k">in</span><span class="w"> </span>🌐<span class="w"> </span>sonradanogrendiklerim<span class="w"> </span><span class="k">in</span><span class="w"> </span>~/src/sonradanogrendiklerim<span class="w"> </span>via<span class="w"> </span>🐍<span class="w"> </span>v3.10.12<span class="w"> </span><span class="o">(</span>venv<span class="o">)</span>
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>❯<span class="w"> </span>deactivate
+</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>
+</span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>eren<span class="w"> </span><span class="k">in</span><span class="w"> </span>🌐<span class="w"> </span>sonradanogrendiklerim<span class="w"> </span><span class="k">in</span><span class="w"> </span>~/src/sonradanogrendiklerim<span class="w"> </span>
+</span><span id="__span-22-5"><a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a>❯
+</span></code></pre></div>
+<h2 id="sonuc">Sonuç<a class="headerlink" href="#sonuc" title="Permanent link">&para;</a></h2>
+<p>Programlama dillerinin ne olduğunu, nasıl ortaya çıktığını az çok anladık. Python'un program
+çalıştıran program olduğunu, sonuç olarak 1 ve 0'lar ile işlem yaptığımızı gördük. Biraz Python
+programlamaya, modüllere giriş yaptık ve en önemlisi sektörde çok sık kullanılan virtual environment
+konusuna değindik.</p>
+<p>Umarım bu kulak aşinalığı ilerleyen projelerinizde işinize yarayacaktır. Özellikle virtualenv ve pip
+kullanmanızı, her projede bu pratiği yapmanızı tavsiye ederim.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Başa dön
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Altbilgi" >
+        
+          
+          <a href="../programlama-dili-neden-ve-nasil/" class="md-footer__link md-footer__link--prev" aria-label="Önceki: Programlama Dili: Neden ve Nasıl">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Önceki
+              </span>
+              <div class="md-ellipsis">
+                Programlama Dili: Neden ve Nasıl
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../makaleler/" class="md-footer__link md-footer__link--next" aria-label="Sonraki: Makaleler">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Sonraki
+              </span>
+              <div class="md-ellipsis">
+                Makaleler
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024 Eren Türkay
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.sections", "navigation.path", "navigation.tabs", "navigation.footer", "toc.follow", "content.code.copy"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Kopyaland\u0131", "clipboard.copy": "Kopyala", "search.result.more.one": "Bu sayfada 1 tane daha", "search.result.more.other": "Bu sayfada # tane daha", "search.result.none": "E\u015fle\u015fen dok\u00fcman bulunamad\u0131", "search.result.one": "1 dok\u00fcman bulundu", "search.result.other": "# dok\u00fcman bulundu", "search.result.placeholder": "Aramaya ba\u015flamak i\u00e7in yaz\u0131n", "search.result.term.missing": "Eksik", "select.version": "Versiyon se\u00e7"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      
+    
+  </body>
+</html>
