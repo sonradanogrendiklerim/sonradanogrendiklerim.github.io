@@ -296,6 +296,19 @@ Böylelikle tekrar `fish` çalıştırdığınızda bu dosya okunacak ve `starsh
     hangi ayarı nerede ve nasıl yaptığımız önemli olduğu için, ayarları bu şekilde ayırıyor olmak
     bize yönetimsel anlamda avantaj sağlamakta. Fish de bir shell olarak bundan farksız değil.
 
+### Öntanımlı Terminal
+
+Starship'i fish çalıştırıldığında her daim çalıştırabiliyoruz ancak bu sefer fish'i her daim nasıl çalıştıracağız sorusu mevcut. Bunun için öntanımlı terminalimizi değiştirmemiz gerekmekte. Aşağıdaki komut ile bunu başarabiliyoruz:
+
+```sh
+sudo chsh -s /usr/bin/fish KULLANICIADI
+```
+
+Burada kullanıcı adına Ubuntu yüklerken verdiğiniz kullanıcı adını vermelisiniz. Terminalinizde zaten görünmekte.
+
+Bu ayarları yaptıktan sonra terminal açtığınızda öntanımlı olarak fish çalışacak ve starship ile
+beraber gelecek.
+
 ## Tebrikler
 
 Buraya kadar okuyup uygulamanız sizi birkaç adım öne taşıdı. Artık daha güzel bir terminal görüp,
