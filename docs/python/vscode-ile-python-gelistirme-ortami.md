@@ -1,7 +1,7 @@
 ---
 title: VSCode ile Python Geliştirme Ortamı
 description: VSCode ile daha kolay Python geliştirme nasıl yapılır.
-date: 2024-03-06
+date: 2024-03-07
 ---
 
 ##  Giriş
@@ -85,29 +85,87 @@ sınıflara ulaşmak için, Markdown yazarken başlıklara ulaşmak için kullan
 
 `ilkadim.py` örneğine gidip bu kombinasyonu kullandığınızda daha net bir şekilde anlayabilirsiniz.
 Dosya ismi aramasında geçerli olduğu gibi burada da arama metnini tam yazmak zorunda değilsiniz,
-[fuzzy search][fuzzy] VSCode'un hemen hemen her yerinde geçerli ve işimizi kolaylaştırıyor.
+[fuzzy search][fuzzy]{:target="_blank"} VSCode'un hemen hemen her yerinde geçerli ve işimizi kolaylaştırıyor.
 
 ### VSCode Komutlarına Erişme
 
-`CTRL + Shift + p`. Bu kısayol VSCode'un bütün komutlarına erişmenizi sağlıyor. Bütün ayarlardan tutun, Python ortamını seçmeye kadar birçok komut mevcut.
+`CTRL + Shift + p`. Bu kısayol VSCode'un bütün komutlarına erişmenizi sağlıyor. Python sanal ortamı
+seçmeden tutun bütün ayarlar buradan ulaşılabiliyor.
 
 ### VSCode İçerisindeki Konsol
 
-`CTRL + j`. Pencereler arasında geçmeden VSCode ile konsol kullanılabiliyor. Bu konsolu açmaya
-yarar. Ben bu konsolu kod yazdığım zaman kapatıp, ihtiyacım olduğunda açarak kullanıyorum.
-Böylelikle geçiş yaparken dikkatim dağılmıyor.
+`CTRL + j`. Pencereler arasında geçmeden VSCode ile konsol kullanılabiliyor. Bu kombinasyon VSCode
+içerisinde konsolu açmaya yarar. Ben bu konsolu kod yazdığım zaman kapatıp, ihtiyacım olduğunda
+açarak kullanıyorum. Pencereler arası geçiş yapmadığım için de dikkatim dağılmıyor.
 
 ## Python Sanal Ortamı
 
 Konsolu açtığınızda Python sanal ortamı aktive olarak gelmeyebilir. VSCode bunun için proje
 dizininde `venv` dizini varsa kullanımı sağlayabiliyor. Otomatik olarak kullanım sağlanmıyorsa yine
-kısayollari le bunu başarabiliyoruz.
+kısayolları le bunu başarabiliyoruz.
 
 VSCode komutlarına erişirken kullandığımız `CTRL + Shift + p` kombinasyonu ile `pyselect` yazarak
-buna erişebiliriz. Devamında size liste sunacaktır. Bu listeden projeye ait olan `venv` seçin ve
-konsolu tuş kombinasyonları ile tekrar başlatın. Her şey yolunda giderse konsolda sanal ortamın
-seçili olduğunu göreceksiniz.
+buna erişebiliriz. Devamında size liste sunacaktır. Bu listeden projeye ait olan `venv` seçin,
+konsola `exit 0` komutu yazın ve konsolu tuş kombinasyonları ile tekrar başlatın. Her şey yolunda
+giderse konsolda sanal ortamın seçili olduğunu göreceksiniz.
+
+## Otomatik Kod Formatlama
+
+Herhangi bir projede tek kişi çalışıyorsanız problem olmayacak ancak birden fazla kişi dahil
+olduğunda problem olacak bir konu: kod formatlama. Her yiğidin ayrı bir yoğurt yiyişi olduğu gibi
+her programcının da kod formatlama konusunda ayrı birer fikri var. Durum bu olunca orta noktada
+bulunulabileceğini düşünmediğimden kod formatlama kararının başka birileri tarafından verilmesinin
+daha uygun olduğunu düşünüyorum.
+
+Bunun için sektörde en sık kullanılan `black` ve `isort` formatlama araçları mevcut. Bunlar nasıl
+formatlıyorsa o şekilde devam edeceğiz kararı aldıktan sonra bütün tartışmalar son buluyor.
+
+Son zamanlarda bu iki ayrı aracı birleştiren ve daha hızlı çalışan `ruff` projesi yükselişte. Biz
+bunu kullanacağız.
+
+### Ruff Yükleme ve Ayarları
+
+VSCode'un eklenti ayarlarına gelin ve [ruff][ruff]{:target="_blank"} eklentisini aratarak yükleyin.
+Ruff yüklememiz hemen kullanacağımız anlamına gelmiyor. Python dosyalarında dosya kaydedildiğinde
+otomatik olarak şekillendir şeklinde bir ayar yapmamız gerekmekte. Bunun için VSCode'un JSON ayar
+dosyasını düzenleyeceğiz.
+
+`CTRL + Shift + p` kombinasyonu ile VSCode komut satırını açıp `userjson` yazdıktan sonra ayar
+dosyasını açın ve düzgün formatlanmış şekilde aşağıdaki satırları ekleyin:
+
+```json
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    }
+  },
+```
+
+!!! note "JSON Formatlama"
+    Bu bir JSON dosyası olduğu için virgüle dikkat etmemiz gerekmekte. Konfigürasyon dosyasının
+    ortasına bunu eklerseniz bir önceki satırda ve bir sonraki satırdaki virgüllere dikkat edin ve
+    bunun geçerli bir JSON dosyası olduğundan emin olun. Yoksa ayarlarımız çalışmayacaktır.
+
+Bu ayardan sonra kodumuz her kaydedildiğinde otomatik olarak formatlanacaktır. Kaydetmek için
+bilindik `CTRL + s` kısayolunu kullanabilirsiniz. Yazdığınız kodun otomatik olarak belli bir formata
+dönüştürüldüğünü kaydettikten sonra görmeniz gerekli.
+
+## Sonuç
+
+VSCode gibi editörler kod yazmayı oldukça kolaylaştırıyor. Bu sadece VSCode kullanacağınız anlamına
+gelmesin, Python için [PyCharm][pycharm] gibi ayrı yazılımlar da mevcut. Burada kişisel tercih de
+önem arz ediyor.
+
+Ben bu bölümde kendi kullanımımı anlatmaya çalıştım. Daha fazla kısayol ile daha hızlı çalışılabilir
+ancak bence burada yazılanlar olmazsa olmaz kısayollarımız. Umarım sizlere faydası olmuş, kod
+yazmanızı hızlandırmıştır.
+
+![VSCode Örneği](../assets/python/vscode-ornek.png)
 
 [download]:     https://code.visualstudio.com/download
 [solarized]:    https://marketplace.visualstudio.com/items?itemName=ginfuru.ginfuru-better-solarized-dark-theme
-[fuzzy]: https://en.wikipedia.org/wiki/Approximate_string_matching
+[fuzzy]:        https://en.wikipedia.org/wiki/Approximate_string_matching
+[ruff]:         https://docs.astral.sh/ruff/
+[pycharm]:      https://www.jetbrains.com/pycharm/
