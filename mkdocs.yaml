@@ -25,7 +25,7 @@ nav:
       - Python:
           - "Programlama Dili: Neden ve Nasıl": python/programlama-dili-neden-ve-nasil.md
           - Python'a Giriş ve Modern Geliştirme: python/pythona-giris-ve-modern-gelistirme.md
-          - Python Geliştirme Ortamı: python/python-gelistirme-ortami.md
+          - VSCode ile Python Geliştirme Ortamı: python/vscode-ile-python-gelistirme-ortami.md
 
   - Makaleler: makaleler/index.md
   - Blog: blog/index.md

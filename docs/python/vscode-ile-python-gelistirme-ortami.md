@@ -1,6 +1,6 @@
 ---
-title: VSCode ve Python Geliştirme Ortamı
-description: Python ile daha kolay geliştirme nasıl yapılır.
+title: VSCode ile Python Geliştirme Ortamı
+description: VSCode ile daha kolay Python geliştirme nasıl yapılır.
 date: 2024-03-06
 ---
 
