@@ -24,8 +24,20 @@ cd <indirmedizini>
 sudo apt install ./<dosyaismi>.deb
 ```
 
-Burada `dosyaismi.deb` indirdiğiniz dosyanın ismi olmalı.
+Burada `dosyaismi.deb` indirdiğiniz dosyanın ismi olmalı. Kurulum tamamlandıktan sonra önceki bölümde gördüğümüz `ilkadim.py` ve `factorial.py` dosyalarını VSCode ile açabilirsiniz.
 
 ## VSCode'a Giriş
 
-[download]: https://code.visualstudio.com/download
+İlk kurulum ayarlarını yaptıktan sonra renk teması seçmeyi tercih edebilirsiniz. Bu ekrana saatlerce
+bakacağımız için öncelikli olarak size uygun temayı bulmanızı tavsiye ederim. Ben göz yormaması
+açısından [Solarized Dark][solarized] temasını kullanıyorum. Bunu sol tarafta tepeden 5. sırada
+bulunan kutucuk ikonuna _(Extensions)_ tıklayarak yükleyebilirsiniz. Yükledikten sonra VSCode
+ayarlarından bunu seçin.
+
+Extensions bölümü VSCode ayarları yaparken sık kullanacağımız bir bölüm olacak. Birçok iş için
+eklenti halihazırda yazılmış durumda ve öncelikle buraya bakacağız. Yazının konusu geliştirme
+ortamını tanıtmak olduğundan ilerleyen kısımda Python kodlarımızı daha iyi yazmamız için başka
+eklentileri de yükleyeceğiz.
+
+[download]:     https://code.visualstudio.com/download
+[solarized]:    https://marketplace.visualstudio.com/items?itemName=ginfuru.ginfuru-better-solarized-dark-theme
