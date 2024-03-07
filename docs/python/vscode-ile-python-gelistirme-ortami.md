@@ -140,7 +140,7 @@ dosyasını açın ve düzgün formatlanmış şekilde aşağıdaki satırları 
     "editor.codeActionsOnSave": {
       "source.organizeImports": "explicit"
     }
-  },
+  }
 ```
 
 !!! note "JSON Formatlama"
