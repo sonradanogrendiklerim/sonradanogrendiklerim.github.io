@@ -24,7 +24,7 @@ nav:
           - Terminali Güzelleştirelim: ubuntu/terminali-guzellestirelim.md
       - Python:
           - "Programlama Dili: Neden ve Nasıl": python/programlama-dili-neden-ve-nasil.md
-          - Python ve Modern Geliştirme: python/python-ve-modern-gelistirme.md
+          - Python'a Giriş ve Modern Geliştirme: python/pythona-giris-ve-modern-gelistirme.md
 
   - Makaleler: makaleler/index.md
   - Blog: blog/index.md
