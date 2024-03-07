@@ -99,11 +99,14 @@ Böylelikle geçiş yaparken dikkatim dağılmıyor.
 
 ## Python Sanal Ortamı
 
-Konsolu açtığınızda Python sanal ortamı aktive olarak gelmeyecek. VSCode bunun için proje dizininde
-`venv` dizini varsa kullanımı sağlayabiliyor. Otomatik olarak kullanım sağlanmıyorsa yine
+Konsolu açtığınızda Python sanal ortamı aktive olarak gelmeyebilir. VSCode bunun için proje
+dizininde `venv` dizini varsa kullanımı sağlayabiliyor. Otomatik olarak kullanım sağlanmıyorsa yine
 kısayollari le bunu başarabiliyoruz.
 
-VSCode komutlarına erişirken kullandığımız `CTRL + Shift + p` kombinasyonu ile `pyselect` yazarak buna erişebiliriz. Devamında size liste sunacaktır. Bu listeden `venv` seçin ve konsolu tekrar başlatın. Her şey yolunda giderse konsolda sanal ortamın seçili olduğunu göreceksiniz.
+VSCode komutlarına erişirken kullandığımız `CTRL + Shift + p` kombinasyonu ile `pyselect` yazarak
+buna erişebiliriz. Devamında size liste sunacaktır. Bu listeden projeye ait olan `venv` seçin ve
+konsolu tuş kombinasyonları ile tekrar başlatın. Her şey yolunda giderse konsolda sanal ortamın
+seçili olduğunu göreceksiniz.
 
 [download]:     https://code.visualstudio.com/download
 [solarized]:    https://marketplace.visualstudio.com/items?itemName=ginfuru.ginfuru-better-solarized-dark-theme
