@@ -161,6 +161,8 @@ Ben bu bölümde kendi kullanımımı anlatmaya çalıştım. Daha fazla kısayo
 ancak bence burada yazılanlar olmazsa olmaz kısayollarımız. Umarım sizlere faydası olmuş, kod
 yazmanızı hızlandırmıştır.
 
+![VSCode Örneği](../assets/python/vscode-ornek.png)
+
 [download]:     https://code.visualstudio.com/download
 [solarized]:    https://marketplace.visualstudio.com/items?itemName=ginfuru.ginfuru-better-solarized-dark-theme
 [fuzzy]:        https://en.wikipedia.org/wiki/Approximate_string_matching
