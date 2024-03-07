@@ -149,7 +149,8 @@ dosyasını açın ve düzgün formatlanmış şekilde aşağıdaki satırları 
     bunun geçerli bir JSON dosyası olduğundan emin olun. Yoksa ayarlarımız çalışmayacaktır.
 
 Bu ayardan sonra kodumuz her kaydedildiğinde otomatik olarak formatlanacaktır. Kaydetmek için
-bilindik `CTRL + s` kısayolunu kullanabilirsiniz. Yazdığınız kodun otomatik olarak belli bir formata dönüştürüldüğünü kaydettikten sonra görmeniz gerekli.
+bilindik `CTRL + s` kısayolunu kullanabilirsiniz. Yazdığınız kodun otomatik olarak belli bir formata
+dönüştürüldüğünü kaydettikten sonra görmeniz gerekli.
 
 ## Sonuç
 
