@@ -935,6 +935,39 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#otomatik-kod-formatlama" class="md-nav__link">
+    <span class="md-ellipsis">
+      Otomatik Kod Formatlama
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Otomatik Kod Formatlama">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ruff-yukleme-ve-ayarlar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ruff Yükleme ve Ayarları
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sonuc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sonuç
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1174,6 +1207,39 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#otomatik-kod-formatlama" class="md-nav__link">
+    <span class="md-ellipsis">
+      Otomatik Kod Formatlama
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Otomatik Kod Formatlama">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ruff-yukleme-ve-ayarlar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ruff Yükleme ve Ayarları
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sonuc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sonuç
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1248,21 +1314,64 @@ tanımlı kısımlara atlamanızı kolaylaştırıyor. Bunu Python yazarken fonk
 sınıflara ulaşmak için, Markdown yazarken başlıklara ulaşmak için kullanabilirsiniz.</p>
 <p><code>ilkadim.py</code> örneğine gidip bu kombinasyonu kullandığınızda daha net bir şekilde anlayabilirsiniz.
 Dosya ismi aramasında geçerli olduğu gibi burada da arama metnini tam yazmak zorunda değilsiniz,
-<a href="https://en.wikipedia.org/wiki/Approximate_string_matching">fuzzy search</a> VSCode'un hemen hemen her yerinde geçerli ve işimizi kolaylaştırıyor.</p>
+<a href="https://en.wikipedia.org/wiki/Approximate_string_matching" target="_blank">fuzzy search</a> VSCode'un hemen hemen her yerinde geçerli ve işimizi kolaylaştırıyor.</p>
 <h3 id="vscode-komutlarna-erisme">VSCode Komutlarına Erişme<a class="headerlink" href="#vscode-komutlarna-erisme" title="Permanent link">&para;</a></h3>
-<p><code>CTRL + Shift + p</code>. Bu kısayol VSCode'un bütün komutlarına erişmenizi sağlıyor. Bütün ayarlardan tutun, Python ortamını seçmeye kadar birçok komut mevcut.</p>
+<p><code>CTRL + Shift + p</code>. Bu kısayol VSCode'un bütün komutlarına erişmenizi sağlıyor. Python sanal ortamı
+seçmeden tutun bütün ayarlar buradan ulaşılabiliyor.</p>
 <h3 id="vscode-icerisindeki-konsol">VSCode İçerisindeki Konsol<a class="headerlink" href="#vscode-icerisindeki-konsol" title="Permanent link">&para;</a></h3>
-<p><code>CTRL + j</code>. Pencereler arasında geçmeden VSCode ile konsol kullanılabiliyor. Bu konsolu açmaya
-yarar. Ben bu konsolu kod yazdığım zaman kapatıp, ihtiyacım olduğunda açarak kullanıyorum.
-Böylelikle geçiş yaparken dikkatim dağılmıyor.</p>
+<p><code>CTRL + j</code>. Pencereler arasında geçmeden VSCode ile konsol kullanılabiliyor. Bu kombinasyon VSCode
+içerisinde konsolu açmaya yarar. Ben bu konsolu kod yazdığım zaman kapatıp, ihtiyacım olduğunda
+açarak kullanıyorum. Pencereler arası geçiş yapmadığım için de dikkatim dağılmıyor.</p>
 <h2 id="python-sanal-ortam">Python Sanal Ortamı<a class="headerlink" href="#python-sanal-ortam" title="Permanent link">&para;</a></h2>
 <p>Konsolu açtığınızda Python sanal ortamı aktive olarak gelmeyebilir. VSCode bunun için proje
 dizininde <code>venv</code> dizini varsa kullanımı sağlayabiliyor. Otomatik olarak kullanım sağlanmıyorsa yine
-kısayollari le bunu başarabiliyoruz.</p>
+kısayolları le bunu başarabiliyoruz.</p>
 <p>VSCode komutlarına erişirken kullandığımız <code>CTRL + Shift + p</code> kombinasyonu ile <code>pyselect</code> yazarak
-buna erişebiliriz. Devamında size liste sunacaktır. Bu listeden projeye ait olan <code>venv</code> seçin ve
-konsolu tuş kombinasyonları ile tekrar başlatın. Her şey yolunda giderse konsolda sanal ortamın
-seçili olduğunu göreceksiniz.</p>
+buna erişebiliriz. Devamında size liste sunacaktır. Bu listeden projeye ait olan <code>venv</code> seçin,
+konsola <code>exit 0</code> komutu yazın ve konsolu tuş kombinasyonları ile tekrar başlatın. Her şey yolunda
+giderse konsolda sanal ortamın seçili olduğunu göreceksiniz.</p>
+<h2 id="otomatik-kod-formatlama">Otomatik Kod Formatlama<a class="headerlink" href="#otomatik-kod-formatlama" title="Permanent link">&para;</a></h2>
+<p>Herhangi bir projede tek kişi çalışıyorsanız problem olmayacak ancak birden fazla kişi dahil
+olduğunda problem olacak bir konu: kod formatlama. Her yiğidin ayrı bir yoğurt yiyişi olduğu gibi
+her programcının da kod formatlama konusunda ayrı birer fikri var. Durum bu olunca orta noktada
+bulunulabileceğini düşünmediğimden kod formatlama kararının başka birileri tarafından verilmesinin
+daha uygun olduğunu düşünüyorum.</p>
+<p>Bunun için sektörde en sık kullanılan <code>black</code> ve <code>isort</code> formatlama araçları mevcut. Bunlar nasıl
+formatlıyorsa o şekilde devam edeceğiz kararı aldıktan sonra bütün tartışmalar son buluyor.</p>
+<p>Son zamanlarda bu iki ayrı aracı birleştiren ve daha hızlı çalışan <code>ruff</code> projesi yükselişte. Biz
+bunu kullanacağız.</p>
+<h3 id="ruff-yukleme-ve-ayarlar">Ruff Yükleme ve Ayarları<a class="headerlink" href="#ruff-yukleme-ve-ayarlar" title="Permanent link">&para;</a></h3>
+<p>VSCode'un eklenti ayarlarına gelin ve <a href="https://docs.astral.sh/ruff/" target="_blank">ruff</a> eklentisini aratarak yükleyin.
+Ruff yüklememiz hemen kullanacağımız anlamına gelmiyor. Python dosyalarında dosya kaydedildiğinde
+otomatik olarak şekillendir şeklinde bir ayar yapmamız gerekmekte. Bunun için VSCode'un JSON ayar
+dosyasını düzenleyeceğiz.</p>
+<p><code>CTRL + Shift + p</code> kombinasyonu ile VSCode komut satırını açıp <code>userjson</code> yazdıktan sonra ayar
+dosyasını açın ve düzgün formatlanmış şekilde aşağıdaki satırları ekleyin:</p>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="w">  </span><span class="nt">&quot;[python]&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="nt">&quot;editor.defaultFormatter&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;charliermarsh.ruff&quot;</span><span class="p">,</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="nt">&quot;editor.formatOnSave&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="nt">&quot;editor.codeActionsOnSave&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">      </span><span class="nt">&quot;source.organizeImports&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;explicit&quot;</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">  </span><span class="p">}</span>
+</span></code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">JSON Formatlama</p>
+<p>Bu bir JSON dosyası olduğu için virgüle dikkat etmemiz gerekmekte. Konfigürasyon dosyasının
+ortasına bunu eklerseniz bir önceki satırda ve bir sonraki satırdaki virgüllere dikkat edin ve
+bunun geçerli bir JSON dosyası olduğundan emin olun. Yoksa ayarlarımız çalışmayacaktır.</p>
+</div>
+<p>Bu ayardan sonra kodumuz her kaydedildiğinde otomatik olarak formatlanacaktır. Kaydetmek için
+bilindik <code>CTRL + s</code> kısayolunu kullanabilirsiniz. Yazdığınız kodun otomatik olarak belli bir formata
+dönüştürüldüğünü kaydettikten sonra görmeniz gerekli.</p>
+<h2 id="sonuc">Sonuç<a class="headerlink" href="#sonuc" title="Permanent link">&para;</a></h2>
+<p>VSCode gibi editörler kod yazmayı oldukça kolaylaştırıyor. Bu sadece VSCode kullanacağınız anlamına
+gelmesin, Python için <a href="https://www.jetbrains.com/pycharm/">PyCharm</a> gibi ayrı yazılımlar da mevcut. Burada kişisel tercih de
+önem arz ediyor.</p>
+<p>Ben bu bölümde kendi kullanımımı anlatmaya çalıştım. Daha fazla kısayol ile daha hızlı çalışılabilir
+ancak bence burada yazılanlar olmazsa olmaz kısayollarımız. Umarım sizlere faydası olmuş, kod
+yazmanızı hızlandırmıştır.</p>
+<p><img alt="VSCode Örneği" src="../../assets/python/vscode-ornek.png" /></p>
 
 
 
