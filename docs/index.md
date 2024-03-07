@@ -15,9 +15,9 @@ zamandan beri Linux benzeri sistemlere ilgi duymaktayım. [İstanbul Bilgi
 çift anadal mezunuyum. İlgilenenler PDF formatındaki CV'me [bu adresten][resume]{:target="_blank"}
 ulaşabilirler.
 
-Bu bir blog. Yazmayı, karmaşık sistemlerin daha basit hallerini ortaya koymayı ve dinleyenlerin
-ilgisini görmek beni sevindiriyor. Dolayısıyla burada yazdıklarım sadece kendi düşüncelerimi
-barındırıyor.
+Bu bir blog. Yazmayı, karmaşık sistemlerin daha basit hallerini ortaya koymayı seviyorum ve
+dinleyenlerin ilgisini görmek beni sevindiriyor. Dolayısıyla burada yazdıklarım sadece kendi
+düşüncelerimi barındırıyor.
 
 Kendi alan adımla da yazabilirdim ancak bu sayfanın `Sonradan Öğrendiklerim` olmasının basit bir
 nedeni var. Üniversite yıllarında halihazırda ders olarak verilmiş ancak o yıllarda kavrayamadığım
