@@ -108,6 +108,24 @@ buna erişebiliriz. Devamında size liste sunacaktır. Bu listeden projeye ait o
 konsolu tuş kombinasyonları ile tekrar başlatın. Her şey yolunda giderse konsolda sanal ortamın
 seçili olduğunu göreceksiniz.
 
+## Otomatik Kod Formatlama
+
+Herhangi bir projede tek kişi çalışıyorsanız problem olmayacak ancak birden fazla kişi dahil
+olduğunda problem olacak bir konu: kod formatlama. Her yiğidin ayrı bir yoğurt yiyişi olduğu gibi
+her programcının da kod formatlama konusunda ayrı fikri var. Durum bu olunca orta noktada
+bulunulabileceğini düşünmediğimden kod formatlama kararının başka birileri tarafından verilmesinin
+daha uygun olduğunu düşünüyorum.
+
+Bunun için sektörde en sık kullanılan `black` ve `isort` formatlama araçları mevcut. Bunlar nasıl
+formatlıyorsa o şekilde devam edeceğiz kararı aldıktan sonra bütün tartışmalar son buluyor.
+
+Son zamanlarda bu iki ayrı aracı birleştiren ve daha hızlı çalışan `ruff` projesi yükselişte. Biz
+bunu kullanacağız.
+
+### Ruff Yükleme ve Ayarları
+
+VSCode'un eklenti ayarlarına gelin ve `ruff` eklentisini aratarak yükleyin. Ruff yüklememiz hemen kullanacağımız anlamına gelmiyor. Python dosyalarında, dosya kaydedildiğinde otomatik olarak şekillendir şeklinde bir ayar yapmamız gerekmekte. Bunun için VSCode'un JSON ayar dosyasını düzenleyeceğiz.
+
 [download]:     https://code.visualstudio.com/download
 [solarized]:    https://marketplace.visualstudio.com/items?itemName=ginfuru.ginfuru-better-solarized-dark-theme
 [fuzzy]: https://en.wikipedia.org/wiki/Approximate_string_matching
