@@ -22,6 +22,7 @@ nav:
           - Ubuntu Kurulumu: ubuntu/kurulum.md
           - Terminal: ubuntu/terminal.md
           - Terminali Güzelleştirelim: ubuntu/terminali-guzellestirelim.md
+          - Terminal Komutu Nasıl Çalışır: ubuntu/terminal-komutu-nasil-calisir.md
       - Python:
           - "Programlama Dili: Neden ve Nasıl": python/programlama-dili-neden-ve-nasil.md
           - Python'a Giriş ve Modern Geliştirme: python/pythona-giris-ve-modern-gelistirme.md
