@@ -10,7 +10,7 @@ copyright: Copyright &copy; 2024 Eren Türkay
 nav:
   - Anasayfa: index.md
   - Bilgisayar Mühendisliğine Giriş:
-      - Ön Söz: bilgisayar-muhendisligine-giris/onsoz.md
+      - Ön Söz: bilgisayar-muhendisligine-giris/index.md
       - Başlarken: bilgisayar-muhendisligine-giris/baslarken.md
 
       - Nasıl Soru Sorulur?:

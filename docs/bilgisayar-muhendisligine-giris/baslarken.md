@@ -3,8 +3,6 @@ title: Bilgisayar Mühendisliğine Başlarken
 description: Bölüme başlamadan önce yapabilecekleriniz.
 ---
 
-## Giriş
-
 Öncesinde belirttiğim gibi artık birer mühendis adayısınız. Şu an kullandığınız bilgisayarın bir gün
 problem çıkaracağını ve ihtiyacınız anında açılmayabileceğini göze almanız gerekiyor. Bu sadece
 kendiliğinden güncelleme yolu ile değil, özellikle sizin bilerek ve isteyerek müdahaleniz ile de
