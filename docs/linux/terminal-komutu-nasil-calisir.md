@@ -13,7 +13,7 @@ değineceğiz.
 
 Fish ve bash gibi yazılımların birer metin arayüzü olduğunu tekrar hatırlatalım. Bizim büyük bir
 bilgisayar ile etkileşmemizi sağlıyorlar ve modern dünyada yaşadığımız için biz bunu hala
-[emüle ediyoruz](../ubuntu/terminal.md#emulator){:target="_blank"}. Burada sormamız gereken soru bu komutlar nerede ve nasıl bulunup çalıştırıldıkları.
+[emüle ediyoruz](../linux/terminal.md#emulator){:target="_blank"}. Burada sormamız gereken soru bu komutlar nerede ve nasıl bulunup çalıştırıldıkları.
 
 Bunun cevabı sabit disk. `ls` gibi komutlar sabit disk üzerinde duruyor ve öncesinde gördüğümüz
 gibi bir çıktı veriyorlar.

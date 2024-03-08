@@ -18,11 +18,11 @@ nav:
           - Sormadan Önce: nasil-soru-sorulur/sormadan-once.md
           - Soru Sorduğunuzda: nasil-soru-sorulur/soru-sordugunuzda.md
 
-      - Ubuntu:
-          - Ubuntu Kurulumu: ubuntu/kurulum.md
-          - Terminal: ubuntu/terminal.md
-          - Terminali Güzelleştirelim: ubuntu/terminali-guzellestirelim.md
-          - Terminal Komutu Nasıl Çalışır: ubuntu/terminal-komutu-nasil-calisir.md
+      - Linux:
+          - Ubuntu Kurulumu: linux/ubuntu-kurulumu.md
+          - Terminal: linux/terminal.md
+          - Terminali Güzelleştirelim: linux/terminali-guzellestirelim.md
+          - Terminal Komutu Nasıl Çalışır: linux/terminal-komutu-nasil-calisir.md
       - Python:
           - "Programlama Dili: Neden ve Nasıl": python/programlama-dili-neden-ve-nasil.md
           - Python'a Giriş ve Modern Geliştirme: python/pythona-giris-ve-modern-gelistirme.md

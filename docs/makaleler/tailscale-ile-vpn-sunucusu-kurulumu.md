@@ -42,7 +42,7 @@ sudo apt-get upgrade -y
     Bu makalede terminal üzerinde herhangi bir ayar yapmayacağız ve ön tanımlı terminali
     kullanacağız. Ancak kişisel tercih olarak sunucu yönetirken de `fish` kullanmayı tercih
     ediyorum. Bu açıdan terminal çıktıları farklılık gösterebilir. İlginizi çekerse
-    [Terminali güzelleştirelim](../ubuntu/terminali-guzellestirelim.md){:target="_blank"}
+    [Terminali güzelleştirelim](../linux/terminali-guzellestirelim.md){:target="_blank"}
     makalesine göz atabilirsiniz.
 
 ## Tailscale Kurulumu

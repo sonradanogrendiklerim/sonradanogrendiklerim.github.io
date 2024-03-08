@@ -28,7 +28,7 @@ sağlıyor.
 
 Önceki yazılarda Ubuntu kullanmamızın yararlı olacağını belirtmiştim. Bundan sonrasında yazacağımız
 komutlar her zaman `Ubuntu 22.04` üzerinde olacak. Daha önce güzelleştirilmiş
-[terminalinizi](../ubuntu/terminali-guzellestirelim.md){:target="_blank"} açarak aşağıdaki komutu
+[terminalinizi](../linux/terminali-guzellestirelim.md){:target="_blank"} açarak aşağıdaki komutu
 girin:
 
 ```sh
@@ -78,7 +78,7 @@ mkdir src
 touch src/ilkadim.py
 ```
 
-- __cd__: Bunu daha önce [terminal makalesinde](../ubuntu/terminali-guzellestirelim.md#ayar-eklemeye-giris){:target="_blank"} görmüştük. Bu komut şu anda bulunduğumuz dizini
+- __cd__: Bunu daha önce [terminal makalesinde](../linux/terminali-guzellestirelim.md#ayar-eklemeye-giris){:target="_blank"} görmüştük. Bu komut şu anda bulunduğumuz dizini
   değiştiriyor.
 - __mkdir__: `Make directory` anlamına geliyor. Yeni bir dizin oluşturuyor.
 - __touch__: Şef dokunuşu. Boş bir dosya oluşturuyor.
