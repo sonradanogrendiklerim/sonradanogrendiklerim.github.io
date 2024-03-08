@@ -44,6 +44,7 @@ theme:
   palette:
     primary: white
     accent: orange
+  logo: assets/favicon.png
 
   features:
     - navigation.top
