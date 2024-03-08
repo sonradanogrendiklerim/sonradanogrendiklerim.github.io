@@ -25,7 +25,7 @@ Bu `ls` uygulamasının, _(şimdilik komutunun demeyelim, metin tabanlı uygulam
 ```
 
 Bu da demek oluyor ki `ls` yazdığımızda `/usr/bin/ls` çalıştırılıyor. Bu dosya tipinin ne olduğunu
-da `file` uygulaması (komutu) ile görebiliyoruz.
+da `file` uygulaması _(komutu)_ ile görebiliyoruz.
 
 ```sh
 ❯ file /usr/bin/ls
@@ -70,10 +70,10 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin
   |--> sihir burada
 ```
 
-Terminalin bir uygulamayı bulurken yaptığı şey çok basit. `$PATH` içerisinde `:` ile ayrılmış
-dizinlere __sırası ile__, teker teker bakıyor ve bulmaya çalışıyor. Bulduğu ilk uygulamayı
-çalıştırıyor. Bu da demek oluyor ki `/usr/local/__sbin__` ve `/usr/local/__bin__` içerisinde aynı
-isimde uygulama varsa öncelikle `/usr/local/sbin` içerisindeki çalıştırılacak.
+Terminalin bir uygulamayı bulurken yaptığı şey çok basit. `$PATH` içerisinde `:` karakteri ile
+ayrılmış dizinlere __sırası ile__, __teker teker__ bakıyor ve bulmaya çalışıyor. Bulduğu ilk
+uygulamayı çalıştırıyor. Bu da demek oluyor ki `/usr/local/__sbin__` ve `/usr/local/__bin__`
+içerisinde aynı isimde uygulama varsa öncelikle `/usr/local/sbin` içerisindeki çalıştırılacak.
 
 Burada `absolute path` ve `relative path` konusuna da değinmemiz gerekli. Terminalimiz bir komut
 yazdığımızda her daim `$PATH` değişkenine bakarak karar veriyor. Bu durumda ikinci sırada yer alan
