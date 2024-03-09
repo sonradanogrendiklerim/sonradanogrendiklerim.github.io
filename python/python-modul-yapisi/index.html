@@ -6,19 +6,19 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="VSCode ile daha kolay Python geliştirme nasıl yapılır.">
+        <meta name="description" content="Python modülleri nasıl çalışır, proje ve modül yapısına giriş.">
       
       
         <meta name="author" content="Eren Türkay">
       
       
-        <link rel="canonical" href="https://sonradanogrendiklerim.com/python/vscode-ile-python-gelistirme-ortami/">
+        <link rel="canonical" href="https://sonradanogrendiklerim.com/python/python-modul-yapisi/">
       
       
-        <link rel="prev" href="../pythona-giris-ve-modern-gelistirme/">
+        <link rel="prev" href="../vscode-ile-python-gelistirme-ortami/">
       
       
-        <link rel="next" href="../python-modul-yapisi/">
+        <link rel="next" href="../../makaleler/">
       
       
         <link rel="alternate" type="application/rss+xml" title="RSS beslemesi" href="../../feed_rss_created.xml">
@@ -29,7 +29,7 @@
     
     
       
-        <title>VSCode ile Python Geliştirme Ortamı - Sonradan Öğrendiklerim</title>
+        <title>Python Modül Yapısı - Sonradan Öğrendiklerim</title>
       
     
     
@@ -76,11 +76,11 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="VSCode ile Python Geliştirme Ortamı - Sonradan Öğrendiklerim" >
+        <meta  property="og:title"  content="Python Modül Yapısı - Sonradan Öğrendiklerim" >
       
-        <meta  property="og:description"  content="VSCode ile daha kolay Python geliştirme nasıl yapılır." >
+        <meta  property="og:description"  content="Python modülleri nasıl çalışır, proje ve modül yapısına giriş." >
       
-        <meta  property="og:image"  content="https://sonradanogrendiklerim.com/assets/images/social/python/vscode-ile-python-gelistirme-ortami.png" >
+        <meta  property="og:image"  content="https://sonradanogrendiklerim.com/assets/images/social/python/python-modul-yapisi.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -88,15 +88,15 @@
       
         <meta  property="og:image:height"  content="630" >
       
-        <meta  property="og:url"  content="https://sonradanogrendiklerim.com/python/vscode-ile-python-gelistirme-ortami/" >
+        <meta  property="og:url"  content="https://sonradanogrendiklerim.com/python/python-modul-yapisi/" >
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="VSCode ile Python Geliştirme Ortamı - Sonradan Öğrendiklerim" >
+        <meta  name="twitter:title"  content="Python Modül Yapısı - Sonradan Öğrendiklerim" >
       
-        <meta  name="twitter:description"  content="VSCode ile daha kolay Python geliştirme nasıl yapılır." >
+        <meta  name="twitter:description"  content="Python modülleri nasıl çalışır, proje ve modül yapısına giriş." >
       
-        <meta  name="twitter:image"  content="https://sonradanogrendiklerim.com/assets/images/social/python/vscode-ile-python-gelistirme-ortami.png" >
+        <meta  name="twitter:image"  content="https://sonradanogrendiklerim.com/assets/images/social/python/python-modul-yapisi.png" >
       
     
     
@@ -117,7 +117,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#giris" class="md-skip">
+        <a href="#moduller-nasl-yuklenir" class="md-skip">
           Ana içeriğe geç
         </a>
       
@@ -151,7 +151,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              VSCode ile Python Geliştirme Ortamı
+              Python Modül Yapısı
             
           </span>
         </div>
@@ -800,6 +800,27 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../vscode-ile-python-gelistirme-ortami/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VSCode ile Python Geliştirme Ortamı
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -814,7 +835,7 @@
           
   
   <span class="md-ellipsis">
-    VSCode ile Python Geliştirme Ortamı
+    Python Modül Yapısı
   </span>
   
 
@@ -825,7 +846,7 @@
         
   
   <span class="md-ellipsis">
-    VSCode ile Python Geliştirme Ortamı
+    Python Modül Yapısı
   </span>
   
 
@@ -845,148 +866,46 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#giris" class="md-nav__link">
+  <a href="#moduller-nasl-yuklenir" class="md-nav__link">
     <span class="md-ellipsis">
-      Giriş
+      Modüller Nasıl Yüklenir
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#vscode-kurulumu" class="md-nav__link">
+  <a href="#kendi-modulumuzu-olusturalm" class="md-nav__link">
     <span class="md-ellipsis">
-      VSCode Kurulumu
+      Kendi Modülümüzü Oluşturalım
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#vscodea-giris" class="md-nav__link">
+  <a href="#modul-dizini-ve-__init__py" class="md-nav__link">
     <span class="md-ellipsis">
-      VSCode'a Giriş
+      Modül Dizini ve __init__.py
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="VSCode'a Giriş">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kendi-modul-dizinimizi-olusturalm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kendi Modül Dizinimizi Oluşturalım
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Kendi Modül Dizinimizi Oluşturalım">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#renk-temas" class="md-nav__link">
+  <a href="#modul-dizininde-ayr-moduller" class="md-nav__link">
     <span class="md-ellipsis">
-      Renk Teması
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#eklentiler" class="md-nav__link">
-    <span class="md-ellipsis">
-      Eklentiler
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#vscode-ksayollar" class="md-nav__link">
-    <span class="md-ellipsis">
-      VSCode Kısayolları
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="VSCode Kısayolları">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#dosyalar-arasnda-gezinme" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dosyalar Arasında Gezinme
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#projenin-tamamnda-arama-yapma" class="md-nav__link">
-    <span class="md-ellipsis">
-      Projenin Tamamında Arama Yapma
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#proje-dosyalarn-gorme" class="md-nav__link">
-    <span class="md-ellipsis">
-      Proje Dosyalarını Görme
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dosya-icerisindeki-tanmlarda-arama" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dosya İçerisindeki Tanımlarda Arama
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#vscode-komutlarna-erisme" class="md-nav__link">
-    <span class="md-ellipsis">
-      VSCode Komutlarına Erişme
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#vscode-icerisindeki-konsol" class="md-nav__link">
-    <span class="md-ellipsis">
-      VSCode İçerisindeki Konsol
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#python-sanal-ortam" class="md-nav__link">
-    <span class="md-ellipsis">
-      Python Sanal Ortamı
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#otomatik-kod-formatlama" class="md-nav__link">
-    <span class="md-ellipsis">
-      Otomatik Kod Formatlama
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Otomatik Kod Formatlama">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ruff-yukleme-ve-ayarlar" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ruff Yükleme ve Ayarları
+      Modül Dizininde Ayrı Modüller
     </span>
   </a>
   
@@ -1010,27 +929,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../python-modul-yapisi/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Python Modül Yapısı
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -1158,148 +1056,46 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#giris" class="md-nav__link">
+  <a href="#moduller-nasl-yuklenir" class="md-nav__link">
     <span class="md-ellipsis">
-      Giriş
+      Modüller Nasıl Yüklenir
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#vscode-kurulumu" class="md-nav__link">
+  <a href="#kendi-modulumuzu-olusturalm" class="md-nav__link">
     <span class="md-ellipsis">
-      VSCode Kurulumu
+      Kendi Modülümüzü Oluşturalım
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#vscodea-giris" class="md-nav__link">
+  <a href="#modul-dizini-ve-__init__py" class="md-nav__link">
     <span class="md-ellipsis">
-      VSCode'a Giriş
+      Modül Dizini ve __init__.py
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="VSCode'a Giriş">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kendi-modul-dizinimizi-olusturalm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kendi Modül Dizinimizi Oluşturalım
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Kendi Modül Dizinimizi Oluşturalım">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#renk-temas" class="md-nav__link">
+  <a href="#modul-dizininde-ayr-moduller" class="md-nav__link">
     <span class="md-ellipsis">
-      Renk Teması
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#eklentiler" class="md-nav__link">
-    <span class="md-ellipsis">
-      Eklentiler
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#vscode-ksayollar" class="md-nav__link">
-    <span class="md-ellipsis">
-      VSCode Kısayolları
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="VSCode Kısayolları">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#dosyalar-arasnda-gezinme" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dosyalar Arasında Gezinme
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#projenin-tamamnda-arama-yapma" class="md-nav__link">
-    <span class="md-ellipsis">
-      Projenin Tamamında Arama Yapma
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#proje-dosyalarn-gorme" class="md-nav__link">
-    <span class="md-ellipsis">
-      Proje Dosyalarını Görme
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dosya-icerisindeki-tanmlarda-arama" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dosya İçerisindeki Tanımlarda Arama
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#vscode-komutlarna-erisme" class="md-nav__link">
-    <span class="md-ellipsis">
-      VSCode Komutlarına Erişme
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#vscode-icerisindeki-konsol" class="md-nav__link">
-    <span class="md-ellipsis">
-      VSCode İçerisindeki Konsol
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#python-sanal-ortam" class="md-nav__link">
-    <span class="md-ellipsis">
-      Python Sanal Ortamı
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#otomatik-kod-formatlama" class="md-nav__link">
-    <span class="md-ellipsis">
-      Otomatik Kod Formatlama
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Otomatik Kod Formatlama">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ruff-yukleme-ve-ayarlar" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ruff Yükleme ve Ayarları
+      Modül Dizininde Ayrı Modüller
     </span>
   </a>
   
@@ -1334,123 +1130,142 @@
                   
 
 
-  <h1>VSCode ile Python Geliştirme Ortamı</h1>
+  <h1>Python Modül Yapısı</h1>
 
-<h2 id="giris">Giriş<a class="headerlink" href="#giris" title="Permanent link">&para;</a></h2>
-<p>Önceki bölümde kodlarımızı normal bir metin editörü ile açtık. Lakin Ubuntu ile gelen metin editörü
-bize çok fazla bir özellik sunmuyor. Bunun yerine Python yazmak için VSCode iyi bir tercih. En
-azından kişisel olarak bu şekilde tercih ediyorum.</p>
-<p>Bu bölümde VSCode ile en çok kullanılan özellikleri, Python sanal ortamı nasıl kullanacağımızı ve
-VSCode'un bize sunduğu diğer özellikleri inceleyeceğiz.</p>
-<h2 id="vscode-kurulumu">VSCode Kurulumu<a class="headerlink" href="#vscode-kurulumu" title="Permanent link">&para;</a></h2>
-<p>Burada sadece bir <code>.deb</code> uzantılı dosya indirip <code>apt</code> komutu kullanarak kuracağız. Öncelikle
-<a href="https://code.visualstudio.com/download" target="_blank">VSCode indirme sayfasına</a> gidip Ubuntu için <code>.deb</code> paketini indirin.
-Sonrasında indirdiğiniz dizine konsol aracılığıyla girip aşağıdaki komutu çalıştırın:</p>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">cd</span><span class="w"> </span>&lt;indirmedizini&gt;
+<p>Python dilinde ilerlemeden önce modül yapısının anlaşılmasının daha yararlı olduğunu düşünüyorum.
+Dili öğrenmeye girişte genellikle tek bir dosya içerisinde birtakım sınıflar, metodlar ve
+fonksiyonlar tanımlanarak örneklendirilir ancak bizim buradaki hedefimiz öncelikli olarak bunların
+nasıl çalıştığı ve nasıl bir araya geldiğini görmek. Bunu kavradıktan sonra Python örneklerini ve
+dili anlamaya çalışacağız çünkü tek bir dosya örneği birden fazla dosyaya çok çabuk şekilde
+evriliyor.</p>
+<p>Burada fikir sahibi olacağımız konu Python'un kendi içerisinde bir kodu nasıl çalıştırdığı ve
+<code>import</code> anahtar kelimesi ile yazdığımız satırları nasıl yorumladığı. Hatırlarsanız faktöriyel ve
+web sayfası örneklerinde <a href="../pythona-giris-ve-modern-gelistirme/#biraz-matematiksel-islem" target="_blank">math</a> ve <a href="../pythona-giris-ve-modern-gelistirme/#web-sayfas-ziyareti" target="_blank">requests</a>
+modüllerini kullanmıştık ancak nasıl çalıştıklarına
+<a href="../../linux/terminal-komutu-nasil-calisir/" target="_blank">terminal komutu nasıl çalışır</a> makalesindeki gibi değinmemiştik. Bu
+bölümde buna değineceğiz.</p>
+<h2 id="moduller-nasl-yuklenir">Modüller Nasıl Yüklenir<a class="headerlink" href="#moduller-nasl-yuklenir" title="Permanent link">&para;</a></h2>
+<p>Öncelikle Python'ın bu modülün nerede olduğunu bulması gerekiyor. Bunu yaparken de kullandığımız
+shell nasıl ortam değişkenlerini kullanıp bir uygulamayı buluyorsa, Python da kendi içerisinde
+modülleri aradığı dizinlere bakıyor. Bu dizinlerin neler olduğunu <code>sys</code> modülünü yükleyerek
+görebiliyoruz.</p>
+<p>Sanal ortamınızı <a href="../pythona-giris-ve-modern-gelistirme/#pip-ve-virtualenv" target="_blank">aktive ettikten</a> sonra <code>ipython</code> komutunu çalıştırın
+ve aşağıdaki kod parçacığını girin:</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="kn">import</span> <span class="nn">sys</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>./&lt;dosyaismi&gt;.deb
-</span></code></pre></div>
-<p>Burada <code>dosyaismi.deb</code> indirdiğiniz dosyanın ismi olmalı. Kurulum tamamlandıktan sonra önceki
-bölümde gördüğümüz <code>ilkadim.py</code> ve <code>factorial.py</code> dosyalarını VSCode ile açabilirsiniz.</p>
-<h2 id="vscodea-giris">VSCode'a Giriş<a class="headerlink" href="#vscodea-giris" title="Permanent link">&para;</a></h2>
-<h3 id="renk-temas">Renk Teması<a class="headerlink" href="#renk-temas" title="Permanent link">&para;</a></h3>
-<p>İlk kurulum ayarlarını yaptıktan sonra öntanımlı renk teması yerine başka bir renk teması seçmeyi
-tercih edebilirsiniz. Bu ekrana saatlerce bakacağımız için öncelikli olarak size uygun temayı
-bulmanızı tavsiye ederim. Ben göz yormaması açısından <a href="https://marketplace.visualstudio.com/items?itemName=ginfuru.ginfuru-better-solarized-dark-theme">Solarized Dark</a> temasını
-kullanıyorum. Bunu sol tarafta tepeden 5. sırada bulunan kutucuk ikonuna <em>(Extensions)</em> tıklayarak
-yükleyebilirsiniz. Yükledikten sonra VSCode ayarlarından bunu seçmelisiniz.</p>
-<h3 id="eklentiler">Eklentiler<a class="headerlink" href="#eklentiler" title="Permanent link">&para;</a></h3>
-<p>Eklentiler <em>(extensions)</em> bölümü VSCode ayarları yaparken sık kullanacağımız bir bölüm olacak.
-Birçok iş için eklenti halihazırda yazılmış durumda ve öncelikle buraya bakacağız. Yazının konusu
-geliştirme ortamını tanıtmak olduğundan ilerleyen kısımda Python kodlarımızı daha iyi yazmamız için
-başka eklentileri de yükleyeceğiz. Şimdilik sadece renk temasını yüklemeniz yeterli.</p>
-<h2 id="vscode-ksayollar">VSCode Kısayolları<a class="headerlink" href="#vscode-ksayollar" title="Permanent link">&para;</a></h2>
-<p>Kısayollar hayatımızı kolaylaştırıyor. Sık olarak yaptığımız işlemleri kısayollar ile yapmak bize
-zaman kazandıracak ve saatlerce bunu yaptığımızı düşünürsek 1 saniyelik bir hızlanma bile toplamda
-bize saatler kazandırabiliyor. Bu açıdan benim bildiğim ve kullandığım kısayolları burada tanıtmak
-isterim. VSCode'un bütün kısayollarını bildiğimi veya kullandığımı söyleyemem ancak bunlar bana
-yetiyor.</p>
-<h3 id="dosyalar-arasnda-gezinme">Dosyalar Arasında Gezinme<a class="headerlink" href="#dosyalar-arasnda-gezinme" title="Permanent link">&para;</a></h3>
-<p>En sık kullanılan kısayol diyebiliriz. <code>CTRL + p</code> tuşu ile proje içerisinde herhangi bir dosya
-ismini arayabilir ve <code>enter</code> ile açabilirsiniz. Burada <a href="https://en.wikipedia.org/wiki/Approximate_string_matching" target="_blank">fuzzy search</a> denen
-bir yöntem kullanılıyor. Dosyanın ismini hatırlamak ya da tam yazmak zorunda değilsiniz, başından
-veya sonundan herhangi bir kısmını yazmanız yeterli. VSCode bu noktada güzel bir biçimde tamamlama
-sağlıyor.</p>
-<p>Örneğin bu dosyanın ismi <code>python-gelistirme-ortami.md</code> ve bu dosyayı ararken sadece <code>ortam</code> yazmam
-ve <code>enter</code> tuşuna basmam yetiyor.</p>
-<h3 id="projenin-tamamnda-arama-yapma">Projenin Tamamında Arama Yapma<a class="headerlink" href="#projenin-tamamnda-arama-yapma" title="Permanent link">&para;</a></h3>
-<p><code>CTRL + Shift + f</code>. Bu kısayol ile proje içerisindeki bütün dosyalarda arama yapabilirsiniz. Sol
-tarafta bu arama kısmı kalacağı için tekrar geriye dönmek isteyeceksinizdir. Bunu da bir sonraki
-kısayol ile başarabilirsiniz. Ben arama yaptıktan sonra her daim proje dosyalarını görmek
-istediğimden bir sonraki kısayol ile beraber kullanıyorum.</p>
-<h3 id="proje-dosyalarn-gorme">Proje Dosyalarını Görme<a class="headerlink" href="#proje-dosyalarn-gorme" title="Permanent link">&para;</a></h3>
-<p><code>CTRL + Shift + e</code>. Arama yaptıktan sonra kullandığım kısayol. En baştaki proje görünüşüne geri
-dönüyoruz.</p>
-<h3 id="dosya-icerisindeki-tanmlarda-arama">Dosya İçerisindeki Tanımlarda Arama<a class="headerlink" href="#dosya-icerisindeki-tanmlarda-arama" title="Permanent link">&para;</a></h3>
-<p><code>CTRL + Shift + o</code> (Ordunun O'su). Bir dosya üzerinde çalışırken bunun içerisindeki tanımlara kolay
-erişmenizi ve arama yapmanızı sağlar. Python veya markdown ile belge yazarken dosyanın içerisindeki
-tanımlı kısımlara atlamanızı kolaylaştırıyor. Bunu Python yazarken fonksiyonlara, değişkenlere ve
-sınıflara ulaşmak için, Markdown yazarken başlıklara ulaşmak için kullanabilirsiniz.</p>
-<p><code>ilkadim.py</code> örneğine gidip bu kombinasyonu kullandığınızda daha net bir şekilde anlayabilirsiniz.
-Dosya ismi aramasında geçerli olduğu gibi burada da arama metnini tam yazmak zorunda değilsiniz,
-<a href="https://en.wikipedia.org/wiki/Approximate_string_matching" target="_blank">fuzzy search</a> VSCode'un hemen hemen her yerinde geçerli ve işimizi kolaylaştırıyor.</p>
-<h3 id="vscode-komutlarna-erisme">VSCode Komutlarına Erişme<a class="headerlink" href="#vscode-komutlarna-erisme" title="Permanent link">&para;</a></h3>
-<p><code>CTRL + Shift + p</code>. Bu kısayol VSCode'un bütün komutlarına erişmenizi sağlıyor. Python sanal ortamı
-seçmeden tutun bütün ayarlar buradan ulaşılabiliyor.</p>
-<h3 id="vscode-icerisindeki-konsol">VSCode İçerisindeki Konsol<a class="headerlink" href="#vscode-icerisindeki-konsol" title="Permanent link">&para;</a></h3>
-<p><code>CTRL + j</code>. Pencereler arasında geçmeden VSCode ile konsol kullanılabiliyor. Bu kombinasyon VSCode
-içerisinde konsolu açmaya yarar. Ben bu konsolu kod yazdığım zaman kapatıp, ihtiyacım olduğunda
-açarak kullanıyorum. Pencereler arası geçiş yapmadığım için de dikkatim dağılmıyor.</p>
-<h2 id="python-sanal-ortam">Python Sanal Ortamı<a class="headerlink" href="#python-sanal-ortam" title="Permanent link">&para;</a></h2>
-<p>Konsolu açtığınızda Python sanal ortamı aktive olarak gelmeyebilir. VSCode bunun için proje
-dizininde <code>venv</code> dizini varsa kullanımı sağlayabiliyor. Otomatik olarak kullanım sağlanmıyorsa yine
-kısayolları le bunu başarabiliyoruz.</p>
-<p>VSCode komutlarına erişirken kullandığımız <code>CTRL + Shift + p</code> kombinasyonu ile <code>pyselect</code> yazarak
-buna erişebiliriz. Devamında size liste sunacaktır. Bu listeden projeye ait olan <code>venv</code> seçin,
-konsola <code>exit 0</code> komutu yazın ve konsolu tuş kombinasyonları ile tekrar başlatın. Her şey yolunda
-giderse konsolda sanal ortamın seçili olduğunu göreceksiniz.</p>
-<h2 id="otomatik-kod-formatlama">Otomatik Kod Formatlama<a class="headerlink" href="#otomatik-kod-formatlama" title="Permanent link">&para;</a></h2>
-<p>Herhangi bir projede tek kişi çalışıyorsanız problem olmayacak ancak birden fazla kişi dahil
-olduğunda problem olacak bir konu: kod formatlama. Her yiğidin ayrı bir yoğurt yiyişi olduğu gibi
-her programcının da kod formatlama konusunda ayrı birer fikri var. Durum bu olunca orta noktada
-bulunulabileceğini düşünmediğimden kod formatlama kararının başka birileri tarafından verilmesinin
-daha uygun olduğunu düşünüyorum.</p>
-<p>Bunun için sektörde en sık kullanılan <code>black</code> ve <code>isort</code> formatlama araçları mevcut. Bunlar nasıl
-formatlıyorsa o şekilde devam edeceğiz kararı aldıktan sonra bütün tartışmalar son buluyor.</p>
-<p>Son zamanlarda bu iki ayrı aracı birleştiren ve daha hızlı çalışan <code>ruff</code> projesi yükselişte. Biz
-bunu kullanacağız.</p>
-<h3 id="ruff-yukleme-ve-ayarlar">Ruff Yükleme ve Ayarları<a class="headerlink" href="#ruff-yukleme-ve-ayarlar" title="Permanent link">&para;</a></h3>
-<p>VSCode'un eklenti ayarlarına gelin ve <a href="https://docs.astral.sh/ruff/" target="_blank">ruff</a> eklentisini aratarak yükleyin.
-Ruff yüklememiz hemen kullanacağımız anlamına gelmiyor. Python dosyalarında dosya kaydedildiğinde
-otomatik olarak şekillendir şeklinde bir ayar yapmamız gerekmekte. Bunun için VSCode'un JSON ayar
-dosyasını düzenleyeceğiz.</p>
-<p><code>CTRL + Shift + p</code> kombinasyonu ile VSCode komut satırını açıp <code>userjson</code> yazdıktan sonra ayar
-dosyasını açın ve düzgün formatlanmış şekilde aşağıdaki satırları ekleyin:</p>
-<div class="language-json highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="w">  </span><span class="nt">&quot;[python]&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="nt">&quot;editor.defaultFormatter&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;charliermarsh.ruff&quot;</span><span class="p">,</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="nt">&quot;editor.formatOnSave&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="nt">&quot;editor.codeActionsOnSave&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">      </span><span class="nt">&quot;source.organizeImports&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;explicit&quot;</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">sys</span><span class="o">.</span><span class="n">path</span>
 </span></code></pre></div>
 <div class="admonition note">
-<p class="admonition-title">JSON Formatlama</p>
-<p>Bu bir JSON dosyası olduğu için virgüle dikkat etmemiz gerekmekte. Konfigürasyon dosyasının
-ortasına bunu eklerseniz bir önceki satırda ve bir sonraki satırdaki virgüllere dikkat edin ve
-bunun geçerli bir JSON dosyası olduğundan emin olun. Yoksa ayarlarımız çalışmayacaktır.</p>
+<p class="admonition-title">IPython Kodu Kopyalama</p>
+<p>Burada direkt olarak <code>In [1]:</code> satırları ile kodu kopyalayıp IPython içerisine
+yapıştırabilirsiniz. IPython otomatik olarak bu satırları almayacak ve kodu çalıştıracaktır.
+IPython hangi komutun çıktısının ne olduğunu <code>Out [2]</code> satırı ile göstermekte ve bize yardımcı
+olmakta.</p>
 </div>
-<p>Bu ayardan sonra kodumuz her kaydedildiğinde otomatik olarak formatlanacaktır. Kaydetmek için
-bilindik <code>CTRL + s</code> kısayolunu kullanabilirsiniz. Yazdığınız kodun otomatik olarak belli bir formata
-dönüştürüldüğünü kaydettikten sonra görmeniz gerekli.</p>
+<p>Sonuç olarak aşağıdakine benzer bir çıktı göreceksiniz.</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">Out</span><span class="p">[</span><span class="mi">2</span><span class="p">]:</span> 
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="p">[</span><span class="s1">&#39;/home/eren.linux/src/sonradanogrendiklerim/venv/bin&#39;</span><span class="p">,</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a> <span class="s1">&#39;/usr/lib/python310.zip&#39;</span><span class="p">,</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a> <span class="s1">&#39;/usr/lib/python3.10&#39;</span><span class="p">,</span>  <span class="c1"># ---&gt; Python&#39;un kendi içerisinde gelen modülleri</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a> <span class="s1">&#39;/usr/lib/python3.10/lib-dynload&#39;</span><span class="p">,</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="c1"># ---&gt; içinde bulunduğumuz dizin</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a> <span class="s1">&#39;/home/eren.linux/src/sonradanogrendiklerim/venv/lib/python3.10/site-packages&#39;</span><span class="p">]</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>     <span class="c1"># |</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>     <span class="c1"># |----&gt; dışarıdan yüklediğimiz paketlerin bulunduğu sanal ortam dizini</span>
+</span></code></pre></div>
+<p>Burada gördüğümüz çıktıdan anladığımız üzere Python herhangi bir <code>import</code> anahtar kelimesi
+gördüğünde bu dizinlere <strong>sırası ile</strong>, <strong>teker teker</strong> bakıyor ve modülü yüklemeye çalışıyor.</p>
+<h2 id="kendi-modulumuzu-olusturalm">Kendi Modülümüzü Oluşturalım<a class="headerlink" href="#kendi-modulumuzu-olusturalm" title="Permanent link">&para;</a></h2>
+<p>Bunun için tek yapmamız gereken proje dizininde <code>py</code> uzantılı bir dosya oluşturmak.
+<a href="../pythona-giris-ve-modern-gelistirme/#python-kullanm" target="_blank">ilkadim.py</a> içerisindeki toplama işlemi bu noktada güzel bir tercih
+olabillir. Tek bir dosya yerine toplama işlemini ayırıp, ayrı bir modülden çağıracağız.</p>
+<p>Öncelikle <code>matematik.py</code> isimli bir dosya oluşturun ve toplama işlemini buraya taşıyın:</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">def</span> <span class="nf">topla</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+</span></code></pre></div>
+<p>Sonrasında <code>ilkadim.py</code> içerisindeki aynı kodu silin ve <code>import</code> ile bu modülü yükleyin:</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">import</span> <span class="nn">matematik</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;merhaba dünya&quot;</span><span class="p">)</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="n">toplam</span> <span class="o">=</span> <span class="n">matematik</span><span class="o">.</span><span class="n">topla</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="nb">print</span><span class="p">(</span><span class="n">toplam</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Tebrikler. İlk modülümüzü oluşturduk. Python modül ararken <code>matematik.py</code> dosyasını diğer dizinlerde
+bulamadı, şu an bulunduğumuz dizine sıra geldi, buldu ve yükledi.</p>
+<p>Burada sadece dosya isiminden giderek modülü yükledik ancak birden fazla dosyaya sahip olan modüller
+de karşımıza çıkacak, <a href="../pythona-giris-ve-modern-gelistirme/#web-sayfas-ziyareti" target="_blank">requests</a> modülünde olduğu gibi. Bu modüller bir
+dizin içerisinde yer alıyor ve birden fazla dosyaya sahip olabiliyor. Şimdi dizin içerisindeki
+modüllerin nasıl yüklendiğine bakalım.</p>
+<h2 id="modul-dizini-ve-__init__py">Modül Dizini ve <code>__init__.py</code><a class="headerlink" href="#modul-dizini-ve-__init__py" title="Permanent link">&para;</a></h2>
+<p><code>requests</code> modülüne bakacak olursak <code>site-packages</code> dizinine göz atmamız yeterli.</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>❯<span class="w"> </span><span class="nb">pwd</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>/home/eren.linux/src/sonradanogrendiklerim
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>❯<span class="w"> </span>ls<span class="w"> </span>venv/lib/python3.10/site-packages/requests/
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>__init__.py<span class="w">  </span>__version__.py<span class="w">  </span>adapters.py<span class="w">  </span>auth.py<span class="w">  </span>...
+</span></code></pre></div>
+<p>Gördüğümüz gibi <code>requests</code> modülü bir dizin olarak yer alıyor ve <code>import requests</code> satırı
+çalıştırıldığında bu dizinden okunup modül yükleniyor. Modülün çeşitli dosyalara ayrıldığını
+görebiliriz. Bu bize bütün kodu tek bir dosyaya yazmamamız için olanak sağlıyor. Peki burada modülün
+giriş kodu nerede? Bu da <code>__init__.py</code> tarafından sağlanıyor.</p>
+<p>Python'da herhangi bir dizin içerisinde <code>__init__.py</code> dosyası varsa, bu dizin modül dizini olarak
+kullanılmakta. Dolayısıyla bu örnekde <code>import requests</code> yazdığımızda bu dizinin içerisindeki
+<code>__init__.py</code> yüklenmekte. Genellikle bu dosya içerisinde diğer <code>import</code> edilecek satırlar yer
+alıyor.</p>
+<h2 id="kendi-modul-dizinimizi-olusturalm">Kendi Modül Dizinimizi Oluşturalım<a class="headerlink" href="#kendi-modul-dizinimizi-olusturalm" title="Permanent link">&para;</a></h2>
+<p><code>matematik.py</code> dosyası şu anlık işimizi görse de farzedelim ki birçok matematik işlemini ayrı
+şekilde tutmak istiyoruz. Bunun için <code>matematik</code> isimli bir dizin oluşturabiliriz. Dizini oluşturun
+ve içerisine <code>__init__.py</code> adlı bir dosya yerleştirin. Bu dosyanın içerisine yine toplama işlemi
+kodunu koyun. Böylelikle dizini modül olarak kullanmış olacağız. Sonrasında <code>matematik.py</code> dosyasını
+silmeyi unutmayın çünkü öncelikli olarak bu yüklenecektir, proje içerisinde olmasını istemiyoruz.</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">import</span> <span class="nn">matematik</span>
+</span></code></pre></div>
+<p>Satırını çalıştırdığımızda artık dizinden okuyacaktır. Dilerseniz burada bir nefeslenelim ve ne
+yaptığımızın farkında olalım.</p>
+<ul>
+<li>Modül yazmadan <code>ilkadim.py</code> örneğini oluşturduk ve toplama işlemi yaptık</li>
+<li>Toplama işlemini ayırmak istedik ve <code>matematik.py</code> isimli bir dosya oluşturduk</li>
+<li>Bu dosyası <code>import matematik</code> şeklinde yükleyip çalıştırdık</li>
+<li>Sonrasında bunu bir dizin içerisine aldık ve Python'a dizini modül olarak kullanmasını söyledik
+  <code>(__init__.py)</code></li>
+<li><code>__init__.py</code> içerisine koyduğumuz toplama işlemi kodu aynı şekilde çalıştırabildik ve modül
+  dizini içerisinden bir modül yükleyebildik.</li>
+</ul>
+<p>Bunların hepsi Python'un modül yükleme yöntemi ile gerçekleşebildi.</p>
+<h3 id="modul-dizininde-ayr-moduller">Modül Dizininde Ayrı Modüller<a class="headerlink" href="#modul-dizininde-ayr-moduller" title="Permanent link">&para;</a></h3>
+<p>Örnek olması açısından bütün kodu <code>__init__.py</code> içerisine yerleştirdik ancak bu yaptığımız bir
+pratik değil. Genellikle bu dosyayı, dizini modül dizini olarak kullanmak için boş olarak
+yerleştiriyoruz ve içerisine ayrı dosyalar koyuyoruz. Toplama işlemini ayırmak istersek <code>matematik</code>
+dizinine <code>topla.py</code> koymamız gerekmekte. Şimdi <code>__init__.py</code> içerisine koyduğumuz kodu <code>topla.py</code>
+içerisine koyalım ve <code>__init__.py</code> dosyası boş kalsın. Durum bu şekilde olduğunda modülü yüklemek
+için ayrı bir <code>import</code> kullanmamız gerekecek:</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="kn">from</span> <span class="nn">matematik</span> <span class="kn">import</span> <span class="n">topla</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">topla</span><span class="o">.</span><span class="n">topla</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="n">Out</span><span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="mi">6</span>
+</span></code></pre></div>
+<p>Bu şekilde kullandığımızda <code>matematik</code> modülünden <code>topla</code> modülünü programımıza dahil etmiş olduk.
+Örneği devam ettirecek olursak <code>carp.py</code>, <code>bol.py</code> gibi dosyaları oluşurabilirdik.</p>
+<div class="admonition note">
+<p class="admonition-title">Boş ve dolu <code>__init__.py</code> dosyası</p>
+<p>Burada not etmemiz gerekir ki genellikle boş koysak da <code>__init__.py</code> dosyasının ileri kullanımı
+mevcut. Yukarıdaki örnekte <code>from matematik import topla</code> satırında toplama modülünü direkt
+olarak import edebildik ancak <code>import matematik</code> yazdığımızda Python modül sisteminde öncelikle
+<code>__init__.py</code> yüklendiği için elimize boş bir modül gelecektir. Bunu <code>matematik</code> modülü import
+edilirken birtakım kolaylıklar sağlamak için kullanabiliriz. Bunu da <code>__init__.py</code> içerisinde
+yapıyoruz ancak şu an ileri kullanıma ihtiyacımız yok. Aklımızda durması yeterli.</p>
+</div>
 <h2 id="sonuc">Sonuç<a class="headerlink" href="#sonuc" title="Permanent link">&para;</a></h2>
-<p>VSCode gibi editörler kod yazmayı oldukça kolaylaştırıyor. Bu sadece VSCode kullanacağınız anlamına
-gelmesin, Python için <a href="https://www.jetbrains.com/pycharm/">PyCharm</a> gibi ayrı yazılımlar da mevcut. Burada kişisel tercih de
-önem arz ediyor.</p>
-<p>Ben bu bölümde kendi kullanımımı anlatmaya çalıştım. Daha fazla kısayol ile daha hızlı çalışılabilir
-ancak bence burada yazılanlar olmazsa olmaz kısayollarımız. Umarım sizlere faydası olmuş, kod
-yazmanızı hızlandırmıştır.</p>
-<p><img alt="VSCode Örneği" src="../../assets/python/vscode-ornek.png" /></p>
+<p>Python modül yapısının nasıl olduğunu, dosyadan ve dizinden nasıl yüklendiğini ve kendi modülümüzü
+nasıl oluşturacağımızı gördük. Modül yapısının daha fazla incelikleri var ancak şimdilik bunlar
+bizim için yeterli. Artık kod yazarken modüllere dikkat edip, neyin nerede olduğunun daha fazla
+farkında olacağız. Bundan sonrasında herhangi bir projeye baktığımızda modüllerin nerede olduğunu ve
+neyin nasıl çağrıldığını bilerek hareket edeceğiz. Bu bize kodu anlamada zaman kazandıracaktır.</p>
+<p>Modül yükleme detaylarını merak ediyorsanız bundan sonrası için
+<a href="https://docs.python.org/3.10/reference/import.html" target="_blank">Python belgelerine</a> göz atabilirsiniz.</p>
 
 
 
@@ -1491,7 +1306,7 @@ yazmanızı hızlandırmıştır.</p>
       <nav class="md-footer__inner md-grid" aria-label="Altbilgi" >
         
           
-          <a href="../pythona-giris-ve-modern-gelistirme/" class="md-footer__link md-footer__link--prev" aria-label="Önceki: Python&#39;a Giriş ve Modern Geliştirme">
+          <a href="../vscode-ile-python-gelistirme-ortami/" class="md-footer__link md-footer__link--prev" aria-label="Önceki: VSCode ile Python Geliştirme Ortamı">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -1501,20 +1316,20 @@ yazmanızı hızlandırmıştır.</p>
                 Önceki
               </span>
               <div class="md-ellipsis">
-                Python'a Giriş ve Modern Geliştirme
+                VSCode ile Python Geliştirme Ortamı
               </div>
             </div>
           </a>
         
         
           
-          <a href="../python-modul-yapisi/" class="md-footer__link md-footer__link--next" aria-label="Sonraki: Python Modül Yapısı">
+          <a href="../../makaleler/" class="md-footer__link md-footer__link--next" aria-label="Sonraki: Makaleler">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Sonraki
               </span>
               <div class="md-ellipsis">
-                Python Modül Yapısı
+                Makaleler
               </div>
             </div>
             <div class="md-footer__button md-icon">
