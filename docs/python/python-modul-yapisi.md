@@ -159,6 +159,14 @@ Out[2]: 6
 Bu şekilde kullandığımızda `matematik` modülünden `topla` modülünü programımıza dahil etmiş olduk.
 Örneği devam ettirecek olursak `carp.py`, `bol.py` gibi dosyaları oluşurabilirdik.
 
+!!! note "Boş ve dolu `__init__.py` dosyası"
+    Burada not etmemiz gerekir ki genellikle boş koysak da `__init__.py` dosyasının ileri kullanımı
+    mevcut. Yukarıdaki örnekte `from matematik import topla` satırında toplama modülünü direkt
+    olarak import edebildik ancak `import matematik` yazdığımızda Python modül sisteminde öncelikle
+    `__init__.py` yüklendiği için elimize boş bir modül gelecektir. Bunu `matematik` modülü import
+    edilirken birtakım kolaylıklar sağlamak için kullanabiliriz. Bunu da `__init__.py` içerisinde
+    yapıyoruz ancak şu an ileri kullanıma ihtiyacımız yok. Aklımızda durması yeterli.
+
 ## Sonuç
 
 Python modül yapısının nasıl olduğunu, dosyadan ve dizinden nasıl yüklendiğini ve kendi modülümüzü
