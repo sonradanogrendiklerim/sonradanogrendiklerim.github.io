@@ -893,13 +893,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#kendi-modul-dizinimizi-olusturalm" class="md-nav__link">
+  <a href="#kendi-modul-dizinimizi-paketimizi-olusturalm" class="md-nav__link">
     <span class="md-ellipsis">
-      Kendi Modül Dizinimizi Oluşturalım
+      Kendi Modül Dizinimizi (Paketimizi) Oluşturalım
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Kendi Modül Dizinimizi Oluşturalım">
+    <nav class="md-nav" aria-label="Kendi Modül Dizinimizi (Paketimizi) Oluşturalım">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1083,13 +1083,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#kendi-modul-dizinimizi-olusturalm" class="md-nav__link">
+  <a href="#kendi-modul-dizinimizi-paketimizi-olusturalm" class="md-nav__link">
     <span class="md-ellipsis">
-      Kendi Modül Dizinimizi Oluşturalım
+      Kendi Modül Dizinimizi (Paketimizi) Oluşturalım
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Kendi Modül Dizinimizi Oluşturalım">
+    <nav class="md-nav" aria-label="Kendi Modül Dizinimizi (Paketimizi) Oluşturalım">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1212,10 +1212,10 @@ modüllerin nasıl yüklendiğine bakalım.</p>
 görebiliriz. Bu bize bütün kodu tek bir dosyaya yazmamamız için olanak sağlıyor. Peki burada modülün
 giriş kodu nerede? Bu da <code>__init__.py</code> tarafından sağlanıyor.</p>
 <p>Python'da herhangi bir dizin içerisinde <code>__init__.py</code> dosyası varsa, bu dizin modül dizini olarak
-kullanılmakta. Dolayısıyla bu örnekde <code>import requests</code> yazdığımızda bu dizinin içerisindeki
+kullanılmakta. Dolayısıyla bu örnekte <code>import requests</code> yazdığımızda bu dizinin içerisindeki
 <code>__init__.py</code> yüklenmekte. Genellikle bu dosya içerisinde diğer <code>import</code> edilecek satırlar yer
 alıyor.</p>
-<h2 id="kendi-modul-dizinimizi-olusturalm">Kendi Modül Dizinimizi Oluşturalım<a class="headerlink" href="#kendi-modul-dizinimizi-olusturalm" title="Permanent link">&para;</a></h2>
+<h2 id="kendi-modul-dizinimizi-paketimizi-olusturalm">Kendi Modül Dizinimizi (Paketimizi) Oluşturalım<a class="headerlink" href="#kendi-modul-dizinimizi-paketimizi-olusturalm" title="Permanent link">&para;</a></h2>
 <p><code>matematik.py</code> dosyası şu anlık işimizi görse de farzedelim ki birçok matematik işlemini ayrı
 şekilde tutmak istiyoruz. Bunun için <code>matematik</code> isimli bir dizin oluşturabiliriz. Dizini oluşturun
 ve içerisine <code>__init__.py</code> adlı bir dosya yerleştirin. Bu dosyanın içerisine yine toplama işlemi
@@ -1228,7 +1228,7 @@ yaptığımızın farkında olalım.</p>
 <ul>
 <li>Modül yazmadan <code>ilkadim.py</code> örneğini oluşturduk ve toplama işlemi yaptık</li>
 <li>Toplama işlemini ayırmak istedik ve <code>matematik.py</code> isimli bir dosya oluşturduk</li>
-<li>Bu dosyası <code>import matematik</code> şeklinde yükleyip çalıştırdık</li>
+<li>Bu dosyayı <code>import matematik</code> şeklinde yükleyip çalıştırdık</li>
 <li>Sonrasında bunu bir dizin içerisine aldık ve Python'a dizini modül olarak kullanmasını söyledik
   <code>(__init__.py)</code></li>
 <li><code>__init__.py</code> içerisine koyduğumuz toplama işlemi kodu aynı şekilde çalıştırabildik ve modül
@@ -1237,7 +1237,7 @@ yaptığımızın farkında olalım.</p>
 <p>Bunların hepsi Python'un modül yükleme yöntemi ile gerçekleşebildi.</p>
 <h3 id="modul-dizininde-ayr-moduller">Modül Dizininde Ayrı Modüller<a class="headerlink" href="#modul-dizininde-ayr-moduller" title="Permanent link">&para;</a></h3>
 <p>Örnek olması açısından bütün kodu <code>__init__.py</code> içerisine yerleştirdik ancak bu yaptığımız bir
-pratik değil. Genellikle bu dosyayı, dizini modül dizini olarak kullanmak için boş olarak
+pratik değil. Genellikle bu dosyayı dizini modül dizini olarak kullanmak için boş olarak
 yerleştiriyoruz ve içerisine ayrı dosyalar koyuyoruz. Toplama işlemini ayırmak istersek <code>matematik</code>
 dizinine <code>topla.py</code> koymamız gerekmekte. Şimdi <code>__init__.py</code> içerisine koyduğumuz kodu <code>topla.py</code>
 içerisine koyalım ve <code>__init__.py</code> dosyası boş kalsın. Durum bu şekilde olduğunda modülü yüklemek
@@ -1265,7 +1265,7 @@ bizim için yeterli. Artık kod yazarken modüllere dikkat edip, neyin nerede ol
 farkında olacağız. Bundan sonrasında herhangi bir projeye baktığımızda modüllerin nerede olduğunu ve
 neyin nasıl çağrıldığını bilerek hareket edeceğiz. Bu bize kodu anlamada zaman kazandıracaktır.</p>
 <p>Modül yükleme detaylarını merak ediyorsanız bundan sonrası için
-<a href="https://docs.python.org/3.10/reference/import.html" target="_blank">Python belgelerine</a> göz atabilirsiniz.</p>
+<a href="https://docs.python.org/3.10/reference/import.html#packages" target="_blank">Python belgelerine</a> göz atabilirsiniz.</p>
 
 
 
