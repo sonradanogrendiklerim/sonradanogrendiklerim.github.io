@@ -111,11 +111,11 @@ görebiliriz. Bu bize bütün kodu tek bir dosyaya yazmamamız için olanak sağ
 giriş kodu nerede? Bu da `__init__.py` tarafından sağlanıyor.
 
 Python'da herhangi bir dizin içerisinde `__init__.py` dosyası varsa, bu dizin modül dizini olarak
-kullanılmakta. Dolayısıyla bu örnekde `import requests` yazdığımızda bu dizinin içerisindeki
+kullanılmakta. Dolayısıyla bu örnekte `import requests` yazdığımızda bu dizinin içerisindeki
 `__init__.py` yüklenmekte. Genellikle bu dosya içerisinde diğer `import` edilecek satırlar yer
 alıyor.
 
-## Kendi Modül Dizinimizi Oluşturalım
+## Kendi Modül Dizinimizi (Paketimizi) Oluşturalım
 
 `matematik.py` dosyası şu anlık işimizi görse de farzedelim ki birçok matematik işlemini ayrı
 şekilde tutmak istiyoruz. Bunun için `matematik` isimli bir dizin oluşturabiliriz. Dizini oluşturun
@@ -132,7 +132,7 @@ yaptığımızın farkında olalım.
 
 - Modül yazmadan `ilkadim.py` örneğini oluşturduk ve toplama işlemi yaptık
 - Toplama işlemini ayırmak istedik ve `matematik.py` isimli bir dosya oluşturduk
-- Bu dosyası `import matematik` şeklinde yükleyip çalıştırdık
+- Bu dosyayı `import matematik` şeklinde yükleyip çalıştırdık
 - Sonrasında bunu bir dizin içerisine aldık ve Python'a dizini modül olarak kullanmasını söyledik
   `(__init__.py)`
 - `__init__.py` içerisine koyduğumuz toplama işlemi kodu aynı şekilde çalıştırabildik ve modül
@@ -143,7 +143,7 @@ Bunların hepsi Python'un modül yükleme yöntemi ile gerçekleşebildi.
 ### Modül Dizininde Ayrı Modüller
 
 Örnek olması açısından bütün kodu `__init__.py` içerisine yerleştirdik ancak bu yaptığımız bir
-pratik değil. Genellikle bu dosyayı, dizini modül dizini olarak kullanmak için boş olarak
+pratik değil. Genellikle bu dosyayı dizini modül dizini olarak kullanmak için boş olarak
 yerleştiriyoruz ve içerisine ayrı dosyalar koyuyoruz. Toplama işlemini ayırmak istersek `matematik`
 dizinine `topla.py` koymamız gerekmekte. Şimdi `__init__.py` içerisine koyduğumuz kodu `topla.py`
 içerisine koyalım ve `__init__.py` dosyası boş kalsın. Durum bu şekilde olduğunda modülü yüklemek
@@ -183,4 +183,4 @@ Modül yükleme detaylarını merak ediyorsanız bundan sonrası için
 [activate]: ../python/pythona-giris-ve-modern-gelistirme.md#pip-ve-virtualenv
 [terminal]: ../linux/terminal-komutu-nasil-calisir.md
 [ilkadim]:  ../python/pythona-giris-ve-modern-gelistirme.md#python-kullanm
-[modulesystem]: https://docs.python.org/3.10/reference/import.html
+[modulesystem]: https://docs.python.org/3.10/reference/import.html#packages
