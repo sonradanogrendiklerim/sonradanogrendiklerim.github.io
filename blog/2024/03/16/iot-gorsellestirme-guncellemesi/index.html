@@ -6,19 +6,17 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="IoT cihazlarlardan metrik alma, ESP8266 ve ne şekilde gösterilebileceği üzerine.">
+        <meta name="description" content="Bir önceki IoT görselleştirme yazısına güncelleme">
       
       
         <meta name="author" content="Eren Türkay">
       
       
-        <link rel="canonical" href="https://sonradanogrendiklerim.com/blog/2024/03/01/iot-cihazlar-esp8266-ve-gorsellestirilmesi/">
+        <link rel="canonical" href="https://sonradanogrendiklerim.com/blog/2024/03/16/iot-gorsellestirme-guncellemesi/">
       
       
-        <link rel="prev" href="../../../02/27/devamlilik/">
+        <link rel="prev" href="../../01/iot-cihazlar-esp8266-ve-gorsellestirilmesi/">
       
-      
-        <link rel="next" href="../../16/iot-gorsellestirme-guncellemesi/">
       
       
         <link rel="alternate" type="application/rss+xml" title="RSS beslemesi" href="../../../../../feed_rss_created.xml">
@@ -29,7 +27,7 @@
     
     
       
-        <title>IoT Cihazlar, ESP8266 ve Görselleştirilmesi - Sonradan Öğrendiklerim</title>
+        <title>IoT Görselleştirme Güncellemesi - Sonradan Öğrendiklerim</title>
       
     
     
@@ -76,11 +74,11 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="IoT Cihazlar, ESP8266 ve Görselleştirilmesi - Sonradan Öğrendiklerim" >
+        <meta  property="og:title"  content="IoT Görselleştirme Güncellemesi - Sonradan Öğrendiklerim" >
       
-        <meta  property="og:description"  content="IoT cihazlarlardan metrik alma, ESP8266 ve ne şekilde gösterilebileceği üzerine." >
+        <meta  property="og:description"  content="Bir önceki IoT görselleştirme yazısına güncelleme" >
       
-        <meta  property="og:image"  content="https://sonradanogrendiklerim.com/assets/images/social/blog/posts/2024-03-01-iot-cihazlar.png" >
+        <meta  property="og:image"  content="https://sonradanogrendiklerim.com/assets/images/social/blog/posts/2024-03-16-iot-gorsellestirme-guncellemesi.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -88,15 +86,15 @@
       
         <meta  property="og:image:height"  content="630" >
       
-        <meta  property="og:url"  content="https://sonradanogrendiklerim.com/blog/2024/03/01/iot-cihazlar-esp8266-ve-gorsellestirilmesi/" >
+        <meta  property="og:url"  content="https://sonradanogrendiklerim.com/blog/2024/03/16/iot-gorsellestirme-guncellemesi/" >
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="IoT Cihazlar, ESP8266 ve Görselleştirilmesi - Sonradan Öğrendiklerim" >
+        <meta  name="twitter:title"  content="IoT Görselleştirme Güncellemesi - Sonradan Öğrendiklerim" >
       
-        <meta  name="twitter:description"  content="IoT cihazlarlardan metrik alma, ESP8266 ve ne şekilde gösterilebileceği üzerine." >
+        <meta  name="twitter:description"  content="Bir önceki IoT görselleştirme yazısına güncelleme" >
       
-        <meta  name="twitter:image"  content="https://sonradanogrendiklerim.com/assets/images/social/blog/posts/2024-03-01-iot-cihazlar.png" >
+        <meta  name="twitter:image"  content="https://sonradanogrendiklerim.com/assets/images/social/blog/posts/2024-03-16-iot-gorsellestirme-guncellemesi.png" >
       
     
     
@@ -115,6 +113,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#docker-ile-graphite" class="md-skip">
+          Ana içeriğe geç
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -146,7 +149,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              IoT Cihazlar, ESP8266 ve Görselleştirilmesi
+              IoT Görselleştirme Güncellemesi
             
           </span>
         </div>
@@ -938,6 +941,32 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      İçindekiler
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#docker-ile-graphite" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker ile Graphite
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#telegraf-konfigurasyonu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Telegraf Konfigürasyonu
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -973,7 +1002,7 @@
                     <li class="md-nav__item">
                       <div class="md-nav__link">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5v-5Z"/></svg>
-                        <time datetime="2024-03-01 00:00:00" class="md-ellipsis">1 Mart 2024</time>
+                        <time datetime="2024-03-16 00:00:00" class="md-ellipsis">16 Mart 2024</time>
                       </div>
                     </li>
                     
@@ -1015,54 +1044,81 @@
         
 
 
-  <h1>IoT Cihazlar, ESP8266 ve Görselleştirilmesi</h1>
+  <h1>IoT Görselleştirme Güncellemesi</h1>
 
-<p>Evlerimizdeki neredeyse bütün cihazlar internete bağlı. Bu cihazlar bir firma tarafından üretiliyor
-ve esasında üzerinde pek de hakimiyetimiz yok. Örneğin basit bir sıcaklık / nem ölçen cihaz bile
-üretici bağımlı. Eğer üretici ortadan kaybolursa bu cihaz çalışmaz hale gelecek zira arka tarafında
-bu metriklerin toplandığı ve mobil uygulama aracılığı ile görselleştirildiği bir altyapı mevcut.</p>
+<p><a href="../../01/iot-cihazlar-esp8266-ve-gorsellestirilmesi/">Bir önceki yazıda</a> IoT görselleştirmenin nasıl yapılabileceğini yazmıştım. Öncesinde
+<a href="https://www.influxdata.com" target="_blank">InfluxDB</a> kullanıp memnun kaldım ancak tekrar kurmak istediğimde
+<a href="https://grafana.com" target="_blank">Grafana</a> ile InfluxDB 2.0 plugini yeterince düzgün çalışmadı. Özetle
+InfluxDB 2.0 FluxQL aldı bir dile geçmiş ve burada kendi dili ile sorgu yapmamız gerekiyor. Bu da
+metrikleri Grafana'dan SQL tarzında seçmenize engel oluyor. Metrikleri Grafana browser ile seçmeyi
+tercih ettiğimden InfluxDB katmanını <a href="https://github.com/graphite-project/docker-graphite-statsd" target="_blank">Graphite</a> ile değiştirdim.</p>
 <!-- more -->
 
-<p>Bu altyapıyı kendimiz de oluşturabiliyoruz. Hatta kendi sıcaklık ölçen cihazımızı yapmak hiç de zor
-değil. <a href="https://en.wikipedia.org/wiki/ESP8266" target="_blank">ESP8266</a> barındıran <a href="https://www.robotistan.com/nodemcu-lolin-esp8266-gelistirme-karti-usb-chip-ch340" target="_blank">NodeMCU v3</a>
-geliştirme kartı ve <a href="https://www.direnc.net/sht31-sicaklik-ve-nem-sensoru-modulu-i2c-13815" target="_blank">SHT31</a> kullanarak internete bağlı, aldığı bilgileri
-uzak bir sunucuya gönderen ve sonrasında görselleştirileceği bir yapı kurmak eli bu işlere değmiş
-biri için gayet yapılabilir.</p>
-<p>Ben buna benzer bir yapıyı odalardaki sıcaklığı takip etmek için kurdum. Bunun için InfluxDB, Telegraf, Mosquitto ve Grafana kullandım. Kısaca açıklayacak olursam:</p>
-<ul>
-<li><strong><a href="https://www.influxdata.com" target="_blank">InfluxDB</a></strong>: Metriklerin toplandığı veri tabanı. Cihazlardan
-  aldığımız metrikler bu sunucuya yazılıyor ve sonrasında sorgulanıyor. Bunu zaman tabanlı bilgiler
-  için bir MySQL veya PostgreSQL şeklinde düşünebilirsiniz</li>
-<li><strong><a href="http://mosquitto.org" target="_blank">Mosquitto</a></strong>: Minik cihazların bağlanıp ölçüm yaptıkları değeri
-  gönderdikleri sunucu. Bu sunucu arada bir mesajcı görevi görüyor ve buna bağlanan diğer bütün
-  istemcilere alınan mesajı gönderiyor. Bu yapıya PubSub denmekte.</li>
-<li><strong><a href="https://www.influxdata.com/time-series-platform/telegraf/" target="_blank">Telegraf</a></strong>: Mosquitto'ya bağlanıp IoT cihazlardan gelen mesajları
-  InfluxDB'ye yazan ara katman. Cihazlar çok küçük olduğundan ve zar zor internete bağlandığından
-  direkt olarak InfluxDB'ye yazamadığımız için böyle bir çözüm gerekmekte.</li>
-<li><strong><a href="https://grafana.com" target="_blank">Grafana</a></strong>: Verilerin görselleştirildiği yer. InfluxDB'yi sorgulayıp
-  ilgili görselleri çıkarıyor.</li>
-</ul>
-<p>Esasında yaptığımız şey cihaz internete bağlanabiliyorsa ve Mosquitto'ya veri gönderebiliyorsa, bu
-alınan verileri görselleştirmek. <a href="https://esphome.io" target="_blank">ESPHome</a> projesi ile elimizde bulunan
-<a href="https://en.wikipedia.org/wiki/ESP8266" target="_blank">ESP8266</a>'yı MQTT (<a href="http://mosquitto.org" target="_blank">Mosquitto</a>) kullanacak
-şekilde programladığımızda bunu elde etmiş oluyoruz. Cihaz açıldığında önce kablosuz ağa bağlanıyor,
-sonrasında MQTT sunucusuna bağlanıp ölçümünü buraya gönderiyor. Burdan sonra da Telegraf, Influxdb
-ve Grafana kullanarak görselleştiriyoruz.</p>
-<p>Aslında kullandığımız IoT cihazların yapısı aşağı yukarı bu şekilde. Biz sadece arka tarafındaki
-altyapıyı göremiyoruz. Elimizdeki cihazların tek görevi işini olabildiğince sade yapıp internete
-bilgi aktarmak.</p>
-<p>Yazının başında bu altyapının şirketlerin kontrolünde olduğunu ve her an çalışmayabileceğini
-söylemiştim. Eğer zamanınız ve bilginiz varsa bu tarz sensör verilerini almak için
-<a href="https://en.wikipedia.org/wiki/ESP8266" target="_blank">ESP8266</a> çok güzel bir platform. Birçok sensör bağlanabiliyor ve
-<a href="https://esphome.io" target="_blank">ESPHome</a> ile <a href="https://en.wikipedia.org/wiki/Over-the-air_update" target="_blank">OTA</a> özelliği sayesinde cihazı
-bilgisayara bağlamadan ağ üzerinden programlayabiliyorsunuz. Geliştirme aşamasında bu çok büyük bir
-kolaylık sağlıyor. Sonrasında InfluxDB, Telegraf, Mosquitto ve Grafana ile güzel bir şekilde de
-görselleştirebiliyoruz.</p>
-<p>Burada tek eksik kullanıcı dostu olmaması. Tak çalıştır şeklinde bir altyapı tabii ki kurulabilir ama bunu para için yapmadığımız için kendi yağımızda kavruluyoruz. Grafana'nın mobil arayüzü gayet yeterli olduğu için pek de ihtiyacımız yok aslında.</p>
-<p>Umarım buradaki anahtar kelimeler sizlere yardımcı olur ve kendi sıcaklık / nem sensörünüzü,
-devamında arka tarafındaki altyapınızı kurmanız için bir yol açar. Maalesef bütün bu sunucuları ve
-altyapıyı baştan kurup yazıya dökmek için vaktim şimdilik yok. Umarım ben de baştan sona sıcaklık /
-nem sensörü ile beraber görselleştirme yazısı yazmak için zaman bulabilirim.</p>
+<p>Kullandığım <code>telegraf.conf</code> dosyasında çok bir değişikliğe gitmeye gerek kalmadı. Sadece <code>outputs</code> kısmını InfluxDB'den Graphite'a çevirdim ve Docker ile Graphite çalıştırdım.</p>
+<h2 id="docker-ile-graphite">Docker ile Graphite<a class="headerlink" href="#docker-ile-graphite" title="Permanent link">&para;</a></h2>
+<p>Graphite çalıştırırken konfigürasyon ve data dizinlerini volume olarak bağlamak işinize yarayacaktır. Bunun için Graphite'ı çalıştırmak için aşağıdaki komutu kullanıyorum:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="ch">#!/bin/bash</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="w"> </span>graphite<span class="w"> </span>--restart<span class="o">=</span>always<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>-p<span class="w"> </span><span class="m">80</span>:80<span class="w"> </span>-p<span class="w"> </span><span class="m">2003</span>-2004:2003-2004<span class="w"> </span>-p<span class="w"> </span><span class="m">2023</span>-2024:2023-2024<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>-p<span class="w"> </span><span class="m">8125</span>:8125/udp<span class="w"> </span>-p<span class="w"> </span><span class="m">8126</span>:8126<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>-v<span class="w"> </span>/graphite/conf:/opt/graphite/conf<span class="w"> </span>-v<span class="w"> </span>/graphite/data:/opt/graphite/storage<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>-v<span class="w"> </span>/graphite/statsd_config:/opt/statsd/config<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>graphiteapp/graphite-statsd
+</span></code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Graphite dizini</p>
+<p>Docker komutunu çalıştırmadan önce kök dizinde /graphite dizininin oluşturulmuş olduğundan emin
+olun. Dilerseniz başka bir dizin de kullanabilirsiniz ancak ben bu şekilde kullanmayı tercih
+ettim.</p>
+</div>
+<h2 id="telegraf-konfigurasyonu">Telegraf Konfigürasyonu<a class="headerlink" href="#telegraf-konfigurasyonu" title="Permanent link">&para;</a></h2>
+<p><a href="https://en.wikipedia.org/wiki/ESP8266" target="_blank">ESP8266</a> ile <a href="https://esphome.io" target="_blank">ESPHome</a> tarafından gönderilen
+metrikleri MQTT sunucusundan alan ve Graphite'a gönderen konfigürasyon aşağıda. Kısa olması
+açısından yorum satırlarını kaldırdım. Tüm bir telegraf konfigürasyonu edinmek ve yorum satırlarını
+görmek isterseniz <code>telegraf config</code> komutunu kullanabilirsiniz, size öntanımlı konfigürasyonu
+verecektir.</p>
+<div class="language-toml highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">[agent]</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">interval</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;10s&quot;</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">round_interval</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">metric_batch_size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1000</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="n">metric_buffer_limit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10000</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="n">collection_jitter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;0s&quot;</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="n">flush_interval</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;10s&quot;</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="n">flush_jitter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;0s&quot;</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="n">precision</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="n">debug</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="n">quiet</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="n">logtarget</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;file&quot;</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="n">logfile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;/var/log/telegraf/telegraf.log&quot;</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="n">logfile_rotation_interval</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;0d&quot;</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="n">logfile_rotation_max_size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;200MB&quot;</span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="n">logfile_rotation_max_archives</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="n">hostname</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="n">omit_hostname</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span>
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="k">[[inputs.mqtt_consumer]]</span>
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="n">servers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;tcp://127.0.0.1:1883&quot;</span><span class="p">]</span>
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="n">topics</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;+/sensor/#&quot;</span><span class="p">]</span>
+</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>
+</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="n">username</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;mqttuser&quot;</span>
+</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="n">password</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;mqttpassword&quot;</span>
+</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>
+</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a><span class="c1"># Bu kısmı önemli. Data format ve type olarak bu değerleri</span>
+</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a><span class="c1"># vermediğimizde telegraf MQTT değerlerini okuyamıyor.</span>
+</span><span id="__span-1-32"><a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a><span class="n">data_format</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;value&quot;</span>
+</span><span id="__span-1-33"><a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a><span class="n">data_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;float&quot;</span>
+</span><span id="__span-1-34"><a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a>
+</span><span id="__span-1-35"><a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a><span class="k">[[outputs.graphite]]</span>
+</span><span id="__span-1-36"><a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a><span class="n">servers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;localhost:2003&quot;</span><span class="p">]</span>
+</span><span id="__span-1-37"><a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a><span class="n">prefix</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+</span><span id="__span-1-38"><a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a><span class="n">template</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;host.tags.measurement.field&quot;</span>
+</span><span id="__span-1-39"><a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a>
+</span><span id="__span-1-40"><a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a><span class="n">timeout</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;2s&quot;</span>
+</span></code></pre></div>
 
 
 
@@ -1107,7 +1163,7 @@ nem sensörü ile beraber görselleştirme yazısı yazmak için zaman bulabilir
       <nav class="md-footer__inner md-grid" aria-label="Altbilgi" >
         
           
-          <a href="../../../02/27/devamlilik/" class="md-footer__link md-footer__link--prev" aria-label="Önceki: Devamlılık">
+          <a href="../../01/iot-cihazlar-esp8266-ve-gorsellestirilmesi/" class="md-footer__link md-footer__link--prev" aria-label="Önceki: IoT Cihazlar, ESP8266 ve Görselleştirilmesi">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -1117,27 +1173,11 @@ nem sensörü ile beraber görselleştirme yazısı yazmak için zaman bulabilir
                 Önceki
               </span>
               <div class="md-ellipsis">
-                Devamlılık
+                IoT Cihazlar, ESP8266 ve Görselleştirilmesi
               </div>
             </div>
           </a>
         
-        
-          
-          <a href="../../16/iot-gorsellestirme-guncellemesi/" class="md-footer__link md-footer__link--next" aria-label="Sonraki: IoT Görselleştirme Güncellemesi">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Sonraki
-              </span>
-              <div class="md-ellipsis">
-                IoT Görselleştirme Güncellemesi
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-            </div>
-          </a>
         
       </nav>
     
