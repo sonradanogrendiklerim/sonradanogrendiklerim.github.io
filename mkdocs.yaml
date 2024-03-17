@@ -81,7 +81,9 @@ markdown_extensions:
 plugins:
   - social
   - search
-  - blog
+  - blog:
+      pagination: true
+      pagination_per_page: 7
   - rss:
       match_path: blog/posts/.*
       date_from_meta:
