@@ -6,13 +6,13 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Sonradan öğrendiklerim sayfası statik olarak nasıl sunuluyor.">
+        <meta name="description" content="Notion'a alternatif belge yönetim yazılmı Outline kurulumu">
       
       
         <meta name="author" content="Eren Türkay">
       
       
-        <link rel="canonical" href="https://sonradanogrendiklerim.com/makaleler/github-pages-statik-sayfa/">
+        <link rel="canonical" href="https://sonradanogrendiklerim.com/makaleler/notion-alternatifi-outline-kurulumu/">
       
       
       
@@ -25,7 +25,7 @@
     
     
       
-        <title>Github Pages ile Statik Sayfa Sunmak - Sonradan Öğrendiklerim</title>
+        <title>Notion Alternatifi: Outline Kurulumu - Sonradan Öğrendiklerim</title>
       
     
     
@@ -72,11 +72,11 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="Github Pages ile Statik Sayfa Sunmak - Sonradan Öğrendiklerim" >
+        <meta  property="og:title"  content="Notion Alternatifi: Outline Kurulumu - Sonradan Öğrendiklerim" >
       
-        <meta  property="og:description"  content="Sonradan öğrendiklerim sayfası statik olarak nasıl sunuluyor." >
+        <meta  property="og:description"  content="Notion'a alternatif belge yönetim yazılmı Outline kurulumu" >
       
-        <meta  property="og:image"  content="https://sonradanogrendiklerim.com/assets/images/social/makaleler/github-pages-statik-sayfa.png" >
+        <meta  property="og:image"  content="https://sonradanogrendiklerim.com/assets/images/social/makaleler/notion-alternatifi-outline-kurulumu.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -84,15 +84,15 @@
       
         <meta  property="og:image:height"  content="630" >
       
-        <meta  property="og:url"  content="https://sonradanogrendiklerim.com/makaleler/github-pages-statik-sayfa/" >
+        <meta  property="og:url"  content="https://sonradanogrendiklerim.com/makaleler/notion-alternatifi-outline-kurulumu/" >
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="Github Pages ile Statik Sayfa Sunmak - Sonradan Öğrendiklerim" >
+        <meta  name="twitter:title"  content="Notion Alternatifi: Outline Kurulumu - Sonradan Öğrendiklerim" >
       
-        <meta  name="twitter:description"  content="Sonradan öğrendiklerim sayfası statik olarak nasıl sunuluyor." >
+        <meta  name="twitter:description"  content="Notion'a alternatif belge yönetim yazılmı Outline kurulumu" >
       
-        <meta  name="twitter:image"  content="https://sonradanogrendiklerim.com/assets/images/social/makaleler/github-pages-statik-sayfa.png" >
+        <meta  name="twitter:image"  content="https://sonradanogrendiklerim.com/assets/images/social/makaleler/notion-alternatifi-outline-kurulumu.png" >
       
     
     
@@ -113,7 +113,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#domain" class="md-skip">
+        <a href="#gereklilikler" class="md-skip">
           Ana içeriğe geç
         </a>
       
@@ -147,7 +147,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Github Pages ile Statik Sayfa Sunmak
+              Notion Alternatifi: Outline Kurulumu
             
           </span>
         </div>
@@ -959,82 +959,91 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#domain" class="md-nav__link">
+  <a href="#gereklilikler" class="md-nav__link">
     <span class="md-ellipsis">
-      Domain
+      Gereklilikler
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#github-pages" class="md-nav__link">
+  <a href="#dns-kayd" class="md-nav__link">
     <span class="md-ellipsis">
-      Github Pages
+      DNS Kaydı
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#statik-sayfa-testi" class="md-nav__link">
+  <a href="#ubuntu-guncellemesi" class="md-nav__link">
     <span class="md-ellipsis">
-      Statik Sayfa Testi
+      Ubuntu Güncellemesi
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#dns-yonlendirmesi" class="md-nav__link">
+  <a href="#gerekli-paketlerin-yuklenmesi" class="md-nav__link">
     <span class="md-ellipsis">
-      DNS Yönlendirmesi
+      Gerekli Paketlerin Yüklenmesi
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cloudflare-ns-sunucular-opsiyonel" class="md-nav__link">
-    <span class="md-ellipsis">
-      CloudFlare NS Sunucuları (Opsiyonel)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#mkdocs-material" class="md-nav__link">
-    <span class="md-ellipsis">
-      MkDocs Material
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="MkDocs Material">
+    <nav class="md-nav" aria-label="Gerekli Paketlerin Yüklenmesi">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#kurulum" class="md-nav__link">
+  <a href="#caddy-web-sunucusu" class="md-nav__link">
     <span class="md-ellipsis">
-      Kurulum
+      Caddy Web Sunucusu
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ayarlar" class="md-nav__link">
+  <a href="#node-20" class="md-nav__link">
     <span class="md-ellipsis">
-      Ayarlar
+      Node 20
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#kullanm" class="md-nav__link">
+  <a href="#postgresql" class="md-nav__link">
     <span class="md-ellipsis">
-      Kullanım
+      PostgreSQL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#redis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Redis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supervisor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supervisor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#google-oauth" class="md-nav__link">
+    <span class="md-ellipsis">
+      Google OAuth
     </span>
   </a>
   
@@ -1042,6 +1051,99 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#outline-kurulumu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Outline Kurulumu
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Outline Kurulumu">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ortam-degiskenleri" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ortam Değişkenleri
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#veritaban" class="md-nav__link">
+    <span class="md-ellipsis">
+      Veritabanı
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uygulamay-calstrma" class="md-nav__link">
+    <span class="md-ellipsis">
+      Uygulamayı Çalıştırma
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#konfigurasyon" class="md-nav__link">
+    <span class="md-ellipsis">
+      Konfigürasyon
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Konfigürasyon">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#supervisor_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supervisor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caddy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Caddy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#admin-kullancs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Admin Kullanıcısı
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sonuc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sonuç
+    </span>
+  </a>
   
 </li>
       
@@ -1060,136 +1162,151 @@
                   
 
 
-  <h1>Github Pages ile Statik Sayfa Sunmak</h1>
+  <h1>Notion Alternatifi: Outline Kurulumu</h1>
 
-<!-- markdownlint-disable MD034 -->
-
-<p>Bir web sayfası yapmak için ihtiyacınız olan çok az şey var. Bunlardan bir tanesi domain, ve bu
-domaine gittiğimiz zaman içerik sunacak bir web sunucu. Bunun haricinde herhangi bir şeye
-ihtiyacınız yok. Bu sayfa için konuşuacak olursak domainimiz <code>sonradanogrendiklerim.com</code> ve web
-sunucumuz <a href="https://pages.github.com">Github Pages</a>. Bu belgede sayfayı statik olarak nasıl sunduğumuzu
-inceleyeceğiz.</p>
-<h2 id="domain">Domain<a class="headerlink" href="#domain" title="Permanent link">&para;</a></h2>
-<p>Kişisel bir tercih olarak domainleri <a href="https://www.namecheap.com" target="_blank">namecheap.com</a> üzerinden almayı tercih ediyorum. Yıllardır kullanmakla birlikte arayüzleri ve sundukları müşteri desteğinden memnunum. Bu açıdan öncelikle tercih ettiğiniz yerden bir domain edinin.</p>
-<h2 id="github-pages">Github Pages<a class="headerlink" href="#github-pages" title="Permanent link">&para;</a></h2>
-<p>Burada dikkat etmemiz gereken nokta tek bir hesabın ya da organizasyonun bir tane ana domaini
-olabiliyor. Dolayısıyla kişisel hesapta bir sayfa varsa, buna ek olarak sayfa açamıyoruz. Benim
-durumumda <code>eren.github.io</code> reposunda <code>erenturkay.com</code> tanımlı. Bu da tek bir statik sayfa anlamına
-geliyor. Bu yüzden kişisel hesabıma bağlı <a href="http://github.com/sonradanogrendiklerim">sonradanogrendiklerim</a> adlı ayrı bir
-organizasyon açmak durumunda kaldım.</p>
+<p>Notion belge yönetimi için yararlı bir araç ancak küçük takımlar için pahalı olabiliyor.
+<a href="https://ecommerc.io/" target="_blank">Ecommerc.io</a> olarak ilk önce notion kullanmış olsak da takım
+büyüdükçe her bir kişi için aylık $10 fazla gelmeye başladı. Bu açıdan alternatif yazılımlara
+yöneldik ve Notion'u aratmayan <a href="https://getoutline.com" target="_blank">Outline</a> projesini bulduk.</p>
+<p>Bu belge Outline'ın nasıl kurulacağını anlatır.</p>
+<h2 id="gereklilikler">Gereklilikler<a class="headerlink" href="#gereklilikler" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Ubuntu 22.04 sanal makine (c6g.medium)</li>
+<li>DNS kaydı</li>
+<li>Caddy web sunucusu</li>
+<li>Supervisor</li>
+<li>Node 20</li>
+<li>Yarn</li>
+<li>Redis</li>
+<li>PostgreSQL</li>
+<li>Google ile kimlik doğrulama</li>
+</ul>
+<h2 id="dns-kayd">DNS Kaydı<a class="headerlink" href="#dns-kayd" title="Permanent link">&para;</a></h2>
+<p>Öncelikle DNS kaydı edinmelisiniz. Outline Google kimlik doğrulaması kullandığı için kimlik
+doğrulaması sonrasında geriye döneceği bir adrese sahip olması gerekiyor. Maalesef sadece kullanıcı
+adı ve parola ile yetkilendirmeyi desteklemiyor. Bu açıdan bir DNS kaydımızın kurulum başlamadan
+olması gerekmekte. Bu DNS kaydına şimdilik <code>wiki.example.com</code> diyebiliriz. Makalenin ilerleyen
+yerlerinde bu adres kullanılacaktır, uygun yerlerde bunları değiştirin.</p>
+<h2 id="ubuntu-guncellemesi">Ubuntu Güncellemesi<a class="headerlink" href="#ubuntu-guncellemesi" title="Permanent link">&para;</a></h2>
+<p>EC2 ya da DigitalOcean olsun, kurulum yaptıktan sonra ilk işimizin güncelleme olması iyi bir pratik.
+Aşağıdaki komut ile güncelleme yapın.</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>update
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>sudo<span class="w"> </span>apt<span class="w"> </span>upgrade
+</span></code></pre></div>
+<p>Güncelleme yaptıktan sonra DNS kaydının çalışır olduğundan emin olun. Aynı zamanda EC2 için güvenlik
+gruplarının düzgün konfigüre edildiğinden emin olun. Port 80 ve 443'e izin vermeniz gerekmekte.</p>
+<h2 id="gerekli-paketlerin-yuklenmesi">Gerekli Paketlerin Yüklenmesi<a class="headerlink" href="#gerekli-paketlerin-yuklenmesi" title="Permanent link">&para;</a></h2>
+<h3 id="caddy-web-sunucusu">Caddy Web Sunucusu<a class="headerlink" href="#caddy-web-sunucusu" title="Permanent link">&para;</a></h3>
+<p>Reverse proxy olarak görev yapacak ve bizim için SSL sertifikasını otomatik olarak oluşturacak
+sunucuyu kuralım. Bu sunucu Ubuntu'nun kendi repolarında yer almıyor ve
+<a href="https://caddyserver.com/docs/install#debian-ubuntu-raspbian" target="_blank">kurulum sayfasındaki</a> yönergeleri takip etmemiz gerekiyor.</p>
+<p>Kurulum yönergelerini takip edip kurduktan sonra <code>/etc/caddy/Caddyfile</code> oluştuğundan ve <code>service
+caddy status</code> komutu ile çalışır olduğundan emin olun.</p>
+<p>Bu aşamada <code>wiki.example.com</code> adresine gittiğiniz zaman Caddy'nin ön tanımlı sayfasını görüyor
+olmanız gerekmekte. Eğer bunu göremiyorsanız DNS kaydınızda ya da güvenlik izinlerinde bir sorun var
+demektir. Geriye dönüp bunların doğru şekilde ayarlandığından emin olun.</p>
+<h3 id="node-20">Node 20<a class="headerlink" href="#node-20" title="Permanent link">&para;</a></h3>
+<p>Ubuntu'nun ön tanımlı repolarında node versiyonu maalesef çok eski ve Outline bu node versiyonu ile
+çalışmıyor. Bunun yerine <code>nodesource</code> reposundan Node 20 kurulumu yapılması gerekmekte.</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>curl<span class="w"> </span>-sL<span class="w"> </span>https://deb.nodesource.com/setup_20.x<span class="w"> </span>-o<span class="w"> </span>/tmp/nodesource_20x.sh
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>sudo<span class="w"> </span>bash<span class="w"> </span>/tmp/nodesource_20x.sh
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>nodejs<span class="w"> </span>-y
+</span></code></pre></div>
+<p>Bu komut sonrası nodejs versiyonun 20 olduğunu <code>node --version</code> ile teyit edin ve devamında <code>yarn</code>
+paketini yükleyin.</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>npm<span class="w"> </span>install<span class="w"> </span>-g<span class="w"> </span>yarn
+</span></code></pre></div>
+<h3 id="postgresql">PostgreSQL<a class="headerlink" href="#postgresql" title="Permanent link">&para;</a></h3>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>apt<span class="w"> </span>install<span class="w"> </span>postgresql
+</span></code></pre></div>
+<p>Kurulum yaptıktan sonra outline için yeni kullanıcı eklenmesi ve bu kullanıcının veritabanı
+oluşturma yetkisine sahip olması gerekmekte. Bunun için <code>postgres</code> kullanıcısı ile veritabanına
+erişelim ve kullanıcı oluşturalım. Buradaki parolayı daha güçlü bir parola ile değiştirmek
+isteyebilirsiniz.</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>sudo<span class="w"> </span>-u<span class="w"> </span>postgres<span class="w"> </span>-s<span class="w"> </span>psql
+</span></code></pre></div>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">USER</span><span class="w"> </span><span class="n">outline</span><span class="w"> </span><span class="k">WITH</span><span class="w"> </span><span class="k">ENCRYPTED</span><span class="w"> </span><span class="n">PASSWORD</span><span class="w"> </span><span class="s1">&#39;outline&#39;</span><span class="p">;</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">USER</span><span class="w"> </span><span class="n">outline</span><span class="w"> </span><span class="k">CREATEDB</span><span class="p">;</span>
+</span></code></pre></div>
+<h3 id="redis">Redis<a class="headerlink" href="#redis" title="Permanent link">&para;</a></h3>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>redis
+</span></code></pre></div>
+<h3 id="supervisor">Supervisor<a class="headerlink" href="#supervisor" title="Permanent link">&para;</a></h3>
+<p>Outline sunucusunu başlatacak ve arkada çalışmasını sağlayacak uygulama.</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>supervisor
+</span></code></pre></div>
+<h3 id="google-oauth">Google OAuth<a class="headerlink" href="#google-oauth" title="Permanent link">&para;</a></h3>
+<p>Uygulamanın çalışabilmesi için <code>Google Client ID</code> ve <code>Google Client Secret</code> ortam değişkenlerinin
+tanımlı olması gerekiyor. Bunun için <a href="https://console.cloud.google.com/apis/credentials" target="_blank">OAuth Client ID</a> sayfasına
+gidip yeni bir ID oluşturun. <code>Redirect URL</code> kısmına DNS kaydınızı yazın.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>https://wiki.example.com/auth/google.callback
+</span></code></pre></div>
+<h2 id="outline-kurulumu">Outline Kurulumu<a class="headerlink" href="#outline-kurulumu" title="Permanent link">&para;</a></h2>
+<p>Bütün gereklilikleri kurduktan sonra <a href="https://docs.getoutline.com/s/hosting/doc/from-source-BlBxrNzMIP" target="_blank">outline kurulumuna</a>
+geçebiliriz. Tek bir sunucuda, sadece outline çalışacağı için root ile kurulum yapılıyor. Bunun
+yerine outline için ayrı bir kullanıcı açıp ilerleyebilirsiniz ancak ben bu yolu tercih etmedim.</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nb">cd</span><span class="w"> </span>/srv
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>sudo<span class="w"> </span>su
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/outline/outline.git
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>yarn<span class="w"> </span>install<span class="w"> </span>--frozen-lockfile<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>yarn<span class="w"> </span>build
+</span></code></pre></div>
+<p>Bu aşamada uygulamanın derlenmesini bekliyoruz. <code>c6g.medium</code> instance ile bu benim için 5 dakika
+civarında sürüyor. Eğer küçük bir instance kullanıyorsanız bu aşamada biraz sabırlı olmak gerekiyor.</p>
+<h3 id="ortam-degiskenleri">Ortam Değişkenleri<a class="headerlink" href="#ortam-degiskenleri" title="Permanent link">&para;</a></h3>
+<p><code>.env</code> içerisindeki alanları doldurun. Burada veritabanı, secret ve Google OAuth bilgilerini
+doldurmanız gerekmekte. Slack kullanmayacaksanız slack ile ilgili alanları yorum satırına alın zira
+dolu olduğu ve doğru bilgiler girilmediği zaman uygulama hata vermekte.</p>
+<h3 id="veritaban">Veritabanı<a class="headerlink" href="#veritaban" title="Permanent link">&para;</a></h3>
+<p>Bu aşamada artık veritabanı migration işlemine geçebiliriz. Aşağıdaki komutlarla bunu
+gerçekleştirin.</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>yarn<span class="w"> </span>sequelize<span class="w"> </span>db:create
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>yarn<span class="w"> </span>sequelize<span class="w"> </span>db:migrate
+</span></code></pre></div>
+<h3 id="uygulamay-calstrma">Uygulamayı Çalıştırma<a class="headerlink" href="#uygulamay-calstrma" title="Permanent link">&para;</a></h3>
+<p>Her şey yolunda gittiyse artık uygulamayı başlatabiliriz. Aşağıdaki komut ile Outline'ın çalıştığından emin olun.</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>yarn<span class="w"> </span>start
+</span></code></pre></div>
+<p>Uygulamanın çalıştığını teyit ettikten sonra <code>ctrl-c</code> ile sonlandırın. Bunu supervisor ile
+çalıştıracağız.</p>
+<h2 id="konfigurasyon">Konfigürasyon<a class="headerlink" href="#konfigurasyon" title="Permanent link">&para;</a></h2>
+<h3 id="supervisor_1">Supervisor<a class="headerlink" href="#supervisor_1" title="Permanent link">&para;</a></h3>
+<p>Outline'ı arkaplanda çalıştırmak için gerekli. <code>/etc/supervisor/conf.d/outline.conf</code> dosyasını
+oluşturun ve içerisine aşağıdaki satırları yazın.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>[program:outline]
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>stopwaitsecs = 120
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>directory=/srv/outline
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>command=/usr/bin/yarn start
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>stdout_logfile=/var/log/supervisor/%(program_name)s.out.log
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>stderr_logfile=/var/log/supervisor/%(program_name)s.err.log
+</span></code></pre></div>
+<p>Sonrasında <code>supervisorctrl start outline</code> ile uygulamayı çalıştırın.</p>
 <div class="admonition note">
-<p class="admonition-title">eren.github.com</p>
-<p>Github Pages ilk açıldığında repo isimleri <code>.github.com</code> bitmesi gerekiyordu. Bu sonrasında değişti ve artık <code>.github.io</code> ile bitmesi gerekiyor.</p>
+<p class="admonition-title">Supervisor ile servisi durdurma</p>
+<p>Sebebini bilmediğim bir şekilde supervisor ile outline servisi durdurulamıyor.
+<code>superviorctrl stop outline</code> komutu ile supervisorde durmuş görünüyor ancak servis çalışmaya
+devam ediyor. Servisi durdurma sırasında supervisor komutunu girdikten sonra <code>node</code> sürecini
+kill etmek gerekmekte. Bunun için <code>superviorctrl stop outline</code> sonrası <code>pkill -f node</code> komutunu
+çalıştırın. <code>ps aux | grep node</code> komutu ile servisin kapanıp kapanmadığını teyit edebilirsiniz.</p>
 </div>
-<p>Domaini aldıktan sonra organizasyon ya da ana hesabınızla aynı olan bir repo açın ve sonu
-<code>.github.io</code> ile bitsin. Örnek olarak ana kullanıcı adım olan <code>eren</code> için
-<a href="https://github.com/eren/eren.github.io/" target="_blank">eren.github.io</a>, organizasyon olan <code>sonradanogrendiklerim</code> için
-<a href="http://github.com/sonradanogrendiklerim/sonradanogrendiklerim.github.io" target="_blank">sonradanogrendiklerim.github.io</a> gösterebiliriz.</p>
-<p>Devamında <code>docs/</code> dizini altında <code>CNAME</code> adlı bir dosya oluşturun ve içerisine domaininizi yazın.
-Sonradan öğrendiklerim için bu dosyanın içeriği <code>sonradanogrendiklerim.com</code>. Bunun Github
-içerisindeki ismi <code>Custom Domain</code>. <a href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site">Kendi belgeleri</a> daha uzun şekilde anlatmakta.
-Buraya da bakmayı tercih edebilirsiniz.</p>
-<div class="admonition note">
-<p class="admonition-title">CNAME dosyası</p>
-<p>Bu dosyanın normalde reponun root dizininde olması gerekmekte. Burada <code>docs/</code> dizini altına
-koymamızın nedeni siteyi <code>mkdocs</code> ile üretiyor olmamız. Eğer <code>mkdocs</code> dosyalarının bulunduğu
-<code>src</code> branchi altında <code>CNAME</code> dosyasını koyarsak bu dosya site üretildiğinde ana branch'e
-gönderilemeyecek, dolayısıyla sayfamız çalışmayacaktır.</p>
-</div>
-<h2 id="statik-sayfa-testi">Statik Sayfa Testi<a class="headerlink" href="#statik-sayfa-testi" title="Permanent link">&para;</a></h2>
-<p>Biraz sonra denemek için repo içerisine <code>index.html</code> koymak iyi bir fikir olabilir. Bu dosyayı
-oluşturun ve içerisini dilediğiniz şekilde doldurun. Ben burayı aşağıdaki kod parçacığı ile
-doldurmayı tercih ettim zira tarayıcı ile açtığımızda test sayfayı görebileyim.</p>
-<div class="language-html highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Github Pages Test Sayfası<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>TEST<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+<h3 id="caddy">Caddy<a class="headerlink" href="#caddy" title="Permanent link">&para;</a></h3>
+<p>Bizim için SSL sertifikalarını oluşturacak ve reverse proxy görevi görecek. Bunun için
+<code>/etc/caddy/Caddyfile</code> dosyasını aşağıdaki şekilde düzenleyin.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>wiki.example.com {
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a> reverse_proxy localhost:3000
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>}
 </span></code></pre></div>
-<div class="admonition tip">
-<p class="admonition-title">Git ve Github üzerine</p>
-<p>Daha önceden deneyimi olmayanlar git ve github kullanımı için başka makalelere göz atmaları
-gerekebilir. Terminolojik olarak konuşursak bu dosyaların sonuç itibariyle repo içerisinde push
-edilmiş halde bulunması gerekiyor.
-Mosh Hamedani'nin <a href="https://www.youtube.com/watch?v=8JJ101D3knE">git başlangıç videosu</a> ve <a href="https://ohmygit.org">Oh My Git!</a> interaktif oyununu bu noktada iyi bir başlangıç olabilir.</p>
-</div>
-<h2 id="dns-yonlendirmesi">DNS Yönlendirmesi<a class="headerlink" href="#dns-yonlendirmesi" title="Permanent link">&para;</a></h2>
-<p>Domainimizi aldık, web sunucusu zaten hazırdı (github pages), gerekli ayarları yaptık ve artık
-yönlendirmeye hazırız. Burada domaini aldığınız yerden <code>A</code> kaydı olarak aşağıdakileri girdiğinizde
-statik sayfaları sunmaya başlayabileceksiniz. Bu kayıtlar Github Pages sunucuları ve yukarıda
-hesabımızla bağlantılı sayfaları sunuyorlar.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>185.199.108.153
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>185.199.109.153
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>185.199.110.153
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>185.199.111.153
-</span></code></pre></div>
-<p>Bu noktada dikkat edilmesi gereken şey bu kayıtların <code>APEX</code> olarak girilmesi, yani bu kayıtlar domainin köküne (root) kısmına girilmesi gerekmekte.</p>
-<div class="admonition danger">
-<p class="admonition-title">Yanlış kayıt</p>
-<p>www.sonradanogrendiklerim.com</p>
-</div>
-<div class="admonition success">
-<p class="admonition-title">Doğru kayıt (APEX)</p>
-<p>sonradanogrendiklerim.com</p>
-</div>
-<p>TTL değerleri kendini bulduğunda statik sayfanız böylelikle hazır olmuş olacak. Tebrikler.</p>
-<h2 id="cloudflare-ns-sunucular-opsiyonel">CloudFlare NS Sunucuları (Opsiyonel)<a class="headerlink" href="#cloudflare-ns-sunucular-opsiyonel" title="Permanent link">&para;</a></h2>
-<p>Domain satın aldığınız servis DNS sunucu hizmeti de yüksek ihtimalle veriyor. Bu hizmeti
-kullanabilirsiniz ancak kişisel olarak <code>namecheap</code> sunucuları yerine <code>CloudFlare</code> kullanmayı tercih
-ediyorum. Belgenin bu bölümü sonralarda olsa da aslında domain alındıktan sonra yapılması
-gerekmekte.</p>
-<p>Satın alma işleminden sonra <code>CloudFlare</code> üzerinde bir proje oluşturun ve NS sunucu isimlerini alın. <code>sonradanogrendiklerim.com</code> projesi için CloudFlare aşağıdaki sunucuları kullanmamı istedi.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>alex.ns.cloudflare.com
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>iris.ns.cloudflare.com
-</span></code></pre></div>
-<p>Devamında domain aldığınız yerde APEX kaydı olarak size verilen sunucuları girin. Bunları yaptıktan
-sonra domain kayıtlarınızı artık satın aldığınız yerden değil, CloudFlare üzerinden yapacaksınız.</p>
-<h2 id="mkdocs-material">MkDocs Material<a class="headerlink" href="#mkdocs-material" title="Permanent link">&para;</a></h2>
-<p>Statik sayfamızı artık oluşturduk. Domaine eriştikten ve <code>index.html</code> içerisindeki yazıları
-gördükten sonra işimiz aslında bitiyor ama siteyi güncellememiz ve yeni yazılar eklememiz de
-gerekmekte. İşte bu noktada <a href="https://www.mkdocs.org" target="_blank">MkDocs</a> devreye giriyor.</p>
-<p>Bu proje bir statik site oluşturma projesi. Yani siz başka bir şekilde ve yapıda yazılarınızı
-yazıyorsunuz ve sizin yerinize statik olarak web sayfası oluşturuyor. Bunu da kendi yöntemi ile
-Github Pages üzerinde sunuyorsunuz. Bu yöntem ile çok değişmeyecek web sayfalarını sadece domain
-ücreti ödeyerek gerçekleyebiliyorsunuz.</p>
-<p>Ben <code>hugo</code>, <code>jekyll</code>, <code>pelican</code> gibi bilindik projeleri denedikten sonra MkDocs ile rastlantısal bir
-şekilde karşılaştım ve yazı yazmanın en kolay yolunun bu olduğuna karar verdim. Diğer projeler
-başarılı olsalar da statik sayfa oluşturmayı kolaylaştırmak yerine statik sayfa için size birer
-framework sunuyor ve geri kalanını size bırakıyor. Dolayısıyla öncelikle statik sayfalarınızı
-oluşturmak, sonrasında yazılarınızı yazmak durumunda kalıyorsunuz. MkDocs bu noktada yine framework
-sunuyor ancak <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank">material teması</a> ile tek bir ayar dosyası ve dizin yapısı
-ile sayfa oluşturmaya başlayabiliyorsunuz. Belki diğer projeler de bu şekilde kolay kullanılıyordur
-ancak ben becerememişimdir.</p>
-<h3 id="kurulum">Kurulum<a class="headerlink" href="#kurulum" title="Permanent link">&para;</a></h3>
-<p>Projenin <a href="https://squidfunk.github.io/mkdocs-material/getting-started/" target="_blank">kurulum sayfasından</a> ilerleyebilirsiniz. Bu bir python
-projesi ve <code>pip</code> ile yükledikten sonra kullanabilirsiniz.</p>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>pip<span class="w"> </span>install<span class="w"> </span>mkdocs-material
-</span></code></pre></div>
-<h3 id="ayarlar">Ayarlar<a class="headerlink" href="#ayarlar" title="Permanent link">&para;</a></h3>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>mkdocs<span class="w"> </span>new<span class="w"> </span>.
-</span></code></pre></div>
-<p>O anki dizinde minimal ayar oluşturacaktır. Bütün yazılar <code>docs/</code> dizini içerisinde yer alıyor ve
-tek bir <code>mkdocs.yml</code> ayar dosyası var. Material teması ve bu sayfanın ayarlarını örnek almak için <a href="https://github.com/sonradanogrendiklerim/sonradanogrendiklerim.github.io/blob/src/mkdocs.yaml" target="_blank">github sayfasını</a> ziyaret edebilirsiniz.</p>
-<h3 id="kullanm">Kullanım<a class="headerlink" href="#kullanm" title="Permanent link">&para;</a></h3>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>mkdocs<span class="w"> </span>serve
-</span></code></pre></div>
-<p><a href="http://localhost:8000">http://localhost:8000</a> üzerinden erişilecektir. Sayfayı geliştirme aşamasında bu yeterli olacaktır
-ancak yayına alma noktasında <code>mkdocs</code> belgeleri işimize yaramamakta. Bu belgede <code>main</code> branch mkdocs
-dizinini barındırmakta, yayına alırken <code>gh-pages</code> branchı oluşturulmakta ve PR açılmakta.</p>
-<p>Ben bunun yerine site dosyalarını <code>src</code> branchi içerisinde tutup, oluşturulan siteyi direkt olarak
-<code>force push</code> ile gönderme taraftarıyım. Yani belgede yazan PR kısmını atlayıp, siteyi hemen
-gönderiyoruz. Bunu aşağıdaki komutlar ile yapabilirsiniz:</p>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>rm<span class="w"> </span>-rf<span class="w"> </span>.cache
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>mkdocs<span class="w"> </span>gh-deploy
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>gh-pages:main<span class="w"> </span>-f
-</span></code></pre></div>
-<div class="admonition note">
-<p class="admonition-title">.cache dizini</p>
-<p>Bu sitenin ayar dosyasında <code>social</code> eklentisi mevcut. Bu eklenti sosyal medyada paylaştığımız
-linkler için resim üretmekte. Siteyi yayına alırken ürettiği resimleri tekrar üretmemek için
-reponun kök dizininde <code>.cache</code> adlı bir dizin kullanıyor. Yazdığımız yazı güncellendiğinde
-ise tekrar üretmiyor. Dolayısıyla siteyi yayına almadan önce <code>social</code> ile üretilen bütün
-resimleri silip tekrar üretmesini sağlıyoruz.</p>
-</div>
+<p>Sonrasında servisi <code>service caddy restart</code> komutu ile yeniden başlatın.</p>
+<h3 id="admin-kullancs">Admin Kullanıcısı<a class="headerlink" href="#admin-kullancs" title="Permanent link">&para;</a></h3>
+<p>Outline'a ilk kayıt olan kullanıcı admin yetkilerine sahip oluyor. Eğer organizasyonunuzda
+kullanıcıların sadece tek bir domain ile kayıt olmalarını istiyorsanız <code>Ayarlar - Güvenlik</code>
+kısmından domain isminizi yazın. Böylelikle sadece tek bir e-posta adresi uzantısına sahip olanlar
+kayıt olacaktır. Detaylı kullanım belgesi için <a href="https://docs.getoutline.com/s/guide">outline belgelerine</a> göz atabilirsiniz.</p>
+<h2 id="sonuc">Sonuç<a class="headerlink" href="#sonuc" title="Permanent link">&para;</a></h2>
+<p>Tebrikler. Artık notion benzeri bir wiki sayfasına sahipsiniz. Outline notion'un sunduğu birçok özelliği sunabilmekte. Aynı anda düzenleme, temiz arayüz bunlardan birkaç tanesi. <code>c6g.medium</code> aylık $28 ve bu da notion'da 3 kişinin ücretine denk geliyor.</p>
 
 
 
