@@ -83,7 +83,7 @@ Htop, dig gibi komutlar FreeBSD temel sisteminde yoklar, bunların dışarıdan 
 ```sh
 su -
 pkg update
-pkg install htop bind-tools bat fish
+pkg install htop bind-tools bat fish vim
 ```
 
 ## Fish Shell
