@@ -10,8 +10,10 @@
         <meta name="author" content="Eren Türkay">
       
       
-        <link rel="canonical" href="https://sonradanogrendiklerim.com/blog/archive/2024/page/2/">
+        <link rel="canonical" href="https://sonradanogrendiklerim.com/blog/2024/09/21/python-312-ye-goc/">
       
+      
+        <link rel="prev" href="../../08/freebsd-deneyimlerim/">
       
       
       
@@ -23,7 +25,7 @@
     
     
       
-        <title>2024 - Sonradan Öğrendiklerim</title>
+        <title>Python 3.12'ye Göç - Sonradan Öğrendiklerim</title>
       
     
     
@@ -70,11 +72,11 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="2024 - Sonradan Öğrendiklerim" >
+        <meta  property="og:title"  content="Python 3.12'ye Göç - Sonradan Öğrendiklerim" >
       
         <meta  property="og:description"  content="None" >
       
-        <meta  property="og:image"  content="https://sonradanogrendiklerim.com/assets/images/social/blog/archive/2024/page/2.png" >
+        <meta  property="og:image"  content="https://sonradanogrendiklerim.com/assets/images/social/blog/posts/2024-09-21-python-3.12.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -82,15 +84,15 @@
       
         <meta  property="og:image:height"  content="630" >
       
-        <meta  property="og:url"  content="https://sonradanogrendiklerim.com/blog/archive/2024/page/2/" >
+        <meta  property="og:url"  content="https://sonradanogrendiklerim.com/blog/2024/09/21/python-312-ye-goc/" >
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="2024 - Sonradan Öğrendiklerim" >
+        <meta  name="twitter:title"  content="Python 3.12'ye Göç - Sonradan Öğrendiklerim" >
       
         <meta  name="twitter:description"  content="None" >
       
-        <meta  name="twitter:image"  content="https://sonradanogrendiklerim.com/assets/images/social/blog/archive/2024/page/2.png" >
+        <meta  name="twitter:image"  content="https://sonradanogrendiklerim.com/assets/images/social/blog/posts/2024-09-21-python-3.12.png" >
       
     
     
@@ -111,7 +113,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#2024" class="md-skip">
+        <a href="#pydantic" class="md-skip">
           Ana içeriğe geç
         </a>
       
@@ -145,7 +147,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              2024
+              Python 3.12'ye Göç
             
           </span>
         </div>
@@ -264,8 +266,10 @@
         
   
   
+    
   
-    <li class="md-tabs__item">
+  
+    <li class="md-tabs__item md-tabs__item--active">
       <a href="../../../../" class="md-tabs__link">
         
   
@@ -323,7 +327,9 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -874,11 +880,13 @@
       
   
   
+    
+  
   
     
   
   
-    <li class="md-nav__item">
+    <li class="md-nav__item md-nav__item--active">
       <a href="../../../../" class="md-nav__link">
         
   
@@ -940,6 +948,8 @@
             
             
               
+                
+              
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -949,8 +959,116 @@
   
   
   
-    
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      İçindekiler
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pydantic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pydantic
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pydantic">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#model_validate" class="md-nav__link">
+    <span class="md-ellipsis">
+      model_validate()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#model_dump" class="md-nav__link">
+    <span class="md-ellipsis">
+      model_dump()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validate_python" class="md-nav__link">
+    <span class="md-ellipsis">
+      validate_python()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#saylarn-metin-haline-cevrimi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sayıların Metin Haline Çevrimi
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#daha-fazlas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Daha Fazlası
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#celery" class="md-nav__link">
+    <span class="md-ellipsis">
+      Celery
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-312" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python 3.12
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Python 3.12">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ubuntu-2204" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ubuntu 22.04
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sonuc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sonuç
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -959,140 +1077,175 @@
             
           
           
-  <div class="md-content" data-md-component="content">
-    <div class="md-content__inner">
-      <header class="md-typeset">
-        <h1 id="2024">2024<a class="headerlink" href="#2024" title="Permanent link">&para;</a></h1>
-      </header>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-02-24 00:00:00">24 Şubat 2024</time></li>
-        
-          <li class="md-meta__item">
-            in
+  <div class="md-content md-content--post" data-md-component="content">
+    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner md-post">
+          <nav class="md-nav md-nav--primary">
+            <div class="md-post__back">
+              <div class="md-nav__title md-nav__container">
+                <a href="../../../../" class="md-nav__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+                  <span class="md-ellipsis">
+                    Dizine geri dön
+                  </span>
+                </a>
+              </div>
+            </div>
             
-              <a href="../../../../category/genel/" class="md-meta__link">Genel</a>, 
-              <a href="../../../../category/sosyal-medya/" class="md-meta__link">Sosyal Medya</a></li>
-        
-        
+            <ul class="md-post__meta md-nav__list">
+              <li class="md-nav__item md-nav__item--section">
+                <div class="md-post__title">
+                  <span class="md-ellipsis">
+                    Metadata
+                  </span>
+                </div>
+                <nav class="md-nav">
+                  <ul class="md-nav__list">
+                    <li class="md-nav__item">
+                      <div class="md-nav__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
+                        <time datetime="2024-09-21 00:00:00" class="md-ellipsis">21 Eylül 2024</time>
+                      </div>
+                    </li>
+                    
+                    
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3v15h3V3zm3 2 4 13 3-1-4-13zM5 5v13h3V5zM3 19v2h18v-2z"/></svg>
+                          <span class="md-ellipsis">
+                            in
+                            
+                              <a href="../../../../category/python/">Python</a></span>
+                        </div>
+                      </li>
+                    
+                    
+                      
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
+                          <span class="md-ellipsis">
+                            
+                              2 dakika okuma
+                            
+                          </span>
+                        </div>
+                      </li>
+                    
+                  </ul>
+                </nav>
+              </li>
+            </ul>
+          </nav>
           
-          <li class="md-meta__item">
-            
-              2 dakika okuma
-            
-          </li>
-        
-      </ul>
-      
+        </div>
+      </div>
     </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="sosyal-medya-ve-tuketim"><a class="toclink" href="../../../../2024/02/24/sosyal-medya-ve-tuketim/">Sosyal Medya ve Tüketim</a></h2>
-<p>Sosyal medya platformlarında içerik tüketimi had safhada. Cehehenneme kadar <a href="https://en.wikipedia.org/wiki/Doomscrolling" target="_blank"><em>(doom scroll)</em></a> kaydırarak içerik tüketiliyor ve aslında bana sorarsanız bu tüketilen içeriğin
-çoğu işe yaramaz, çöp içerikler. Modern dünya bizi bu içerikleri tüketmeye zorlasa da aslında bu durum daha 10-15 yıl önceye kadar böyle değildi.</p>
+    <article class="md-content__inner md-typeset">
+      
+        
 
-    
-      <nav class="md-post__action">
-        <a href="../../../../2024/02/24/sosyal-medya-ve-tuketim/">
-          Okumaya devam et
-        </a>
-      </nav>
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-02-23 00:00:00">23 Şubat 2024</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../../../category/m%C3%BCzik/" class="md-meta__link">Müzik</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              1 dakika okuma
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="lena-chamamyan"><a class="toclink" href="../../../../2024/02/23/lena-chamamyan/">Lena Chamamyan</a></h2>
-<p>Keşfettiğime çok sevindiğim, o günden beri dinlediğim, herkesin bilmesini de istediğim <a href="https://en.wikipedia.org/wiki/Lena_Chamamyan">Suriyeli şarkıcı, söz yazarı ve müzisyen</a>. Kendine özgü bir tarzı var ve Doğu / Batı sentezini bana göre çok güzel yapıyor. Albümlerini, şarkılarını, düetlerini dinlemenizi isterim. Bu girdiyi yazmama sebep olan şarkısını da ekleyeyim:</p>
+
+  <h1>Python 3.12'ye Göç</h1>
+
+<p>Ecommerc.io olarak Python'u sıkça kullanıyoruz. Projelerimize başladığımızda Python 3.10 sürümü ile
+başladık ancak bu sürüm artık eskimeye yüz tuttu.</p>
+<p>Python 3.12 Ekim 2012 tarihinde yayınlanmış ve sürüm üzerinden 1 yıl geçmiş. Typing modülü dahil
+birçok yeni özellik ve performans iyileştirmeleri içeriyor. Bu blog girdisinde kullandığımız
+teknolojilerle birlikte Python 3.10'dan 3.12'ye nasıl geçtiğimize değineceğim.</p>
+<!-- more -->
+
+<h2 id="pydantic">Pydantic<a class="headerlink" href="#pydantic" title="Permanent link">&para;</a></h2>
+<p><a href="https://docs.pydantic.dev/latest/" target="_blank">Pydantic</a> Python ekosisteminde en çok kullanılan veri doğrulama
+kütüphanesi. Biz bu kütüphaneyi JSON doğrulamak ve JSON objelerini Python objelerine çevirmek için
+kullanıyoruz. Bu bize JSON objelerine tip atamamıza ve kodumuzu daha okunabilir hale getirmemize
+olanak sağlıyor.</p>
+<p>Python 3.10 kullanırken 1.x sürümünü kullandık ancak sonrasında 2.x sürümü geriye
+uyumlu olmadan güncellendi. Dolayısıyla öncelikle pydantic sürümünü güncellememiz gerekti.</p>
+<h3 id="model_validate">model_validate()<a class="headerlink" href="#model_validate" title="Permanent link">&para;</a></h3>
+<p>Bizi ilgilendiren en büyük değişiklik <code>.parse_obj()</code> yerine artık <code>.model_validate()</code> kullanılıyor
+olması. Modellerimizi tanımladıktan sonra <code>parse_obj()</code> çağrıları yerine <code>model_validate()</code>
+kullandığınızda kodunuzun büyük bir kısmını yeni pydantic sürümüne geçirmiş oluyorsunuz.</p>
+<h3 id="model_dump">model_dump()<a class="headerlink" href="#model_dump" title="Permanent link">&para;</a></h3>
+<p>Modelleri dictionary olarak almak için öncesinde <code>dict()</code> kullanırken, bu çağrı artık <code>model_dump()</code> olmuş durumda.</p>
+<h3 id="validate_python">validate_python()<a class="headerlink" href="#validate_python" title="Permanent link">&para;</a></h3>
+<p>Herhangi bir Python objesini parse etmek için kullanılan çağrı. 2.x ile beraber <code>parse_obj_as</code>
+çağrısı yerine <a href="https://docs.pydantic.dev/latest/concepts/type_adapter/" target="_blank">TypeAdapter</a> kullanmamız gerekmekte. Örnek olarak
+elimizdeki datayı <code>List[Stock]</code> tipinde parse etmek istersek aşağıdaki kod bloğunu kullanmamız
+gerekiyor.</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">pydantic</span> <span class="kn">import</span> <span class="n">TypeAdapter</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">adapter</span> <span class="o">=</span> <span class="n">TypeAdapter</span><span class="p">(</span><span class="n">List</span><span class="p">[</span><span class="n">Stock</span><span class="p">])</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">result</span> <span class="o">=</span> <span class="n">adapter</span><span class="o">.</span><span class="n">validate_python</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</span></code></pre></div>
+<h3 id="saylarn-metin-haline-cevrimi">Sayıların Metin Haline Çevrimi<a class="headerlink" href="#saylarn-metin-haline-cevrimi" title="Permanent link">&para;</a></h3>
+<p>2.x ile birlikte ön tanımlı olarak bu özellik kapatılmış durumda. Elinizde bir API varsa ve buradan
+gelen sayı değerini string halinde görmek istiyorsanız <a href="https://docs.pydantic.dev/latest/api/config/#pydantic.config.ConfigDict.coerce_numbers_to_str" target="_blank">bu ayarı</a> açmanız
+gerekiyor. Bunun için model konfigürasyonuna aşağıdaki satırı eklemeniz yeterli olacaktır.</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">model_config</span> <span class="o">=</span> <span class="n">ConfigDict</span><span class="p">(</span><span class="n">coerce_numbers_to_str</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span></code></pre></div>
+<h3 id="daha-fazlas">Daha Fazlası<a class="headerlink" href="#daha-fazlas" title="Permanent link">&para;</a></h3>
+<p>Pydantic 2.x sürümü yeniden yazılmış bir sürüm ve geriye uyumlu değil. Kod üzerinde gerekli
+değişikliklerin yeni kütüphaneye uyumlu şekilde yazılması gerekiyor ve bahsettiğimiz değişiklikler
+yukarıda yazılanlarla sınırlı değil. 1.x sürümünden 2.x sürümüne geçiş için pydantic'in
+<a href="https://docs.pydantic.dev/latest/migration/" target="_blank">geçiş belgesine</a> göz atmanızı öneririm.</p>
+<h2 id="celery">Celery<a class="headerlink" href="#celery" title="Permanent link">&para;</a></h2>
+<p>Bu yazının yazıldığı tarih itibariyle en son sürüm olan 5.4.0 sürümüne güncelledik. Bu sürüm Python
+3.12 değişikliklerini de içeriyor. Celery koduna herhangi bir müdahalede bulunmadan geçişi
+gerçekleştirebildik.</p>
+<h2 id="python-312">Python 3.12<a class="headerlink" href="#python-312" title="Permanent link">&para;</a></h2>
+<p>Bu sürüm type sistemi, f-string gibi birçok alanda değişiklikler içeriyor. Maalesef teker teker ne
+kadar değişiklik olduğunu bu blog girdisinde açıklayamayacağım ama aşağıdaki video güzel bir özet
+vermiş, izleyebilirsiniz.</p>
 <!-- markdownlint-disable MD033 -->
 <div class="video-wrapper">
-  <iframe width="720" height="360" src="https://www.youtube.com/embed/p3JvnJcWQ9U" frameborder="0" allowfullscreen></iframe>
+    <iframe width="720" height="360" src="https://www.youtube.com/embed/8l4UWz48Elc" frameborder="0" allowfullscreen></iframe>
 </div>
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-02-22 00:00:00">22 Şubat 2024</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../../../category/genel/" class="md-meta__link">Genel</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              1 dakika okuma
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="ilk-blog-girdisi"><a class="toclink" href="../../../../2024/02/22/ilk-blog-girdisi/">İlk Blog Girdisi</a></h2>
-<p>Aslında yazacak bir şeyim yok ancak sayfa içerisinde boş görünmemesi için bu girdiyi giriyorum. Belki de yazacak bir şeyim vardır zira boş kalmasın diye yazıyorum. Bir şeylerin boş kalmamasını istemek biraz garip.</p>
 
-    
-      <nav class="md-post__action">
-        <a href="../../../../2024/02/22/ilk-blog-girdisi/">
-          Okumaya devam et
-        </a>
-      </nav>
-    
-  </div>
-</article>
-      
-      
-        
-          
+<h3 id="ubuntu-2204">Ubuntu 22.04<a class="headerlink" href="#ubuntu-2204" title="Permanent link">&para;</a></h3>
+<p>Ubuntu resmi repolarındaki Python sürümü 3.10. Geçiş yapmak için öncelikle Ubuntu içerisine Python
+3.12 yüklememiz gerekti. Bunu <a href="https://launchpad.net/~deadsnakes/+archive/ubuntu/ppa" target="_blank">deadsnakes</a> reposundan sağladık.</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sudo<span class="w"> </span>add-apt-repository<span class="w"> </span>ppa:deadsnakes/ppa
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>python3.12<span class="w"> </span>python3.12-venv
+</span></code></pre></div>
+<p>Devamında uygulamalarımız için oluşturduğumuz <code>.venv</code> dizinini yeniden oluşturmamız ve <code>pip</code> ile
+bağımlılıkları yüklememiz gerekti.</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>python3.12<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>venv
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nb">source</span><span class="w"> </span>venv/bin/activate
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+</span></code></pre></div>
+<p>Sonrasında supervisor ile yönettiğimiz servileri yeniden başlattık ve Python 3.12 geçişini
+tamamlamış olduk.</p>
+<h2 id="sonuc">Sonuç<a class="headerlink" href="#sonuc" title="Permanent link">&para;</a></h2>
+<p>Python 3.12 birçok yenilik ve performans optimizasyonu ile birlikte geliyor. 3.12 güncellemesi ile
+birlikte bunları kullanabilme imkanı edindik. Yeni type güncellemeleri ile kodumuz daha sade ve
+anlaşılır oldu. İşlemci ve bellek kullanımı konusunda bir iyileşme gözlemlemedik, Python 3.10 nasıl
+davranıyorsa Python 3.12 de aynı şekilde davranmaya devam etti.</p>
+<p>Genel olarak 3.12 sürümünden memnun kaldık diyebiliriz. Geçiş aşamasında kullandığımız kütüphaneleri
+güncellemeye zorlaması iyi bile oldu denebilir.</p>
 
 
 
-<nav class="md-pagination">
-  <a class="md-pagination__link" href="../../">1</a> <span class="md-pagination__current">2</span>
-</nav>
-        
+
+
+
+
+  
+  
+
+
+
+  
+
+
+  
+
+
+
       
-    </div>
+    </article>
   </div>
 
           
@@ -1109,6 +1262,30 @@
       
         <footer class="md-footer">
   
+    
+      
+        
+      
+      <nav class="md-footer__inner md-grid" aria-label="Altbilgi" >
+        
+          
+          <a href="../../08/freebsd-deneyimlerim/" class="md-footer__link md-footer__link--prev" aria-label="Önceki: FreeBSD Deneyimlerim">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Önceki
+              </span>
+              <div class="md-ellipsis">
+                FreeBSD Deneyimlerim
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
