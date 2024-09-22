@@ -30,7 +30,13 @@ nav:
           - VSCode ile Python Geliştirme Ortamı: python/vscode-ile-python-gelistirme-ortami.md
           - Python Modül Yapısı: python/python-modul-yapisi.md
 
-  - Makaleler: makaleler/index.md
+  - Makaleler:
+      - Ana Sayfa: makaleler/index.md
+      - Outline Güncelleme: makaleler/outline-guncelleme.md
+      - "Notion Alternatifi: Outline Kurulumu": makaleler/notion-alternatifi-outline-kurulumu.md
+      - Tailscale ile VPN Sunucusu Kurulumu: makaleler/tailscale-ile-vpn-sunucusu-kurulumu.md
+      - Github Pages ile Statik Sayfa Sunmak: makaleler/github-pages-statik-sayfa.md
+
   - Blog: blog/index.md
   - İletişim: https://erenturkay.com/iletisim
   - Resume: https://erenturkay.com/assets/resume/Eren_Turkay_Resume.pdf
