@@ -49,3 +49,48 @@ Son kısım biraz karmaşık gelmiş olabilir ama takılmayın. Burada bilmemiz 
 uzak sunucuların farklı olduğu ve yerelimizdeki değişikliği gönderirken `git push` komutunu
 kullanıyor olmamız. Aynı zamanda nereye sorusunu cevabını da verebiliyor olmamız zira `git
 push` yaptığımızda `origin` remote'u içerisinde işlem yapıyoruz.
+
+Şimdi GitHub arayüzüne bakarsanız yerelinizdeki değişikliklerin oraya gönderildiğini görebilirsiniz.
+`git push` ile elimizde ne varsa GitHub'a göndermiş olduk.
+
+Burada gördüğümüz üzere ilk önce yerelimizde oluşturduğumuz repomuzu gönderdik. Yani yerel repomuza
+`commit` etmemiz, uzak repoya göndermiş olduğumuz anlamına gelmiyor. Yerelde yaptığımız
+değişiklikleri, commitleri, aynı zamanda bir de `git push` ile uzak sunucuya göndermemiz gerekmekte.
+
+## PR Açmak
+
+PR kelime anlamı ile `Pull Request` demek. Ana branch haricinde başka bir branch içerisinde
+çalıştığınız ve gönderdiğiniz değişikliklerin ana branch'e alınmasına yani ana branch ile
+birleştirilme isteğine verilen ad. PR kısmını anlamak için öncelikle branch'in ne olduğunu anlamamız gerekmekte.
+
+### Branch
+
+Dal olarak çevirebiliriz. Git içerisinde commit ettiğimiz her değişiklik bir önceki değişikliğin
+devamı niteliğinde ve bir branch, dal içerisinde kümeleniyorlar. `main` branch bizim ana branchimiz,
+ancak ana branch dışında bu branch'den dallanan başka branchler de olabilir. Bu konuyu anlatması
+biraz zor, aşağıdaki diagram bu konuda yardımcı olabilir diye düşünüyorum.
+
+![Branch](https://wac-cdn.atlassian.com/dam/jcr:a905ddfd-973a-452a-a4ae-f1dd65430027/01%20Git%20branch.svg)
+
+Buradaki her yuvarlak bir commiti ifade ediyor. Mor ve yeşil renkte olanlar da ayrı birer branch'ı
+temsil etmekteler.
+
+### PR'ın Amacı
+
+PR ile yaptığımız şey aslında oldukça basit. `main` branch'ten dallanan başka bir branch'i GitHub'a
+yüklüyoruz ve GitHub bize `main` ile bu branch arasındaki farkı çıkararak diff görmemizi
+kolaylaştırıyor. Sonrasında bu değişiklikleri `merge` ediyoruz. Bunu anlamak için bir önceki bölümdeki örnek üzerinden ilerleyebiliriz.
+
+### Yeni Method
+
+`test.py` içerisine yeni bir özellik ekleyelim ancak bunun diğer takım arkadaşlarımız tarafından gözden geçirilmesini istemekteyiz. Bunun için öncelikle yeni bir branch'e geçmemiz gerekiyor.
+
+```sh
+git pull
+git checkout -b cikarma-islemi
+```
+
+Bu komut ile `cikarma-islemi`  adlı bir branch'e geçiyoruz. Bu branch `main` en son hangi noktada
+ise onun devamı niteliğinde olacak. Bu yüzden remote ile local arasında bir değişiklik olmaması
+gerekiyor. Bunu önlemek için branch açmadan önce `git pull` ile uzaktaki değişiklikleri yerelimize
+alıyoruz.
