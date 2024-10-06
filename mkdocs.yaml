@@ -33,6 +33,7 @@ nav:
 
       - Git:
           - Git Başlangıcı: git/git-baslangici.md
+          - Pratik GitHub Rehberi: git/pratik-github.md
 
   - Makaleler:
       - Ana Sayfa: makaleler/index.md
