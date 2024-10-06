@@ -79,11 +79,13 @@ temsil etmekteler.
 
 PR ile yaptığımız şey aslında oldukça basit. `main` branch'ten dallanan başka bir branch'i GitHub'a
 yüklüyoruz ve GitHub bize `main` ile bu branch arasındaki farkı çıkararak diff görmemizi
-kolaylaştırıyor. Sonrasında bu değişiklikleri `merge` ediyoruz. Bunu anlamak için bir önceki bölümdeki örnek üzerinden ilerleyebiliriz.
+kolaylaştırıyor. Sonrasında bu değişiklikleri `merge` ediyoruz. Bunu anlamak için bir önceki
+bölümdeki örnek üzerinden ilerleyebiliriz.
 
-### Yeni Method
+### Yeni Metod
 
-`test.py` içerisine yeni bir özellik ekleyelim ancak bunun diğer takım arkadaşlarımız tarafından gözden geçirilmesini istemekteyiz. Bunun için öncelikle yeni bir branch'e geçmemiz gerekiyor.
+`test.py` içerisine yeni bir özellik ekleyelim ancak bunun diğer takım arkadaşlarımız tarafından
+gözden geçirilmesini istemekteyiz. Bunun için öncelikle yeni bir branch'e geçmemiz gerekiyor.
 
 ```sh
 git pull
@@ -91,6 +93,110 @@ git checkout -b cikarma-islemi
 ```
 
 Bu komut ile `cikarma-islemi`  adlı bir branch'e geçiyoruz. Bu branch `main` en son hangi noktada
-ise onun devamı niteliğinde olacak. Bu yüzden remote ile local arasında bir değişiklik olmaması
+ise onun devamı niteliğinde olacak. Bu yüzden uzak ile yerel arasında bir değişiklik olmaması
 gerekiyor. Bunu önlemek için branch açmadan önce `git pull` ile uzaktaki değişiklikleri yerelimize
 alıyoruz.
+
+Sonrasında çıkarma işlemi için metodumuzu ekleyelim. Dosyanın sonuna aşağıdaki satırları ekleyin ve
+devamında `git status` ile reponun durumuna bakın.
+
+```python
+def cikar(a, b):
+    return a - b
+```
+
+Görebileceğimiz üzere değişiklikler henüz git tarafından algılanmadı ve bu değişikliği `git add` ile
+eklememiz gerekmekte. Bunun öncesinde nelerin değiştiğini `git diff` komutu ile görmek her zaman iyi
+bir pratik olacaktır. Aşağıdaki komut ile değişikliklerimizi git'e alalım.
+
+```sh
+git add test.py
+```
+
+Sonrasında bu değişiklikleri `cikarma-islemi` branchımıza commit edelim.
+
+```sh
+git commit -m 'test.py: cikarma islemini ekle'
+```
+
+### PR Oluşturmak
+
+Yaptığımız değişiklikler artık yerel github repomuzda duruyor. PR oluşturmak için bunları GitHub'a
+göndermemiz, yani `push` etmemiz gerekmekte. `cikarma-islemi` branchında çalışırken aşağıdaki
+komutla bu branch'ı GitHub'a gönderelim.
+
+```sh
+git push -u origin cikarma-islemi
+```
+
+Push işlemi sonrasında GitHub sonrasında size bir URL verecektir. Push sonrası konsolunuzda yazan
+çıktıyı dikkatle okuyun. Bu URL'i ziyaret ettiğinizde PR açma ekranını göreceksiniz. PR açma
+ekranından PR başlığını ve açıklamasını yazarak gönder'e basın. Tebrikler, ilk PR'ınızı açtınız.
+
+Bu PR ekranında hangi değişikliklerin olduğunu, hangi commitlerin yapıldığını rahatça görebilir ve
+değişen ilgili dosyalara yorum girebilirsiniz. Sonrasında PR'ı onaylayıp ana branch ile
+birleştirebilirsiniz. Esasında bütün çalışma düzeni bundan ibaret. Özetlersek:
+
+- Ana branch'i güncel tut
+- Üzerinde çalışacağınız değişiklik için yeni bir branch aç
+- Bu branch içerisinde değişiklikleri yap ve commit et
+- Değişiklikler bitince ve hazır olduğunu düşündüğünüzde bunları `push` et.
+- Push sonrası gelen URL'i ziyaret et ve PR açma ekranına eriş
+- PR açıklamalarını gir ve PR aç
+- PR hazır olduğunda ana branch'e `merge` et
+
+### PR Sonrası Yapılanlar
+
+PR oluşturduktan sonra başka bir değişiklik gerekiyorsa yine kendi yerelinizden `cikarma-islemi`
+branchi üzerinde çalışabilir ve daha fazla commit atabilirsiniz. Sonrasında bu değişiklikleri `git
+push` ile gönderebilirsiniz. Bu sefer PR otomatik olarak güncellenecek ve yeni commitler
+görülebilecektir.
+
+Özet olarak PR içerisinde düzeltilmesi gereken bir yorum aldıysanız bunu yerelinizde yeni bir commit
+olarak düzeltip, `git push` ile commit ederek PR'ı güncelleyebilirsiniz.
+
+PR `merge` edildiğinde, yani `cikarma-islemi` branchinde yaptığınız değişiklik ana branch ile
+birleştirildiğinde artık `cikarma-islemi` branchine ihtiyaç olmayacaktır. Bu durumda yapmanız
+gereken ana branch'i güncellemek olmalıdır. Merge edildiği zaman ana branch'e gelip `git pull` ile
+yeni değişiklikleri almalısınız.
+
+```sh
+git checkout main
+git pull
+```
+
+## PR Üzerinde Çalışırken Ana Branch'in Güncellenmesi
+
+Bu çok sık karşılaşılan bir durumdur. Siz güncel ana branch'den dallanıp yeni bir branch
+oluşturduğunuzda, ana branch içerisine başka değişiklik girmiş olabilir. Bunun için zaman zaman
+üzerinde çalıştığınız branch'i `rebase` etmelisiniz, yani ana branch ile uyumlu hale getirmeniz
+gerekmekte.
+
+`cikarma-islemi` branchinden örnek verecek olursak siz bu değişikliği yaparken ana branch'e başka
+bir commit girmiş, sizden önce başka birinin değişikliği `merge` edilmiş olabilir. Bu durumda
+ypamanız gereken aşağıdaki komutlarla kendi branchınızı rebase etmenizdir. Buna
+`git rebase workflow` denmektedir.
+
+```sh
+# Ana branchte iken (main)
+git pull
+
+# Kendi branchımıza geçelim
+git checkout cikarma-islemi
+
+# Ana branhc ile senkronize olalım
+git rebase main
+```
+
+Bu komutlar sonrasında `cikarma-islemi` branchı içerisine yaptığınız commitler, ana branch'in en son
+durumu üzerine konumlandırılacaktır. Aksi halde eski bir commit üzerinden devam edeceğiniz için
+dosya çakışması alma ihtimaliniz vardır. Bu durumu engellemek adına sık sık kendi branchinizi ana
+branch ile senkronize etmeli ve rebase işlemini uygulamalısınız.
+
+Rebase sonrası PR'ı güncellerken yapılan bu değişiklikleri `push` etmeniz gerekecektir. Ancak
+history bozulduğu için normal şekilde `push` yapamayacaksınız, bunun yerine `force push` yapmanız
+gerekmekte. `git push -f` komutu ile bunu başarabilirsiniz.
+
+!!! warning "Force push"
+    Gerekmedikçe kullanmanın sakıncalı olduğu bir komuttur. Git tarihini (history) değiştirdiği için
+    bunu bozma ihtimaliniz fazladır. Bu açıdan **sadece** gereken hallerde force push kullanınız.
