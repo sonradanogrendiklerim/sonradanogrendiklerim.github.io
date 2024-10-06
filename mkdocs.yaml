@@ -31,6 +31,9 @@ nav:
           - VSCode ile Python Geliştirme Ortamı: python/vscode-ile-python-gelistirme-ortami.md
           - Python Modül Yapısı: python/python-modul-yapisi.md
 
+      - Git:
+          - Git Başlangıcı: git/git-baslangici.md
+
   - Makaleler:
       - Ana Sayfa: makaleler/index.md
       - Outline Güncelleme: makaleler/outline-guncelleme.md
