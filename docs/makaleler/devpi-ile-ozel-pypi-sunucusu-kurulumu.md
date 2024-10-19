@@ -161,7 +161,7 @@ Caddy ile http basic auth yardımıyla sadece bizim erişebileceğimiz şekilde 
 edeceğiz. Şirket içerisinde kullanacağımız ve dışarıya açık olmayacağı için bu noktada basic auth
 tercih ediyoruz.
 
-Öncelikle yukakarıda oluşturduğumuz `devops` kullanıcısı ile aynı parolaya sahip olacak şekilde
+Öncelikle yukarıda oluşturduğumuz `devops` kullanıcısı ile aynı parolaya sahip olacak şekilde
 parola oluşturmamız gerekmekte. Bunun için aşağıdaki komutu girin ve belirleyeceğiniz parolayı
 yazın. Örnek olması açısından burada `devops` parolası kullanılacaktır.
 
@@ -245,6 +245,10 @@ kullandığınız kabuğa girin ve sonrasında `uv pip install ...` komutunu ça
 ```sh
 set -x UV_DEFAULT_INDEX "https://devops:devops@pypi.sirketismi.com/devops/pypi/+simple"
 ```
+
+Uv'ye bu özelliğin son sürüm ile birlikte geldiğini belirtmem gerekli. Eğer uv ile yukarıdaki ortam
+değişkenini ayarlamış olmanıza rağmen indexi kullanamıyorsanız uv'nin son sürümünün yüklü olduğundan
+emin olun. Bu yazının yazıldığı tarih itibariyle `0.4.24` sürümünde çalışır halde.
 
 ## Sonuç
 
