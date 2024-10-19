@@ -1,5 +1,5 @@
 ---
-title: DevPi ile Özel PyPI Sunucusu Kurulumu
+title: Devpi ile Özel PyPI Sunucusu Kurulumu
 description: Şirket içerisinde kendinize özel PyPI paket sunucusu nasıl kurulur
 ---
 
@@ -36,7 +36,7 @@ sudo apt-get upgrade
 
 ### DNS Kaydı
 
-PyPi sunucusunun DNS kaydına ihtiyacı var. Bu DNS adresini çeşitli konfigürasyon dosyalarına
+PyPI sunucusunun DNS kaydına ihtiyacı var. Bu DNS adresini çeşitli konfigürasyon dosyalarına
 yazacağız ve bu açıdan bir DNS adresinizin olması gerekiyor. Bunun için `pypi.sirketismi.com` gibi
 bir alan adını tercih edebilirsiniz.
 
@@ -243,5 +243,13 @@ Uv ile kullanırken ortam değişkeninin ayarlanması gerekiyor. Aşağıdaki or
 kullandığınız kabuğa girin ve sonrasında `uv pip install ...` komutunu çalıştırın.
 
 ```sh
-set -x UV_DEFAULT_INDEX "https://pypi.sirketismi.com/devops/pypi/+simple"
+set -x UV_DEFAULT_INDEX "https://devops:devops@pypi.sirketismi.com/devops/pypi/+simple"
 ```
+
+## Sonuç
+
+Şirket içerisinde özel PyPI sunucusunu HTTP Basic Auth ile sağlıyoruz. Yukarıda yazan kullanıcı adı
+ve parolaları kendinize göre değiştirmenizi ve bir parola yönetimi yazılımı ile 25 karakter parola
+üretmenizi tavsiye ederim.
+
+PyPI sunucusunu kullanacağınız her yerde `pip.conf` ayarlarını yapmanız gerekecektir. Aynı zamanda `--index` parametresi ile bunu başarabilirsiniz.

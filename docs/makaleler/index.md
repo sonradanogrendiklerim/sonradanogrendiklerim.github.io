@@ -3,7 +3,7 @@ title: Öğrendiğim Teknolojiler
 description: Kendi ihtiyaçlarımı karşılarken başkalarının ihtiyaçlarına da cevap vermeye çalıştığım makaleler.
 ---
 
-- [DevPi ile Özel PyPI Sunucusu Kurulumu](devpi-ile-ozel-pypi-sunucusu-kurulumu.md) &ndash; _2024-10-19_
+- [Devpi ile Özel PyPI Sunucusu Kurulumu](devpi-ile-ozel-pypi-sunucusu-kurulumu.md) &ndash; _2024-10-19_
 - [Outline Güncelleme](outline-guncelleme.md) &ndash; _2024-09-22_
 - [Notion Alternatifi: Outline Kurulumu](notion-alternatifi-outline-kurulumu.md) &ndash; _2024-08-10_
 - [Tailscale ile VPN Sunucusu Kurulumu](tailscale-ile-vpn-sunucusu-kurulumu.md) &ndash; _2024-03-01_
