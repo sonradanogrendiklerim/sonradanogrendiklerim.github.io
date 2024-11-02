@@ -6,37 +6,35 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Terminalimize yazdığımız komutların nasıl çalıştırıldığına giriş.">
+        <meta name="description" content="Kod yazmak için okul okumaya gerek var mı?">
       
       
         <meta name="author" content="Eren Türkay">
       
       
-        <link rel="canonical" href="https://sonradanogrendiklerim.com/linux/terminal-komutu-nasil-calisir/">
+        <link rel="canonical" href="https://sonradanogrendiklerim.com/blog/2024/11/02/okul-okumak-sart-mi/">
       
       
-        <link rel="prev" href="../fish-terminal-eklentileri/">
+        <link rel="prev" href="../../../09/21/python-312-ye-goc/">
       
       
-        <link rel="next" href="../../python/programlama-dili-neden-ve-nasil/">
       
+        <link rel="alternate" type="application/rss+xml" title="RSS beslemesi" href="../../../../../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="Güncellenmiş içeriğin RSS beslemesi" href="../../../../../feed_rss_updated.xml">
       
-        <link rel="alternate" type="application/rss+xml" title="RSS beslemesi" href="../../feed_rss_created.xml">
-        <link rel="alternate" type="application/rss+xml" title="Güncellenmiş içeriğin RSS beslemesi" href="../../feed_rss_updated.xml">
-      
-      <link rel="icon" href="../../assets/favicon.png">
+      <link rel="icon" href="../../../../../assets/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
     
     
       
-        <title>Terminal Komutu Nasıl Çalışır - Sonradan Öğrendiklerim</title>
+        <title>Okul Okumak Şart Mı? - Sonradan Öğrendiklerim</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.0253249f.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -55,9 +53,9 @@
       
     
     
-      <link rel="stylesheet" href="../../css/extra.css">
+      <link rel="stylesheet" href="../../../../../css/extra.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -76,11 +74,11 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="Terminal Komutu Nasıl Çalışır - Sonradan Öğrendiklerim" >
+        <meta  property="og:title"  content="Okul Okumak Şart Mı? - Sonradan Öğrendiklerim" >
       
-        <meta  property="og:description"  content="Terminalimize yazdığımız komutların nasıl çalıştırıldığına giriş." >
+        <meta  property="og:description"  content="Kod yazmak için okul okumaya gerek var mı?" >
       
-        <meta  property="og:image"  content="https://sonradanogrendiklerim.com/assets/images/social/linux/terminal-komutu-nasil-calisir.png" >
+        <meta  property="og:image"  content="https://sonradanogrendiklerim.com/assets/images/social/blog/posts/2024-11-02-okullu-alayli.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -88,15 +86,15 @@
       
         <meta  property="og:image:height"  content="630" >
       
-        <meta  property="og:url"  content="https://sonradanogrendiklerim.com/linux/terminal-komutu-nasil-calisir/" >
+        <meta  property="og:url"  content="https://sonradanogrendiklerim.com/blog/2024/11/02/okul-okumak-sart-mi/" >
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="Terminal Komutu Nasıl Çalışır - Sonradan Öğrendiklerim" >
+        <meta  name="twitter:title"  content="Okul Okumak Şart Mı? - Sonradan Öğrendiklerim" >
       
-        <meta  name="twitter:description"  content="Terminalimize yazdığımız komutların nasıl çalıştırıldığına giriş." >
+        <meta  name="twitter:description"  content="Kod yazmak için okul okumaya gerek var mı?" >
       
-        <meta  name="twitter:image"  content="https://sonradanogrendiklerim.com/assets/images/social/linux/terminal-komutu-nasil-calisir.png" >
+        <meta  name="twitter:image"  content="https://sonradanogrendiklerim.com/assets/images/social/blog/posts/2024-11-02-okullu-alayli.png" >
       
     
     
@@ -116,11 +114,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#terminal-komutu-nerede" class="md-skip">
-          Ana içeriğe geç
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -131,7 +124,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Başlık">
-    <a href="../.." title="Sonradan Öğrendiklerim" class="md-header__button md-logo" aria-label="Sonradan Öğrendiklerim" data-md-component="logo">
+    <a href="../../../../.." title="Sonradan Öğrendiklerim" class="md-header__button md-logo" aria-label="Sonradan Öğrendiklerim" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -151,7 +144,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Terminal Komutu Nasıl Çalışır
+              Okul Okumak Şart Mı?
             
           </span>
         </div>
@@ -220,7 +213,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href="../../../../.." class="md-tabs__link">
         
   
     
@@ -235,13 +228,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../bilgisayar-muhendisligine-giris/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../../../../bilgisayar-muhendisligine-giris/" class="md-tabs__link">
           
   
   Bilgisayar Mühendisliğine Giriş
@@ -259,7 +250,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../makaleler/" class="md-tabs__link">
+        <a href="../../../../../makaleler/" class="md-tabs__link">
           
   
   Makaleler
@@ -273,9 +264,11 @@
         
   
   
+    
   
-    <li class="md-tabs__item">
-      <a href="../../blog/" class="md-tabs__link">
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="../../../../" class="md-tabs__link">
         
   
     
@@ -332,7 +325,9 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -343,7 +338,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigasyon" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Sonradan Öğrendiklerim" class="md-nav__button md-logo" aria-label="Sonradan Öğrendiklerim" data-md-component="logo">
+    <a href="../../../../.." title="Sonradan Öğrendiklerim" class="md-nav__button md-logo" aria-label="Sonradan Öğrendiklerim" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -361,7 +356,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -378,30 +373,25 @@
       
   
   
-    
   
   
-  
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -412,7 +402,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Bilgisayar Mühendisliğine Giriş
@@ -426,7 +416,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../bilgisayar-muhendisligine-giris/" class="md-nav__link">
+      <a href="../../../../../bilgisayar-muhendisligine-giris/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -447,7 +437,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../bilgisayar-muhendisligine-giris/baslarken/" class="md-nav__link">
+      <a href="../../../../../bilgisayar-muhendisligine-giris/baslarken/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -473,20 +463,17 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
         
           
-          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -511,7 +498,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nasil-soru-sorulur/" class="md-nav__link">
+      <a href="../../../../../nasil-soru-sorulur/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -532,7 +519,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nasil-soru-sorulur/sormadan-once/" class="md-nav__link">
+      <a href="../../../../../nasil-soru-sorulur/sormadan-once/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -553,7 +540,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nasil-soru-sorulur/soru-sordugunuzda/" class="md-nav__link">
+      <a href="../../../../../nasil-soru-sorulur/soru-sordugunuzda/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -579,30 +566,25 @@
                 
   
   
-    
   
   
-  
     
     
     
       
       
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
         
           
-          
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -613,7 +595,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_4">
             <span class="md-nav__icon md-icon"></span>
             Linux
@@ -627,7 +609,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ubuntu-kurulumu/" class="md-nav__link">
+      <a href="../../../../../linux/ubuntu-kurulumu/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -648,7 +630,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../terminal/" class="md-nav__link">
+      <a href="../../../../../linux/terminal/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -669,7 +651,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../terminali-guzellestirelim/" class="md-nav__link">
+      <a href="../../../../../linux/terminali-guzellestirelim/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -690,7 +672,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../fish-terminal-eklentileri/" class="md-nav__link">
+      <a href="../../../../../linux/fish-terminal-eklentileri/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -708,28 +690,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Terminal Komutu Nasıl Çalışır
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../../../linux/terminal-komutu-nasil-calisir/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -738,51 +702,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="İçindekiler">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      İçindekiler
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#terminal-komutu-nerede" class="md-nav__link">
-    <span class="md-ellipsis">
-      Terminal Komutu Nerede?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ortam-degiskenleri" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ortam Değişkenleri
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#uygulamay-bulduk-sonra" class="md-nav__link">
-    <span class="md-ellipsis">
-      Uygulamayı Bulduk, Sonra?
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -808,20 +727,17 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
         
           
-          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -846,7 +762,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python/programlama-dili-neden-ve-nasil/" class="md-nav__link">
+      <a href="../../../../../python/programlama-dili-neden-ve-nasil/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -867,7 +783,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python/pythona-giris-ve-modern-gelistirme/" class="md-nav__link">
+      <a href="../../../../../python/pythona-giris-ve-modern-gelistirme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -888,7 +804,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python/vscode-ile-python-gelistirme-ortami/" class="md-nav__link">
+      <a href="../../../../../python/vscode-ile-python-gelistirme-ortami/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -909,7 +825,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python/python-modul-yapisi/" class="md-nav__link">
+      <a href="../../../../../python/python-modul-yapisi/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -943,20 +859,17 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
         
           
-          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -981,7 +894,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../git/git-baslangici/" class="md-nav__link">
+      <a href="../../../../../git/git-baslangici/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1002,7 +915,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../git/pratik-github-rehberi/" class="md-nav__link">
+      <a href="../../../../../git/pratik-github-rehberi/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1078,7 +991,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../makaleler/" class="md-nav__link">
+      <a href="../../../../../makaleler/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1099,7 +1012,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../makaleler/devpi-ile-ozel-pypi-sunucusu-kurulumu/" class="md-nav__link">
+      <a href="../../../../../makaleler/devpi-ile-ozel-pypi-sunucusu-kurulumu/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1120,7 +1033,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../makaleler/outline-guncelleme/" class="md-nav__link">
+      <a href="../../../../../makaleler/outline-guncelleme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1141,7 +1054,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../makaleler/notion-alternatifi-outline-kurulumu/" class="md-nav__link">
+      <a href="../../../../../makaleler/notion-alternatifi-outline-kurulumu/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1162,7 +1075,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../makaleler/tailscale-ile-vpn-sunucusu-kurulumu/" class="md-nav__link">
+      <a href="../../../../../makaleler/tailscale-ile-vpn-sunucusu-kurulumu/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1183,7 +1096,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../makaleler/github-pages-statik-sayfa/" class="md-nav__link">
+      <a href="../../../../../makaleler/github-pages-statik-sayfa/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1208,12 +1121,14 @@
       
   
   
+    
+  
   
     
   
   
-    <li class="md-nav__item">
-      <a href="../../blog/" class="md-nav__link">
+    <li class="md-nav__item md-nav__item--active">
+      <a href="../../../../" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1274,6 +1189,8 @@
             
             
               
+                
+              
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -1284,41 +1201,6 @@
   
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      İçindekiler
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#terminal-komutu-nerede" class="md-nav__link">
-    <span class="md-ellipsis">
-      Terminal Komutu Nerede?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ortam-degiskenleri" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ortam Değişkenleri
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#uygulamay-bulduk-sonra" class="md-nav__link">
-    <span class="md-ellipsis">
-      Uygulamayı Bulduk, Sonra?
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1326,108 +1208,128 @@
             
           
           
-            <div class="md-content" data-md-component="content">
-              <article class="md-content__inner md-typeset">
-                
-                  
-
-
-  <h1>Terminal Komutu Nasıl Çalışır</h1>
-
-<p>Terminalimizi güzelleştirdik, <code>ls</code> komutunu kullandık ve en çok kullandığımız komutlar için kısayol,
-yani <code>alias</code> tanımladık. Ancak hala bu <code>ls</code> komutunun nasıl ve ne şekilde çalıştırıldığını
-bilmiyoruz. Bu bölümde herhangi bir komutun nerede barındığına ve nasıl çalıştırıldığına
-değineceğiz.</p>
-<h2 id="terminal-komutu-nerede">Terminal Komutu Nerede?<a class="headerlink" href="#terminal-komutu-nerede" title="Permanent link">&para;</a></h2>
-<p>Fish ve bash gibi yazılımların birer metin arayüzü olduğunu tekrar hatırlatalım. Bizim büyük bir
-bilgisayar ile etkileşmemizi sağlıyorlar ve modern dünyada yaşadığımız için biz bunu hala
-<a href="../terminal/#emulator" target="_blank">emüle ediyoruz</a>. Burada sormamız gereken soru bu komutlar nerede ve nasıl bulunup çalıştırıldıkları.</p>
-<p>Bunun cevabı sabit disk. <code>ls</code> gibi komutlar sabit disk üzerinde duruyor ve öncesinde gördüğümüz
-gibi bir çıktı veriyorlar.
-Bu <code>ls</code> uygulamasının, <em>(şimdilik komutunun demeyelim, metin tabanlı uygulama diyelim ki aklımıza daha net otursun)</em>, nerede olduğunu <code>which</code> uygulaması ile görebiliyoruz.</p>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>❯<span class="w"> </span>which<span class="w"> </span>ls
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>/usr/bin/ls
-</span></code></pre></div>
-<p>Bu da demek oluyor ki <code>ls</code> yazdığımızda <code>/usr/bin/ls</code> çalıştırılıyor. Bu dosya tipinin ne olduğunu
-da <code>file</code> uygulaması <em>(komutu)</em> ile görebiliyoruz.</p>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>❯<span class="w"> </span>file<span class="w"> </span>/usr/bin/ls
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>/usr/bin/ls:<span class="w"> </span>ELF<span class="w"> </span><span class="m">64</span>-bit<span class="w"> </span>LSB<span class="w"> </span>pie<span class="w"> </span>executable,<span class="w"> </span>ARM<span class="w"> </span>aarch64,<span class="w"> </span>version<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">(</span>SYSV<span class="o">)</span>,<span class="w"> </span>...
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">                                    </span>↑
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">                                    </span><span class="p">|</span>
-</span></code></pre></div>
-<p>Buradaki çıktı sizin sisteminizde farklılık gösterecektir ancak önemli olan burada <code>executable</code>
-satırını görmek. Yani bu bir uygulama. Terminalimize <code>ls</code> yazdığımızda <code>/usr/bin/ls</code> çalıştırılıyor.
-Peki terminalimiz bunu nasıl buluyor?</p>
-<p>Her seferinde <code>which</code> çalıştırıp, uygulamanın nerede olduğunu bulup, ona göre hareket edebilir ancak
-bu sefer de <code>which</code> komutunu nasıl bulacağı sorusu ile karşı karşıyayız. Tavuk - yumurta problemi
-yani. Demek ki elimizde başka bir yöntem olması gerekli.</p>
-<p>Bunun için terminalimiz ortam değişkenleri kullanıyor.</p>
-<h2 id="ortam-degiskenleri">Ortam Değişkenleri<a class="headerlink" href="#ortam-degiskenleri" title="Permanent link">&para;</a></h2>
-<p>Başı dolar işareti ($) ile başlayan değişkenler. Terminal içerisinde <code>echo</code> komutu ile görülebilir. Örneğin ev dizininiz öntanımlı olarak <code>$HOME</code> değişkenine atanıyor.</p>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">echo</span><span class="w"> </span><span class="nv">$HOME</span>
-</span></code></pre></div>
-<p>Atanmış bütün ortam değişkenlerini <code>env</code> komutu ile görüyoruz. Aşağıda en sık kullanılan ve önem arz
-edenleri listeledim. Sizde daha fazla çıktı görülecektir.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>❯ env
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>...
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>...
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>USER=eren
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>PWD=/home/eren.linux
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>LANG=C.UTF-8
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>SHELL=/usr/bin/fish
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>HOME=/home/eren.linux
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>TERM=xterm-256color
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin
-</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>  |
-</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>  |--&gt; sihir burada
-</span></code></pre></div>
-<p>Terminalin bir uygulamayı bulurken yaptığı şey çok basit. <code>$PATH</code> içerisinde <code>:</code> karakteri ile
-ayrılmış dizinlere <strong>sırası ile</strong>, <strong>teker teker</strong> bakıyor ve bulmaya çalışıyor. Bulduğu ilk
-uygulamayı çalıştırıyor. Bu da demek oluyor ki <code>/usr/local/__sbin__</code> ve <code>/usr/local/__bin__</code>
-içerisinde aynı isimde uygulama varsa öncelikle <code>/usr/local/sbin</code> içerisindeki çalıştırılacak.</p>
-<p>Burada <code>absolute path</code> ve <code>relative path</code> konusuna da değinmemiz gerekli. Terminalimiz bir komut
-yazdığımızda her daim <code>$PATH</code> değişkenine bakarak karar veriyor. Bu durumda ikinci sırada yer alan
-uygulamayı çalıştırmak için <code>tam path</code> vermemiz, yani <code>/usr/local/sbin/uygulamaismi</code> şeklinde
-kullanmamız lazım. <code>Relative path</code> ise o an bulunduğumuz dizine göre, başında <code>/</code> olmadan
-verdiğimiz path anlamına geliyor. Konu hakkında daha detaylı bilgi için
-<a href="https://www.redhat.com/sysadmin/linux-path-absolute-relative" target="_blank">Redhat belgesine</a> göz atabilirsiniz.</p>
-<div class="admonition note">
-<p class="admonition-title">cd komutu üzerine</p>
-<p><code>cd</code> komutu disk üzerinde değil, terminal emülatörünün kendi içerisinde olan bir komut ve o anki
-çalışma dizinini değiştiriyor ($PWD). Bunun için ayrı bir uygulamaya gerek yok ve shell kendi
-içerisinde bunu sağlamakta. Bu yüzden <code>which</code> ile <code>cd</code> komutunu bulamıyoruz çünkü disk üzerinde
-değil, öntanımlı bir komut.</p>
-</div>
-<h2 id="uygulamay-bulduk-sonra">Uygulamayı Bulduk, Sonra?<a class="headerlink" href="#uygulamay-bulduk-sonra" title="Permanent link">&para;</a></h2>
-<p>Özetle, shell birtakım hazırlıklar yaptıktan sonra Linux kerneline bu uygulamayı çalıştır şeklinde
-bir <a href="https://en.wikipedia.org/wiki/System_call">sistem çağrısı</a> <em>(syscall)</em> gönderiyor <em>(<a href="https://en.wikipedia.org/wiki/Exec_(system_call)" target="_blank">execve</a>)</em>. Linux
-kerneli uygulamayı diskten okuyup RAM'e yüklüyor ve sonrasında RAM'de nerede yer alıyorsa oradan
-çalıştırmaya devam ediyor. Uygulama işini bitirdikten ve çıktıktan sonra tekrar shell'e dönüyor.</p>
-<p>Tabii ki bu çok basitleştirilmiş bir anlatım oldu. Bunun içerisinde kernelin yaptığı
-<a href="https://en.wikipedia.org/wiki/Executable_and_Linkable_Format" target="_blank">ELF</a> parsing, <a href="https://en.wikipedia.org/wiki/Dynamic_linker" target="_blank">dinamik kütüphaneleri</a> bulma gibi
-şeyler de var ama bu 3. sınıf işletim sistemleri konusu. Şimdilik bu kadarının büyük resmi görmek
-açısından yeterli olduğunu düşünüyorum.</p>
-
-
-
-
-
-
-
-  
-  
-
-
-
-  
-
-
-
-
-                
-              </article>
+  <div class="md-content md-content--post" data-md-component="content">
+    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner md-post">
+          <nav class="md-nav md-nav--primary">
+            <div class="md-post__back">
+              <div class="md-nav__title md-nav__container">
+                <a href="../../../../" class="md-nav__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+                  <span class="md-ellipsis">
+                    Dizine geri dön
+                  </span>
+                </a>
+              </div>
             </div>
+            
+            <ul class="md-post__meta md-nav__list">
+              <li class="md-nav__item md-nav__item--section">
+                <div class="md-post__title">
+                  <span class="md-ellipsis">
+                    Metadata
+                  </span>
+                </div>
+                <nav class="md-nav">
+                  <ul class="md-nav__list">
+                    <li class="md-nav__item">
+                      <div class="md-nav__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
+                        <time datetime="2024-11-02 00:00:00" class="md-ellipsis">2 Kasım 2024</time>
+                      </div>
+                    </li>
+                    
+                    
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3v15h3V3zm3 2 4 13 3-1-4-13zM5 5v13h3V5zM3 19v2h18v-2z"/></svg>
+                          <span class="md-ellipsis">
+                            in
+                            
+                              <a href="../../../../category/genel/">Genel</a></span>
+                        </div>
+                      </li>
+                    
+                    
+                      
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
+                          <span class="md-ellipsis">
+                            
+                              2 dakika okuma
+                            
+                          </span>
+                        </div>
+                      </li>
+                    
+                  </ul>
+                </nav>
+              </li>
+            </ul>
+          </nav>
           
+        </div>
+      </div>
+    </div>
+    <article class="md-content__inner md-typeset">
+      
+        
+
+
+  <h1>Okul Okumak Şart Mı?</h1>
+
+<p>Sektöre merak salan insanların sorduğu sorulardan bir tanesi, okul okumak şart mı? Bu sorunun cevabı
+yapacağınız işe göre değişiyor ama burada kısaca yazacak olursam şart değil, olsa iyi olur.</p>
+<!-- more -->
+
+<p>Dijkstra'nın söylediği gibi bilgisayar bilimlerinin bilgisayar ile ilişkisi, astronominin teleskop
+ile ilişkisi kadardır. Bilgisayar bilimleri yapmak için bilgisayara ihtiyaç duyulmadığı gibi, kod
+yazmak için okul okumanıza gerek yok.</p>
+<p>Bu yazdıklarım okulun gerekli olmadığı anlamına gelmiyor. Üniversitenin size katacakları yadsınamaz
+ve orada öğrenecekleriniz kariyerinizin ilerleyen aşamalarında size çok yardımcı olacaktır. Örneğin
+lineer cebir öğrendikten sonra oyun programlama konusunda daha fazla bilgi sahibi olacaksınız, ya da
+ilişkisel cebir öğrendiğinizde veritabanlarının nasıl çalıştığını anlayabileceksiniz. Bunlar
+olmadığı zaman her daim başkasının yazdığı kütüphanelere mahkum sayılacaksınız.</p>
+<p>Bu kötü bir şey değil, yazılım alanında yaptığımız birçok şey hali hazırda var olan kütüphaneleri
+kullanmak. Ancak spesifik olarak bir ihtiyaç ortaya çıktığı zaman bu alanın temellerini bilmeniz
+avantaj sağlayacaktır.</p>
+<p>Alaylı bir yazılımcı iseniz MIT'nin ders programına bakıp oradaki teorik konuları çalışmak iyi bir
+fikir olacaktır. İşletim sistemleri, compiler, birçok matematiksel teorik dersler daha iyi bir
+yazılımcı olmanız için öğrenmeniz gereken araçlar. Burada bütün ders programını teker teker
+anlatamayacağım ama anlatmak istediğimi anlatabildim diye düşünüyorum.</p>
+<p>Son olarak belirtmem gerekir ki matematik dediğimizde sadece Calculus anlaşılmasın. Türkiye'de
+liselerde ve üniversitelerde giriş dersi olarak Calculus gösteriliyor ancak matematiğin birçok alanı
+var. Yukarıda bahsettiğim gibi lineer cebir, ilişkisel cebir, kümeler teorisi bunlardan bir tanesi.
+O yüzden Calculus konusunda kötü iseniz, matematiğin diğer dallarında kötü olacağınız anlamına
+gelmiyor. Hatta diğer dallarını daha çok sevme imkanınız var. Şahsen Calculus derslerimi üniversite
+zamanında vermekte zorlandım, bir türlü ilgimi çekmiyordu ama ilişkisel cebir dersimi severek ve
+başarılı bir şekilde verebildim. Bu açıdan Calculuste iyi olmamanız kendinizi kötü hissettirmesin.
+Öğrenebileceğiniz kadar teori öğrenmek her daim iyidir ve sizi ileriye taşır.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+  
+
+
+
+      
+    </article>
+  </div>
+
           
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
@@ -1444,10 +1346,12 @@ açısından yeterli olduğunu düşünüyorum.</p>
   
     
       
+        
+      
       <nav class="md-footer__inner md-grid" aria-label="Altbilgi" >
         
           
-          <a href="../fish-terminal-eklentileri/" class="md-footer__link md-footer__link--prev" aria-label="Önceki: Fish Terminal Eklentileri">
+          <a href="../../../09/21/python-312-ye-goc/" class="md-footer__link md-footer__link--prev" aria-label="Önceki: Python 3.12&#39;ye Göç">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1457,27 +1361,11 @@ açısından yeterli olduğunu düşünüyorum.</p>
                 Önceki
               </span>
               <div class="md-ellipsis">
-                Fish Terminal Eklentileri
+                Python 3.12'ye Göç
               </div>
             </div>
           </a>
         
-        
-          
-          <a href="../../python/programlama-dili-neden-ve-nasil/" class="md-footer__link md-footer__link--next" aria-label="Sonraki: Programlama Dili: Neden ve Nasıl">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Sonraki
-              </span>
-              <div class="md-ellipsis">
-                Programlama Dili: Neden ve Nasıl
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
-            </div>
-          </a>
         
       </nav>
     
@@ -1508,10 +1396,10 @@ açısından yeterli olduğunu düşünüyorum.</p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.sections", "navigation.path", "navigation.tabs", "navigation.footer", "toc.follow", "content.code.copy"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Kopyaland\u0131", "clipboard.copy": "Kopyala", "search.result.more.one": "Bu sayfada 1 tane daha", "search.result.more.other": "Bu sayfada # tane daha", "search.result.none": "E\u015fle\u015fen dok\u00fcman bulunamad\u0131", "search.result.one": "1 dok\u00fcman bulundu", "search.result.other": "# dok\u00fcman bulundu", "search.result.placeholder": "Aramaya ba\u015flamak i\u00e7in yaz\u0131n", "search.result.term.missing": "Eksik", "select.version": "Versiyon se\u00e7"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.top", "navigation.sections", "navigation.path", "navigation.tabs", "navigation.footer", "toc.follow", "content.code.copy"], "search": "../../../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Kopyaland\u0131", "clipboard.copy": "Kopyala", "search.result.more.one": "Bu sayfada 1 tane daha", "search.result.more.other": "Bu sayfada # tane daha", "search.result.none": "E\u015fle\u015fen dok\u00fcman bulunamad\u0131", "search.result.one": "1 dok\u00fcman bulundu", "search.result.other": "# dok\u00fcman bulundu", "search.result.placeholder": "Aramaya ba\u015flamak i\u00e7in yaz\u0131n", "search.result.term.missing": "Eksik", "select.version": "Versiyon se\u00e7"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.83f73b43.min.js"></script>
       
     
   </body>
