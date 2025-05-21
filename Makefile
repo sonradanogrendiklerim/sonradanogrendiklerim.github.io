@@ -1,11 +1,13 @@
+export DYLD_LIBRARY_PATH:=$(shell brew --prefix cairo)/lib:$(DYLD_LIBRARY_PATH)
+
 all:
-	mkdocs serve
+	DYLD_LIBRARY_PATH=$(DYLD_LIBRARY_PATH) mkdocs serve
 
 build:
-	mkdocs build
+	DYLD_LIBRARY_PATH=$(DYLD_LIBRARY_PATH) mkdocs build
 
 gh-deploy:
-	mkdocs gh-deploy
+	DYLD_LIBRARY_PATH=$(DYLD_LIBRARY_PATH) mkdocs gh-deploy
 	@echo
 	@echo
 
