@@ -177,7 +177,7 @@ Uygulamanın çalıştığını teyit ettikten sonra `ctrl-c` ile sonlandırın.
 
 ## Konfigürasyon
 
-### Supervisor
+### Supervisor Ayarları
 
 Outline'ı arkaplanda çalıştırmak için gerekli. `/etc/supervisor/conf.d/outline.conf` dosyasını
 oluşturun ve içerisine aşağıdaki satırları yazın.
@@ -225,4 +225,6 @@ kayıt olacaktır. Detaylı kullanım belgesi için [outline belgelerine][outlin
 
 ## Sonuç
 
-Tebrikler. Artık notion benzeri bir wiki sayfasına sahipsiniz. Outline notion'un sunduğu birçok özelliği sunabilmekte. Aynı anda düzenleme, temiz arayüz bunlardan birkaç tanesi. `c6g.medium` aylık $28 ve bu da notion'da 3 kişinin ücretine denk geliyor.
+Tebrikler. Artık notion benzeri bir wiki sayfasına sahipsiniz. Outline notion'un sunduğu birçok
+özelliği sunabilmekte. Aynı anda düzenleme, temiz arayüz bunlardan birkaç tanesi. `c6g.medium` aylık
+$28 ve bu da notion'da 3 kişinin ücretine denk geliyor.
