@@ -1,3 +1,10 @@
+/* Override font size for large screens */
+@media screen and (min-width: 125em) {
+    html {
+        font-size: 137.5% !important;
+    }
+}
+
 .md-content {
     text-align: justify !important;
     text-justify: inter-word;
