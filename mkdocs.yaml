@@ -37,6 +37,7 @@ nav:
 
   - Makaleler:
       - Ana Sayfa: makaleler/index.md
+      - Mitmproxy ile Hata Ayıklama: makaleler/mitmproxy-ile-hata-ayiklama.md
       - Devpi ile Özel PyPI Sunucusu Kurulumu: makaleler/devpi-ile-ozel-pypi-sunucusu-kurulumu.md
       - Outline Güncelleme: makaleler/outline-guncelleme.md
       - "Notion Alternatifi: Outline Kurulumu": makaleler/notion-alternatifi-outline-kurulumu.md
