@@ -10,9 +10,10 @@
     text-justify: inter-word;
 }
 
-.md-main {
+/* Dark ve light mode geçişi yapıldığı için buraya artık statik olarak arkaplan rengi vermiyoruz. */
+/* .md-main {
     background-color: #fbfbfd;
-}
+} */
 
 .md-main__inner h1, h2, h3, h4, h5, h6 {
     text-align: left !important;
